@@ -1,0 +1,115 @@
+h1. README
+
+h2. Location
+
+This project migrated on 2017-11-19 from Sourceforge (CVS) to Github
+(Git).  Please use the Github repository from now on.
+
+* https://sourceforge.net/projects/hyx-tools/ *OBSOLETE REPOSITORY*
+* https://github.com/gonter/hyx-tools
+
+$Id: README,v 1.3 2006/03/13 19:09:41 gonter Exp $
+
+[To be completed]
+
+This repository contains source code mostly created for a collection
+of hypertext tools.  Since this "project" was started around 1986,
+HTML or even the WWW was not part of the picture.  In fact, not
+even SGML was widely known at that time and Charles F. Goldfarb's
+book[1] only arrived in 1990.  So, the format used might look like
+SGML and even be referenced as "SGML", but it isn't.  However, SGML
+compliance, or nowadays XML compliance, is still a goal.
+
+Some parts of this repository are totally unrelated to anything,
+they are only here because I didn't care to remove them before
+moving everything to SourceForge.
+
+How to use the software
+
+First, only a few people are expected to use the entire repository.
+Most users will use subsets of code with a more reasonable structure
+and setup routines.
+
+This repository consists of currently two major parts:
+/lib/  ... the library
+/app/  ... the applications
+
+There are Perl scripts called "SetupWork" in several places.  Their
+output are shell commands to create various symbolic links which
+are necessary for the compiler to find include files, etc.  I hope
+to improve the setup some time in the future.
+
+Some modules require Tcl or even Tk (the last tested version was
+Tcl/Tk 8.4 but Tcl/Tk 8.0 might work too).  Unfortunately, path
+names for Tcl/Tk are hardcoded in most places.  Again, I hope to
+improve that in the future.  ...ooO( I really need to read [2] )...
+
+A typical start might look like that:
+
+  cd lib
+  perl SetupWork >@work
+  $EDITOR @work    # inspect the shell script, it
+                   # should only create symbolic links
+  sh -v @work
+  make
+  cd ..
+
+If you want to compile Tcl stuff too, verfy the path to your Tcl
+stuff and:
+
+  cd lib/ds
+  make all.using-tcl
+  cd ../..
+
+After that, to compile the applications:
+
+  cd app
+  perl SetupWork >@work
+  $EDITOR @work    # inspect the shell script, it
+                   # should only create symbolic links
+  sh -v @work
+  make
+  cd ..
+
+NED
+
+NED is a text editor which dates back to 1986 and was first used on a
+CP/M-68K machine.  The editor was then ported to MS-DOS 3.3 or so,
+evolved into a Hypertext thingy.  Later it was ported over to Unix
+(AIX, HP-UX, FreeBSD.  Linux might also work, but I'm not sure if I
+ever tested it there).  Thus this module is more or less the core
+element of the whole repository.
+
+If you also want to compile NED (or n00), proceed as follows.  This
+currently *requires* Tcl even for the curses mode version and for the
+X11 version Tk is required!  Tcl/Tk 8.4 should work.
+
+  cd app/ned
+  perl SetupWork >@work
+  $EDITOR @work    # inspect the shell script, it
+                   # should only create symbolic links
+  sh -v @work
+  make all.groups all
+  cd ../..
+
+Questions that may arise:
+1. Q: what are those *.ftr files in the _bak_ftr.ned directory?
+   A: these files contain "feature" information about their parent
+      file, such as hypertext links.  After all, creating hypertext
+      was the reason for creating the project in the first place!
+      Embedding the links within the source file requires extra
+      processing for compilation and distribution, so keeping this
+      information in another file makes development simpler.
+2. Q: I sent you a patch/bug report/etc.  Why don't you answer?
+   A: Sorry, I'm quite busy and sometimes too lazy to hack around,
+      so I usually have a huge backlog of work to do, so it may
+      take me quite a while to reply.  I hope that using SourceForge
+      (please use the tracker, when possible) will reduce turnaround
+      time.
+
+References:
+[1] Charles F. Goldfarb: The SGML Handbook; Oxford University Press,
+    1990.
+[2] Vaughan, Elliston, Tromey, Taylor: Gnu autoconf, automake, and
+    libtool; New Riders, 2001.
+
