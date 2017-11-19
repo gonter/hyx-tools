@@ -1,0 +1,98 @@
+
+FILE lmd1.doc
+
+Temporary documentation about the LM/D engine
+in the Gopher environment.
+
+written:       1993-09-11
+latest update: 1993-09-29
+
+------------------------------------------------------------------------------
+
+
+Embedding LM/D into Gopher as a Veronica-like service
+
+The LM/D (lutmake/deref) package can be embedded into gopher servers to
+provide a veronica-style service, e.g. as a menu server for just one campus.
+
+The system consists of several modules, some are used to prepare data for
+the server, others are called when someone initiates a search request.
+
+Major steps (overwiew):
+
+    Phase               Step            Description
+a.  preparation         GOPHSCAN        scan complete servers for menus
+
+                        LUTMAKE         generate lookup-tables and index
+                                        files from scanned gopher menus
+
+b.  service             DEREF           return all items that match
+                                        a user's query
+
+
+Notes:
++  GOPHSCAN is a REXX program that comes with the VieGOPHER package.
++  LUTMAKE, DEREF are part of a different package.  They are written in
+   C and can be compiled for VM/CMS, various Unixes and MSDOS.
+
+
+
+------------------------------------------------------------------------------
+GOPHSCAN
+
+Gophscan is distributed with the VieGOPHER package.  This program scans
+through one or a group of gopher servers and produces one file named
+GOPHSCAN.OUT.  This file is essentially one large gopher menu.  Servers
+should be scanned from time to time or when major changes occur.
+
+Several files produced by GOPHSCAN can be combined into one larger
+overall gopher menu just by concatinating them.
+
+The current version of GOPHSCAN runs only under VM/CMS, a version for
+Unix will follow.
+
+Usage (#######)
+GOPHSCAN  <server>[:<port>]     (1 or more)
+
+Each parameter for GOPHSCAN is the name and port of a gopher server.
+If the port number is ommited, the standard port number 70 is assumed.
+Gophscan will walk through all the menus of the named gopher servers.
+It will not leave the area of the named servers.
+
+
+------------------------------------------------------------------------------
+LUTMAKE
+
+LUTMAKE's role is to process one single (large) gopher menu produced
+in the Gophscan-step to generate lookup tables and other index files
+for the DEREF-phase.
+
+Usage
+LUTMAKE -mv gophscan.out
+
+The flag -mv advises LUTMAKE to work in Veronica-mode, it will read
+the input file and produces three files:
+xxx.lut         (lookup table) contains lexical information about
+                the words from gophscan.out and associates them with
+                an index into the xxx.wi file.
+xxx.wi          (word information) contains references for any indexed
+                word into the xxx.di structure
+xxx.di          (document information) contains identification codes
+                for any document indexed.
+
+In veronica mode, the document ID is the offset value of the beginning
+of each line in the large gopher menu gophscan.out.  Therefore, it's
+not possible to index more than one file in veronica-mode at once.
+
+
+------------------------------------------------------------------------------
+DEREF
+
+When a user formulates a search request, the program DEREF is called
+to lookup the word in the lookup table (xxx.lut).  With the word
+information (xxx.wi) records pointing into the document identification
+table, (xxx.di) the program will locate each line containing the
+searched words in the large gopher menu file (gophscan.out)
+
+Usage:
+DEREF -mvgophscan.out  word

@@ -1,0 +1,30 @@
+FILE %ned/notes001.sgm
+
+latest update: 1997-08-15 10:38:12
+------------------------------------------------------------------------------
+
+Festlegen eines zu aktivierenden Files, Beruecksichtigung des relativen
+Pfades
+
+Genereller Vorgang:
+1. tatsaechlichen Filenamen ermitteln unter Beruecksichtigung des
+   relativen Pfades in Bezug auf das gegenwaertig aktivierte Window
+2. Window mit File in Window List suchen und ggf. anspringen oder laden
+
+In Modul 0610 <hyx.l file="%ned/06/ned0610.c" mark="q_ofile" tdc=hyx.l tdp=7>q_ofile() wird zuerst das File in der Window List gesucht
+und dann ein der Filename mit <hyx.l file="%sbr/logicfnm.c" mark="translate_logic_filename" tdc="hyx.l" tdp=24>translate_logic_filename() bestimmt.
+
+In Modul 0836 <hyx.l file="%ned/08/ned0836.c" mark="eval_hlink" tdc=hyx.l tdp=10>eval_hlink() wird zuerst das File gesucht und anschliessend
+der aktuelle Filename mit <hyx.l file="%ned/06/ned0615.c" mark="q_fnm" tdc=hyx.l tdp=5>q_fnm() ermittelt.  q_fnm() verwendet
+<hyx.l file="%ned/06/ned0630.c" mark="FC_setup_filenames" tdc=hyx.l tdp=18>FC_setup_filenames() was seinerseits <hyx.l file="%sbr/logicfnm.c" mark="translate_logic_filename" tdc=hyx.l tdp=24>translate_logic_filename()
+aufruft.
+
+<hyx.l file="%ned/08/ned0841.c" mark="eval_feature" tdc=hyx.l tdp=12>eval_feature() entscheidet zwischen q_ofile und eval_hlink.
+
+  Weiters findet ein aehnlicher Vorgang in <hyx.l file="%ned/ned00.c" tdc="hyx.l" tdp=7 mark="GET_FILENAME">ned00.c statt.
+
+activate_cluster,        activate_frame
+ned_activate_cluster,    ned_activate_frame
+ned_ro_activate_cluster, ned_ro_activate_frame
+ned_rw_activate_cluster, ned_rw_activate_frame
+

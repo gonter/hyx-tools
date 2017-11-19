@@ -1,0 +1,259 @@
+#
+# FILE %ned/09/makefile
+#
+# GG's Night(mare) Editor System
+#
+# written:       1990-01-01
+# latest update: 1996-12-04 18:24:05
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /Fo$@ /W3 -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED09_TEXT $@
+
+lib : lib.1 lib.mac
+
+lib.1 : !
+  ned0901.obj ned0902.obj ned0903.obj !
+  ned0908.obj ned0911.obj ned0912.obj !
+  ned0913.obj ned0914.obj ned0915.obj ned0916.obj !
+  ned0917.obj ned0918.obj ned0919.obj ned0922.obj !
+  ned0923.obj ned0924.obj ned0936.obj ned0937.obj !
+  ned0937b.obj ned0938.obj ned0939.obj ned0940.obj !
+  ned0941.obj ned0942.obj ned0943.obj ned0944.obj ned0945.obj !
+  ned0946.obj ned0947.obj ned0948.obj ned0949.obj ned0950.obj !
+  ned0972.obj !
+  ned0973.obj ned0974.obj ned0975.obj ned0976.obj !
+  ned0977.obj ned0978.obj ned0979.obj ned0980.obj !
+  ned0981.obj
+
+lib.mac : !
+ ned09m00.obj ned09m01.obj ned09m02.obj ned09m03.obj !
+ ned09m04.obj ned09m05.obj ned09m06.obj ned09m07.obj !
+ ned09m08.obj ned09m09.obj ned09m10.obj ned09m11.obj !
+ ned09m12.obj ned09m13.obj ned09m14.obj ned09m15.obj !
+ ned09m16.obj ned09m17.obj ned09m18.obj ned09m19.obj !
+ ned09m20.obj ned09m21.obj ned09m22.obj ned09m23.obj !
+ ned09m24.obj ned09m25.obj ned09m26.obj ned09m27.obj !
+ ned09m28.obj ned09m29.obj ned09m30.obj ned09m31.obj !
+ ned09m32.obj ned09m33.obj ned09m34.obj ned09m35.obj !
+ ned09m36.obj ned09m37.obj ned09m38.obj ned09m39.obj !
+ ned09m40.obj ned09m41.obj ned09m42.obj ned09m43.obj !
+ ned09m44.obj ned09m45.obj ned09m46.obj ned09m47.obj !
+ ned09m48.obj ned09m49.obj ned09m50.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)
+
+# ----------------------------------------------------------------------------
+ned0924.obj : ned0924.c
+  $(cc) /Fo$@ /W2 -I.. ned0924.c
+  $(obj)
+
+# Macros
+ned09m00.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro00 -DMACRO_NUM=0 ned0921.c
+  $(obj)
+
+ned09m01.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro01 -DMACRO_NUM=1 ned0921.c
+  $(obj)
+
+ned09m02.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro02 -DMACRO_NUM=2 ned0921.c
+  $(obj)
+
+ned09m03.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro03 -DMACRO_NUM=3 ned0921.c
+  $(obj)
+
+ned09m04.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro04 -DMACRO_NUM=4 ned0921.c
+  $(obj)
+
+ned09m05.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro05 -DMACRO_NUM=5 ned0921.c
+  $(obj)
+
+ned09m06.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro06 -DMACRO_NUM=6 ned0921.c
+  $(obj)
+
+ned09m07.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro07 -DMACRO_NUM=7 ned0921.c
+  $(obj)
+
+ned09m08.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro08 -DMACRO_NUM=8 ned0921.c
+  $(obj)
+
+ned09m09.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro09 -DMACRO_NUM=9 ned0921.c
+  $(obj)
+
+ned09m10.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro10 -DMACRO_NUM=10 ned0921.c
+  $(obj)
+
+ned09m11.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro11 -DMACRO_NUM=11 ned0921.c
+  $(obj)
+
+ned09m12.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro12 -DMACRO_NUM=12 ned0921.c
+  $(obj)
+
+ned09m13.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro13 -DMACRO_NUM=13 ned0921.c
+  $(obj)
+
+ned09m14.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro14 -DMACRO_NUM=14 ned0921.c
+  $(obj)
+
+ned09m15.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro15 -DMACRO_NUM=15 ned0921.c
+  $(obj)
+
+ned09m16.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro16 -DMACRO_NUM=16 ned0921.c
+  $(obj)
+
+ned09m17.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro17 -DMACRO_NUM=17 ned0921.c
+  $(obj)
+
+ned09m18.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro18 -DMACRO_NUM=18 ned0921.c
+  $(obj)
+
+ned09m19.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro19 -DMACRO_NUM=19 ned0921.c
+  $(obj)
+
+ned09m20.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro20 -DMACRO_NUM=20 ned0921.c
+  $(obj)
+
+ned09m21.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro21 -DMACRO_NUM=21 ned0921.c
+  $(obj)
+
+ned09m22.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro22 -DMACRO_NUM=22 ned0921.c
+  $(obj)
+
+ned09m23.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro23 -DMACRO_NUM=23 ned0921.c
+  $(obj)
+
+ned09m24.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro24 -DMACRO_NUM=24 ned0921.c
+  $(obj)
+
+ned09m25.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro25 -DMACRO_NUM=25 ned0921.c
+  $(obj)
+
+ned09m26.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro26 -DMACRO_NUM=26 ned0921.c
+  $(obj)
+
+ned09m27.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro27 -DMACRO_NUM=27 ned0921.c
+  $(obj)
+
+ned09m28.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro28 -DMACRO_NUM=28 ned0921.c
+  $(obj)
+
+ned09m29.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro29 -DMACRO_NUM=29 ned0921.c
+  $(obj)
+
+ned09m30.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro30 -DMACRO_NUM=30 ned0921.c
+  $(obj)
+
+ned09m31.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro31 -DMACRO_NUM=31 ned0921.c
+  $(obj)
+
+ned09m32.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro32 -DMACRO_NUM=32 ned0921.c
+  $(obj)
+
+ned09m33.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro33 -DMACRO_NUM=33 ned0921.c
+  $(obj)
+
+ned09m34.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro34 -DMACRO_NUM=34 ned0921.c
+  $(obj)
+
+ned09m35.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro35 -DMACRO_NUM=35 ned0921.c
+  $(obj)
+
+ned09m36.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro36 -DMACRO_NUM=36 ned0921.c
+  $(obj)
+
+ned09m37.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro37 -DMACRO_NUM=37 ned0921.c
+  $(obj)
+
+ned09m38.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro38 -DMACRO_NUM=38 ned0921.c
+  $(obj)
+
+ned09m39.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro39 -DMACRO_NUM=39 ned0921.c
+  $(obj)
+
+ned09m40.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro40 -DMACRO_NUM=40 ned0921.c
+  $(obj)
+
+ned09m41.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro41 -DMACRO_NUM=41 ned0921.c
+  $(obj)
+
+ned09m42.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro42 -DMACRO_NUM=42 ned0921.c
+  $(obj)
+
+ned09m43.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro43 -DMACRO_NUM=43 ned0921.c
+  $(obj)
+
+ned09m44.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro44 -DMACRO_NUM=44 ned0921.c
+  $(obj)
+
+ned09m45.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro45 -DMACRO_NUM=45 ned0921.c
+  $(obj)
+
+ned09m46.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro46 -DMACRO_NUM=46 ned0921.c
+  $(obj)
+
+ned09m47.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro47 -DMACRO_NUM=47 ned0921.c
+  $(obj)
+
+ned09m48.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro48 -DMACRO_NUM=48 ned0921.c
+  $(obj)
+
+ned09m49.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro49 -DMACRO_NUM=49 ned0921.c
+  $(obj)
+
+ned09m50.obj : ned0921.c
+  $(ccc) -DMACRO_PRIM=p_macro50 -DMACRO_NUM=50 ned0921.c
+  $(obj)
+

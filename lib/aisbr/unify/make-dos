@@ -1,0 +1,70 @@
+#
+#  FILE ~/usr/aisbr/unify/makefile
+#
+#  Subroutines for AI
+#
+#  written:       1991 05 01
+#  latest update: 1994-08-12
+#
+# ========================================================================
+cml=cl -Od -AL /W3 /Fo$* /c
+obj=objdec -w -d -m0 -sl 2 AISBR_TEXT $*.obj
+UNIFY_H=c:\c5\include\gg\unify.h
+
+all.exe : library ut1.exe # ut2.exe
+
+library : obj\unify001.obj obj\unify002.obj obj\unify003.obj !
+          obj\unify004.obj obj\unify005.obj obj\unify006.obj !
+          obj\unify007.obj obj\unify008.obj
+#  llink -n0 -lc:\usr\sbr\ai.lib -daisbr.mod
+
+# test modules: --------------------------------------------------------------
+ut1.exe : obj\ut1.obj obj\unify003.obj obj\unify004.obj !
+  obj\unify005.obj obj\unify006.obj obj\unify007.obj
+  link obj\ut1 obj\unify003 obj\unify004 obj\unify005 obj\unify006!
+  obj\unify007,,\dev\nul,c:\usr\sbr\lsbr/NOI/NOE;
+
+obj\ut1.obj : ut1.c $(UNIFY_H)
+              $(cml) ut1.c
+
+ut2.exe : obj\ut2.obj obj\unify001.obj obj\unify002.obj obj\unify003.obj !
+  obj\unify004.obj obj\unify005.obj obj\unify006.obj obj\unify008.obj
+  link obj\ut2 obj\unify001 obj\unify002 obj\unify003 obj\unify004!
+  obj\unify005 obj\unify006 obj\unify008,,\dev\nul,c:\usr\sbr\lsbr/NOI/NOE;
+
+obj\ut2.obj : ut2.c $(UNIFY_H)
+              $(cml) ut2.c
+
+# library modules: -----------------------------------------------------------
+obj\unify001.obj : unify001.c $(UNIFY_H)
+                   $(cml) unify001.c
+                   $(obj)
+
+obj\unify002.obj : unify002.c $(UNIFY_H)
+                   $(cml) unify002.c
+                   $(obj)
+
+obj\unify003.obj : unify003.c $(UNIFY_H)
+                   $(cml) unify003.c
+                   $(obj)
+
+obj\unify004.obj : unify004.c $(UNIFY_H)
+                   $(cml) unify004.c
+                   $(obj)
+
+obj\unify005.obj : unify005.c $(UNIFY_H)
+                   $(cml) unify005.c
+                   $(obj)
+
+obj\unify006.obj : unify006.c $(UNIFY_H)
+                   $(cml) unify006.c
+                   $(obj)
+
+obj\unify007.obj : unify007.c $(UNIFY_H)
+                   $(cml) unify007.c
+                   $(obj)
+
+obj\unify008.obj : unify008.c $(UNIFY_H)
+                   $(cml) unify008.c
+                   $(obj)
+

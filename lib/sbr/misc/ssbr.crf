@@ -1,0 +1,518 @@
+_bios_blit_load...bioss030          _bios_blit_save...bioss029
+_bios_border......bioss011          _bios_box.........bioss201
+_bios_circle......bioss203          _bios_cls.........bioss016
+_bios_create......bioss103          _bios_cursoroff...bioss009
+_bios_cursoron....bioss010          _bios_cursorsize..bioss050
+_bios_display.....bioss120          _bios_display_scr..bioss121
+_bios_disp_bbox...bioss111          _bios_disp_box....bioss112
+_bios_fbos........bioss202          _bios_fcircle.....bioss204
+_bios_getchar.....bioss014          _bios_getcup......bioss042
+_bios_gr_create...bioss105          _bios_init........bioss001
+_bios_init_mode...bioss001          _bios_more........bioss118
+_bios_namecreat...bioss104          _bios_printf......bioss117
+_bios_prntcol.....bioss101          _bios_put1ln......bioss106
+_bios_putln.......bioss107          _bios_puts........bioss119
+_bios_putstr......bioss108          _bios_rd_dot......bioss025
+_bios_readln......bioss110          _bios_readstr.....bioss109
+_bios_reset.......bioss004          _bios_scrblk_down..bioss022
+_bios_scrblk_up...bioss021          _bios_scrolldown..bioss020
+_bios_scrollup....bioss019          _bios_selpage.....bioss008
+_bios_setarea.....bioss018          _bios_setchar.....bioss012
+_bios_setcup......bioss023          _bios_setnchar....bioss013
+_bios_setscreen...bioss015          _bios_setstring...bioss102
+_bios_set_col.....bioss028          _bios_set_mode....bioss027
+_bios_wr_dot......bioss024          _cga_blit_load....cga_s030
+_cga_blit_save....cga_s029          _cga_cls_col......cga_s041
+_cga_display......cga_s120          _cga_display_scr..cga_s121
+_cga_disp_bbox....cga_s111          _cga_disp_box.....cga_s112
+_cga_getchar......cga_s014          _cga_getpage......cga_s033
+_cga_get_cols.....cga_s032          _cga_get_mode.....cga_s001
+_cga_get_screen_max..cga_s043       _cga_init.........cga_s001
+_cga_init_mode....cga_s001          _cga_more.........cga_s118
+_cga_namecreat....cga_s104          _cga_printf.......cga_s117
+_cga_prntcol......cga_s101          _cga_put1ln.......cga_s106
+_cga_puts.........cga_s119          _cga_reset........cga_s004
+_cga_scrblk_left..cga_s034          _cga_scrblk_right..cga_s035
+_cga_selpage......cga_s008          _cga_setchar......cga_s012
+_cga_setcup.......bioss114          _cga_setnchar.....cga_s013
+_cga_setstring....cga_s102          _CODE_ASCII_to_EBCDIC..str_s003
+_copy_file........copyfile          _dc_cal...........fmt
+_dc_chk...........fmt               _dc_fmt...........fmt
+_dc_modus.........fmt               _dc_reset.........fmt
+_delstr...........str_s109          _dump.............dirt_s06
+_EBCDIC_ASCII_char_convert..ebcasc  _EBCDIC_ASCII_convert..ebcasc
+_EBCDIC_ASCII_INIT..ebcasc          _ega_setcup.......bioss115
+_f2transfer.......ftrans02          _f3transfer.......ftrans03
+_f4fscan..........fileio            _f4f_read.........fileio
+_f4f_wds..........fileio            _f4f_write........fileio
+_Fdta_find........fnames2           _Fget_dta.........fnames2
+_field_edit.......scan              _flip_int.........dirt_s08
+_flip_long........dirt_s09          _flip_long_2......dirt_s10
+_Fname_find.......fnames2           _fpars_line.......fparslin
+_fread_line.......freadlin          _Freset_find......fnames2
+_fscan_line.......fscanlin          _Fsetdta..........fnames
+_Fsfirst..........fnames            _Fsnext...........fnames
+_fsopen...........fsopen            _ftopen...........ftopen
+_ftransfer........ftrans01          _getkey...........scan
+_getpwd...........getpwd            _get_arc_file.....arcfiles
+_get_arc_head.....archead           _get_identifier...fileio
+_get_lzh_head.....lzhhead           _get_patch........dirt_s03
+_get_Sid..........fileio            _gr_setcup........bioss113
+_identify_key.....identkey          _kbclick..........key_s004
+_kbhit............key_s002          _kbhit_set_AT.....key_s002
+_kbin.............key_s001          _kbin_set_AT......key_s001
+_kbnumoff.........key_s007          _kbnumon..........key_s008
+_kbqueue..........key_s005          _kbshift..........key_s003
+_kbshift_set_AT...key_s003          _kbtype...........key_s006
+_mapkey...........bioss116          _match............str_s006
+_match_lng........str_s008          _maus_disable.....maus_s03
+_maus_enable......maus_s02          _maus_position....maus_s04
+_maus_reset.......maus_s01          _maus_setposition..maus_s05
+_maus_set_cursor_type..maus_s08     _maus_set_x_margins..maus_s06
+_maus_set_y_margins..maus_s07       _msk_edit.........masked_1
+_msk_get_fld......masked_1          _msk_set_err......masked_1
+_msk_set_fld......masked_1          _patch............dirt_s01
+_patch_str........dirt_s02          _peekb............dirt_s04
+_pokeb............dirt_s05          _scan_hex.........scan
+_scan_int.........scan              _scan_str.........scan
+_set_coff.........scan              _set_filemode.....fileio
+_show_field.......scan              _strcmp_c.........str_s002
+_strcmp_ebcdic....str_s003          _strcmp_us........str_s009
+_string_hash......str_s007          _strndel..........str_s108
+_strnins..........str_s107          _strnscpy.........str_s001
+_topen............topen             _to_lower.........str_s004
+_to_upper.........str_s005          _VAL..............dirt_s11
+_wcrd_get_date....fnames2           _wcrd_get_size....fnames2
+_wcrd_get_time....fnames2           _W_AKT_MODE.......win_sdat
+_W_DATA_initialized..win_sdat       _W_GRAPH_MAX_X....win_sdat
+_W_GRAPH_MAX_Y....win_sdat          _w_screen_and_modes..win_sdat
+_W_TEXT_AKT_MEM...cga_s001          _W_TEXT_AKT_MULT..cga_s001
+_W_TEXT_CELL_X....win_sdat          _W_TEXT_CELL_Y....win_sdat
+_W_TEXT_MAX_X.....win_sdat          _W_TEXT_MAX_Y.....win_sdat
+__bios_x_line.....bioss205          __bios_y_line.....bioss206
+__cga_get_mode....cga_s031          
+
+maus_s01          Offset: 00000010H  Code and data size: 1aH
+  _maus_reset     
+
+maus_s02          Offset: 000000e0H  Code and data size: cH
+  _maus_enable    
+
+maus_s03          Offset: 000001a0H  Code and data size: cH
+  _maus_disable   
+
+maus_s05          Offset: 00000260H  Code and data size: 12H
+  _maus_setposition                 
+
+maus_s06          Offset: 00000330H  Code and data size: 12H
+  _maus_set_x_margins               
+
+maus_s07          Offset: 00000400H  Code and data size: 12H
+  _maus_set_y_margins               
+
+maus_s08          Offset: 000004d0H  Code and data size: 15H
+  _maus_set_cursor_type             
+
+masked_1          Offset: 000005a0H  Code and data size: 912H
+  _msk_edit         _msk_get_fld      _msk_set_err      _msk_set_fld
+
+maus_s04          Offset: 00001100H  Code and data size: 20H
+  _maus_position  
+
+dirt_s01          Offset: 000011d0H  Code and data size: 26H
+  _patch          
+
+dirt_s02          Offset: 000012f0H  Code and data size: 2aH
+  _patch_str      
+
+dirt_s03          Offset: 00001420H  Code and data size: 2aH
+  _get_patch      
+
+dirt_s04          Offset: 00001550H  Code and data size: cH
+  _peekb          
+
+dirt_s05          Offset: 00001660H  Code and data size: eH
+  _pokeb          
+
+dirt_s06          Offset: 00001770H  Code and data size: eaH
+  _dump           
+
+dirt_s08          Offset: 00001990H  Code and data size: 26H
+  _flip_int       
+
+dirt_s09          Offset: 00001ac0H  Code and data size: 40H
+  _flip_long      
+
+dirt_s10          Offset: 00001c00H  Code and data size: 40H
+  _flip_long_2    
+
+dirt_s11          Offset: 00001d50H  Code and data size: 24H
+  _VAL            
+
+key_s001          Offset: 00001e80H  Code and data size: 2bH
+  _kbin             _kbin_set_AT    
+
+key_s002          Offset: 00001f70H  Code and data size: 21H
+  _kbhit            _kbhit_set_AT   
+
+key_s003          Offset: 00002060H  Code and data size: 18H
+  _kbshift          _kbshift_set_AT 
+
+key_s004          Offset: 00002140H  Code and data size: 8H
+  _kbclick        
+
+key_s005          Offset: 00002200H  Code and data size: 4aH
+  _kbqueue        
+
+key_s006          Offset: 00002360H  Code and data size: 1aH
+  _kbtype         
+
+key_s007          Offset: 00002430H  Code and data size: 10H
+  _kbnumoff       
+
+key_s008          Offset: 000024f0H  Code and data size: 10H
+  _kbnumon        
+
+bioss001          Offset: 000025b0H  Code and data size: 5adH
+  _bios_init        _bios_init_mode 
+
+freadlin          Offset: 00002e30H  Code and data size: 82H
+  _fread_line     
+
+fsopen            Offset: 00002fd0H  Code and data size: 6eH
+  _fsopen         
+
+archead           Offset: 00003180H  Code and data size: 74H
+  _get_arc_head   
+
+lzhhead           Offset: 00003330H  Code and data size: d0H
+  _get_lzh_head   
+
+identkey          Offset: 00003540H  Code and data size: 446H
+  _identify_key   
+
+ebcasc            Offset: 00003b40H  Code and data size: 22bH
+  _EBCDIC_ASCII_char_convert          _EBCDIC_ASCII_convert
+  _EBCDIC_ASCII_INIT                
+
+str_s002          Offset: 00003e20H  Code and data size: 1b2H
+  _strcmp_c       
+
+str_s003          Offset: 000040d0H  Code and data size: 26cH
+  _CODE_ASCII_to_EBCDIC               _strcmp_ebcdic  
+
+str_s005          Offset: 00004480H  Code and data size: e6H
+  _to_upper       
+
+str_s007          Offset: 00004670H  Code and data size: 56H
+  _string_hash    
+
+str_s009          Offset: 000047d0H  Code and data size: 7aH
+  _strcmp_us      
+
+str_s107          Offset: 00004950H  Code and data size: 2eH
+  _strnins        
+
+str_s108          Offset: 00004a80H  Code and data size: 30H
+  _strndel        
+
+ftrans02          Offset: 00004bb0H  Code and data size: 71H
+  _f2transfer     
+
+fileio            Offset: 00004d70H  Code and data size: ae4H
+  _f4fscan          _f4f_read         _f4f_wds          _f4f_write
+  _get_identifier   _get_Sid          _set_filemode   
+
+scan              Offset: 00005c00H  Code and data size: 63fH
+  _field_edit       _getkey           _scan_hex         _scan_int
+  _scan_str         _set_coff         _show_field     
+
+fmt               Offset: 00006580H  Code and data size: 653H
+  _dc_cal           _dc_chk           _dc_fmt           _dc_modus
+  _dc_reset       
+
+fparslin          Offset: 00006f70H  Code and data size: 9cH
+  _fpars_line     
+
+fscanlin          Offset: 00007130H  Code and data size: f2H
+  _fscan_line     
+
+ftopen            Offset: 00007340H  Code and data size: 44H
+  _ftopen         
+
+ftrans01          Offset: 000074a0H  Code and data size: 5cH
+  _ftransfer      
+
+ftrans03          Offset: 00007620H  Code and data size: 9dH
+  _f3transfer     
+
+copyfile          Offset: 00007820H  Code and data size: 1c1H
+  _copy_file      
+
+fnames2           Offset: 00007bb0H  Code and data size: 1f6H
+  _Fdta_find        _Fget_dta         _Fname_find       _Freset_find
+  _wcrd_get_date    _wcrd_get_size    _wcrd_get_time  
+
+arcfiles          Offset: 00007f80H  Code and data size: cbH
+  _get_arc_file   
+
+str_s001          Offset: 00008190H  Code and data size: 7eH
+  _strnscpy       
+
+str_s004          Offset: 00008310H  Code and data size: e2H
+  _to_lower       
+
+str_s006          Offset: 000084f0H  Code and data size: 142H
+  _match          
+
+str_s008          Offset: 00008750H  Code and data size: 62H
+  _match_lng      
+
+str_s109          Offset: 000088b0H  Code and data size: 1cH
+  _delstr         
+
+topen             Offset: 000089d0H  Code and data size: 1bH
+  _topen          
+
+getpwd            Offset: 00008a90H  Code and data size: 16H
+  _getpwd         
+
+fnames            Offset: 00008b50H  Code and data size: 66H
+  _Fsetdta          _Fsfirst          _Fsnext         
+
+cga_s001          Offset: 00008d10H  Code and data size: 2b6H
+  _cga_get_mode     _cga_init         _cga_init_mode    _W_TEXT_AKT_MEM
+  _W_TEXT_AKT_MULT
+
+cga_s004          Offset: 000092b0H  Code and data size: 21H
+  _cga_reset      
+
+cga_s008          Offset: 00009410H  Code and data size: 74H
+  _cga_selpage    
+
+cga_s012          Offset: 000095e0H  Code and data size: 7cH
+  _cga_setchar    
+
+cga_s013          Offset: 000097a0H  Code and data size: 9aH
+  _cga_setnchar   
+
+cga_s014          Offset: 00009980H  Code and data size: 4eH
+  _cga_getchar    
+
+cga_s029          Offset: 00009af0H  Code and data size: 3aH
+  _cga_blit_save  
+
+cga_s030          Offset: 00009c50H  Code and data size: 46H
+  _cga_blit_load  
+
+cga_s031          Offset: 00009dc0H  Code and data size: 13H
+  __cga_get_mode  
+
+cga_s032          Offset: 00009e90H  Code and data size: 11H
+  _cga_get_cols   
+
+cga_s033          Offset: 00009f50H  Code and data size: 13H
+  _cga_getpage    
+
+cga_s034          Offset: 0000a010H  Code and data size: 86H
+  _cga_scrblk_left
+
+cga_s035          Offset: 0000a1d0H  Code and data size: 86H
+  _cga_scrblk_right                 
+
+cga_s041          Offset: 0000a390H  Code and data size: 46H
+  _cga_cls_col    
+
+cga_s043          Offset: 0000a530H  Code and data size: 1eH
+  _cga_get_screen_max               
+
+bioss004          Offset: 0000a640H  Code and data size: 21H
+  _bios_reset     
+
+bioss008          Offset: 0000a7a0H  Code and data size: 44H
+  _bios_selpage   
+
+bioss009          Offset: 0000a930H  Code and data size: 26H
+  _bios_cursoroff 
+
+bioss010          Offset: 0000aa70H  Code and data size: 26H
+  _bios_cursoron  
+
+bioss011          Offset: 0000abb0H  Code and data size: 28H
+  _bios_border    
+
+bioss012          Offset: 0000acf0H  Code and data size: 7cH
+  _bios_setchar   
+
+bioss013          Offset: 0000aeb0H  Code and data size: 9aH
+  _bios_setnchar  
+
+bioss014          Offset: 0000b0a0H  Code and data size: 4eH
+  _bios_getchar   
+
+bioss015          Offset: 0000b210H  Code and data size: 40H
+  _bios_setscreen 
+
+bioss016          Offset: 0000b390H  Code and data size: 3eH
+  _bios_cls       
+
+bioss018          Offset: 0000b500H  Code and data size: 8cH
+  _bios_setarea   
+
+bioss019          Offset: 0000b6d0H  Code and data size: 5aH
+  _bios_scrollup  
+
+bioss020          Offset: 0000b840H  Code and data size: 54H
+  _bios_scrolldown
+
+bioss021          Offset: 0000b9b0H  Code and data size: 94H
+  _bios_scrblk_up 
+
+bioss022          Offset: 0000bb90H  Code and data size: 94H
+  _bios_scrblk_down                 
+
+bioss023          Offset: 0000bd70H  Code and data size: 30H
+  _bios_setcup    
+
+bioss024          Offset: 0000bec0H  Code and data size: 52H
+  _bios_wr_dot    
+
+bioss025          Offset: 0000c050H  Code and data size: 52H
+  _bios_rd_dot    
+
+bioss027          Offset: 0000c1e0H  Code and data size: 34H
+  _bios_set_mode  
+
+bioss028          Offset: 0000c330H  Code and data size: 2aH
+  _bios_set_col   
+
+bioss029          Offset: 0000c470H  Code and data size: 7cH
+  _bios_blit_save 
+
+bioss030          Offset: 0000c610H  Code and data size: 7eH
+  _bios_blit_load 
+
+bioss042          Offset: 0000c7b0H  Code and data size: 36H
+  _bios_getcup    
+
+bioss050          Offset: 0000c900H  Code and data size: 2aH
+  _bios_cursorsize
+
+win_sdat          Offset: 0000ca50H  Code and data size: 14H
+  _W_AKT_MODE       _W_DATA_initialized                 _W_GRAPH_MAX_X
+  _W_GRAPH_MAX_Y    _w_screen_and_modes                 _W_TEXT_CELL_X
+  _W_TEXT_CELL_Y    _W_TEXT_MAX_X     _W_TEXT_MAX_Y   
+
+bioss101          Offset: 0000cbf0H  Code and data size: 36H
+  _bios_prntcol   
+
+bioss103          Offset: 0000cd60H  Code and data size: 60H
+  _bios_create    
+
+bioss104          Offset: 0000cf00H  Code and data size: 6aH
+  _bios_namecreat 
+
+bioss105          Offset: 0000d0b0H  Code and data size: 6aH
+  _bios_gr_create 
+
+bioss106          Offset: 0000d250H  Code and data size: a8H
+  _bios_put1ln    
+
+bioss107          Offset: 0000d440H  Code and data size: 42H
+  _bios_putln     
+
+bioss108          Offset: 0000d5d0H  Code and data size: c8H
+  _bios_putstr    
+
+bioss109          Offset: 0000d7f0H  Code and data size: 116H
+  _bios_readstr   
+
+bioss110          Offset: 0000da70H  Code and data size: 138H
+  _bios_readln    
+
+bioss111          Offset: 0000dd10H  Code and data size: 24H
+  _bios_disp_bbox 
+
+bioss112          Offset: 0000de60H  Code and data size: 1fcH
+  _bios_disp_box  
+
+bioss115          Offset: 0000e1b0H  Code and data size: 52H
+  _ega_setcup     
+
+bioss117          Offset: 0000e330H  Code and data size: 1eaH
+  _bios_printf    
+
+bioss118          Offset: 0000e4d0H  Code and data size: 107H
+  _bios_more      
+
+bioss119          Offset: 0000e760H  Code and data size: d2H
+  _bios_puts      
+
+bioss120          Offset: 0000e960H  Code and data size: fcH
+  _bios_display   
+
+bioss121          Offset: 0000ebd0H  Code and data size: 48H
+  _bios_display_scr                 
+
+cga_s101          Offset: 0000ed50H  Code and data size: 36H
+  _cga_prntcol    
+
+cga_s104          Offset: 0000eeb0H  Code and data size: 6aH
+  _cga_namecreat  
+
+cga_s106          Offset: 0000f060H  Code and data size: a8H
+  _cga_put1ln     
+
+cga_s111          Offset: 0000f250H  Code and data size: 24H
+  _cga_disp_bbox  
+
+cga_s112          Offset: 0000f390H  Code and data size: 1fcH
+  _cga_disp_box   
+
+cga_s117          Offset: 0000f6e0H  Code and data size: 1eaH
+  _cga_printf     
+
+cga_s118          Offset: 0000f870H  Code and data size: 107H
+  _cga_more       
+
+cga_s119          Offset: 0000fb00H  Code and data size: d2H
+  _cga_puts       
+
+cga_s120          Offset: 0000fd00H  Code and data size: fcH
+  _cga_display    
+
+cga_s121          Offset: 0000ff70H  Code and data size: 48H
+  _cga_display_scr
+
+bioss201          Offset: 000100f0H  Code and data size: 78H
+  _bios_box       
+
+bioss202          Offset: 000102a0H  Code and data size: 4cH
+  _bios_fbos      
+
+bioss203          Offset: 00010400H  Code and data size: 10aH
+  _bios_circle    
+
+bioss204          Offset: 00010640H  Code and data size: faH
+  _bios_fcircle   
+
+bioss205          Offset: 00010860H  Code and data size: 2cH
+  __bios_x_line   
+
+bioss206          Offset: 000109b0H  Code and data size: 2cH
+  __bios_y_line   
+
+bioss113          Offset: 00010b00H  Code and data size: 50H
+  _gr_setcup      
+
+bioss114          Offset: 00010c80H  Code and data size: 16H
+  _cga_setcup     
+
+bioss116          Offset: 00010dc0H  Code and data size: 36H
+  _mapkey         
+
+bioss102          Offset: 00010f10H  Code and data size: 84H
+  _bios_setstring 
+
+cga_s102          Offset: 000110d0H  Code and data size: 84H
+  _cga_setstring  

@@ -1,0 +1,27 @@
+#
+# FILE %ned/05/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-01-06 13:27:44
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED05_TEXT $@
+I=../
+
+lib : !
+  ned0501.obj  ned0502.obj  ned0502c.obj ned0502d.obj ned0503.obj  !
+  ned0503b.obj ned0504.obj  ned0505.obj  ned0506a.obj ned0506b.obj !
+  ned0506c.obj ned0506d.obj ned0506e.obj ned0507.obj  !
+  ned0508.obj  ned0508b.obj ned0508m.obj ned0508t.obj !
+  ned0509.obj  ned0510.obj  ned0510b.obj ned0510c.obj !
+  ned0511.obj  ned0512.obj  ned0513.obj  ned0514.obj  ned0515.obj  !
+  ned0515b.obj ned0516.obj  ned0516b.obj ned0517.obj  ned0519.obj  !
+  ned0520.obj  ned0521.obj  ned0522.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

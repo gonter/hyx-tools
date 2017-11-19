@@ -1,0 +1,38 @@
+# executables
+deref
+lutdump
+lutmake
+lutprint
+luttest
+ta
+tasgml
+tfbget
+tfblut
+# SWIG output and temporary files
+Makefile-swig
+tfb_wrap.c
+tfb_wrap.doc
+tfb.pm
+# temporary and test files
+lmd.idx
+lmd.lut
+*.wr
+*.di
+*.lt
+*.log
+blues.*
+@*
+# files from rfc2hyx.pl
+rfc[0-9]*.txt
+rfc[0-9]*.tmp
+rfc[0-9]*.top
+rfc[0-9]*.hyx
+rfc[0-9]*.idx
+rfc[0-9]*.lut
+# Release Stages
+distrib
+lmd-3.10
+# Release Files
+luttools-0.14
+*.tar
+*.tar.gz

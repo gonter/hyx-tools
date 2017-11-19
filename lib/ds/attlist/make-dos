@@ -1,0 +1,22 @@
+#
+# FILE %ds/attlist/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1994-03-26
+# latest update: 1995-12-20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  attl0001.obj attl0002.obj attl0003.obj attl0004.obj attl0005.obj !
+  attl0006.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

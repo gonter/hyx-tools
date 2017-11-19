@@ -1,0 +1,68 @@
+#
+# FILE %ned/08/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-12-05  3:24:24
+#
+# ============================================================================
+cc=cl -Os -AL -I.. /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -sl 2 NED08_TEXT $@
+
+lib : lib.1 lib.2 lib.3 lib.ro
+
+lib.1 :                           ned0803.obj ned0804.obj !
+  ned0805.obj ned0806.obj ned0807.obj ned0808.obj !
+  ned0809.obj ned0811.obj ned0812.obj !
+  ned0813.obj ned0814.obj                                 !
+  ned0821.obj ned0822.obj ned0823.obj ned0824.obj !
+  ned0825.obj ned0826.obj ned0827.obj ned0828.obj ned0829.obj !
+              ned0830.obj ned0831.obj ned0832.obj !
+  ned0833.obj ned0834.obj ned0835.obj ned0836.obj !
+              ned0838.obj ned0838a.obj ned0839.obj ned0840.obj !
+  ned0841.obj ned0841b.obj ned0842.obj ned0842b.obj ned0842c.obj !
+  ned0843.obj ned0844.obj ned0844b.obj
+
+lib.2 :       ned0845.obj ned0845a.obj ned0846.obj !
+  ned0847.obj ned0848.obj ned0849.obj ned0850.obj ned0850b.obj !
+  ned0851.obj ned0853.obj ned0856.obj ned0857.obj !
+  ned0857b.obj ned0857c.obj !
+  ned0858.obj ned0858b.obj ned0859.obj ned0860.obj !
+  ned0861.obj ned0862.obj ned0863.obj ned0863b.obj ned0864.obj !
+  ned0865.obj ned0866.obj ned0867.obj ned0867b.obj ned0868.obj !
+  ned0869.obj ned0869b.obj ned0870.obj ned0871.obj !
+  ned0873.obj             ned0875.obj ned0876.obj !
+  ned0877.obj ned0878.obj !
+  ned0879.obj ned0879i.obj ned0879l.obj ned0879t.obj !
+  ned0880.obj ned0882.obj             ned0884.obj !
+  ned0885.obj ned0885b.obj ned0886.obj
+
+lib.3 : !
+  ned0854a.obj ned0854b.obj ned0854c.obj ned0854d.obj !
+  ned0854e.obj ned0854f.obj ned0854g.obj ned0854h.obj
+
+lib.ro : !
+  ner0831.obj  ner0836.obj  ner0844.obj  ner0845.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $?
+  $(obj)
+
+# ----------------------------------------------------------------------------
+ner0831.obj : ..\ed.h ..\edhyx.h ned0831.c
+  $(ccc) -DNED_READ_ONLY ned0831.c
+  $(obj)
+
+ner0836.obj : ..\ed.h ..\edhyx.h ned0836.c
+  $(ccc) -DNED_READ_ONLY ned0836.c
+  $(obj)
+
+ner0844.obj : ..\ed.h ..\edhyx.h ned0844.c
+  $(ccc) -DNED_READ_ONLY ned0844.c
+  $(obj)
+
+ner0845.obj : ..\ed.h ..\edhyx.h ned0845.c
+  $(ccc) -DNED_READ_ONLY ned0845.c
+  $(obj)

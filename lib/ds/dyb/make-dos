@@ -1,0 +1,32 @@
+#
+# FILE %ds/dyb/makefile
+#
+# manipulation of dynamic blocks
+#  
+# written:       1995-08-19
+# latest update: 1995-12-20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  dyb_0001.obj dyb_0002.obj dyb_0003.obj dyb_0004.obj !
+  dyb_0005.obj dyb_0006.obj dyb_0007.obj dyb_0008.obj !
+  dyb_0009.obj dyb_0010.obj dyb_0011.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+dyb_0008.obj : dyb_0008.c
+  $(cml) -DMODE_ECB $?
+  $(obj) $@
+
+dyb_0009.obj : dyb_0008.c
+  $(cml) -DMODE_CFB $?
+  $(obj) $@
+

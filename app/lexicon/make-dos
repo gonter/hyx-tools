@@ -1,0 +1,87 @@
+#
+# FILE %lexicon/makefile
+#
+# latest update: 1997-11-01 10:05:06
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$* /c
+obj=objdec -w -d -m0 -sl 2 LEXICON_TEXT
+inst=command /c inst-exe
+bin=c:\bin\
+
+all.exe : libr $(bin)dictadd.exe $(bin)pt.exe
+
+all2.exe : tst1.exe tst2.exe lex.exe $(bin)dictmod.exe
+
+lib.0 : lex00001.obj
+
+lib.1 : !
+  parse007.obj parse008.obj parse014.obj parse016.obj !
+  parse017.obj parse019.obj parse021.obj parse022.obj
+
+lib.2 : !
+  dictadd1.obj dictadd2.obj dictadd3.obj dictadd4.obj !
+               dictadd6.obj              dictadd8.obj !
+  dictadd9.obj !
+  dict0001.obj dict0002.obj dict0003.obj dict0004.obj !
+  dict0005.obj dict0006.obj dict0007.obj dict0008.obj !
+  dict0009.obj dict0010.obj dict0011.obj dict0012.obj !
+  dict0013.obj dict0014.obj dict0015.obj dict0016.obj !
+               dict0018.obj !
+  lexut001.obj !
+  parsd008.obj parsd016.obj
+
+libr : lib.1 lib.2 lsbr.lib
+
+lsbr.lib :
+  llink -n0 -lc:\usr\sbr\lsbr.lib -dlexicon.mod
+
+clr1 :
+  del alexicon.lut
+  del alexicon.idx
+  del alexicon.hyx
+  del alexicon.@hx
+  del alexicon.@ix
+
+# ---------------------------------------------------------------------------
+lexicon.sh :
+  shar -c -t lexicon.sh -fmakeshar.lst
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# production programs: -------------------------------------------------------
+$(bin)dictadd.exe : dictadd.obj dictadd1.obj lexicon.mod
+  link dictadd dictadd1,$(bin)dictadd.exe,\dev\nul,!
+    c:\usr\sbr\lsbr/NOE/NOI;
+  $(inst) $(bin)dictadd.exe
+
+$(bin)dictmod.exe : dictmod.obj lexpr001.obj lexicon.mod
+  link dictmod lexpr001,$(bin)dictmod.exe,!
+    \dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+  $(inst) $(bin)dictmod.exe
+
+# diagnostic modules: --------------------------------------------------------
+parsd008.obj : parse008.c
+  $(cml) -DDIAGNOSTIC parse008.c
+  $(obj)
+
+parsd016.obj : parse016.c
+  $(cml) -DDIAGNOSTIC parse016.c
+  $(obj)
+
+# test programs: -------------------------------------------------------------
+lex.exe : lex.obj lex00001.obj
+  link lex lex00001,,\dev\nul,c:\usr\sbr\lsbr;
+
+$(bin)pt.exe : pt.obj parse017.obj !
+  lexicon.mod
+  link pt parse017,$@,\dev\nul,c:\usr\sbr\lsbr/NOE;
+
+tst1.exe : tst1.obj
+  link tst1.obj,,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+
+tst2.exe : tst2.obj parse019.obj
+  link tst2.obj parse019,,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;

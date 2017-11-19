@@ -1,0 +1,19 @@
+#!/usr/local/bin/perl
+# FILE .../lib/(dirinf).fm
+#
+# Library
+# written:       1999-04-17
+# latest update: 1999-04-17 11:52:34
+# $Id: (dirinf).fm,v 1.3 2002/05/02 06:48:29 gonter Exp $
+#
+
+Makefile
+SetupWork
+libgg.a         main library
+contrib         contributed libraries
+ds              data structures
+include         header files
+sbr             miscellaneous functions
+window          windowing functions, mostly for MSDOS
+
+# msdos           MSDOS specific library functions

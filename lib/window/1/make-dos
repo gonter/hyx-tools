@@ -1,0 +1,301 @@
+#
+#  FILE %win/1/makefile
+#
+#  written:       1989 08 16
+#                 1991 02 04: Revision
+#  latest update: 1995-10-01
+#
+
+cml=cl -Os -AL /Fo$* /c
+cms=cl -Os -AS /Fo$* /c
+obl=objdec -w -d -m0 -sl 2 WINDOW_TEXT
+obs=objdec -w -d -m0
+
+window : large.bios large.cga small.bios small.cga
+
+large.bios :       obj\biosl101.obj obj\biosl102.obj obj\biosl103.obj !
+  obj\biosl104.obj obj\biosl105.obj obj\biosl106.obj obj\biosl107.obj !
+  obj\biosl108.obj obj\biosl109.obj obj\biosl110.obj obj\biosl111.obj !
+  obj\biosl112.obj obj\biosl113.obj obj\biosl114.obj obj\biosl115.obj !
+  obj\biosl116.obj obj\biosl117.obj obj\biosl118.obj obj\biosl119.obj !
+  obj\biosl120.obj obj\biosl121.obj obj\biosl122.obj obj\biosl123.obj !
+  obj\biosl124.obj obj\biosl125.obj
+
+large.cga :        obj\cga_l101.obj obj\cga_l102.obj !
+  obj\cga_l104.obj                  obj\cga_l106.obj obj\cga_l111.obj !
+  obj\cga_l112.obj obj\cga_l117.obj obj\cga_l118.obj obj\cga_l119.obj !
+  obj\cga_l120.obj obj\cga_l121.obj obj\cga_l122.obj obj\cga_l123.obj
+
+small.bios :       obj\bioss101.obj obj\bioss102.obj obj\bioss103.obj !
+  obj\bioss104.obj obj\bioss105.obj obj\bioss106.obj obj\bioss107.obj !
+  obj\bioss108.obj obj\bioss109.obj obj\bioss110.obj obj\bioss111.obj !
+  obj\bioss112.obj obj\bioss113.obj obj\bioss114.obj obj\bioss115.obj !
+  obj\bioss116.obj obj\bioss117.obj obj\bioss118.obj obj\bioss119.obj !
+  obj\bioss120.obj obj\bioss121.obj
+
+small.cga :        obj\cga_s101.obj obj\cga_s102.obj !
+  obj\cga_s104.obj obj\cga_s106.obj obj\cga_s111.obj obj\cga_s112.obj !
+  obj\cga_s117.obj obj\cga_s118.obj obj\cga_s119.obj obj\cga_s120.obj !
+  obj\cga_s121.obj
+
+# LARGE Modell ---------------------------------------------------------------
+obj\biosl101.obj    :        win_0101.c
+                  $(cml) /DW_MODEL_BIOS win_0101.c
+                  $(obl) obj\biosl101.obj
+
+obj\cga_l101.obj    :        win_0101.c
+                  $(cml) /DW_MODEL_CGA win_0101.c
+                  $(obl) obj\cga_l101.obj
+
+obj\biosl102.obj    :        win_0102.c
+                  $(cml) /DW_MODEL_BIOS win_0102.c
+                  $(obl) obj\biosl102.obj
+
+obj\cga_l102.obj    :        win_0102.c
+                  $(cml) /DW_MODEL_CGA win_0102.c
+                  $(obl) obj\cga_l102.obj
+
+obj\biosl103.obj    :        win_0103.c
+                  $(cml) /DW_MODEL_BIOS win_0103.c
+                  $(obl) obj\biosl103.obj
+
+obj\biosl104.obj    :        win_0104.c
+                  $(cml) /DW_MODEL_BIOS win_0104.c
+                  $(obl) obj\biosl104.obj
+
+obj\cga_l104.obj    :        win_0104.c
+                  $(cml) /DW_MODEL_CGA win_0104.c
+                  $(obl) obj\cga_l104.obj
+
+obj\biosl105.obj    :        win_0105.c
+                  $(cml) /DW_MODEL_BIOS win_0105.c
+                  $(obl) obj\biosl105.obj
+
+obj\biosl106.obj    :        win_0106.c
+                  $(cml) /DW_MODEL_BIOS win_0106.c
+                  $(obl) obj\biosl106.obj
+
+obj\cga_l106.obj    :        win_0106.c
+                  $(cml) /DW_MODEL_CGA win_0106.c
+                  $(obl) obj\cga_l106.obj
+
+obj\biosl107.obj    :        win_0107.c
+                  $(cml) /DW_MODEL_BIOS win_0107.c
+                  $(obl) obj\biosl107.obj
+
+obj\biosl108.obj    :        win_0108.c
+                  $(cml) /DW_MODEL_BIOS win_0108.c
+                  $(obl) obj\biosl108.obj
+
+obj\biosl109.obj    :        win_0109.c
+                  $(cml) /DW_MODEL_BIOS win_0109.c
+                  $(obl) obj\biosl109.obj
+
+obj\biosl110.obj    :        win_0110.c
+                  $(cml) /DW_MODEL_BIOS win_0110.c
+                  $(obl) obj\biosl110.obj
+
+obj\biosl111.obj : win_0111.c
+  $(cml) /DW_MODEL_BIOS win_0111.c
+  $(obl) obj\biosl111.obj
+
+obj\cga_l111.obj : win_0111.c
+  $(cml) /DW_MODEL_CGA win_0111.c
+  $(obl) obj\cga_l111.obj
+
+obj\biosl112.obj : win_0112.c
+  $(cml) /DW_MODEL_BIOS win_0112.c
+  $(obl) obj\biosl112.obj
+
+obj\cga_l112.obj : win_0112.c
+  $(cml) /DW_MODEL_CGA win_0112.c
+  $(obl) obj\cga_l112.obj
+
+obj\biosl113.obj : win_0113.c
+  $(cml) /DW_MODEL_BIOS win_0113.c
+  $(obl) obj\biosl113.obj
+
+obj\biosl114.obj    :        win_0114.c
+                  $(cml) /DW_MODEL_BIOS win_0114.c
+                  $(obl) obj\biosl114.obj
+
+obj\biosl115.obj    :        win_0115.c
+                  $(cml) /DW_MODEL_BIOS win_0115.c
+                  $(obl) obj\biosl115.obj
+
+obj\biosl116.obj    :        win_0116.c
+                  $(cml) /DW_MODEL_BIOS win_0116.c
+                  $(obl) obj\biosl116.obj
+
+obj\biosl117.obj    :        win_0117.c
+                  $(cml) /DW_MODEL_BIOS win_0117.c
+                  $(obl) obj\biosl117.obj
+
+obj\cga_l117.obj    :        win_0117.c
+                  $(cml) /DW_MODEL_CGA win_0117.c
+                  $(obl) obj\cga_l117.obj
+
+obj\biosl118.obj    :        win_0118.c
+                  $(cml) /DW_MODEL_BIOS win_0118.c
+                  $(obl) obj\biosl118.obj
+
+obj\cga_l118.obj    :        win_0118.c
+                  $(cml) /DW_MODEL_CGA win_0118.c
+                  $(obl) obj\cga_l118.obj
+
+obj\biosl119.obj    :        win_0119.c
+                  $(cml) /DW_MODEL_BIOS win_0119.c
+                  $(obl) obj\biosl119.obj
+
+obj\cga_l119.obj    :        win_0119.c
+                  $(cml) /DW_MODEL_CGA win_0119.c
+                  $(obl) obj\cga_l119.obj
+
+obj\biosl120.obj    :        win_0120.c
+                  $(cml) /DW_MODEL_BIOS win_0120.c
+                  $(obl) obj\biosl120.obj
+
+obj\cga_l120.obj    :        win_0120.c
+                  $(cml) /DW_MODEL_CGA win_0120.c
+                  $(obl) obj\cga_l120.obj
+
+obj\biosl121.obj    :        win_0121.c
+                  $(cml) /DW_MODEL_BIOS win_0121.c
+                  $(obl) obj\biosl121.obj
+
+obj\cga_l121.obj    :        win_0121.c
+                  $(cml) /DW_MODEL_CGA win_0121.c
+                  $(obl) obj\cga_l121.obj
+
+obj\biosl122.obj : win_0122.c
+  $(cml) /DW_MODEL_BIOS win_0122.c
+  $(obl) obj\biosl122.obj
+
+obj\cga_l122.obj : win_0122.c
+  $(cml) /DW_MODEL_CGA win_0122.c
+  $(obl) obj\cga_l122.obj
+
+obj\biosl123.obj : win_0123.c
+  $(cml) /DW_MODEL_BIOS win_0123.c
+  $(obl) obj\biosl123.obj
+
+obj\cga_l123.obj : win_0123.c
+  $(cml) /DW_MODEL_CGA win_0123.c
+  $(obl) obj\cga_l123.obj
+
+obj\biosl124.obj : win_0124.c
+  $(cml) /DW_MODEL_BIOS win_0124.c
+  $(obl) obj\biosl124.obj
+
+obj\cga_l124.obj : win_0124.c
+  $(cml) /DW_MODEL_CGA win_0124.c
+  $(obl) obj\cga_l124.obj
+
+obj\biosl125.obj : win_0125.c
+  $(cml) /DW_MODEL_BIOS win_0125.c
+  $(obl) obj\biosl125.obj
+
+
+# SMALL Modell ---------------------------------------------------------------
+obj\bioss101.obj    :        win_0101.c
+                  $(cms) /DW_MODEL_BIOS win_0101.c
+
+obj\cga_s101.obj    :        win_0101.c
+                  $(cms) /DW_MODEL_CGA win_0101.c
+
+obj\bioss102.obj    :        win_0102.c
+                  $(cms) /DW_MODEL_BIOS win_0102.c
+
+obj\cga_s102.obj    :        win_0102.c
+                  $(cms) /DW_MODEL_CGA win_0102.c
+
+obj\bioss103.obj    :        win_0103.c
+                  $(cms) /DW_MODEL_BIOS win_0103.c
+
+obj\bioss104.obj    :        win_0104.c
+                  $(cms) /DW_MODEL_BIOS win_0104.c
+
+obj\cga_s104.obj    :        win_0104.c
+                  $(cms) /DW_MODEL_CGA win_0104.c
+
+obj\bioss105.obj    :        win_0105.c
+                  $(cms) /DW_MODEL_BIOS win_0105.c
+
+obj\bioss106.obj    :        win_0106.c
+                  $(cms) /DW_MODEL_BIOS win_0106.c
+
+obj\cga_s106.obj    :        win_0106.c
+                  $(cms) /DW_MODEL_CGA win_0106.c
+
+obj\bioss107.obj    :        win_0107.c
+                  $(cms) /DW_MODEL_BIOS win_0107.c
+
+obj\bioss108.obj    :        win_0108.c
+                  $(cms) /DW_MODEL_BIOS win_0108.c
+
+obj\bioss109.obj    :        win_0109.c
+                  $(cms) /DW_MODEL_BIOS win_0109.c
+
+obj\bioss110.obj    :        win_0110.c
+                  $(cms) /DW_MODEL_BIOS win_0110.c
+
+obj\bioss111.obj : win_0111.c
+  $(cms) /DW_MODEL_BIOS win_0111.c
+
+obj\cga_s111.obj : win_0111.c
+  $(cms) /DW_MODEL_CGA win_0111.c
+
+obj\bioss112.obj : win_0112.c
+  $(cms) /DW_MODEL_BIOS win_0112.c
+
+obj\cga_s112.obj : win_0112.c
+  $(cms) /DW_MODEL_CGA win_0112.c
+
+obj\bioss113.obj    :        win_0113.c
+                  $(cms) /DW_MODEL_BIOS win_0113.c
+
+obj\bioss114.obj    :        win_0114.c
+                  $(cms) /DW_MODEL_BIOS win_0114.c
+
+obj\bioss115.obj    :        win_0115.c
+                  $(cms) /DW_MODEL_BIOS win_0115.c
+
+obj\bioss116.obj    :        win_0116.c
+                  $(cms) /DW_MODEL_BIOS win_0116.c
+
+obj\bioss117.obj    :        win_0117.c
+                  $(cms) /DW_MODEL_BIOS win_0117.c
+
+obj\cga_s117.obj    :        win_0117.c
+                  $(cms) /DW_MODEL_CGA win_0117.c
+
+obj\bioss118.obj    :        win_0118.c
+                  $(cms) /DW_MODEL_BIOS win_0118.c
+
+obj\cga_s118.obj    :        win_0118.c
+                  $(cms) /DW_MODEL_CGA win_0118.c
+
+obj\bioss119.obj    :        win_0119.c
+                  $(cms) /DW_MODEL_BIOS win_0119.c
+
+obj\cga_s119.obj    :        win_0119.c
+                  $(cms) /DW_MODEL_CGA win_0119.c
+
+obj\bioss120.obj    :        win_0120.c
+                  $(cms) /DW_MODEL_BIOS win_0120.c
+
+obj\cga_s120.obj    :        win_0120.c
+                  $(cms) /DW_MODEL_CGA win_0120.c
+
+obj\bioss121.obj    :        win_0121.c
+                  $(cms) /DW_MODEL_BIOS win_0121.c
+
+obj\cga_s121.obj    :        win_0121.c
+                  $(cms) /DW_MODEL_CGA win_0121.c
+
+obj\bioss122.obj : win_0122.c
+  $(cms) /DW_MODEL_BIOS win_0122.c
+
+obj\cga_s122.obj : win_0122.c
+  $(cms) /DW_MODEL_CGA win_0122.c
+

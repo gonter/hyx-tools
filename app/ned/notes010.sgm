@@ -1,0 +1,21 @@
+1999-05-02 13:22:35
+
+Herkunft von @@TMP@@.@@ klaeren und sanieren
+  derzeitige Verdaechtige:
+  + %ds/hytxt/hytxt010.c int <hyx.l name="hyx_sequencer" tdc=106 tdp=13>hyx_sequencer (...)
+  + %ds/hytxt/hytxt030.c int <hyx.l name="hyx_threader" tdc="mark" tdp=12>hyx_threader (...)
+  dort wurden die Namen geaendert, damit sie leichter zugeordnet
+  werden koennen.
+
+------
+Menue fuer Tags mit Matching Pattern:
+  :tag urxn_*
+
+------
+neues Tk Window: Cursor reinsetzen
+
+------
+Template Frames mit Pattern:
+  z.B. "bug: .*" =&gt; Template Frame fuer Bugs aktivieren
+
+

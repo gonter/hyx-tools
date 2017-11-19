@@ -1,0 +1,31 @@
+#
+# FILE %ds/ytree/makefile
+#  
+# written:       1989 03 29
+# latest update: 1996-12-11 13:04:06
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.2 all.3
+
+all.2 : yt_00001.obj yt_00002.obj yt_00003.obj yt_00004.obj yt_00005.obj !
+        yt_00006.obj yt_00007.obj yt_00008.obj yt_00009.obj yt_00010.obj !
+        yt_00011.obj yt_00012.obj yt_00013.obj yt_00014.obj yt_00015.obj !
+        yt_00016.obj yt_00017.obj yt_00018.obj yt_00019.obj yt_00020.obj !
+        yt_00021.obj yt_00022.obj yt_00023.obj
+
+all.3 : yt_00101.obj yt_00102.obj
+
+# llink -n0 -l$(lib).lib -dyt_lib.mod
+
+ytt.exe : ytt.obj yt_00013.obj yt_d0005.obj
+  link ytt yt_00013.obj yt_d0005.obj,,,$(lib);
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

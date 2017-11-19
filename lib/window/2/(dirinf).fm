@@ -1,0 +1,13 @@
+#
+# FILE ~/usr/window/w/(dirinf).fm
+#
+# written:       1994-08-20
+# latest update: 1994-08-20
+#
+# ----------------------------------------------------------------------------
+win_0201.c      void wg_box (...)       /* Rechteck                         */
+win_0202.c      void wg_fbox (...)      /* gefuelltes Rechteck              */
+win_0203.c      void wg_circle (...)    /* zeichnet Kreis mit Mittelpunkt   */
+win_0204.c      void wg_fcircle (...)   /* zeichnet Kreis mit Mittelpunkt   */
+win_0205.c      void _wg_x_line (...)
+win_0206.c      void _wg_y_line (...)

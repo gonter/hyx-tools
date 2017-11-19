@@ -1,0 +1,1030 @@
+#
+# FILE %ds/makeshar.lst
+#
+# library of datastructure manipulation routines
+# array, attlist, bbc, cal, codes, dyb, entity,
+# ggcrypt, hytxt, hyxl, hyxp, hyxta,
+# irdb, lmd, lmd5, lut, lxs, mail, mime, rdtp, rtf, streams, strings,
+# tcl, tfb, url, varspace, vieos, ytree, zip
+#
+# written:       1995-12-12
+# latest update: 1997-11-26 13:18:39
+#
+# ----------------------------------------------------------------------------
+>mkdir _bak_ftr.ned
+a (dirinf).fm           '(dirinf)'.fm
+>ln -s '(dirinf)'.fm Contents
+a makeshar.lst          makeshar.lst
+a make-ux               make-ux
+a make-dos              make-dos
+>ln -s make-ux  Makefile
+# ----------------------------------------------------------------------------
+>if [ ! -d array ]
+>then
+>   echo 'creating subdirectory array'
+>   mkdir array
+>   mkdir array/_bak_ftr.ned
+>fi
+>ln -fs ../../gg array/gg
+a array/(dirinf).fm                           array/'(dirinf)'.fm
+>ln -s 'array/(dirinf).fm' array/Contents
+a array/make-ux                               array/Makefile
+a array/make-dos                              array/make-dos
+a array/array000.c array/array000.c
+a array/array001.c array/array001.c
+a array/array002.c array/array002.c
+a array/array003.c array/array003.c
+a array/array004.c array/array004.c
+a array/array005.c array/array005.c
+a array/array006.c array/array006.c
+a array/array007.c array/array007.c
+a array/array008.c array/array008.c
+a array/array009.c array/array009.c
+a array/array010.c array/array010.c
+a array/array011.c array/array011.c
+a array/array012.c array/array012.c
+a array/array013.c array/array013.c
+a array/array014.c array/array014.c
+# ----------------------------------------------------------------------------
+>if [ ! -d attlist ]
+>then
+>   echo 'creating subdirectory attlist'
+>   mkdir attlist
+>   mkdir attlist/_bak_ftr.ned
+>fi
+>ln -fs ../../gg attlist/gg
+a attlist/(dirinf).fm                           attlist/'(dirinf)'.fm
+>ln -s 'attlist/(dirinf).fm' attlist/Contents
+a attlist/make-ux                               attlist/Makefile
+a attlist/make-dos                              attlist/make-dos
+a attlist/attl0000.c attlist/attl0000.c
+a attlist/attl0001.c attlist/attl0001.c
+a attlist/attl0002.c attlist/attl0002.c
+a attlist/attl0003.c attlist/attl0003.c
+a attlist/attl0004.c attlist/attl0004.c
+a attlist/attl0005.c attlist/attl0005.c
+a attlist/attl0006.c attlist/attl0006.c
+# ----------------------------------------------------------------------------
+>if [ ! -d bbc ]
+>then
+>   echo 'creating subdirectory bbc'
+>   mkdir bbc
+>   mkdir bbc/_bak_ftr.ned
+>fi
+>ln -fs ../../gg bbc/gg
+a bbc/(dirinf).fm               bbc/'(dirinf)'.fm
+a bbc/make-ux                   bbc/make-ux
+a bbc/make-dos                  bbc/make-dos
+>ln -fs make-ux bbc/Makefile
+a bbc/bbcd.doc                  bbc/bbcd.doc
+a bbc/bbc.c                     bbc/bbc.c
+a bbc/bbct1.c                   bbc/bbct1.c
+#
+a bbc/bbc01.c                   bbc/bbc01.c
+a bbc/bbc02.c                   bbc/bbc02.c
+a bbc/bbc03.c                   bbc/bbc03.c
+a bbc/bbc04.c                   bbc/bbc04.c
+a bbc/bbc05.c                   bbc/bbc05.c
+a bbc/bbc06.c                   bbc/bbc06.c
+a bbc/bbc07.c                   bbc/bbc07.c
+a bbc/bbc08.c                   bbc/bbc08.c
+a bbc/bbc09.c                   bbc/bbc09.c
+a bbc/bbc10.c                   bbc/bbc10.c
+a bbc/bbc11.c                   bbc/bbc11.c
+a bbc/bbc12.c                   bbc/bbc12.c
+a bbc/bbc13.c                   bbc/bbc13.c
+a bbc/bbc14.c                   bbc/bbc14.c
+a bbc/bbc15.c                   bbc/bbc15.c
+# ----------------------------------------------------------------------------
+>if [ ! -d cal ]
+>then
+>   echo 'creating subdirectory cal'
+>   mkdir cal
+>   mkdir cal/_bak_ftr.ned
+>fi
+>ln -fs ../../gg cal/gg
+a cal/(dirinf).fm                           cal/'(dirinf)'.fm
+a cal/make-ux                               cal/Makefile
+a cal/make-dos                              cal/make-dos
+a cal/cal01.c cal/cal01.c
+a cal/cal02.c cal/cal02.c
+a cal/cal03.c cal/cal03.c
+a cal/cal04.c cal/cal04.c
+a cal/cal05.c cal/cal05.c
+a cal/cal06.c cal/cal06.c
+a cal/cal07.c cal/cal07.c
+a cal/cal08.c cal/cal08.c
+a cal/cal09.c cal/cal09.c
+a cal/cal10.c cal/cal10.c
+#
+a cal/dt001.c cal/dt001.c
+a cal/dt001b.c cal/dt001b.c
+a cal/dt001t.c cal/dt001t.c
+a cal/dt002.c cal/dt002.c
+a cal/dt002b.c cal/dt002b.c
+a cal/dt003.c cal/dt003.c
+a cal/dt004.c cal/dt004.c
+a cal/dt006.c cal/dt006.c
+a cal/dt007.c cal/dt007.c
+a cal/dt008.c cal/dt008.c
+a cal/dt010.c cal/dt010.c
+a cal/dt011.c cal/dt011.c
+a cal/dt011t.c cal/dt011t.c
+a cal/dt014a.c cal/dt014a.c
+a cal/dt014b.c cal/dt014b.c
+a cal/dt015a.c cal/dt015a.c
+a cal/dt021.c cal/dt021.c
+a cal/dt022.c cal/dt022.c
+a cal/dt023.c cal/dt023.c
+a cal/dt024.c cal/dt024.c
+a cal/dt025.c cal/dt025.c
+a cal/dt031.c cal/dt031.c
+a cal/dt032.c cal/dt032.c
+a cal/dt033.c cal/dt033.c
+a cal/dt034.c cal/dt034.c
+a cal/dt035.c cal/dt035.c
+a cal/dt036.c cal/dt036.c
+a cal/dt037.c cal/dt037.c
+a cal/dt038.c cal/dt038.c
+a cal/dt041.c cal/dt041.c
+a cal/dt042.c cal/dt042.c
+# ----------------------------------------------------------------------------
+>if [ ! -d codes ]
+>then
+>   echo 'creating subdirectory codes'
+>   mkdir codes
+>   mkdir codes/_bak_ftr.ned
+>fi
+>ln -fs ../../gg codes/gg
+# codes/readme                        codes/README
+a codes/(dirinf).fm                   codes/Files
+a codes/make-ux                       codes/Makefile
+a codes/make-dos                      codes/make-dos
+#
+a codes/codeconv.c                    codes/codeconv.c
+a codes/codetbl.c                     codes/codetbl.c
+a codes/codes.c                       codes/codes.c
+a codes/cst006.c                      codes/cst006.c
+a codes/ebcdic.c                      codes/ebcdic.c
+a codes/xmerge.c                      codes/xmerge.c
+#
+a codes/cs000.c                       codes/cs000.c
+a codes/cs001.c                       codes/cs001.c
+a codes/cs002.c                       codes/cs002.c
+a codes/cs003.c                       codes/cs003.c
+a codes/cs004.c                       codes/cs004.c
+a codes/cs005.c                       codes/cs005.c
+a codes/cs006.c                       codes/cs006.c
+a codes/cs007.c                       codes/cs007.c
+a codes/cs008.c                       codes/cs008.c
+a codes/cs009.c                       codes/cs009.c
+a codes/cs010.c                       codes/cs010.c
+a codes/cs011.c                       codes/cs011.c
+a codes/cs012.c                       codes/cs012.c
+a codes/cs101.c                       codes/cs101.c
+a codes/cs102.c                       codes/cs102.c
+a codes/cs103.c                       codes/cs103.c
+a codes/cs104.c                       codes/cs104.c
+a codes/cs105.c                       codes/cs105.c
+a codes/cs106.c                       codes/cs106.c
+a codes/cs107.c                       codes/cs107.c
+a codes/cs108.c                       codes/cs108.c
+a codes/cs109.c                       codes/cs109.c
+a codes/cs110.c                       codes/cs110.c
+a codes/cs201.c                       codes/cs201.c
+a codes/cs202.c                       codes/cs202.c
+a codes/cs203.c                       codes/cs203.c
+a codes/cs204.c                       codes/cs204.c
+a codes/cs205.c                       codes/cs205.c
+a codes/cs206.c                       codes/cs206.c
+a codes/cs207.c                       codes/cs207.c
+# ----------------------------------------------------------------------------
+>if [ ! -d dyb ]
+>then
+>   echo 'creating subdirectory dyb'
+>   mkdir dyb
+>   mkdir dyb/_bak_ftr.ned
+>fi
+>ln -fs ../../gg dyb/gg
+a dyb/(dirinf).fm                           dyb/'(dirinf)'.fm
+a dyb/make-ux                               dyb/Makefile
+a dyb/make-dos                              dyb/make-dos
+a dyb/dyb_0000.c dyb/dyb_0000.c
+a dyb/dyb_0001.c dyb/dyb_0001.c
+a dyb/dyb_0002.c dyb/dyb_0002.c
+a dyb/dyb_0003.c dyb/dyb_0003.c
+a dyb/dyb_0004.c dyb/dyb_0004.c
+a dyb/dyb_0005.c dyb/dyb_0005.c
+a dyb/dyb_0006.c dyb/dyb_0006.c
+a dyb/dyb_0007.c dyb/dyb_0007.c
+a dyb/dyb_0008.c dyb/dyb_0008.c
+a dyb/dyb_0010.c dyb/dyb_0010.c
+a dyb/dyb_0011.c dyb/dyb_0011.c
+# ----------------------------------------------------------------------------
+>if [ ! -d entity ]
+>then
+>   echo 'creating subdirectory entity'
+>   mkdir entity
+>   mkdir entity/_bak_ftr.ned
+>fi
+>ln -fs ../../gg entity/gg
+a entity/(dirinf).fm       entity/'(dirinf)'.fm
+a entity/make-ux           entity/Makefile
+a entity/make-dos          entity/make-dos
+a entity/ent_0000.c        entity/ent_0000.c
+a entity/ent_0001.c        entity/ent_0001.c
+a entity/ent_0002.c        entity/ent_0002.c
+a entity/ent_0003.c        entity/ent_0003.c
+a entity/ent_0004.c        entity/ent_0004.c
+a entity/ent_0005.c        entity/ent_0005.c
+# ----------------------------------------------------------------------------
+>if [ ! -d ggcrypt ]
+>then
+>   echo 'creating subdirectory ggcrypt'
+>   mkdir ggcrypt
+>   mkdir ggcrypt/_bak_ftr.ned
+>fi
+>ln -fs ../../gg ggcrypt/gg
+>ln -fs ../../contrib ggcrypt/contrib
+a ggcrypt/(dirinf).fm                           ggcrypt/'(dirinf)'.fm
+a ggcrypt/make-ux                               ggcrypt/Makefile
+a ggcrypt/make-dos                              ggcrypt/make-dos
+a ggcrypt/ggcryp02.c ggcrypt/ggcryp02.c
+a ggcrypt/ggcryp04.c ggcrypt/ggcryp04.c
+a ggcrypt/ggcryp05.c ggcrypt/ggcryp05.c
+a ggcrypt/ggcryp06.c ggcrypt/ggcryp06.c
+a ggcrypt/ggcryp07.c ggcrypt/ggcryp07.c
+a ggcrypt/ggcryp08.c ggcrypt/ggcryp08.c
+a ggcrypt/ggcryp09.c ggcrypt/ggcryp09.c
+a ggcrypt/ggcryp10.c ggcrypt/ggcryp10.c
+a ggcrypt/ggcryp11.c ggcrypt/ggcryp11.c
+a ggcrypt/ggcryp12.c ggcrypt/ggcryp12.c
+a ggcrypt/ggcryp13.c ggcrypt/ggcryp13.c
+a ggcrypt/ggcryp14.c ggcrypt/ggcryp14.c
+a ggcrypt/ggcryp15.c ggcrypt/ggcryp15.c
+a ggcrypt/ggcryp16.c ggcrypt/ggcryp16.c
+a ggcrypt/ggcryp17.c ggcrypt/ggcryp17.c
+a ggcrypt/ggcryp18.c ggcrypt/ggcryp18.c
+a ggcrypt/ggcryp19.c ggcrypt/ggcryp19.c
+a ggcrypt/ggcryp20.c ggcrypt/ggcryp20.c
+# ----------------------------------------------------------------------------
+>if [ ! -d hytxt ]
+>then
+>   echo 'creating subdirectory hytxt'
+>   mkdir hytxt
+>   mkdir hytxt/_bak_ftr.ned
+>fi
+>ln -fs ../../gg hytxt/gg
+>ln -fs ../../contrib hytxt/contrib
+a hytxt/(dirinf).fm                           hytxt/'(dirinf)'.fm
+a hytxt/make-ux                               hytxt/Makefile
+a hytxt/make-dos                              hytxt/make-dos
+a hytxt/hytxt001.c hytxt/hytxt001.c
+a hytxt/hytxt002.c hytxt/hytxt002.c
+a hytxt/hytxt003.c hytxt/hytxt003.c
+a hytxt/hytxt004.c hytxt/hytxt004.c
+a hytxt/hytxt005.c hytxt/hytxt005.c
+a hytxt/hytxt006.c hytxt/hytxt006.c
+a hytxt/hytxt007.c hytxt/hytxt007.c
+a hytxt/hytxt008.c hytxt/hytxt008.c
+a hytxt/hytxt009.c hytxt/hytxt009.c
+a hytxt/hytxt010.c hytxt/hytxt010.c
+a hytxt/hytxt011.c hytxt/hytxt011.c
+a hytxt/hytxt012.c hytxt/hytxt012.c
+a hytxt/hytxt013.c hytxt/hytxt013.c
+a hytxt/hytxt014.c hytxt/hytxt014.c
+a hytxt/hytxt015.c hytxt/hytxt015.c
+a hytxt/hytxt016.c hytxt/hytxt016.c
+a hytxt/hytxt017.c hytxt/hytxt017.c
+a hytxt/hytxt018.c hytxt/hytxt018.c
+a hytxt/hytxt019.c hytxt/hytxt019.c
+a hytxt/hytxt020.c hytxt/hytxt020.c
+a hytxt/hytxt021.c hytxt/hytxt021.c
+a hytxt/hytxt022.c hytxt/hytxt022.c
+a hytxt/hytxt023.c hytxt/hytxt023.c
+a hytxt/hytxt024.c hytxt/hytxt024.c
+a hytxt/hytxt025.c hytxt/hytxt025.c
+a hytxt/hytxt026.c hytxt/hytxt026.c
+a hytxt/hytxt027.c hytxt/hytxt027.c
+a hytxt/hytxt028.c hytxt/hytxt028.c
+a hytxt/hytxt029.c hytxt/hytxt029.c
+a hytxt/hytxt030.c hytxt/hytxt030.c
+a hytxt/hytxt031.c hytxt/hytxt031.c
+a hytxt/hytxt032.c hytxt/hytxt032.c
+a hytxt/hytxt033.c hytxt/hytxt033.c
+a hytxt/hytxt034.c hytxt/hytxt034.c
+a hytxt/hytxt035.c hytxt/hytxt035.c
+a hytxt/hytxt036.c hytxt/hytxt036.c
+a hytxt/hytxt037.c hytxt/hytxt037.c
+a hytxt/hytxt038.c hytxt/hytxt038.c
+# ----------------------------------------------------------------------------
+>if [ ! -d hyxl ]
+>then
+>   echo 'creating subdirectory hyxl'
+>   mkdir hyxl
+>   mkdir hyxl/_bak_ftr.ned
+>fi
+>ln -fs ../../gg hyxl/gg
+a hyxl/(dirinf).fm                           hyxl/'(dirinf)'.fm
+a hyxl/make-ux                               hyxl/Makefile
+a hyxl/make-dos                              hyxl/make-dos
+a hyxl/hyxl0001.c hyxl/hyxl0001.c
+a hyxl/hyxl0002.c hyxl/hyxl0002.c
+a hyxl/hyxl0003.c hyxl/hyxl0003.c
+a hyxl/hyxl0004.c hyxl/hyxl0004.c
+a hyxl/hyxl0005.c hyxl/hyxl0005.c
+a hyxl/hyxl0006.c hyxl/hyxl0006.c
+a hyxl/hyxl0007.c hyxl/hyxl0007.c
+a hyxl/hyxl0008.c hyxl/hyxl0008.c
+a hyxl/hyxl0009.c hyxl/hyxl0009.c
+a hyxl/hyxl0010.c hyxl/hyxl0010.c
+a hyxl/hyxl0011.c hyxl/hyxl0011.c
+a hyxl/hyxl0012.c hyxl/hyxl0012.c
+#
+a hyxl/hyxl0101.c hyxl/hyxl0101.c
+# ----------------------------------------------------------------------------
+>if [ ! -d hyxp ]
+>then
+>   echo 'creating subdirectory hyxp'
+>   mkdir hyxp
+>   mkdir hyxp/_bak_ftr.ned
+>fi
+>ln -fs ../../gg hyxp/gg
+a hyxp/(dirinf).fm                           hyxp/'(dirinf)'.fm
+a hyxp/make-ux                               hyxp/Makefile
+a hyxp/make-dos                              hyxp/make-dos
+a hyxp/hyxp0001.c hyxp/hyxp0001.c
+a hyxp/hyxp0002.c hyxp/hyxp0002.c
+a hyxp/hyxp0003.c hyxp/hyxp0003.c
+a hyxp/hyxp0004.c hyxp/hyxp0004.c
+a hyxp/hyxp0005.c hyxp/hyxp0005.c
+a hyxp/hyxp0006.c hyxp/hyxp0006.c
+a hyxp/hyxp0007.c hyxp/hyxp0007.c
+a hyxp/hyxp0008.c hyxp/hyxp0008.c
+a hyxp/hyxp0009.c hyxp/hyxp0009.c
+a hyxp/hyxp0010.c hyxp/hyxp0010.c
+a hyxp/hyxp0011.c hyxp/hyxp0011.c
+a hyxp/hyxp0012.c hyxp/hyxp0012.c
+a hyxp/hyxp0013.c hyxp/hyxp0013.c
+a hyxp/hyxp0014.c hyxp/hyxp0014.c
+a hyxp/hyxp0015.c hyxp/hyxp0015.c
+a hyxp/hyxp0016.c hyxp/hyxp0016.c
+a hyxp/hyxp0017.c hyxp/hyxp0017.c
+a hyxp/hyxp0018.c hyxp/hyxp0018.c
+a hyxp/hyxp0019.c hyxp/hyxp0019.c
+a hyxp/hyxp0020.c hyxp/hyxp0020.c
+a hyxp/hyxp0021.c hyxp/hyxp0021.c
+a hyxp/hyxp0022.c hyxp/hyxp0022.c
+a hyxp/hyxp0023.c hyxp/hyxp0023.c
+a hyxp/hyxp0024.c hyxp/hyxp0024.c
+a hyxp/hyxp0025.c hyxp/hyxp0025.c
+a hyxp/hyxp0026.c hyxp/hyxp0026.c
+a hyxp/hyxp0027.c hyxp/hyxp0027.c
+a hyxp/hyxp0028.c hyxp/hyxp0028.c
+a hyxp/hyxp0029.c hyxp/hyxp0029.c
+a hyxp/hyxp0030.c hyxp/hyxp0030.c
+a hyxp/hyxp0031.c hyxp/hyxp0031.c
+a hyxp/hyxp0032.c hyxp/hyxp0032.c
+a hyxp/hyxp0033.c hyxp/hyxp0033.c
+a hyxp/hyxp0034.c hyxp/hyxp0034.c
+a hyxp/hyxp0035.c hyxp/hyxp0035.c
+# ----------------------------------------------------------------------------
+>if [ ! -d hyxta ]
+>then
+>   echo 'creating subdirectory hyxta'
+>   mkdir hyxta
+>   mkdir hyxta/_bak_ftr.ned
+>fi
+>ln -fs ../../gg hyxta/gg
+a hyxta/(dirinf).fm                           hyxta/'(dirinf)'.fm
+a hyxta/make-ux                               hyxta/Makefile
+a hyxta/make-dos                              hyxta/make-dos
+a hyxta/hyxta001.c hyxta/hyxta001.c
+a hyxta/hyxta002.c hyxta/hyxta002.c
+a hyxta/hyxta003.c hyxta/hyxta003.c
+a hyxta/hyxta004.c hyxta/hyxta004.c
+a hyxta/hyxta005.c hyxta/hyxta005.c
+a hyxta/hyxta006.c hyxta/hyxta006.c
+a hyxta/hyxta007.c hyxta/hyxta007.c
+a hyxta/hyxta008.c hyxta/hyxta008.c
+a hyxta/hyxta012.c hyxta/hyxta012.c
+a hyxta/hyxta015.c hyxta/hyxta015.c
+a hyxta/hyxta020.c hyxta/hyxta020.c
+a hyxta/hyxta101.c hyxta/hyxta101.c
+a hyxta/hyxta102.c hyxta/hyxta102.c
+a hyxta/hyxtax01.c hyxta/hyxtax01.c
+# ----------------------------------------------------------------------------
+>if [ ! -d irdb ]
+>then
+>   echo 'creating subdirectory irdb'
+>   mkdir irdb
+>   mkdir irdb/_bak_ftr.ned
+>fi
+>ln -fs ../../gg irdb/gg
+a irdb/(dirinf).fm                   irdb/'(dirinf)'.fm
+a irdb/make-ux                       irdb/Makefile
+a irdb/make-dos                      irdb/make-dos
+a irdb/irdb0000.c      irdb/irdb0000.c
+a irdb/irdb0001.c      irdb/irdb0001.c
+a irdb/irdb0002.c      irdb/irdb0002.c
+a irdb/irdb0003.c      irdb/irdb0003.c
+a irdb/irdb0004.c      irdb/irdb0004.c
+a irdb/irdb0005.c      irdb/irdb0005.c
+a irdb/irdb0006.c      irdb/irdb0006.c
+a irdb/irdb0007.c      irdb/irdb0007.c
+a irdb/irdb0008.c      irdb/irdb0008.c
+a irdb/irdb0009.c      irdb/irdb0009.c
+a irdb/irdb0010.c      irdb/irdb0010.c
+a irdb/irdb0011.c      irdb/irdb0011.c
+a irdb/irdb0012.c      irdb/irdb0012.c
+a irdb/irdb0013.c      irdb/irdb0013.c
+a irdb/irdb0014.c      irdb/irdb0014.c
+a irdb/irdb0015.c      irdb/irdb0015.c
+a irdb/irdb0016.c      irdb/irdb0016.c
+a irdb/irdb0017.c      irdb/irdb0017.c
+a irdb/irdb0018.c      irdb/irdb0018.c
+a irdb/irdb0019.c      irdb/irdb0019.c
+a irdb/irdb0020.c      irdb/irdb0020.c
+a irdb/irdb0021.c      irdb/irdb0021.c
+a irdb/irdb0022.c      irdb/irdb0022.c
+a irdb/irdb0023.c      irdb/irdb0023.c
+a irdb/irdb0024.c      irdb/irdb0024.c
+a irdb/irdb0025.c      irdb/irdb0025.c
+a irdb/irdb0026.c      irdb/irdb0026.c
+a irdb/irdb0027.c      irdb/irdb0027.c
+a irdb/irdb0028.c      irdb/irdb0028.c
+a irdb/irdb0101.c      irdb/irdb0101.c
+a irdb/irdb0102.c      irdb/irdb0102.c
+a irdb/irdb0103.c      irdb/irdb0103.c
+a irdb/irdb0104.c      irdb/irdb0104.c
+a irdb/irdb0105.c      irdb/irdb0105.c
+a irdb/irdb0106.c      irdb/irdb0106.c
+a irdb/irdb0107.c      irdb/irdb0107.c
+a irdb/irdb0112.c      irdb/irdb0112.c
+a irdb/irdb0116.c      irdb/irdb0116.c
+a irdb/irdb0118.c      irdb/irdb0118.c
+a irdb/irdb0119.c      irdb/irdb0119.c
+a irdb/irdb0120.c      irdb/irdb0120.c
+a irdb/it1.c           irdb/it1.c
+# ----------------------------------------------------------------------------
+>if [ ! -d lmd ]
+>then
+>   echo 'creating subdirectory lmd'
+>   mkdir lmd
+>   mkdir lmd/_bak_ftr.ned
+>fi
+>ln -fs ../../gg lmd/gg
+a lmd/(dirinf).fm                           lmd/'(dirinf)'.fm
+a lmd/make-ux                               lmd/Makefile
+a lmd/make-dos                              lmd/make-dos
+a lmd/nl_00001.c lmd/nl_00001.c
+a lmd/nl_00002.c lmd/nl_00002.c
+a lmd/nl_00004.c lmd/nl_00004.c
+a lmd/nl_00009.c lmd/nl_00009.c
+a lmd/nl_00101.c lmd/nl_00101.c
+a lmd/nl_00102.c lmd/nl_00102.c
+a lmd/nl_00104.c lmd/nl_00104.c
+a lmd/nl_00105.c lmd/nl_00105.c
+a lmd/nl_00106.c lmd/nl_00106.c
+a lmd/nl_00107.c lmd/nl_00107.c
+a lmd/nl_00108.c lmd/nl_00108.c
+a lmd/nl_00109.c lmd/nl_00109.c
+a lmd/nl_00111.c lmd/nl_00111.c
+a lmd/nl_00112.c lmd/nl_00112.c
+a lmd/nl_00113.c lmd/nl_00113.c
+a lmd/nl_00114.c lmd/nl_00114.c
+a lmd/nl_00115.c lmd/nl_00115.c
+a lmd/nl_00116.c lmd/nl_00116.c
+a lmd/nl_00117.c lmd/nl_00117.c
+a lmd/nl_00118.c lmd/nl_00118.c
+a lmd/nl_00119.c lmd/nl_00119.c
+a lmd/nl_00120.c lmd/nl_00120.c
+a lmd/nl_00121.c lmd/nl_00121.c
+a lmd/nl_00122.c lmd/nl_00122.c
+a lmd/nl_00123.c lmd/nl_00123.c
+a lmd/nl_00124.c lmd/nl_00124.c
+a lmd/nl_00125.c lmd/nl_00125.c
+a lmd/nl_00126.c lmd/nl_00126.c
+a lmd/nl_00127.c lmd/nl_00127.c
+a lmd/nl_00128.c lmd/nl_00128.c
+a lmd/nl_00129.c lmd/nl_00129.c
+a lmd/nl_00130.c lmd/nl_00130.c
+a lmd/nl_00131.c lmd/nl_00131.c
+a lmd/nl_00132.c lmd/nl_00132.c
+a lmd/nl_00133.c lmd/nl_00133.c
+a lmd/nl_00134.c lmd/nl_00134.c
+a lmd/nl_00135.c lmd/nl_00135.c
+a lmd/nl_00136.c lmd/nl_00136.c
+a lmd/nl_00137.c lmd/nl_00137.c
+a lmd/nl_00138.c lmd/nl_00138.c
+a lmd/nl_00139.c lmd/nl_00139.c
+a lmd/nl_00201.c lmd/nl_00201.c
+a lmd/nl_00301.c lmd/nl_00301.c
+a lmd/nl_00302.c lmd/nl_00302.c
+a lmd/nl_00303.c lmd/nl_00303.c
+a lmd/nl_00304.c lmd/nl_00304.c
+a lmd/nl_00305.c lmd/nl_00305.c
+a lmd/nl_00306.c lmd/nl_00306.c
+a lmd/nl_00401.c lmd/nl_00401.c
+a lmd/nl_00402.c lmd/nl_00402.c
+a lmd/nl_00403.c lmd/nl_00403.c
+a lmd/nl_00404.c lmd/nl_00404.c
+a lmd/nl_00405.c lmd/nl_00405.c
+a lmd/nl_00407.c lmd/nl_00407.c
+a lmd/nl_00408.c lmd/nl_00408.c
+a lmd/nl_00409.c lmd/nl_00409.c
+a lmd/nl_00410.c lmd/nl_00410.c
+a lmd/nl_00411.c lmd/nl_00411.c
+a lmd/nl_00500.c lmd/nl_00500.c
+a lmd/nl_00501.c lmd/nl_00501.c
+a lmd/nl_00502.c lmd/nl_00502.c
+a lmd/nl_00503.c lmd/nl_00503.c
+a lmd/nl_00504.c lmd/nl_00504.c
+a lmd/nl_00510.c lmd/nl_00510.c
+a lmd/nl_00511.c lmd/nl_00511.c
+a lmd/nl_00512.c lmd/nl_00512.c
+a lmd/nl_00514.c lmd/nl_00514.c
+a lmd/nl_00600.c lmd/nl_00600.c
+a lmd/nl_00601.c lmd/nl_00601.c
+a lmd/nl_00602.c lmd/nl_00602.c
+a lmd/nl_00603.c lmd/nl_00603.c
+a lmd/nl_00604.c lmd/nl_00604.c
+a lmd/nl_00605.c lmd/nl_00605.c
+a lmd/nl_00606.c lmd/nl_00606.c
+a lmd/nl_00607.c lmd/nl_00607.c
+a lmd/nl_00608.c lmd/nl_00608.c
+a lmd/nl_00609.c lmd/nl_00609.c
+a lmd/nl_00610.c lmd/nl_00610.c
+a lmd/nl_01001.c lmd/nl_01001.c
+a lmd/rdtoken.c lmd/rdtoken.c
+# ----------------------------------------------------------------------------
+>if [ ! -d lmd5 ]
+>then
+>   echo 'creating subdirectory lmd5'
+>   mkdir lmd5
+>   mkdir lmd5/_bak_ftr.ned
+>fi
+>ln -fs ../../gg lmd5/gg
+a lmd5/(dirinf).fm                      lmd5/'(dirinf)'.fm
+a lmd5/make-ux                          lmd5/Makefile
+a lmd5/make-dos                         lmd5/make-dos
+a lmd5/lm5.c                            lmd5/lm5.c
+a lmd5/lmd5.doc                         lmd5/lmd5.doc
+a lmd5/lmd50000.c                       lmd5/lmd50000.c
+a lmd5/lmd50001.c                       lmd5/lmd50001.c
+a lmd5/lmd50002.c                       lmd5/lmd50002.c
+a lmd5/lmd50003.c                       lmd5/lmd50003.c
+a lmd5/lmd50004.c                       lmd5/lmd50004.c
+a lmd5/lmd50005.c                       lmd5/lmd50005.c
+a lmd5/test.doc                         lmd5/test.doc
+# ----------------------------------------------------------------------------
+>if [ ! -d lut ]
+>then
+>   echo 'creating subdirectory lut'
+>   mkdir lut
+>   mkdir lut/_bak_ftr.ned
+>fi
+>ln -fs ../../gg lut/gg
+a lut/(dirinf).fm                           lut/'(dirinf)'.fm
+a lut/make-ux                               lut/Makefile
+a lut/make-dos                              lut/make-dos
+a lut/lut_0001.c lut/lut_0001.c
+a lut/lut_0002.c lut/lut_0002.c
+a lut/lut_0004.c lut/lut_0004.c
+a lut/lut_0007.c lut/lut_0007.c
+a lut/lut_0008.c lut/lut_0008.c
+a lut/lut_0005.c lut/lut_0005.c
+a lut/lut_0009.c lut/lut_0009.c
+a lut/lut_0010.c lut/lut_0010.c
+a lut/lut_0011.c lut/lut_0011.c
+a lut/lut_0012.c lut/lut_0012.c
+a lut/lut_0013.c lut/lut_0013.c
+a lut/lut_0014.c lut/lut_0014.c
+# ----------------------------------------------------------------------------
+>if [ ! -d lxs ]
+>then
+>   echo 'creating subdirectory lxs'
+>   mkdir lxs
+>   mkdir lxs/_bak_ftr.ned
+>fi
+>ln -fs ../../gg lxs/gg
+a lxs/(dirinf).fm                           lxs/'(dirinf)'.fm
+a lxs/make-ux                               lxs/Makefile
+a lxs/make-dos                              lxs/make-dos
+a lxs/lxs_0000.c lxs/lxs_0000.c
+a lxs/lxs_0001.c lxs/lxs_0001.c
+#
+# ----------------------------------------------------------------------------
+>if [ ! -d mail ]
+>then
+>  echo 'creating subdirectory mail'
+>  mkdir mail
+>  mkdir mail/_bak_ftr.ned
+>fi
+>ln -fs ../../gg mail/gg
+a mail/(dirinf).fm      mail/'(dirinf)'.fm
+a mail/make-ux          mail/Makefile
+a mail/make-dos         mail/make-dos
+a mail/mt1.c            mail/mt1.c
+#
+a mail/mail0000.c       mail/mail0000.c
+a mail/mail0001.c       mail/mail0001.c
+a mail/mail0002.c       mail/mail0002.c
+a mail/mail0003.c       mail/mail0003.c
+a mail/mail0004.c       mail/mail0004.c
+a mail/mail0005.c       mail/mail0005.c
+a mail/mail0006.c       mail/mail0006.c
+a mail/mail0007.c       mail/mail0007.c
+a mail/mail0008.c       mail/mail0008.c
+a mail/mail0009.c       mail/mail0009.c
+a mail/mail0010.c       mail/mail0010.c
+a mail/mail0011.c       mail/mail0011.c
+a mail/mail0012.c       mail/mail0012.c
+a mail/mail0013.c       mail/mail0013.c
+a mail/mail0014.c       mail/mail0014.c
+#
+# ----------------------------------------------------------------------------
+>if [ ! -d mime ]
+>then
+>   echo 'creating subdirectory mime'
+>   mkdir mime
+>   mkdir mime/_bak_ftr.ned
+>fi
+>ln -fs ../../gg mime/gg
+a mime/(dirinf).fm      mime/'(dirinf)'.fm
+a mime/make-ux          mime/Makefile
+a mime/make-dos         mime/make-dos
+a mime/mime0000.c       mime/mime0000.c
+a mime/mime0001.c       mime/mime0001.c
+#
+# ----------------------------------------------------------------------------
+>if [ ! -d rdtp ]
+>then
+>   echo 'creating subdirectory rdtp'
+>   mkdir rdtp
+>   mkdir rdtp/_bak_ftr.ned
+>fi
+>ln -fs ../../gg rdtp/gg
+a rdtp/(dirinf).fm     rdtp/'(dirinf)'.fm
+a rdtp/make-ux         rdtp/Makefile
+a rdtp/make-dos        rdtp/make-dos
+a rdtp/rt1.c           rdtp/rt1.c
+a rdtp/rdtp0001.c      rdtp/rdtp0001.c
+a rdtp/rdtp0002.c      rdtp/rdtp0002.c
+a rdtp/rdtp0003.c      rdtp/rdtp0003.c
+a rdtp/rdtp0004.c      rdtp/rdtp0004.c
+a rdtp/rdtp0005.c      rdtp/rdtp0005.c
+a rdtp/rdtp0101.c      rdtp/rdtp0101.c
+a rdtp/rdtp0102.c      rdtp/rdtp0102.c
+a rdtp/rdtp0103.c      rdtp/rdtp0103.c
+a rdtp/rdtp0104.c      rdtp/rdtp0104.c
+a rdtp/rdtp0105.c      rdtp/rdtp0105.c
+a rdtp/rdtp0106.c      rdtp/rdtp0106.c
+a rdtp/rdtp0107.c      rdtp/rdtp0107.c
+a rdtp/rdtp0108.c      rdtp/rdtp0108.c
+a rdtp/rdtp0109.c      rdtp/rdtp0109.c
+a rdtp/rdtp0110.c      rdtp/rdtp0110.c
+a rdtp/rdtp0111.c      rdtp/rdtp0111.c
+a rdtp/rdtp0112.c      rdtp/rdtp0112.c
+a rdtp/rdtp0113.c      rdtp/rdtp0113.c
+a rdtp/rdtp0114.c      rdtp/rdtp0114.c
+a rdtp/rdtp0115.c      rdtp/rdtp0115.c
+a rdtp/rdtp0116.c      rdtp/rdtp0116.c
+a rdtp/rdtp0201.c      rdtp/rdtp0201.c
+a rdtp/rdtp0202.c      rdtp/rdtp0202.c
+a rdtp/rdtp0203.c      rdtp/rdtp0203.c
+a rdtp/rdtp0204.c      rdtp/rdtp0204.c
+a rdtp/rdtp0205.c      rdtp/rdtp0205.c
+a rdtp/rdtp0206.c      rdtp/rdtp0206.c
+a rdtp/rdtp0207.c      rdtp/rdtp0207.c
+a rdtp/rdtp0204.c      rdtp/rdtp0208.c
+a rdtp/rdtp0301.c      rdtp/rdtp0301.c
+a rdtp/rdtp0302.c      rdtp/rdtp0302.c
+a rdtp/rdtp0303.c      rdtp/rdtp0303.c
+a rdtp/rdtp0304.c      rdtp/rdtp0304.c
+a rdtp/rdtp0305.c      rdtp/rdtp0305.c
+a rdtp/rdtp0306.c      rdtp/rdtp0306.c
+a rdtp/rdtp0307.c      rdtp/rdtp0307.c
+a rdtp/rdtp0308.c      rdtp/rdtp0308.c
+a rdtp/rdtp0309.c      rdtp/rdtp0309.c
+a rdtp/rdtp0310.c      rdtp/rdtp0310.c
+a rdtp/rdtp0311.c      rdtp/rdtp0311.c
+a rdtp/rdtp0312.c      rdtp/rdtp0312.c
+a rdtp/rdtp0313.c      rdtp/rdtp0313.c
+a rdtp/rdtp0314.c      rdtp/rdtp0314.c
+a rdtp/rdtp0315.c      rdtp/rdtp0315.c
+a rdtp/rdtp0316.c      rdtp/rdtp0316.c
+a rdtp/rdtp0317.c      rdtp/rdtp0317.c
+a rdtp/rdtp0318.c      rdtp/rdtp0318.c
+a rdtp/rdtp0319.c      rdtp/rdtp0319.c
+a rdtp/rdtp0320.c      rdtp/rdtp0320.c
+a rdtp/rdtp0321.c      rdtp/rdtp0321.c
+a rdtp/rdtp0322.c      rdtp/rdtp0322.c
+#
+a rdtp/rdtp0341.c      rdtp/rdtp0341.c
+a rdtp/rdtp0342.c      rdtp/rdtp0342.c
+a rdtp/rdtp0343.c      rdtp/rdtp0343.c
+a rdtp/rdtp0344.c      rdtp/rdtp0344.c
+a rdtp/rdtp0345.c      rdtp/rdtp0345.c
+a rdtp/rdtp0346.c      rdtp/rdtp0346.c
+a rdtp/rdtp0347.c      rdtp/rdtp0347.c
+a rdtp/rdtp0348.c      rdtp/rdtp0348.c
+#
+a rdtp/rdtp0403.c      rdtp/rdtp0403.c
+a rdtp/rdtp0413.c      rdtp/rdtp0413.c
+a rdtp/rdtp0421.c      rdtp/rdtp0421.c
+a rdtp/rdtp0422.c      rdtp/rdtp0422.c
+a rdtp/rdtp0423.c      rdtp/rdtp0423.c
+# ----------------------------------------------------------------------------
+>if [ ! -d rtf ]
+>then
+>   echo 'creating subdirectory rtf'
+>   mkdir rtf
+>   mkdir rtf/_bak_ftr.ned
+>fi
+>ln -fs ../../gg rtf/gg
+a rtf/(dirinf).fm                           rtf/'(dirinf)'.fm
+a rtf/make-ux                               rtf/Makefile
+a rtf/make-dos                              rtf/make-dos
+a rtf/rtf00.c rtf/rtf00.c
+a rtf/rtf01.c rtf/rtf01.c
+# ----------------------------------------------------------------------------
+>if [ ! -d streams ]
+>then
+>   echo 'creating subdirectory streams'
+>   mkdir streams
+>   mkdir streams/_bak_ftr.ned
+>fi
+>ln -fs ../../gg streams/gg
+a streams/(dirinf).fm   streams/'(dirinf)'.fm
+a streams/make-ux       streams/make-ux
+a streams/make-dos      streams/make-dos
+>ln -s '(dirinf).fm'    streams/Contents
+>ln -s make-ux          streams/Makefile
+a streams/strm_f01.c    streams/strm_f01.c
+a streams/strm_f02.c    streams/strm_f02.c
+a streams/strm_f03.c    streams/strm_f03.c
+# ----------------------------------------------------------------------------
+>if [ ! -d strings ]
+>then
+>   echo 'creating subdirectory strings'
+>   mkdir strings
+>   mkdir strings/_bak_ftr.ned
+>fi
+>ln -fs ../../gg strings/gg
+a strings/(dirinf).fm                           strings/'(dirinf)'.fm
+a strings/make-ux                               strings/Makefile
+a strings/make-dos                              strings/make-dos
+a strings/strings.c strings/strings.c
+a strings/str_0001.c strings/str_0001.c
+a strings/str_0002.c strings/str_0002.c
+a strings/str_0003.c strings/str_0003.c
+a strings/str_0004.c strings/str_0004.c
+a strings/str_0005.c strings/str_0005.c
+a strings/str_0006.c strings/str_0006.c
+a strings/str_0007.c strings/str_0007.c
+a strings/str_0008.c strings/str_0008.c
+a strings/str_0009.c strings/str_0009.c
+a strings/str_0010.c strings/str_0010.c
+a strings/str_0011.c strings/str_0011.c
+a strings/str_0012.c strings/str_0012.c
+a strings/str_0013.c strings/str_0013.c
+a strings/str_0014.c strings/str_0014.c
+a strings/str_0015.c strings/str_0015.c
+a strings/str_0016.c strings/str_0016.c
+a strings/str_0017.c strings/str_0017.c
+a strings/str_0018.c strings/str_0018.c
+a strings/str_0019.c strings/str_0019.c
+a strings/str_0020.c strings/str_0020.c
+a strings/str_0021.c strings/str_0021.c
+a strings/str_0022.c strings/str_0022.c
+a strings/str_0023.c strings/str_0023.c
+a strings/str_0024.c strings/str_0024.c
+a strings/str_0025.c strings/str_0025.c
+a strings/str_0026.c strings/str_0026.c
+a strings/str_0027.c strings/str_0027.c
+a strings/str_0028.c strings/str_0028.c
+a strings/str_0029.c strings/str_0029.c
+a strings/str_0030.c strings/str_0030.c
+a strings/str_0031.c strings/str_0031.c
+a strings/str_0032.c strings/str_0032.c
+a strings/str_0033.c strings/str_0033.c
+a strings/str_0034.c strings/str_0034.c
+a strings/str_0035.c strings/str_0035.c
+a strings/str_0036.c strings/str_0036.c
+a strings/str_0037.c strings/str_0037.c
+a strings/str_0038.c strings/str_0038.c
+a strings/str_0039.c strings/str_0039.c
+a strings/str_0040.c strings/str_0040.c
+a strings/str_0041.c strings/str_0041.c
+a strings/str_0041.tbl strings/str_0041.tbl
+a strings/str_0042.c strings/str_0042.c
+a strings/str_0042.tbl strings/str_0042.tbl
+a strings/str_0043.c strings/str_0043.c
+a strings/str_0044.c strings/str_0044.c
+a strings/str_0045.c strings/str_0045.c
+a strings/str_0046.c strings/str_0046.c
+a strings/str_0047.c strings/str_0047.c
+a strings/str_0048.c strings/str_0048.c
+a strings/str_0049.c strings/str_0049.c
+a strings/str_0050.c strings/str_0050.c
+a strings/str_0051.c strings/str_0051.c
+a strings/str_0052.c strings/str_0052.c
+a strings/str_0053.c strings/str_0053.c
+#
+a strings/str_0107.c strings/str_0107.c
+a strings/str_0108.c strings/str_0108.c
+a strings/str_0109.c strings/str_0109.c
+a strings/str_0201.c strings/str_0201.c
+a strings/str_0202.c strings/str_0202.c
+a strings/str_0203.c strings/str_0203.c
+a strings/str_0204.c strings/str_0204.c
+a strings/str_0301.c strings/str_0301.c
+a strings/str_0302.c strings/str_0302.c
+a strings/str_0303.c strings/str_0303.c
+a strings/str_0304.c strings/str_0304.c
+a strings/stt.c strings/stt.c
+a strings/stt_0020.c strings/stt_0020.c
+# ----------------------------------------------------------------------------
+>if [ ! -d tcl ]
+>then
+>   echo 'creating subdirectory tcl'
+>   mkdir tcl
+>   mkdir tcl/_bak_ftr.ned
+>fi
+>ln -fs ../../gg tcl/gg
+a tcl/(dirinf).fm                           tcl/'(dirinf)'.fm
+a tcl/make-ux                               tcl/Makefile
+a tcl/make-dos                              tcl/make-dos
+a tcl/tclreg00.c tcl/tclreg00.c
+a tcl/tclreg01.c tcl/tclreg01.c
+a tcl/tclreg02.c tcl/tclreg02.c
+a tcl/tcl_0000.c tcl/tcl_0000.c
+a tcl/tcl_0001.c tcl/tcl_0001.c
+a tcl/tcl_0002.c tcl/tcl_0002.c
+a tcl/tcl_0003.c tcl/tcl_0003.c
+a tcl/tcl_0004.c tcl/tcl_0004.c
+a tcl/tcl_0005.c tcl/tcl_0005.c
+a tcl/tcl_0006.c tcl/tcl_0006.c
+a tcl/tcl_0007.c tcl/tcl_0007.c
+a tcl/tcl_0008.c tcl/tcl_0008.c
+a tcl/tcl_0009.c tcl/tcl_0009.c
+a tcl/tcl_0010.c tcl/tcl_0010.c
+a tcl/tcl_0101.c tcl/tcl_0101.c
+# ----------------------------------------------------------------------------
+>if [ ! -d tfb ]
+>then
+>   echo 'creating subdirectory tfb'
+>   mkdir tfb
+>   mkdir tfb/_bak_ftr.ned
+>fi
+>ln -fs ../../gg tfb/gg
+a tfb/(dirinf).fm                           tfb/'(dirinf)'.fm
+a tfb/make-ux                               tfb/Makefile
+a tfb/make-dos                              tfb/make-dos
+a tfb/d3164.c tfb/d3164.c
+a tfb/dbf2tfb.c tfb/dbf2tfb.c
+a tfb/plz2tfb.c tfb/plz2tfb.c
+a tfb/tfb01.c tfb/tfb01.c
+a tfb/tfb02.c tfb/tfb02.c
+a tfb/tfb03.c tfb/tfb03.c
+a tfb/tfb04.c tfb/tfb04.c
+a tfb/tfb05.c tfb/tfb05.c
+a tfb/tfb06.c tfb/tfb06.c
+a tfb/tfbget.c tfb/tfbget.c
+a tfb/tfblut.c tfb/tfblut.c
+a tfb/tfblut01.c tfb/tfblut01.c
+# ----------------------------------------------------------------------------
+>if [ ! -d url ]
+>then
+>   echo 'creating subdirectory url'
+>   mkdir url
+>   mkdir url/_bak_ftr.ned
+>fi
+>ln -fs ../../gg url/gg
+a url/(dirinf).fm                           url/'(dirinf)'.fm
+a url/make-ux                               url/Makefile
+a url/make-dos                              url/make-dos
+a url/url_0000.c url/url_0000.c
+a url/url_0001.c url/url_0001.c
+a url/url_0002.c url/url_0002.c
+a url/url_0003.c url/url_0003.c
+a url/url_0004.c url/url_0004.c
+a url/url_0005.c url/url_0005.c
+a url/url_0006.c url/url_0006.c
+a url/url_0007.c url/url_0007.c
+a url/url_0008.c url/url_0008.c
+# ----------------------------------------------------------------------------
+>if [ ! -d varspace ]
+>then
+>   echo 'creating subdirectory varspace'
+>   mkdir varspace
+>   mkdir varspace/_bak_ftr.ned
+>fi
+>ln -fs ../../gg varspace/gg
+a varspace/(dirinf).fm                           varspace/'(dirinf)'.fm
+a varspace/make-ux                               varspace/Makefile
+a varspace/make-dos                              varspace/make-dos
+a varspace/varsp000.c varspace/varsp000.c
+a varspace/varsp001.c varspace/varsp001.c
+a varspace/varsp002.c varspace/varsp002.c
+a varspace/varsp003.c varspace/varsp003.c
+a varspace/varsp004.c varspace/varsp004.c
+a varspace/varsp005.c varspace/varsp005.c
+a varspace/varsp006.c varspace/varsp006.c
+a varspace/varsp007.c varspace/varsp007.c
+a varspace/varsp008.c varspace/varsp008.c
+a varspace/vspt.c varspace/vspt.c
+# ----------------------------------------------------------------------------
+>if [ ! -d vieos ]
+>then
+>   echo 'creating subdirectory vieos'
+>   mkdir vieos
+>   mkdir vieos/_bak_ftr.ned
+>fi
+>ln -fs ../../gg vieos/gg
+a vieos/(dirinf).fm                             vieos/'(dirinf)'.fm
+>ln -s 'vieos/(dirinf).fm' vieos/Contents
+a vieos/make-ux                                 vieos/Makefile
+a vieos/make-dos                                vieos/make-dos
+a vieos/vieos.c                                 vieos/vieos.c
+a vieos/vieos001.c                              vieos/vieos001.c
+a vieos/vieos002.c                              vieos/vieos002.c
+a vieos/vieos003.c                              vieos/vieos003.c
+a vieos/vieos101.c                              vieos/vieos101.c
+a vieos/vieos102.c                              vieos/vieos102.c
+a vieos/vieos103.c                              vieos/vieos103.c
+a vieos/vieos201.c                              vieos/vieos201.c
+a vieos/vieos202.c                              vieos/vieos202.c
+a vieos/vieos203.c                              vieos/vieos203.c
+a vieos/vieos301.c                              vieos/vieos301.c
+a vieos/vieos302.c                              vieos/vieos302.c
+a vieos/vieos303.c                              vieos/vieos303.c
+a vieos/vieos401.c                              vieos/vieos401.c
+a vieos/vieos402.c                              vieos/vieos402.c
+a vieos/vieos403.c                              vieos/vieos403.c
+a vieos/vieosg01.c                              vieos/vieosg01.c
+a vieos/vieosg02.c                              vieos/vieosg02.c
+a vieos/vieosg03.c                              vieos/vieosg03.c
+# ----------------------------------------------------------------------------
+>if [ ! -d ytree ]
+>then
+>   echo 'creating subdirectory ytree'
+>   mkdir ytree
+>   mkdir ytree/_bak_ftr.ned
+>fi
+>ln -fs ../../gg ytree/gg
+a ytree/(dirinf).fm                             ytree/'(dirinf)'.fm
+>ln -s 'ytree/(dirinf).fm' ytree/Contents
+a ytree/make-ux                                 ytree/Makefile
+a ytree/make-dos                                ytree/make-dos
+a ytree/yt_00001.c                              ytree/yt_00001.c
+a ytree/yt_00002.c                              ytree/yt_00002.c
+a ytree/yt_00003.c                              ytree/yt_00003.c
+a ytree/yt_00004.c                              ytree/yt_00004.c
+a ytree/yt_00005.c                              ytree/yt_00005.c
+a ytree/yt_00006.c                              ytree/yt_00006.c
+a ytree/yt_00007.c                              ytree/yt_00007.c
+a ytree/yt_00008.c                              ytree/yt_00008.c
+a ytree/yt_00009.c                              ytree/yt_00009.c
+a ytree/yt_00010.c                              ytree/yt_00010.c
+a ytree/yt_00011.c                              ytree/yt_00011.c
+a ytree/yt_00012.c                              ytree/yt_00012.c
+a ytree/yt_00013.c                              ytree/yt_00013.c
+a ytree/yt_00014.c                              ytree/yt_00014.c
+a ytree/yt_00015.c                              ytree/yt_00015.c
+a ytree/yt_00016.c                              ytree/yt_00016.c
+a ytree/yt_00017.c                              ytree/yt_00017.c
+a ytree/yt_00018.c                              ytree/yt_00018.c
+a ytree/yt_00019.c                              ytree/yt_00019.c
+a ytree/yt_00020.c                              ytree/yt_00020.c
+a ytree/yt_00021.c                              ytree/yt_00021.c
+a ytree/yt_00022.c                              ytree/yt_00022.c
+a ytree/yt_00023.c                              ytree/yt_00023.c
+#
+a ytree/yt_00101.c                              ytree/yt_00101.c
+a ytree/yt_00102.c                              ytree/yt_00102.c
+#
+a ytree/ytt.c                                   ytree/ytt.c
+# ----------------------------------------------------------------------------
+>if [ ! -d zip ]
+>then
+>   echo 'creating subdirectory zip'
+>   mkdir zip
+>   mkdir zip/_bak_ftr.ned
+>fi
+>ln -fs ../../gg zip/gg
+a zip/(dirinf).fm       zip/'(dirinf)'.fm
+a zip/make-ux           zip/make-ux
+a zip/make-dos          zip/make-dos
+>ln -s '(dirinf).fm'    zip/Contents
+>ln -s make-ux          zip/Makefile
+a zip/zs.c              zip/zs.c
+a zip/zip_0001.c        zip/zip_0001.c
+a zip/zip_0002.c        zip/zip_0002.c
+a zip/zip_0003.c        zip/zip_0003.c
+a zip/zip_0004.c        zip/zip_0004.c
+a zip/zip_0005.c        zip/zip_0005.c
+a zip/zip_0006.c        zip/zip_0006.c
+a zip/zip_0007.c        zip/zip_0007.c
+a zip/zip_0008.c        zip/zip_0008.c

@@ -1,0 +1,52 @@
+#
+# FILE %ned/05/(dirinf).fm
+#
+# NED
+#
+# written:      1991-10-17
+# latest upate: 2000-08-24 15:58:55
+# $Id: (dirinf).fm,v 1.3 2000/08/24 15:10:15 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0501.c       | void p_aitoggle () /* Auto Indent Toggle */
+ned0502.c       | void ned_del2eoln ()  delete to the end of line
+ned0502b.c      | int ned_w_del2eoln (register struct WINDOWCTRL *w)
+ned0502c.c      | void ned_del2boln ()  delete to the begin of line
+ned0502d.c      | int ned_w_del2boln (register struct WINDOWCTRL *w)
+ned0503.c       | void ned_pr_jump_to_line ()
+ned0503b.c      | int ned_cb_jump_to_line (char *str, ...)
+ned0504.c       | struct LINE *ned_get_line_by_nr (lp, lnr)
+ned0505.c       | int ned_jmp_2line_by_nr (w, lnr, flg)
+ned0506a.c      | int ned_cnt_line_2beg (register struct LINE *a)
+ned0506b.c      | int ned_cnt_line_2end (register struct LINE *p)
+ned0506c.c      | int ned_cnt_total_lines (struct LINE *a)
+ned0506d.c      | void ned_cnt_act_line ()
+ned0506e.c      | int ned_cnt_line_relative ()
+ned0507.c       | int ned_show_total_lines ()
+ned0508.c       | int ned_w_jmp_aktline (flg)
+ned0508b.c      | int ned_w_jmp_aktline_bot ()
+ned0508m.c      | int ned_w_jmp_aktline_mid ()
+ned0508t.c      | int ned_w_jmp_aktline_top ()
+ned0509.c       | int ins_nl ()
+ned0510.c       | int ned_delete_line ()
+ned0510b.c      | int ned_delete_current_line (struct WINDOWCTRL *w)
+ned0510c.c      | int ned_delete_a_line (register struct WINDOWCTRL *w,...)
+ned0511.c       | void ned_join3 ()
+ned0512.c       | void tabulate ()
+ned0513.c       | void pq_up ()
+ned0514.c       | void pq_dn ()
+ned0515.c       | int ned_split (...);
+ned0515b.c      | int ned_split2 (...);
+ned0516.c       | int ned_join (struct LINE *lp1, struct LINE *lp2);
+ned0516b.c      | int ned_join2 (struct LINE *lp1, struct LINE *lp2);
+ned0517.c       | int copy_line (struct LINE *sl, struct LINE **dl);
+ned0519.c       | int jmpline_relative (...);
+ned0520.c       | int jmp2column (register struct WINDOWCTRL *w, int coln);
+ned0521.c       | int ned_copy_feature_list (struct FEATURE *fs, struct FEATURE **fd)
+ned0522.c       | int winstack_insert (struct WINDOWCTRL *w)
+ned0522.c       | int winstack_delete (struct WINDOWCTRL *w)
+*               |

@@ -1,0 +1,10 @@
+##!/usr/local/bin/perl
+# FILE .../app/ned/msdos/(dirinf).fm
+#
+# written:       1999-05-01
+# latest update: 1999-05-01 19:43:34
+# $Id: (dirinf).fm,v 1.2 2002/05/02 06:48:29 gonter Exp $
+#
+
+possig.bat      | let things be found
+possig.awk      | find things

@@ -1,0 +1,17 @@
+#
+# FILE %ds/make-dos
+#
+# written:       1994-03-26
+# latest update: 1996-09-28 11:44:01
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 NLKR_TEXT
+lib=c:\usr\sbr\lsbr
+
+all :
+  llink -n0 -l$(lib).lib -dds.mod
+
+ds.sh :
+  shar -c -t $@ -fmakeshar.lst

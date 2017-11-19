@@ -1,0 +1,27 @@
+#
+# FILE %ds/lxs/(dirinf).fm
+#
+.               | lexicon services subsystem
+#
+# written:       1995-11-11
+# latest update: 1996-12-22 11:49:33
+#
+# ----------------------------------------------------------------------------
+
+#include <gg/lxs.h>
+#include <gg/lxs2.h>
+
+(dirinf).fm     Contents
+Makefile        current version of Makefile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+lxs_0000.c      template
+lxs_0001.c      .
+
+lxs_2001.c      lxs_new_context ()
+lxs_2002.c      lxs_record (struct LEXICON_CONTEXT *lxc, char *word);
+
+/* Diagnostic Functions */
+lxs_2003.c      lxs_dump_context ()
+lxs_2004.c      lxs_dump_entry ()

@@ -1,0 +1,72 @@
+#!/usr/local/bin/perl
+# FILE %workf/lib/./SetupWork
+#
+# written:       2000-01-02
+# latest update: 2000-01-02 15:51:45
+#
+
+my @SUBDIRS= qw(
+ds/array
+ds/attlist
+ds/bbc
+ds/cal
+ds/codes
+ds/dbx
+ds/dyb
+ds/entity
+ds/ggcrypt
+ds/hytxt
+ds/hyxdb
+ds/hyxl
+ds/hyxp
+ds/hyxta
+ds/irdb
+ds/lmd
+ds/lmd5
+ds/lut
+ds/lxs
+ds/mail
+ds/mime
+ds/rdtp
+ds/rtf
+ds/streams
+ds/strings
+ds/tcl
+ds/tfb
+ds/url
+ds/varspace
+ds/vieos
+ds/ytree
+ds/zip
+sbr/misc
+window/1
+contrib/md5
+);
+
+my %OLD_LIST1=
+(
+  'include/gg'         => 'gg',
+  'include/contrib'    => 'contrib',
+  'libgg.a'            => 'libgg.a', 
+);
+
+my ($sub);
+foreach $sub (@SUBDIRS)
+{
+  &mk_links ($sub);
+}
+exit (0);
+
+sub mk_links
+{
+  my $dir= shift;
+
+  my ($old, $new);
+  foreach $old (sort keys %OLD_LIST1)
+  {
+    $new= $OLD_LIST1{$old};
+    print "ln -fs ../../$old $dir/$new\n";
+  }
+
+  print "\n";
+}

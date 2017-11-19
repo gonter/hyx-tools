@@ -1,0 +1,24 @@
+#
+# FILE %ds/lxs/makefile
+#
+# lexicon services
+#  
+# written:       1984-03-27
+# latest update: 1995-12-20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.2
+
+all.0 : # lxs_0001.obj lxs_0002.obj lxs_0003.obj lxs_0004.obj
+
+all.2 : lxs_2001.obj lxs_2002.obj lxs_2003.obj lxs_2004.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

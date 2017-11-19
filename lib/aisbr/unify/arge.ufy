@@ -1,0 +1,168 @@
+#
+# ARGE NLU
+#
+# 1991 05 01
+#
+# ----------------------------------------------------------------------------
+rules:{ r1a r1b r1c r2a r2b r3 }
+
+# catrules: Verzeichnis von Rules, bei denen die angegeben Kategroie
+#           auf der rechten Seite der Regeln stehen.
+catrules:[NP: { r1b r1c r3              }
+          V:  { r1a r1b r1c             }
+          DET:{ r2a                     }
+          VP: { r3                      }
+          N:  { r2a r2b                 }]
+
+lexicon:{ hans maria
+          kommt liebt hilft gibt
+          der ein mann buch }
+
+#
+# ----------------------------------------------------------------------------
+# Rule 1: VP -> V (NP1 (NP2))
+r1a:[syn:[cat:VP
+          head:[agr:[gnd pers cas num]]
+          dtrs:[hdtr:[syn:[cat:V
+                           head:[agr:@syn@head@agr]]]
+                sdtr1:[syn:[cat:NP
+                            head:[agr:@syn@head@agr]]]
+                sdtr2:[syn:[cat:NP
+                            head:[agr:@syn@head@agr]]] ]]]
+
+r1b:[syn:[cat:VP
+          head:[agr:[gnd pers cas num]]
+          dtrs:[hdtr:[syn:[cat:V
+                           head:[agr:@syn@head@agr]]]
+                sdtr:[syn:[cat:NP
+                           head:[agr:@syn@head@agr]]] ]]]
+
+r1c:[syn:[cat:VP
+          head:[agr:[gnd pers cas num]]
+          dtrs:[hdtr:[syn:[cat:V
+                           head:[agr:@syn@head@agr]]] ]]]
+
+#
+# ----------------------------------------------------------------------------
+# Rule 2: NP -> (Det) N
+r2a:[syn:[cat:NP
+          head:[agr:[gnd pers cas num]]
+          dtrs:[hdtr:[syn:[cat:N
+                           head:[agr:@syn@head@agr]]]
+                sdtr:[syn:[cat:DET
+                           head:[agr:@syn@head@agr]]] ]]]
+
+r2a:[syn:[cat:NP
+          head:[agr:[gnd pers cas num]]
+          dtrs:[hdtr:[syn:[cat:N
+                           head:[agr:@syn@head@agr]]] ]]]
+
+#
+# ----------------------------------------------------------------------------
+# Rule 3: S -> NP VP
+r3:[syn:[cat:s
+         head:[agr:[gnd pers cas num]]
+         dtrs:[hdtr:[syn:[cat:NP
+                          head:[agr:@syn@head@agr]]]
+               sdtr:[syn:[cat:VP
+                          head:[agr:@syn@head@agr]]] ]]]
+#
+# LEXICON: -------------------------------------------------------------------
+hans:[syn:[str:hans
+           nf:hans
+           cat:N
+           subcat:PN
+           head:[agr:[gnd:masc
+                      pers:third
+                      num:sing]]]]
+
+maria:[syn:[str:maria
+            nf:maria
+            cat:N
+            subcat:pn
+            head:[agr:[gnd:fem
+                       pers:third
+                       num:sing]]]]
+
+kommt:[syn:[str:kommt
+            nf:kommen
+            cat:V
+            head:[agr:[pers:third
+                       num:sing
+                       cas:akk]]]]
+
+liebt:[syn:[str:liebt
+            nf:lieben
+            cat:V
+            head:[agr:[pers:third
+                       num:sing
+                       cas:akk]]]]
+
+hilft:[syn:[str:hilft
+            nf:helfen
+            cat:V
+            head:[agr:[pers:third
+                       num:sing
+                       cas:akk]]]]
+
+gibt:[syn:[str:gibt
+            nf:geben
+            cat:V
+            head:[agr:[pers:third
+                       num:sing
+                       cas:akk]]]
+      semref:{geben_transfer geben_existence geben_metaphor}]
+
+der:[syn:[str:der
+          nf:der
+          cat:DET
+          subcat:def
+          head:[agr:[num:sing
+                     cas:akk]]]]
+
+ein:[syn:[str:ein
+          nf:ein
+          cat:DET
+          subcat:indef
+          head:[agr:[num:sing
+                     cas:akk]]]]
+
+mann:[syn:[str:mann
+           nf:mann
+           cat:N
+           head:[agr:[num:sing
+                      gnd:masc
+                      cas:akk]]]]
+
+buch:[syn:[str:buch
+           nf:buch
+           cat:N
+           head:[agr:[num:sing
+                      gnd:n
+                      cas:akk]]]]
+
+#
+# ----------------------------------------------------------------------------
+geben_transfer:[sem:[actor_active:[cat:NP]
+                     actor_passiv:[cat:NP]
+                     object:[cat:NP]]
+                pat:[x:@sem@actor_acitve
+                     verb:geben
+                     y:@sem@actor_passive
+                     z:@sem@object] ]
+
+geben_existence:[sem:[object:[cat:NP]
+                 pat:[es:es
+                      verb:geben
+                      x:@sem@object] ]
+
+geben_metaphor:[sem:[actor:[cat:NP]
+                     object:[cat:NP]]
+                pat:[x:@sem@actor
+                     verb:geben
+                     y:@sem@object]]
+
+kommen1:[sem:[actor:[cat NP]]
+         pat:[x:@sem@actor
+              verb:kommen]]
+

@@ -1,0 +1,31 @@
+#
+# FILE %ds/tcl/makefile
+#
+# TCL command library
+#  
+# written:       1996-03-17
+# latest update: 1996-09-28 11:28:17
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.1 all.2 all.3
+
+all.1 : !
+  tclreg00.obj tclreg01.obj tclreg02.obj
+
+all.2 : !
+  tcl_0000.obj tcl_0001.obj tcl_0002.obj tcl_0003.obj tcl_0004.obj !
+  tcl_0005.obj tcl_0006.obj tcl_0007.obj tcl_0008.obj tcl_0009.obj !
+  tcl_0010.obj
+
+all.3 : !
+  tcl_0101.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

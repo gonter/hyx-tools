@@ -1,0 +1,205 @@
+
+BBC doc
+
+written:       1995-08-04
+latest update: 1996-12-01  9:20:03
+
+[protocl | API | DESIGN | NOTES | BBCINETD | T2D | DICTADD | TEST ]
+
+--- protocol -----------------------------------------------------------------
+Each connection involves two principals, the target which waits for
+incoming connections, the initiator which opens the connection to
+the target.
+
+The startup phase of the protocol is described as follows:
+1. target listens on port
+2. initiator connects to target
+3. target accepts the connection
+4. initiator sends a REQUEST Message
+5. target sends a ACCPET Message
+6. initiator sends a CONNECT Message
+7. target checks all credentionals transmitted in the CONNECT Message
+   to authenticate the initiator and replies either with an OK or
+   FAILED Message.
+8. initiator sends a block of random data
+9. target receives and ignores the block of random data
+
+REQUEST Message:
+BBC:REQUEST:resource:comment
+0   1       2        3
+
+ACCEPT Message:
+BBC:ACCEPT:challenge:session_challenge:comment
+0   1      2         3                 4
+
+CONNECT Message: (opening message)
+BBC:CONNECT:from:to:resource:chex_string:session_challenge:comment
+0   1       2    3  4        5           6                 7
+
+Akzeptierte Verbindung:
+BBC:OK:comment
+
+Zurueckgewiesene Verbindung:
+BBC:FAILED:comment
+
+
+challenge == 'PUBLIC':
+=> Server erlaubt unauthentisierte Clients
+
+session_challenge == 'OPEN':
+=> kein session key und Verschluesselung verwendet
+
+Bei der Accept Message teilt das Target dem Initiator seine session
+challenge mit, die fuer die Verschluesselung des in weiterer Folge vom
+Target an den Initiator uebermittletn Datenstrom benutzt werden soll.
+
+Umgekehrt teilt der Initiator dem Target seine Session challenge
+mit, die in der Folge fuer die Verschluesselung des seinerseits
+uebermittleten Datenstrom verwendet wird.
+
+Credential Mix:
+
+sym     A B C D E       description
+EC        x x x x       entity from (client)
+ES        x x x x       entity to (server)
+RE        x x x x       ressource
+AC      x   x           accept/connect challenge
+CX        x             chex string
+S1      x     x         session challenge 1
+S2        x     x       session challenge 2
+PW          x x x       password (shared secret)
+
+A ... klarschriftliche Uebermittlung in ACCPET Message
+B ... klarschriftliche Uebermittlung in CONNECT Message
+C ... Ermittlung des chex_string
+D ... Ermittlung des Session Key 1
+E ... Ermittlung des Session Key 2
+
+Die opening challenge wird vom Server an den Client uebermittelt,
+dieser muss anhand dessen den Chex String ermitteln.
+Die Challenge PUBLIC zeigt an, dass kein Passwort noetig ist.
+In diesem Fall kann auch keine Verschluesselung der Datenstroeme
+erfolgen, da es kein gemeinsam bekanntes Passwort gibt.
+
+--- API %ds/bbc/ -------------------------------------------------------------
+bbc_diagnostic_output ():
+Target Mode:
+geprueft in bbc_chex ()                                           (see chex.c)
+
+Die Connection wird zu Beginn mit 'BBCCst_target' markiert um anzudeuten,
+dass die Authentisierung erwartet wird.  Nach deren Ueberpruefung wird
+entweder 'BBCCst_failed' oder 'BBCCst_ok' eingetragen.
+
+Daten werden in beiden Faellen angenommen aber nur im 'ok'-Fall
+tatsaechlich verarbeitet.
+
+Initiator Mode:
+Die Connection wird mit 'BBCCst_initiator' markiert, was bedeutet,
+dass die ACCEPT Message vom Target erwaret wird.  Daraufhin versucht
+sich der Initiator gegegenueber zu authentisieren und uebermittelt
+die entsprchechende CONNECT Message.  Die Connection wird zu diesem
+Zeitpunkt mit 'BBCCst_wait' markiert, was bedeutet, dass vom Target
+entweder eine OK oder FAILED Nachricht erwartet wird.
+
+
+Das Session Password wird verwendet um einen Session Key zu erzeugen,
+der in der Folge fuer die Verschluesselung verwendet wird.  Das Session
+Password 'OPEN' bringt zum Ausdruck, dass keine Verschluesselung erfolgen
+soll.
+
+Alle folgenden Datentransfers werden mit dem definierten Session Key
+verschluesselt.
+
+
+--- DESIGN -------------------------------------------------------------------
+Symmetrisches Client/Server Design
+* offene Listen Calls in Control Structure eintragen
+  (es koennen ja auch mehrere Server simmultan bedient werden).
+  bbc_server (bbc_session, port) -> erzeugt einen BBC_LISTEN Eintrag.
+
+* TCL mit incrementellen Parser??
+
+* Meta Queue
+  Requests, die Verbindungsauf- und -abbau betreffen, z.B:
+  - connect
+  - listen
+  - shutdown (connection|listen)
+
+* bbc_main (...)
+  Main event loop:
+  while (doit)
+  {
+    event := next_event (...);
+    switch (event)
+    {
+      case incoming_connection:         ***OK***
+        ACCEPT();
+        add server slot;
+        break;
+      case incoming_data:               ***OK***
+        process_data();
+        break;
+      case incoming_from_pipe:          ***OK***
+        process_pipe();
+        break;
+      case create_connect:
+        LISTEN();
+        add listen slot;
+        break;
+      case shutdown:
+        CLOSE();
+        remove connection slot;
+        break;
+      case TIMEOUT:
+        drop connections, if timed-out
+        break;
+    }
+  }
+
+--- NOTES --------------------------------------------------------------------
+bbc_init_connection erzeugt nur fuer die connection challenge and die
+beiden session challenges nur Strings, die fuer anonyme und unverschluesselte
+Verbindungen verwendet werden koennen.  Die ev. noetigen Strings muessen
+durch die Aufrufende Applikation festgelegt werden.
+
+Der Name bbc_diagnostic_output() ist irrefuehrend und sollte geandert
+werden.
+
+--- BBCINETD -----------------------------------------------------------------
+T2D:
++ closed/crashed network connection
++ closed/crashed child
++ Angabe des Ports direkt im conf file
+
+--- T2D ----------------------------------------------------------------------
+bbc02.c:
++ check, ob Portnummer ermittelt werden kann.
++ HP-UX: Warnings (1996-08-12)
+
+variante zu display_markup (char *buffer, ...) mit datentransfer in
+einen Puffer statt Ausgabe auf Stream!
+
+Moeglichkeit zur reinen Abfrage von Daten ohne Update der Lexion
+Struktur vorsehen.
+
+(re)design einer allgemeinen Protocol Engine:
+Session Descriptor
+  input_channel_descriptor
+  output_channel_descriptor
+  connection_descriptor
+  protocol_descriptor
+  void *meta_descriptor
+
+
+--- DICTADD ------------------------------------------------------------------
+Ressources:
++ dictadd (DAMODE_MERGE)  ... merge mit bestehenden Eintraegen
++ lookup (DAMODE_LOOKUP)  ... nur Ausgabe
+
+
+--- TEST ---------------------------------------------------------------------
+generic encryption routines <gg/ggcrypt.h>
+
+ggc_block_cfb und ggc_block_ecb
+
+

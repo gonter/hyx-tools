@@ -1,0 +1,17 @@
+#
+# FILE %ned/release.txt
+#
+# written:       2000-12-09
+# latest update: 2000-12-09 13:38:29
+# $Id: release.txt,v 1.1 2000/12/09 17:34:13 gonter Exp $
+#
+
+ned 3.20.04 #D$2000-12-09 13:39:45
+
+debugging version:
++ track down inconsistent window decorations
++ virtual filename debugging: DEBUG flag turned on
+
+ned 3.20.03 #D$2000-08-30 20:59:32
+
+debugging or possibly released version

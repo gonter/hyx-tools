@@ -1,0 +1,55 @@
+#
+# FILE %ds/codes/makefile
+#
+# written:       1992-12-25
+# latest update: 1996-02-24 11:38:20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DPP_TEXT
+lib=c:\usr\sbr\lsbr
+o=
+bin=c:\bin\
+nomap=\dev\nul
+
+all : all.l1
+all.bin : $(bin)codes.exe $(bin)codeconv.exe $(bin)codetbl.exe
+all.ex0 : ebcdic.exe xmerge.exe
+
+all.l1 :       cs001.obj cs002.obj cs003.obj cs004.obj !
+  cs005.obj cs006.obj cs007.obj cs008.obj cs009.obj !
+  cs010.obj cs011.obj cs012.obj !
+  cs101.obj cs102.obj cs103.obj cs104.obj cs105.obj cs106.obj !
+  cs107.obj cs108.obj cs109.obj cs110.obj !
+  cs201.obj cs202.obj cs203.obj cs204.obj cs205.obj !
+  cs206.obj cs207.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+$(bin)codes.exe : codes.obj cs012.obj
+ link codes cs012,$@,$(nomap),$(lib)/NOI;
+
+# ----------------------------------------------------------------------------
+$(bin)codeconv.exe : codeconv.obj
+ link codeconv,$@,$(nomap),$(lib)/NOI;
+
+# ----------------------------------------------------------------------------
+$(bin)codetbl.exe : codetbl.obj
+ link codetbl,$@,$(nomap),$(lib)/NOI;
+
+# ----------------------------------------------------------------------------
+ebcdic.exe : ebcdic.obj
+  link ebcdic,$@,$(nomap);
+
+# ----------------------------------------------------------------------------
+xmerge.exe : xmerge.obj
+  link xmerge,$@,$(nomap);
+
+# ----------------------------------------------------------------------------
+cst006.exe : cst006.obj cs006.obj cs001.obj cs007.obj
+  link cst006 cs006 cs001 cs007,,$(nomap),$(lib);

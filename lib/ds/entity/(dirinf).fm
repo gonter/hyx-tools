@@ -1,0 +1,23 @@
+#
+# FILE %ds/entity/(dirinf).fm
+#
+# written:       1996-06-09
+# latest update: 1996-06-09 11:17:22
+#
+
+# see also: <gg/entity.h> and entity
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+ent_0000.c      TEMPLATE
+
+ent_0001.c      create entity context
+ent_0002.c      destroy entity context
+
+ent_0003.c      entity_find_by_name
+ent_0004.c      entity_find_by_code
+ent_0005.c      entity_register
+
+
+

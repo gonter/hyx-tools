@@ -1,0 +1,9 @@
+a setacl "INBOX.JOINT-STUDY" gg none
+a setacl "INBOX.JOINT-STUDY.AUSTRALIEN" gg none
+a setacl "INBOX.JOINT-STUDY.CHINA" gg none
+a setacl "INBOX.JOINT-STUDY.FA Moskau" gg none
+a setacl "INBOX.JOINT-STUDY.KANADA" gg none
+a setacl "INBOX.JOINT-STUDY.KANADA.INCO-KANADA" gg none
+a setacl "INBOX.JOINT-STUDY.NEUSEELAND" gg none
+a setacl "INBOX.JOINT-STUDY.SingaporeMU" gg none
+a setacl "INBOX.JOINT-STUDY.mexiko" gg none

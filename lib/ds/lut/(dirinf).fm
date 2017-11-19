@@ -1,0 +1,34 @@
+#
+# FILE %ds/lut/(dirinf).fm
+#
+# lookup table
+#
+# written:       1995-12-20
+# latest update: 1996-10-13 12:16:58
+# $Id: (dirinf).fm,v 1.2 2003/06/25 14:38:29 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+# administrative files
+(dirinf).fm     Contents
+Makefile        active version of Makefile
+make-ux         Unix version of Makefile
+make-dos        MSDOS version of Makefile
+
+# ----------------------------------------------------------------------------
+# Lookup Table
+lut_0001.c      int lookup_char (lut, struktur, w, w_info, lng)
+lut_0002.c      int lookup_file (lut, struktur, w, w_info, lng)
+lut_0003.c
+lut_0004.c      int lut_print (fo, lut_name, struktur, start, length)
+lut_0005.c      int lut_print_block (fo, lut_name, struktur, length)
+lut_0006.c
+lut_0007.c      int lookup_file_xfn (char *xfn, w, w_info)
+lut_0008.c      int lut_process (lut_name, (*processor) ())
+lut_0009.c      int lut_process_block (lut_name, (*processor) ())
+lut_0010.c      int xfn_process (char *xfn_name, ...)
+lut_0011.c      int xfn_process_block (FILE *xfn, ...)
+lut_0012.c      int lut_dump_file (char *fnm, ...)
+lut_0013.c      int lut_dump_entry (...)
+lut_0014.c      int xfn_dump_file (char *fnm, ...)
+lut_0015.c      int lut_scan_ytree (char *fnm, ...)

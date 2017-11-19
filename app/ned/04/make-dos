@@ -1,0 +1,33 @@
+#
+# FILE %ned/04/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-01-12 17:19:11
+#
+# ============================================================================
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -sl 2 NED04_TEXT $@
+
+lib : !
+  ned0401.obj ned0402.obj ned0402b.obj ned0403.obj ned0404.obj !
+  ned0405.obj ned0406.obj ned0408.obj ned0409.obj ned0409b.obj ned0409c.obj !
+  ned0410.obj ned0411.obj ned0412.obj ned0413.obj !
+  ned0416.obj ned0417.obj !
+  ned0417b.obj ned0418.obj ned0420.obj ned0421.obj !
+  ned0422.obj ned0423.obj                 ned0425.obj !
+  ned0426.obj ned0427.obj ned0428.obj ned0429.obj !
+  ned0430.obj ned0431.obj ned0432.obj ned0433.obj !
+  ned0434.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)
+
+# ----------------------------------------------------------------------------
+ned04t1.exe : ned04t1.obj ned0423.obj ned0424.obj ned0419.obj
+  link ned04t1 ned0423 ned0424 ned0419;
+
+ned04t1.obj : ned04t1.c
+  $(ccc) ned04t1.c

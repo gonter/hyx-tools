@@ -1,0 +1,22 @@
+#
+# FILE %ds/lmd5/(dirinf).fm
+#
+# written:       1996-04-12
+# latest update: 1996-05-07 11:55:59
+#
+
+# see also: <gg/lmd5.h> and irdb
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+lm5.c           indexer
+lmd5.doc        preliminary documentation
+
+lmd50000.c      TEMPLATE
+
+lmd50001.c      create control structure
+lmd50002.c      increment word counter
+lmd50003.c      process stream
+lmd50004.c      increment document counter
+lmd50005.c      set info attribute/value

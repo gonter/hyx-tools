@@ -1,0 +1,18 @@
+#
+# FILE %ds/url/(dirinf).fm
+#
+# written:       1996-11-04
+# latest update: 1996-11-04  0:00:10
+#
+
+# see also: <gg/streams.h>
+
+(dirinf).fm     Contents
+Makefile        current version of Makefile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+strm_f01.c      struct STREAM_OBJECT *new_stream_file_object (FILE *fi)
+strm_f02.c      int stream_file_next_char (void *cd)
+strm_f03.c      int stream_file_eof (void *cd)
+

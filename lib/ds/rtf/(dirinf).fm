@@ -1,0 +1,13 @@
+#
+# FILE %ds/(dirinf).fm
+#
+.               | rich text format
+#
+# written:       1995-11-11
+# latest update: 1995-12-29
+#
+# ----------------------------------------------------------------------------
+
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile

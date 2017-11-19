@@ -1,0 +1,7 @@
+
+see possig.pl
+
+feature editing
+struct <hyx.l file="%ned/ed.h" mark="LINE" tdc="pgm.struct" tdp=4>LINE: flag for protected lines; -&gt; no editing of that line,
+this flag needs to be set during linking of features
+

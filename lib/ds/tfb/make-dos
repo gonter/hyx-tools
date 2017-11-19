@@ -1,0 +1,46 @@
+#
+# FILE %ds/tfb/makefile
+#
+# written:       1993-10-19
+# latest update: 1996-05-24 16:34:28
+#
+# ============================================================================
+cml=cl -AL /W3 /c
+cms=cl -AS /W3 /c
+ccl=cl -AL /W3
+ccs=cl -AS /W3
+obj=objdec -w -d -m0
+bin=c:\bin\
+lib=c:\usr\sbr\lsbr
+nomap=\dev\nul
+
+# ----------------------------------------------------------------------------
+all.exe : all.lib $(bin)tfblut.exe $(bin)tfbget.exe
+all2.exe : plz2tfb.exe dbf2tfb.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $*.c
+  $(obj) $*.obj
+
+# ----------------------------------------------------------------------------
+all.lib : !
+  tfblut01.obj !
+  tfb01.obj tfb02.obj tfb03.obj tfb04.obj tfb05.obj tfb06.obj !
+  d3164.obj
+
+# ----------------------------------------------------------------------------
+$(bin)tfblut.exe : tfblut.obj tfblut01.obj
+  link tfblut tfblut01,$@,$(nomap),$(lib);
+
+# ----------------------------------------------------------------------------
+$(bin)tfbget.exe : tfbget.obj
+  link tfbget,$@,$(nomap),$(lib);
+
+# ----------------------------------------------------------------------------
+plz2tfb.exe : plz2tfb.obj
+  link plz2tfb,$@,$(nomap),$(lib);
+
+# ----------------------------------------------------------------------------
+dbf2tfb.exe : dbf2tfb.obj d3164.obj
+  link dbf2tfb d3164,$@,$(nomap),$(lib);

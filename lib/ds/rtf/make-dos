@@ -1,0 +1,22 @@
+#
+# FILE %ds/rtf/makefile
+#
+# lexicon services
+#  
+# written:       1984-03-28
+# latest update: 1995-12-20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : rtf01.obj
+
+# rtf02.obj rtf03.obj rtf04.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

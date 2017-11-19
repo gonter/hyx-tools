@@ -1,0 +1,73 @@
+#
+# FILE %ned/(dirinf).fm
+#
+# latest update: 2000-06-05 14:31:08
+# $Id: (dirinf).fm,v 1.10 2007/04/13 10:16:40 gonter Exp $
+#
+.               +------------------------------------------------------+
+..              |                                                      |
+00              | globale Datenstrukturen                              |
+01              | elementare Cursorsteuerung + Memorymanagement        |
+02              | Screen & Windows: Oeffnen, Schliessen, Verschieben   |
+03              | elementare Editierfunktionen                         |
+04              | File I/O: Save- /Load-File                           |
+05              | elementare Editierfunktionen                         |
+06              | File- und Windowoperationen                          |
+07              | Blockoperationen                                     |
+08             | Features, SGML, HyperText, Restart                   |
+09              | NED-Setup, Makros und JOUR-File                      |
+10              | Maus Steuerung                                       |
+11              | Find + Find/Switch                                   |
+12              | Context and Object Handling                          |
+13              | Tools                                                |
+unix            | adaptation modules for UN*X                          |
+_bak_ftr.ned    +------------------------------------------------------+
+(dirinf).fm     | [ abbrev %ned/09/ned0925.c ]
+readme.txt      | compilation info and other stuff
+release.txt     | information about various releases
+Makefile        | Unix Makefile for the main module
+#
+# Headers --------------------------------------------------------------------
+ed.h            | data structures; operation levels
+edctx.h         | context structures
+edhyx.h         | hypertext structures and definitions
+edtcl.h         | TCL interface
+edtk.h          | TK interface
+proto.h         | ANSI C Function Prototyping
+#
+# Editor Funktionen ----------------------------------------------------------
+ned00.c         | NED Hauptmodul + Commandline Interpreter
+#
+# Portierungen ---------------------------------------------------------------
+make-dos        | current translation control
+make-sbr        | Unix Makefile for the sbr directory
+make-l1.lst     | list of NED core files to be packed in SHAR file
+# test: q_ofile, hyx.l, q_join, stat p_1cross_ref split_string
+int pq_feature_set (int what) ned_identify_feature
+#
+# Library --------------------------------------------------------------------
+ned.mod         | list of library modules
+ned.lib         | NED Library
+#
+# NOTES ----------------------------------------------------------------------
+@fnd.sgm        | recently found items
+notes001.sgm    | open/rename/... file
+notes002.sgm    | feature record editing
+notes003.sgm    | line callback
+notes004.sgm    | new features
+notes005.sgm    | hyx/ned calendar tools
+notes006.sgm    | window callbak
+notes007.sgm    | Blocks and Buffers
+notes008.sgm    | Docu Considerations
+notes009.sgm    | SGML tag handling
+notes010.sgm    | AGENDA
+notes011.sgm    | Suche nach mysterioesen Core Dumps
+notes012.sgm    | USE_TK und USE_CURSES
+notes_tk.sgml
+#
+# sonstiges ------------------------------------------------------------------
+possig.pl       | find things, new version
+ned.stp         | setup file
+msdos           | MSDOS adaption files and tools
+_relics_.zip    | Alte Versionen; Reste; etc.
+*               |

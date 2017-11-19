@@ -1,0 +1,34 @@
+#
+# FILE %ned/01/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-08-28 10:44:21
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED01_TEXT $@
+
+lib : !
+ ned0101.obj  ned0102.obj  ned0102m.obj ned0102p.obj ned0102v.obj !
+ ned0103.obj  ned0103p.obj ned0103v.obj ned0104.obj  !
+ ned0105.obj  ned0105a.obj ned0105p.obj ned0106.obj  ned0106a.obj !
+ ned0106p.obj ned0107.obj  ned0107b.obj !
+ ned0108a.obj ned0108b.obj ned0108c.obj ned0108d.obj ned0109.obj !
+ ned0110.obj  ned0110a.obj ned0110b.obj !
+ ned0111.obj  ned0111a.obj ned0111b.obj !
+ ned0112w.obj ned0112.obj  !
+ ned0113.obj  ned0114.obj  ned0115.obj  ned0115b.obj ned0116.obj !
+ ned0117.obj  ned0118.obj  ned0119.obj  ned0119a.obj ned0120.obj !
+ ned0121.obj  ned0122.obj  ned0123.obj  ned0124.obj !
+ ned0125c.obj ned0126.obj  ned0127.obj  ned0128.obj !
+ ned0129.obj  ned0132.obj  ned0134.obj  ned0138.obj ned0138b.obj !
+ ned0139.obj  ned0140.obj  ned0141.obj  ned0142.obj
+
+lib_old : ned0135.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

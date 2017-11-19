@@ -1,0 +1,23 @@
+#
+# FILE %ds/array/makefile
+#
+# manipulation of array
+#  
+# written:       1996-08-11
+# latest update: 1997-11-09 12:27:20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  array001.obj array002.obj array003.obj array004.obj array005.obj !
+  array006.obj array007.obj array008.obj array009.obj array010.obj !
+  array011.obj array012.obj array013.obj array014.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

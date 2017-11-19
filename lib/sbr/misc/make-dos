@@ -1,0 +1,906 @@
+#
+# FILE %sbr/makefile
+#
+# Diverse Unterprogramme und Libraries
+#
+# written:       198?-??-??
+# latest update: 1997-08-15 21:42:26
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+cms=cl -AS /W3 /Fo$*.obj /c
+ccl=cl -AL
+ccs=cl -AS
+obj=objdec -w -d -m0
+incl=c:\c5\include\gg\
+bin=c:\bin\
+
+all : lib.lsbr all.exe
+all.exe : $(bin)fnmdef.exe $(bin)gennednm.exe $(bin)fndvfile.exe
+test.exe : fnmsep4.exe strings.exe t.exe tt.exe zs.exe
+
+# LARGE Library --------------------------------------------------------------
+lib.lsbr : part.l1 part.l3 dirt.lgrp !
+ filename.lgrp wildcard.lgrp fileio.lgrp unix.lgrp !
+ lsbr.lib
+
+lsbr.lib :
+ llink -v -llsbr.lib -dlsbr.mod -n0
+
+# ----------------------------------------------------------------------------
+sbr.sh :
+  shar -c -t sbr.sh -fmake-sbr.lst
+
+# ----------------------------------------------------------------------------
+part.l1 :           large\fopenwng.obj large\flopen.obj   !
+ large\fmt.obj      large\fsopen.obj   large\topen.obj    large\ftopen.obj   !
+ large\ftrans01.obj large\ftrans02.obj large\ftrans03.obj large\ftrans04.obj !
+ large\ftrans05.obj large\ftrans06.obj large\ftrans07.obj large\ftrans08.obj !
+ large\ftrans09.obj large\ftrans10.obj !
+ large\fscanlin.obj large\freadlin.obj large\frmaclin.obj large\trasheol.obj !
+ large\freadit.obj  large\freaditf.obj large\freadst.obj  large\freadstf.obj !
+ large\fparslin.obj large\scan.obj     large\identkey.obj large\keynames.obj !
+ large\fnames.obj   large\fnames2.obj  large\fnmovwr.obj  large\getpwd.obj   !
+ large\xref01.obj   large\xref02.obj   large\xref03.obj
+
+part.l3 : !
+ large\arcfiles.obj large\archead.obj  large\lzhhead.obj  !
+ large\ebcasc.obj   large\param001.obj large\param002.obj !
+ large\dsklscrd.obj large\copyfile.obj large\copyfil0.obj !
+ large\convent1.obj large\convent2.obj large\convent4.obj large\convent5.obj !
+ large\convent6.obj !
+ large\dpp_0001.obj large\dpp_0002.obj large\dpp_0003.obj large\dpp_0004.obj !
+ large\dpp_0005.obj large\dpp_0006.obj large\dpp_0007.obj large\dpp_0008.obj !
+ large\rndlong.obj  !
+ large\lng2hex.obj  large\lng2nstr.obj large\hex2bin.obj  !
+ large\bin2hex.obj  large\bin2hexr.obj large\diagnose.obj
+
+fileio.lgrp: !
+ large\file2buf.obj large\file2low.obj large\file2upp.obj large\fileio.obj   !
+ large\fclosec.obj
+
+dirt.lgrp :         large\dirt_001.obj large\dirt_002.obj large\dirt_003.obj !
+ large\dirt_004.obj large\dirt_005.obj large\dirt_006.obj large\dirt_007.obj !
+ large\dirt_008.obj large\dirt_009.obj large\dirt_010.obj large\dirt_011.obj !
+ large\dirt_012.obj large\dirt_i12.obj large\dirt_l12.obj !
+ large\dirt_013.obj large\dirt_i13.obj large\dirt_l13.obj !
+ large\dirt_i14.obj large\dirt_l14.obj !
+ large\dirt_i16.obj large\dirt_l16.obj !
+ large\int24.obj    large\int14l.obj
+
+filename.lgrp : !
+ large\cdromfnm.obj large\curdisk.obj  large\dcd01.obj    !
+ large\envbinsr.obj large\envfilsr.obj large\extcmp.obj   !
+ large\fnmcpy.obj   large\fnmcpy2.obj  large\fnmcpy3.obj  large\fnmcpy4.obj  !
+ large\fnmdef.obj   large\fnmdestn.obj large\fmtdta01.obj large\fmtdta02.obj !
+ large\fnmreal.obj  large\fnmrenm.obj  large\fnmsep1.obj  !
+ large\fnmsep2.obj  large\fnmsep3.obj  large\fnmsep4.obj  large\fnmdpath.obj !
+ large\fnm_d2u.obj  large\fndvfile.obj large\getcdir0.obj large\getcdir1.obj !
+ large\gennednm.obj large\logicfnm.obj large\makepath.obj large\modtbl.obj   !
+ large\rotfile.obj  large\setetcfn.obj large\settmpfn.obj large\tellext.obj  !
+ large\vshift01.obj large\wildcard.obj large\wildcrd2.obj
+
+wildcard.lgrp : !
+  large\wcrd_001.obj large\wcrd_002.obj large\wcrd_003.obj !
+  large\wcrd_004.obj large\wcrd_005.obj large\wcrd_006.obj !
+  large\wcrd_007.obj large\wcrd_008.obj large\wcrd_009.obj !
+  large\wcrd_d01.obj large\wcrd_d02.obj
+
+unix.lgrp : !
+  large\unix0001.obj large\unix0002.obj large\unix0003.obj
+
+# SMALL Library --------------------------------------------------------------
+lib.ssbr : part.s1 part.s2 part.s3 ssbr.lib
+
+ssbr.lib :
+ llink -v -lssbr.lib -dssbr.mod -n0
+ del ssbr.bak
+
+part.s1 : !
+ small\fileio.obj   small\fmt.obj      small\fsopen.obj   !
+ small\topen.obj    small\ftopen.obj   !
+ small\ftrans01.obj small\ftrans02.obj small\ftrans03.obj !
+ small\fscanlin.obj small\freadlin.obj small\fparslin.obj !
+ small\identkey.obj small\scan.obj     !
+ small\fnames.obj   small\fnames2.obj  small\getpwd.obj   !
+ small\arcfiles.obj small\archead.obj  small\lzhhead.obj  !
+ small\ebcasc.obj                      small\copyfile.obj
+
+part.s3 : !
+ small\dirt_s01.obj small\dirt_s02.obj small\dirt_s03.obj small\dirt_s04.obj !
+ small\dirt_s05.obj small\dirt_s06.obj small\dirt_s08.obj small\dirt_s09.obj !
+ small\dirt_s10.obj small\dirt_s11.obj
+
+# File Input/Output ----------------------------------------------------------
+large\file2buf.obj : file2buf.c
+  $(cml) $?
+  $(obj) -sl 2 FILEIO_TEXT $@
+
+large\fclosec.obj : fclosec.c
+  $(cml) $?
+  $(obj) -sl 2 FILEIO_TEXT $@
+
+large\file2low.obj : file2low.c
+  $(cml) -DTO_LOWER file2low.c
+  $(obj) -sl 2 FILEIO_TEXT large\file2low.obj
+
+large\file2upp.obj : file2low.c
+  $(cml) -DTO_UPPER file2low.c
+  $(obj) -sl 2 FILEIO_TEXT large\file2upp.obj
+
+small\fileio.obj : fileio.c
+  $(cms) fileio.c
+
+large\fileio.obj : fileio.c
+  $(cml) fileio.c
+  $(obj) -sl 2 FILEIO_TEXT large\fileio.obj
+
+# Zeilen von Files lesen und parsen ------------------------------------------
+small\fscanlin.obj : fscanlin.c
+  $(cms) fscanlin.c
+
+large\fscanlin.obj : fscanlin.c
+  $(cml) fscanlin.c
+  $(obj) -sl 2 FILEIO_TEXT large\fscanlin.obj
+
+small\freadlin.obj : freadlin.c
+  $(cms) freadlin.c
+
+large\freadlin.obj : freadlin.c
+  $(cml) freadlin.c
+  $(obj) -sl 2 FILEIO_TEXT large\freadlin.obj
+
+large\frmaclin.obj : freadlin.c
+  $(cml) -DMAC_MODE freadlin.c
+  $(obj) -sl 2 FILEIO_TEXT large\frmaclin.obj
+
+large\freadit.obj : freadit.c
+  $(cml) freadit.c
+  $(obj) -sl 2 FILEIO_TEXT large\freadit.obj
+
+large\freadst.obj : freadst.c
+  $(cml) freadst.c
+  $(obj) -sl 2 FILEIO_TEXT large\freadst.obj
+
+large\freaditf.obj : freaditf.c
+  $(cml) freaditf.c
+  $(obj) -sl 2 FILEIO_TEXT large\freaditf.obj
+
+large\freadstf.obj : freadstf.c
+  $(cml) freadstf.c
+  $(obj) -sl 2 FILEIO_TEXT large\freadstf.obj
+
+large\trasheol.obj : trasheol.c
+  $(cml) trasheol.c
+  $(obj) -sl 2 FILEIO_TEXT large\trasheol.obj
+
+small\fparslin.obj : fparslin.c
+  $(cms) fparslin.c
+
+large\fparslin.obj : fparslin.c
+  $(cml) fparslin.c
+  $(obj) -sl 2 FILEIO_TEXT large\fparslin.obj
+
+# Masken Editor --------------------------------------------------------------
+small\masked_1.obj      : masked_1.c $(incl)masked_1.h
+                          $(cms) masked_1.c
+
+large\masked_1.obj      : masked_1.c $(incl)masked_1.h
+                          $(cml) masked_1.c
+
+large\masked_t.obj      : masked_t.c $(incl)masked_1.h
+                          $(cml) masked_t.c
+
+masked_t.exe : large\masked_t.obj large\masked_1.obj
+               link large\masked_t large\masked_1,,\dev\nul,\usr\sbr\lsbr;
+
+# Zahlenformatierung ---------------------------------------------------------
+small\fmt.obj           : fmt.c
+                          $(cms) fmt.c
+
+large\fmt.obj           : fmt.c
+                          $(cml) fmt.c
+
+fmt.exe                 : large\fmt.obj
+                          LINK large\fmt.obj;
+                          fmt
+
+# Zeichenconvertierung: EBCDIC -> ASCII --------------------------------------
+small\ebcasc.obj : ebcasc.c
+  $(cms) ebcasc.c
+
+large\ebcasc.obj : ebcasc.c
+  $(cml) ebcasc.c
+
+# Eingaben von der Tastatur; (Varianten von \usr\g\ik*.c) --------------------
+small\scan.obj          : scan.c
+                          $(cms) scan.c
+
+large\scan.obj          : scan.c
+                          $(cml) scan.c
+
+
+# Identifizieren von Tastebezeichnungen --------------------------------------
+small\identkey.obj : identkey.c
+                     $(cms) /Os identkey.c
+
+large\identkey.obj : identkey.c
+                     $(cml) identkey.c
+
+large\keynames.obj : keynames.c
+                     $(cml) keynames.c
+
+small\t.obj : t.c
+        $(cms) t.c
+
+t.exe : small\t.obj
+        link small\t,,,ssbr;
+
+# Test fuer String-Pruefsummen -----------------------------------------------
+small\tt.obj : tt.c
+        $(cms) tt.c
+
+tt.exe : small\tt.obj
+        link small\tt,,,ssbr;
+
+# File Open fuer Netzwerk (SHARE) --------------------------------------------
+large\fsopen.obj  : fsopen.c
+  $(cml) fsopen.c
+  $(obj) -sl 2 FILEIO_TEXT large\fsopen.obj
+
+small\fsopen.obj  : fsopen.c
+  $(cms) fsopen.c
+
+# lazy file open -------------------------------------------------------------
+large\flopen.obj  : flopen.c
+  $(cml) flopen.c
+  $(obj) -sl 2 FILEIO_TEXT large\flopen.obj
+
+# file open with warning -----------------------------------------------------
+large\fopenwng.obj  : fopenwng.c
+  $(cml) fopenwng.c
+  $(obj) -sl 2 FILEIO_TEXT large\fopenwng.obj
+
+# file temporary open --------------------------------------------------------
+large\ftopen.obj  : ftopen.c
+  $(cml) ftopen.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftopen.obj
+
+small\ftopen.obj  : ftopen.c
+  $(cms) ftopen.c
+
+# transfer data from file to file --------------------------------------------
+large\ftrans01.obj : ftrans01.c
+  $(cml) ftrans01.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans01.obj
+
+large\ftrans02.obj : ftrans02.c
+  $(cml) ftrans02.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans02.obj
+
+large\ftrans03.obj : ftrans03.c
+  $(cml) ftrans03.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans03.obj
+
+large\ftrans04.obj : ftrans04.c
+  $(cml) ftrans04.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans04.obj
+
+large\ftrans05.obj : ftrans05.c
+  $(cml) ftrans05.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans05.obj
+
+large\ftrans06.obj : ftrans06.c
+  $(cml) ftrans06.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans06.obj
+
+large\ftrans07.obj : ftrans07.c
+  $(cml) ftrans07.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans07.obj
+
+large\ftrans08.obj : ftrans08.c
+  $(cml) ftrans08.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans08.obj
+
+large\ftrans09.obj : ftrans09.c
+  $(cml) ftrans09.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans09.obj
+
+large\ftrans10.obj : ftrans10.c
+  $(cml) ftrans10.c
+  $(obj) -sl 2 FILEIO_TEXT large\ftrans10.obj
+
+small\ftrans01.obj : ftrans01.c
+  $(cms) ftrans01.c
+
+small\ftrans02.obj : ftrans02.c
+  $(cms) ftrans02.c
+
+small\ftrans03.obj : ftrans03.c
+  $(cms) ftrans03.c
+
+# copy files -----------------------------------------------------------------
+large\copyfile.obj : copyfile.c
+  $(cml) copyfile.c
+  $(obj) -sl 2 FILES_TEXT large\copyfile.obj
+
+small\copyfile.obj : copyfile.c
+  $(cms) copyfile.c
+
+# copy files -----------------------------------------------------------------
+large\copyfil0.obj : copyfil0.c
+  $(cml) copyfil0.c
+  $(obj) -sl 2 FILES_TEXT large\copyfil0.obj
+
+small\copyfil0.obj : copyfil0.c
+  $(cms) copyfil0.c
+
+# Filematching (Aufrufe fuer DOS-Funktionen) ---------------------------------
+small\fnames.obj : fnames.c $(incl)fnames.h
+  $(cms) -DSMALL_MODEL fnames.c
+
+large\fnames.obj : fnames.c $(incl)fnames.h
+  $(cml) -DLARGE_MODEL fnames.c
+  $(obj) -sl 2 FILES_TEXT large\fnames.obj
+
+# Filematching (Aufrufe ueber FNAMES) ----------------------------------------
+small\fnames2.obj : fnames2.c $(incl)fnames.h
+  $(cms) fnames2.c
+
+large\fnames2.obj : fnames2.c $(incl)fnames.h
+  $(cml) fnames2.c
+  $(obj) -sl 2 FILES_TEXT large\fnames2.obj
+
+# Filematching ---------------------------------------------------------------
+large\wildcard.obj : wildcard.c $(incl)filename.h
+  $(cml) wildcard.c
+  $(obj) -sl 2 FILES_TEXT large\wildcard.obj
+
+large\wildcrd2.obj : wildcrd2.c $(incl)filename.h
+  $(cml) wildcrd2.c
+  $(obj) -sl 2 FILES_TEXT large\wildcrd2.obj
+
+# redesigned wildcard processing ---------------------------------------------
+large\wcrd_001.obj : wcrd_001.c $(incl)wildcard.h
+  $(cml) wcrd_001.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_002.obj : wcrd_002.c $(incl)wildcard.h
+  $(cml) wcrd_002.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_003.obj : wcrd_003.c $(incl)wildcard.h
+  $(cml) wcrd_003.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_004.obj : wcrd_004.c $(incl)wildcard.h
+  $(cml) wcrd_004.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_005.obj : wcrd_005.c $(incl)wildcard.h
+  $(cml) wcrd_005.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_006.obj : wcrd_006.c $(incl)wildcard.h
+  $(cml) wcrd_006.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_007.obj : wcrd_007.c $(incl)wildcard.h
+  $(cml) wcrd_007.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_008.obj : wcrd_008.c $(incl)wildcard.h
+  $(cml) wcrd_008.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_009.obj : wcrd_009.c $(incl)wildcard.h
+  $(cml) wcrd_009.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_d01.obj : wcrd_d01.c $(incl)wildcard.h
+  $(cml) wcrd_d01.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_d02.obj : wcrd_d02.c $(incl)wildcard.h
+  $(cml) wcrd_d02.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_d03.obj : wcrd_d03.c $(incl)wildcard.h
+  $(cml) wcrd_d03.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\wcrd_d04.obj : wcrd_d04.c $(incl)wildcard.h
+  $(cml) wcrd_d04.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+# make full path -------------------------------------------------------------
+large\makepath.obj : makepath.c
+  $(cml) makepath.c
+  $(obj) -sl 2 FILES_TEXT large\makepath.obj
+
+# format date from dta -------------------------------------------------------
+large\fmtdta01.obj : fmtdta01.c
+  $(cml) fmtdta01.c
+  $(obj) -sl 2 FILES_TEXT large\fmtdta01.obj
+
+# format time from dta -------------------------------------------------------
+large\fmtdta02.obj : fmtdta02.c
+  $(cml) fmtdta02.c
+  $(obj) -sl 2 FILES_TEXT large\fmtdta02.obj
+
+# set filename with ETC environment ------------------------------------------
+large\setetcfn.obj : setetcfn.c
+  $(cml) setetcfn.c
+  $(obj) -sl 2 FILES_TEXT large\setetcfn.obj
+
+large\settmpfn.obj : settmpfn.c
+  $(cml) settmpfn.c
+  $(obj) -sl 2 FILES_TEXT large\settmpfn.obj
+
+# change filename extension --------------------------------------------------
+large\fnmcpy.obj : fnmcpy.c
+  $(cml) fnmcpy.c
+  $(obj) -sl 2 FILES_TEXT large\fnmcpy.obj
+
+large\fnmcpy2.obj : fnmcpy2.c
+  $(cml) fnmcpy2.c
+  $(obj) -sl 2 FILES_TEXT large\fnmcpy2.obj
+
+large\fnmcpy3.obj : fnmcpy3.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmcpy4.obj : fnmcpy4.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmdpath.obj : fnmdpath.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+fnmcpyt.exe : fnmcpyt.c fnmcpy.c
+  cl -AL /W3 fnmcpyt.c
+
+# translate logic filenames --------------------------------------------------
+large\logicfnm.obj : logicfnm.c
+  $(cml) logicfnm.c
+  $(obj) -sl 2 FILES_TEXT large\logicfnm.obj
+
+test\logicfnm.obj : logicfnm.c
+  $(cml) -DDEBUG logicfnm.c
+  $(obj) -sl 2 FILES_TEXT test\logicfnm.obj
+
+# ----------------------------------------------------------------------------
+large\fnmdef.obj : fnmdef.c
+  $(cml) fnmdef.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+test\fnmdef.obj : fnmdef.c
+  $(cml) -DDEBUG -DDEBUG_main fnmdef.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmreal.obj : fnmreal.c
+  $(cml) fnmreal.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+test\fnmreal.obj : fnmreal.c
+  $(cml) -DDEBUG fnmreal.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+$(bin)fnmdef.exe : test\fnmdef.obj test\fnmreal.obj test\logicfnm.obj
+  link test\fnmdef test\fnmreal test\logicfnm,$@,\dev\nul,lsbr/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+large\fnmrenm.obj : fnmrenm.c
+  $(cml) fnmrenm.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmdestn.obj : fnmdestn.c
+  $(cml) fnmdestn.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+# ----------------------------------------------------------------------------
+large\gennednm.obj : gennednm.c
+  $(cml) gennednm.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+test\gennednm.obj : gennednm.c
+  $(cml) -DDEBUG gennednm.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+$(bin)gennednm.exe : test\gennednm.obj
+  link test\gennednm,$@,\dev\nul,lsbr/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+large\fndvfile.obj : fndvfile.c
+  $(cml) fndvfile.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+test\fndvfile.obj : fndvfile.c
+  $(cml) -DDEBUG -DDEBUG_main fndvfile.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+$(bin)fndvfile.exe : test\fndvfile.obj
+  link test\fndvfile,$@,\dev\nul,lsbr/NOE/NOI;
+
+# seperate path from filename ------------------------------------------------
+large\fnmsep1.obj : fnmsep1.c
+  $(cml) fnmsep1.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+# remove filename extension --------------------------------------------------
+large\fnmsep2.obj : fnmsep2.c
+  $(cml) fnmsep2.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmsep3.obj : fnmsep3.c
+  $(cml) fnmsep3.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\fnmsep4.obj : fnmsep4.c
+  $(cml) fnmsep4.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+test\fnmsep4.obj : fnmsep4.c
+  $(cml) -DDEBUG fnmsep4.c
+  $(obj) -sl 2 FILES_TEXT large\fnmsep4.obj
+
+fnmsep4.exe : test\fnmsep4.obj
+  link test\fnmsep4,$@,\dev\nul,lsbr/NOE/NOI;
+
+# copy filenames from dos to unix style --------------------------------------
+large\fnm_d2u.obj : fnm_d2u.c
+  $(cml) fnm_d2u.c
+  $(obj) -sl 2 FILES_TEXT large\fnm_d2u.obj
+
+# find the current working directory -----------------------------------------
+large\getcdir0.obj : getcdir0.c
+  $(cml) getcdir0.c
+  $(obj) -sl 2 FILES_TEXT large\getcdir0.obj
+
+large\getcdir1.obj : getcdir1.c
+  $(cml) getcdir1.c
+  $(obj) -sl 2 FILES_TEXT large\getcdir1.obj
+
+# Ermittlung des Current Work Directories ------------------------------------
+small\getpwd.obj : getpwd_s.asm
+  masm /Ml getpwd_s,small\getpwd.obj;
+
+large\getpwd.obj : getpwd_l.asm
+  masm /Ml getpwd_l,large\getpwd.obj;
+
+# change working directory ---------------------------------------------------
+large\dcd01.obj : dcd01.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+# ----------------------------------------------------------------------------
+large\cdromfnm.obj : cdromfnm.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+# get and set current disk ---------------------------------------------------
+large\curdisk.obj : curdisk.c
+  $(cml) $?
+  $(obj) -sl 2 FILES_TEXT $@
+
+# find file in path specified by environment ---------------------------------
+large\envfilsr.obj : envfilsr.c
+  $(cml) envfilsr.c
+  $(obj) -sl 2 FILES_TEXT large\envfilsr.obj
+
+# find binary file in path specified by environment --------------------------
+large\envbinsr.obj : envbinsr.c
+  $(cml) envbinsr.c
+  $(obj) -sl 2 FILES_TEXT large\envbinsr.obj
+
+# compare two files by their extensions --------------------------------------
+large\extcmp.obj : extcmp.c
+  $(cml) extcmp.c
+  $(obj) -sl 2 FILES_TEXT large\extcmp.obj
+
+# open temporary file --------------------------------------------------------
+small\topen.obj : topen_s.asm
+  masm /Ml topen_s,small\topen.obj;
+
+large\topen.obj : topen_l.asm
+  masm /Ml topen_l,large\topen.obj;
+
+# rotate a file --------------------------------------------------------------
+large\rotfile.obj : rotfile.c
+  $(cml) rotfile.c
+  $(obj) -sl 2 FILES_TEXT large\rotfile.obj
+
+# process module table -------------------------------------------------------
+large\modtbl.obj : modtbl.c
+  $(cml) modtbl.c
+  $(obj) -sl 2 FILES_TEXT large\modtbl.obj
+
+# return filename extension --------------------------------------------------
+large\tellext.obj : tellext.c
+  $(cml) tellext.c
+  $(obj) -sl 2 FILES_TEXT large\tellext.obj
+
+# Verarbeiten von ARC-Files --------------------------------------------------
+small\arcfiles.obj : arcfiles.c $(incl)fnames.h $(incl)archead.h
+  $(cms) arcfiles.c
+
+large\arcfiles.obj : arcfiles.c $(incl)fnames.h $(incl)archead.h
+  $(cml) arcfiles.c
+  $(obj) -sl 2 FILES_TEXT large\arcfiles.obj
+
+small\archead.obj : archead.c $(incl)archead.h
+  $(cms) archead.c
+
+large\archead.obj : archead.c $(incl)archead.h
+  $(cml) archead.c
+  $(obj) -sl 2 FILES_TEXT large\archead.obj
+
+# Verarbeiten von LZH-Files --------------------------------------------------
+small\lzhhead.obj : lzhhead.c $(incl)lzhhead.h
+  $(cms) lzhhead.c
+
+large\lzhhead.obj : lzhhead.c $(incl)lzhhead.h
+  $(cml) lzhhead.c
+  $(obj) -sl 2 FILES_TEXT large\lzhhead.obj
+
+# Parameter Verarbeitung -----------------------------------------------------
+large\param001.obj : param001.c
+  $(cml) param001.c
+  $(obj) -sl 2 PARAM_TEXT large\param001.obj
+
+param001.exe : param001.c
+  $(ccl) /DTEST param001.c
+  del param001.obj
+
+large\param002.obj : param002.c
+  $(cml) param002.c
+  $(obj) -sl 2 PARAM_TEXT large\param002.obj
+
+large\fnmqueue.obj : fnmqueue.c
+  $(cml) fnmqueue.c
+  $(obj) -sl 2 STRINGS_TEXT large\fnmqueue.obj
+
+# Direktes Lesen/Schreiben von Disks -----------------------------------------
+large\dsklscrd.obj : dsklscrd.asm
+  masm /Ml dsklscrd,large\dsklscrd.obj;
+
+# Entity Processing ----------------------------------------------------------
+large\convent1.obj : convent1.c
+  $(cml) convent1.c
+  $(obj) -sl 2 STRINGS_TEXT large\convent1.obj
+
+large\convent2.obj : convent2.c
+  $(cml) convent2.c
+  $(obj) -sl 2 STRINGS_TEXT large\convent2.obj
+
+large\convent4.obj : convent4.c
+  $(cml) convent4.c
+  $(obj) -sl 2 STRINGS_TEXT large\convent4.obj
+
+large\convent5.obj : convent5.c
+  $(cml) convent5.c
+  $(obj) -sl 2 STRINGS_TEXT large\convent5.obj
+
+large\convent6.obj : convent6.c
+  $(cml) convent6.c
+  $(obj) -sl 2 STRINGS_TEXT large\convent6.obj
+
+# Data Portability Package ---------------------------------------------------
+large\dpp_0001.obj : dpp_0001.c
+  $(cml) dpp_0001.c
+  $(obj) -sl 2 DPP_TEXT large\dpp_0001.obj
+
+large\dpp_0002.obj : dpp_0002.c
+  $(cml) dpp_0002.c
+  $(obj) -sl 2 DPP_TEXT large\dpp_0002.obj
+
+large\dpp_0003.obj : dpp_0003.c
+  $(cml) dpp_0003.c
+  $(obj) -sl 2 DPP_TEXT large\dpp_0003.obj
+
+large\dpp_0004.obj : dpp_0004.c
+  $(cml) dpp_0004.c
+  $(obj) -sl 2 DPP_TEXT large\dpp_0004.obj
+
+large\dpp_0005.obj : dpp_0005.c
+  $(cml) dpp_0005.c
+  $(obj) -sl 2 DPP_TEXT large\dpp_0005.obj
+
+large\dpp_0006.obj : dpp_0006.c
+  $(cml) dpp_0006.c
+  $(obj) -sl 2 DPP_TEXT $@
+
+large\dpp_0007.obj : dpp_0007.c
+  $(cml) dpp_0007.c
+  $(obj) -sl 2 DPP_TEXT $@
+
+large\dpp_0008.obj : dpp_0008.c
+  $(cml) dpp_0008.c
+  $(obj) -sl 2 DPP_TEXT $@
+
+large\rndlong.obj : rndlong.c
+  $(cml) rndlong.c
+  $(obj) -sl 2 DPP_TEXT large\rndlong.obj
+
+large\lng2hex.obj : lng2hex.c
+  $(cml) lng2hex.c
+  $(obj) -sl 2 DPP_TEXT large\lng2hex.obj
+
+large\lng2nstr.obj : lng2nstr.c
+  $(cml) $?
+  $(obj) -sl 2 DPP_TEXT $@
+
+large\bin2hex.obj : bin2hex.c
+  $(cml) bin2hex.c
+  $(obj) -sl 2 DPP_TEXT large\bin2hex.obj
+
+large\bin2hexr.obj : bin2hexr.c
+  $(cml) bin2hexr.c
+  $(obj) -sl 2 DPP_TEXT large\bin2hexr.obj
+
+large\hex2bin.obj : hex2bin.c
+  $(cml) hex2bin.c
+  $(obj) -sl 2 DPP_TEXT $@
+
+large\fnmovwr.obj : fnmovwr.c
+  $(cml) fnmovwr.c
+  $(obj) -sl 2 FILE_TEXT $@
+
+# ----------------------------------------------------------------------------
+large\vshift01.obj : vshift01.c
+  $(cml) vshift01.c
+  $(obj) -sl 2 FILES_TEXT large\vshift01.obj
+
+# diagnose: ------------------------------------------------------------------
+large\diagnose.obj : diagnose.c
+  $(cml) diagnose.c
+  $(obj) -sl 2 DPP_TEXT large\diagnose.obj
+
+# ============================================================================
+large\dirt_001.obj : dirt_001.c
+  $(cml) /W0 dirt_001.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_001.obj
+
+large\dirt_002.obj : dirt_002.c
+  $(cml) /W0 dirt_002.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_002.obj
+
+large\dirt_003.obj : dirt_003.c
+  $(cml) /W0 dirt_003.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_003.obj
+
+large\dirt_004.obj : dirt_004.c
+  $(cml) /W0 dirt_004.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_004.obj
+
+large\dirt_005.obj : dirt_005.c
+  $(cml) /W0 dirt_005.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_005.obj
+
+large\dirt_006.obj : dirt_006.c
+  $(cml) /W0 dirt_006.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_006.obj
+
+large\dirt_007.obj : dirt_007.c
+  $(cml) /W0 dirt_007.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_007.obj
+
+large\dirt_008.obj : dirt_008.c
+  $(cml) /W0 dirt_008.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_008.obj
+
+large\dirt_009.obj : dirt_009.c
+  $(cml) /W0 dirt_009.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_009.obj
+
+large\dirt_010.obj : dirt_010.c
+  $(cml) /W0 dirt_010.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_010.obj
+
+large\dirt_011.obj : dirt_011.c
+  $(cml) /W0 dirt_011.c
+  $(obj) -sl 2 DIRTY_TEXT large\dirt_011.obj
+
+large\dirt_012.obj : dirt_012.c
+  $(cml) $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_i12.obj : dirt_012.c
+  $(cml) -DTLT_INT $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_l12.obj : dirt_012.c
+  $(cml) -DTLT_LONG $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_013.obj : dirt_013.c
+  $(cml) $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_i13.obj : dirt_013.c
+  $(cml) -DTLT_INT $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_l13.obj : dirt_013.c
+  $(cml) -DTLT_LONG $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_i14.obj : dirt_014.c
+  $(cml) -DDTYPE_int $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_l14.obj : dirt_014.c
+  $(cml) -DDTYPE_long $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_i16.obj : dirt_016.c
+  $(cml) -DDTYPE_int $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\dirt_l16.obj : dirt_016.c
+  $(cml) -DDTYPE_long $?
+  $(obj) -sl 2 DIRTY_TEXT $@
+
+large\int24.obj : int24.asm
+  masm /Ml int24.asm,$@;
+
+large\int14l.obj : int14l.asm
+  masm /Ml int14l.asm,$@;
+
+# ----------------------------------------------------------------------------
+small\dirt_s01.obj : dirt_001.c
+  $(cms) dirt_001.c
+
+small\dirt_s02.obj : dirt_002.c
+  $(cms) dirt_002.c
+
+small\dirt_s03.obj : dirt_003.c
+  $(cms) dirt_003.c
+
+small\dirt_s04.obj : dirt_004.c
+  $(cms) dirt_004.c
+
+small\dirt_s05.obj : dirt_005.c
+  $(cms) dirt_005.c
+
+small\dirt_s06.obj : dirt_006.c
+  $(cms) dirt_006.c
+
+small\dirt_s08.obj : dirt_008.c
+  $(cms) dirt_008.c
+
+small\dirt_s09.obj : dirt_009.c
+  $(cms) dirt_009.c
+
+small\dirt_s10.obj : dirt_010.c
+  $(cms) dirt_010.c
+
+small\dirt_s11.obj : dirt_011.c
+  $(cms) dirt_011.c
+
+# ----------------------------------------------------------------------------
+large\unix0001.obj : unix0001.c
+  $(cml) unix0001.c
+  $(obj) -sl 2 FILES_TEXT large\unix0001.obj
+
+large\unix0002.obj : unix0002.c
+  $(cml) unix0002.c
+  $(obj) -sl 2 FILES_TEXT large\unix0002.obj
+
+large\unix0003.obj : unix0003.c
+  $(cml) /W0 unix0003.c
+  $(obj) -sl 2 FILES_TEXT large\unix0003.obj
+
+# tools ----------------------------------------------------------------------
+large\xref01.obj : xref01.c $(incl)xref.h
+  $(cml) xref01.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\xref02.obj : xref02.c $(incl)xref.h
+  $(cml) xref02.c
+  $(obj) -sl 2 FILES_TEXT $@
+
+large\xref03.obj : xref03.c $(incl)xref.h
+  $(cml) xref03.c
+  $(obj) -sl 2 FILES_TEXT $@

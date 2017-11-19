@@ -1,0 +1,46 @@
+#!/usr/bin/perl
+
+my @SUBDIRS= qw(
+planner
+sgml
+nl_kr lex lexicon
+);
+
+my %OLD_LIST1=
+(
+  'include/gg'         => 'gg',
+  'include/contrib'    => 'contrib',
+);
+
+my %OLD_LIST2=
+(
+);
+
+my ($sub);
+foreach $sub (@SUBDIRS)
+{
+  next unless (-d $sub);
+  &mk_links ($sub);
+}
+print "(cd ned; ./SetupWork)\n";
+
+exit (0);
+
+sub mk_links
+{
+  my $dir= shift;
+
+  my ($old, $new);
+  foreach $old (sort keys %OLD_LIST1)
+  {
+    $new= $OLD_LIST1{$old};
+    print "ln -fs ../../lib/$old $dir/$new\n";
+  }
+
+  foreach $old (sort keys %OLD_LIST2)
+  {
+    $new= $OLD_LIST2{$old};
+    print "ln -fs $old $dir/$new\n";
+  }
+  print "\n";
+}

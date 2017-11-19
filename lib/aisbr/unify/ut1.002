@@ -1,0 +1,5 @@
+name:[sub1:value1 sub2:[sub2sub1:sub2value1 sub2sub2:sub2value2]]
+[a:b]:[c:d]
+set:{m1 m2 m3 18 0 1 m4}
+hugo:@name@sub2
+last:[x:[]]

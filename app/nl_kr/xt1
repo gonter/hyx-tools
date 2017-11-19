@@ -1,0 +1,17 @@
+# file xt1
+# test for lutmake stream mode
+# STOPWORDS
+# and
+# the
+# .
+DOCID 2423
+DATA
+gerhard
+gonter
+blabla
+.
+DOCID 4711
+DATA
+urxn1
+gerhard
+.

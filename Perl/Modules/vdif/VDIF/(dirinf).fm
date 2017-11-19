@@ -1,0 +1,11 @@
+#!/usr/local/bin/perl
+# FILE %work/fbsd/gg/CPAN/vdif/VDIF/(dirinf).fm
+#
+# written:       1999-10-21
+# latest update: 1999-10-21 18:58:38
+#
+
+Entry.pm               4158 f 100644  3222  3000
+LDIF.pm                7325 f 100644  3222  3000
+TopCall.pm             2896 f 100644  3222  3000
+vCx.pm                 3786 f 100644  3222  3000

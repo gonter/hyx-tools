@@ -1,0 +1,75 @@
+/*
+ *  FILE ~/usr/planner/cal01.c
+ *
+ *  CAL generator
+ *
+ *  written:       1994-10-17
+ *  latest update: 1994-10-19
+ *
+ */
+
+#include <stdio.h>
+#include <gg/dates.h>
+
+/* ------------------------------------------------------------------------ */
+static char day_frame_name [256];
+
+/* ------------------------------------------------------------------------ */
+int print_year_info (FILE *fo, struct YEAR_INFO *yi, int year)
+{
+  struct DAY_INFO *di;  /* information about a day                          */
+  int num;              /* number of days in particular month               */
+  int wnum= 1;          /* week number                                      */
+  int dnum= 0;          /* day of year; 0..364 (365)                        */
+  int wday;             /* day of week; 0..6                                */
+  char *dow3;           /* name of day week                                 */
+  int mon;              /* current month                                    */
+  int day;              /* current day in month                             */
+
+  num= (yi->YI_is_leap_year) ? 366 : 365;
+
+  fprintf (fo, "<Frame %d>\n", year);
+  fprintf (fo, "%d\n\n", year);
+  for (mon= 0; mon < 12; mon++)
+  {
+    fprintf (fo, "<hyx.l fr=\"%d-%02d\" tdc=hyx.l tdp=2>%2d %s\n",
+            year, mon+1, mon+1, MONTH_NAME[mon+1]);
+  }
+  fprintf (fo, "\n</Frame>\n");
+
+  for (mon= 0; mon < 12; mon++)
+  {
+    dnum= yi->YI_month_beg [mon];
+    num= yi->YI_days_of_month [mon];
+    di= &(yi->YI_day_info [dnum]);
+
+    fprintf (fo, "<Frame %d-%02d>\n", di->DAYI_year, di->DAYI_month);
+    fprintf (fo, "%d-%02d %s\n\n",
+            di->DAYI_year, di->DAYI_month, MONTH_NAME [di->DAYI_month]);
+
+    fprintf (fo, "------ week %2d\n", wnum);
+    for (day= 0; day < num; day++)
+    {
+      di= &(yi->YI_day_info [dnum++]);
+      wday= di->DAYI_wday;
+      dow3= (wday >= 0 && wday <= 6) ? DAY_OF_WEEK3 [wday] : "XXX";
+      sprintf (day_frame_name,
+             "%d-%02d-%02d %s",
+             di->DAYI_year,
+             di->DAYI_month,
+             di->DAYI_day,
+             dow3);
+      /***************
+      fprintf (fo, "<hyx.l fr=\"%s\" tdc=hyx.l tdp=6>%2d %s %66s[%3d]\n",
+              day_frame_name, di->DAYI_day, dow3, " ", dnum);
+      ************/
+      fprintf (fo,
+              "[%3d] <hyx.l fr=\"%s\" tdc=hyx.l tdp=6>%2d %s\n",
+              dnum, day_frame_name, di->DAYI_day, dow3);
+      if (wday == 0) fprintf (fo, "------ week %2d\n", ++wnum);
+    }
+    fprintf (fo, "\n</Frame>\n");
+
+  }
+  return 0;
+}

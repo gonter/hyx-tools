@@ -1,0 +1,29 @@
+#
+#  FILE /usr/window/utl/makefile
+#
+#  Diverese Utilities IBM-PC BildschirmunterstÅtzung
+#
+# ----------------------------------------------------------------------------
+obj=objdec -m0 -w -d
+cml=cl -Ot -AL /c
+incl=c:\c5\include\gg\
+inst=command /c inst-exe
+bin=c:\bin\
+llib=c:\usr\sbr\lsbr
+
+all.exe : $(bin)video.exe $(bin)setpal.exe
+
+#
+# Bildschirmmode Utility =====================================================
+#
+$(bin)video.exe : video.c
+  $(cml) video.c
+  $(obj) video.obj
+  link   video,$(bin)video.exe,\dev\nul,$(llib);
+  del    video.obj
+
+$(bin)setpal.exe : setpal.c
+  $(cml) setpal.c
+  $(obj) setpal.obj
+  link   setpal,$(bin)setpal.exe,\dev\nul,$(llib);
+  del    setpal.obj

@@ -1,0 +1,42 @@
+#
+# FILE %ds/irdb/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1996-04-05
+# latest update: 1996-05-06  0:28:21
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.00 all.01 # all.02 # all.test
+
+all.00 : !
+  irdb0001.obj irdb0002.obj irdb0003.obj irdb0004.obj irdb0005.obj !
+  irdb0006.obj irdb0007.obj irdb0008.obj irdb0009.obj irdb0010.obj !
+  irdb0011.obj irdb0012.obj irdb0013.obj irdb0014.obj irdb0015.obj !
+  irdb0016.obj irdb0017.obj irdb0018.obj irdb0019.obj irdb0020.obj !
+  irdb0021.obj irdb0022.obj irdb0023.obj irdb0024.obj irdb0025.obj !
+  irdb0026.obj irdb0027.obj irdb0028.obj
+
+all.01 : !
+  irdb0101.obj irdb0102.obj irdb0103.obj irdb0104.obj irdb0105.obj !
+  irdb0106.obj irdb0107.obj !
+               irdb0112.obj !
+  irdb0116.obj              irdb0118.obj irdb0119.obj irdb0120.obj
+
+all.test : it1.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+TEST= irdb0001.obj irdb0003.obj irdb0005.obj irdb0012.obj irdb0014.obj irdb0017.obj
+
+it1.exe : it1.obj $(TEST)
+  link it1 $(TEST),,,c:\usr\sbr\lsbr;

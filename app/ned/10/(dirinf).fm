@@ -1,0 +1,32 @@
+#
+# FILE %ned/10/(dirinf).fm
+#
+# written:       1990 01 20
+# latest update: 2000-08-24 14:49:10
+# $Id: (dirinf).fm,v 1.2 2000/08/24 15:10:19 gonter Exp $
+#
+
+Makefile        | current makefile
+make-c5         | MSDOS makefile
+
+ned1001.c | int check_maus ()
+ned1002.c | void look1_for_maus ()
+ned1003.c | void look2_for_maus ()
+ned1004.c | void maus_wdw (int where)   /* Gr”sse des aktuellen Windows „ndern */
+ned1005.c | void p_menue ()             /* Menueleiste(n) aktivieren    */
+ned1006.c | void maus_menue (int mode)  /* Menueleiste(n) aktivieren    */
+ned1007.c | q_window_menu ()            /* Menue der Windows            */
+ned1008.c | p_window_menu ()            /* Menue der Windows            */
+ned1009.c | show_buttons ()
+ned1010.c | int test_maus (int left, int right, int left_right)
+ned1011.c | int rst_button ()
+ned1012.c | int stp_button (FILE *fi, char *str)
+ned1013.c | int def_button (int bdx, int bdy, int bdc, int bdm, int bdi)
+ned1014.c | struct BUTTON_DESCRIPTOR *locate_button (...);
+ned1015.c | int execute_mm_item (long fc);
+ned1016.c | int stp_mm_item (FILE *fi, char *str);
+ned1017.c | int ned_mouse_set_cursor (int x, int y, int t);
+ned1018.c | int ned_mouse_event (int x, int y, int t)
+ned1019.c | int ned_search_button_bar (int x, int y, int t)
+
+*         |

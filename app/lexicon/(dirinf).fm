@@ -1,0 +1,104 @@
+#
+# FILE %lexicon/(dirinf).fm
+#
+# written:       1991 03 26
+# latest update: 2000-08-26 15:16:36
+# $Id: (dirinf).fm,v 1.4 2000/08/26 13:21:14 gonter Exp $
+#
+
+(dirinf).fm     Contents
+Makefile        Unix version of Makefile
+make-dos        MSDOS version of Makefile
+
+NOTES           various notes
+
+# debugging stuff:
+possig.awk      search for patterns
+
+# headers and documentation ----
+lexicon.mod     control file for library
+lexfile.doc     Beschreibung der Datenstrukturen des Lexicons
+lexdoc.zip      auxiliary information
+lexint.doc      internal information
+#
+makefile        MSDOS makefile
+make-ux         UNIX makefile
+makeshar.lst    list of files transported to unix
+http4lex.pl     format frames from a lexicon as a filter stage of a HTTP4HYX server
+#
+# production programs ----------
+dictadd.c       add entries to dictionary; main module
+dictmod.c       modify dictionary
+#
+# test programs ----------------
+lex.c           Lexicon Test
+lex.c           (nicht verwendet)
+pt.c            parse test
+#
+# library modules --------------
+#
+parse001.c      struct LEX_PARSER_STATUS *LEX_reset_segment_parser ()
+parse002.c      struct TEXT_ELEMENT *LEX_segment_parse_char (...)
+parse003.c      Tag Definition anfordern
+parse004.c      free text list etc.
+parse005.c      free text segment list
+parse006.c      copy text segments
+parse007.c      print text element list
+parse008.c      print text segment list
+parse009.c      strip text segment list
+parse010.c      text list in markup struktur umbauen
+parse011.c      allocate text semgent
+parse012.c      allocate text node
+parse013.c      allocate text node together with text segment
+parse014.c      key string transformation
+parse015.c      make markup
+parse016.c      display markup structure
+parse017.c      display tag definition
+parse018.c      append_text_element (...)
+parse019.c      int parse_tag_sequence (...)
+parse020.c      long text_segment_count_char (...)
+parse021.c      void dump_text_element_list (FILE *fo, ...);
+parse022.c      int dump_text_segment_list (FILE *fo, ...);
+parse023.c      struct TEXT_ELEMENT **find_last_text_element_ptr (...);
+
+parse024.c      int read_tag_definition (char *fn)
+parse025.c      int process_tag_definition (char *line)
+parse026.c      struct TAG_DEFINITION *identify_tag (char *str, ...)
+parse027.c      struct TAG_DEFINITION *new_tag_definition (...)
+parse028.c      struct TAG_DEFINITION *find_tag_definition (...)
+#
+dictadd1.c      add entries to dictionary
+dictadd2.c      restructure lexicon entry
+dictadd3.c      int dict_update_entry (...)
+dictadd4.c      write lexicon entry to files
+dictadd5.c      lexicon file cache
+dictadd6.c      write lexicon text
+dictadd8.c      purge entry list
+dictadd9.c      combine two entries
+#
+dict0001.c      char *get_divided_lexicon (char *base_name, ...)
+dict0002.c      int dict_check_integrity (void);
+dict0003.c      int write_lexicon_frame (FILE *fhyx, ...)
+dict0004.c      int dict_add_init (struct HYX_CLUSTER_CONTROL *hcc)
+dict0005.c      int dict_add_finish (struct HYX_CLUSTER_CONTROL *hcc)
+dict0006.c      void memory_statistics (FILE *fo, long record_counter)
+dict0007.c      int ytree_index_to_entry_descriptor (yt_node, ...)
+dict0008.c      int ytree_entry_descriptor_to_index (yt_node, ...)
+dict0009.c      int dict_queue (struct LEXICON_CONTROL *lcc, ...)
+dict0010.c      int dict_flush_queue (struct HYX_CLUSTER_CONTROL *hcc, ...);
+dict0011.c      int dict_write_xfn_entry (struct YTREE *yt_node, void *client_data)
+dict0012.c      int dict_read_setup_file (...)
+dict0013.c      char *dict_get_frame_name (struct HYX_CLUSTER_CONTROL *hcc, ...)
+dict0014.c      int dict_restructure2_entry (struct LEXICON_CONTROL *lcc, ...)
+dict0015.c      int dict_process_entry (struct HYX_CLUSTER_CONTROL *hcc, ...)
+dict0016.c      int hyx_unroll_text (struct DYNAMIC_BLOCK *dyb, ...)
+dict0017.c      /* unroll tag defintion */
+dict0018.c      int hyx_unroll_text_segment_list (struct DYNAMIC_BLOCK *dyb, ...)
+#
+dict0031.c      read lexicon entry from named files
+dict0032.c      read lexicon entry from opened files
+dict0033.c      read lexicon text
+#
+lex00001.c      Lexicon Verwaltung  *** NICHT VERWENDET ***
+#
+lexut001.c      int ISPELL_derive (char *orig, int flag, char *deriv)

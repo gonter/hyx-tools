@@ -1,0 +1,50 @@
+#!/usr/bin/perl
+
+my @SUBDIRS= qw(
+00 01 02 03 04 05 06 07 08 09
+10 11 12 13
+unix
+);
+
+my %OLD_LIST1=
+(
+  'include/gg'         => 'gg',
+  'include/contrib'    => 'contrib',
+);
+
+my %OLD_LIST2=
+(
+);
+
+my ($sub);
+foreach $sub (@SUBDIRS)
+{
+  &mk_links ($sub);
+}
+
+  foreach $old (sort keys %OLD_LIST1)
+  {
+    $new= $OLD_LIST1{$old};
+    print "ln -fs ../../lib/$old $new\n";
+  }
+
+exit (0);
+
+sub mk_links
+{
+  my $dir= shift;
+
+  my ($old, $new);
+  foreach $old (sort keys %OLD_LIST1)
+  {
+    $new= $OLD_LIST1{$old};
+    print "ln -fs ../../../lib/$old $dir/$new\n";
+  }
+
+  foreach $old (sort keys %OLD_LIST2)
+  {
+    $new= $OLD_LIST2{$old};
+    print "ln -fs $old $dir/$new\n";
+  }
+  print "\n";
+}

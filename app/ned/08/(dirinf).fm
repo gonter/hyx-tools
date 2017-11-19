@@ -1,0 +1,114 @@
+#
+# FILE %ned/08/(dirinf).fm
+#
+# latest update: 2000-08-24 14:42:35
+# $Id: (dirinf).fm,v 1.4 2001/04/01 22:45:03 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0803.c       | void p_feature_next ()
+ned0804.c       | void p_feature_prev ()
+ned0805.c       | void p_feature_range ()
+ned0806.c       | void p_feature_set ()
+ned0807.c       | void p_feature_reset ()
+ned0808.c       | int ned_link_feature_lines (...)
+ned0809.c       | int ned_setup_feature_window (...)
+ned0810.c       | int q_save_restart ()
+ned0811.c       | void q_save_marker (fo, m)
+ned0812.c       | int q_load_restart ()
+ned0813.c       | void p_link_feature (...) /* ^O F: Open Feature Window */
+ned0814.c       | struct WINDOWCTRL *active_feature_window (struct WINDOWCTRL *w)
+#
+ned0821.c       | void wr_ftr (ff, ln, fp)
+ned0822.c       | void wr_ftr_txt (ff, fp)
+ned0823.c       | int rd_ftr (ff, fp)
+ned0824.c       | int wr_sgml_tag (ff, fp, column_idx);
+ned0825.c       | int rd_sgml_tag (...);
+ned0826.c       | int find_feature (...)
+ned0827.c       | int find_feature_with_attribute (...)
+ned0828.c       | int ned_identify_feature (...);
+ned0829.c       | int ned_insert_feature (*fp, f)
+ned0830.c       | int setup_sgml_entity_descriptors (char *setup_file_name)
+ned0831.c       | int setup_sgml_tag_descriptors (char *setup_file_name)
+ned0832.c       | void p_format_SGML (void);
+ned0833.c       | void p_format_ASCII (void);
+ned0834.c       | int ned_eval_string (char *str, int option);
+ned0835.c       | void ned_eval_str (void);
+ned0836.c       | int ned_eval_hlink (char *str, int option);
+ned0837.c       | int get_attr_value (char *src, char *dst);
+ned0838.c       | char *ned_line_2_string (...);
+ned0838a.c      | ind ned_line_list_size ();
+ned0839.c       | int ned_eval_line (...);
+ned0840.c       | void ned_eval_block (void);
+ned0841.c       | void ned_eval_feature (void);
+ned0841b.c      | int q_eval_tag (void);
+ned0842.c       | struct FEATURE **ned_feature_find3 (int range);
+ned0842b.c      | struct FEATURE **ned_feature_find (struct LINE *lp, int x, int range)
+ned0842c.c      | struct FEATURE **ned_feature_find2 (struct WINDOWCTRL *wc, int range)
+ned0843.c       | int eval_ned_macro (char *str, int option);
+ned0844.c       | int ned_activate_cluster (char *fn)
+ned0844b.c      | int ned_free_cluster (struct CLUSTERCTRL *cl)
+ned0845.c       | int ned_activate_frame (...)
+ned0845a.c      | int ned_deactivate_frame (...)
+ned0846.c       | struct FRAMECTRL *find_frame (...)
+ned0847.c       | struct FRAMECTRL *create_framectrl (...)
+ned0848.c       | int get_index (struct FRAMECTRL *fr);
+ned0849.c       | int update_index (...)
+ned0850.c       | struct FEATURE *q_feature_set (...)
+ned0850b.c      | struct FEATURE *ned_new_feature (...)
+ned0851.c       | int eval_window_parameters (...)
+ned0852.c       | **OBS** char *find_attr_name (char *str, char *name);
+ned0853.c       | int eval_logic_link (...);
+ned0854a.c      | void p_logic_link_next ();
+ned0854b.c      | void p_logic_link_prev ();
+ned0854c.c      | void p_logic_link_menu ();
+ned0854d.c      | void p_logic_link_up ();
+ned0854e.c      | void p_logic_link_lang ()
+ned0854f.c      | void p_logic_link_sort ();
+ned0854g.c      | void p_logic_link_view ();
+ned0854h.c      | void p_logic_link ();
+ned0856.c       | int ned_lookup_current_feature (char *token, ...)
+ned0857.c       | int ned_lookup_feature (char *token, char *line_buffer, ...)
+ned0857b.c      | int ned_lookup_tag (char *token, char *line_buffer, ...)
+ned0857c.c      | int ned_lookup_feature_cache (...)
+ned0858.c       | int ned_rename_frame (struct WINDOWCTRL *w, char *fnm)
+ned0858b.c      | int ned_cb_rename_frame (...)
+ned0859.c       | void eval_ned_parameter (char *str, int option);
+ned0860.c       | int check_logic_links (struct WINDOWCTRL *w);
+ned0861.c       | void ned_set_SGML_tag ()
+ned0862.c       | void ned_set_SGML_entity ()
+ned0863.c       | int ned_wc_feature_create (
+ned0863b.c      | int ned_wc_simple_feature_create (
+ned0864.c       | int initialize_frame (struct WINDOWCTRL *w, char fr_name);
+ned0865.c       | void ned_set_hyx_l ()
+ned0866.c       | int show_feature (struct FEATURE *fp);
+ned0867.c       | void ned_wc_memorize_location (struct WINDOCTRL *wc);
+ned0867b.c      | void ned_memorize_location (void);
+ned0868.c       | void p_logic_link_more ();
+ned0869.c       | struct FRAMECTRL *ned_activate_special (cl_name, fr_name)
+ned0869b.c      | struct FRAMECTRL *ned_activate_cl_fr (cl_name, fr_name)
+ned0870.c       | activate default symbolic bookmarks
+ned0871.c       | void p_activate_crf ()
+ned0872.c       |
+ned0873.c       | bookmark subsystem
+ned0874.c       |
+ned0875.c       | void p_activate_fr_root ()
+ned0876.c       | void p_activate_fr_notes ()
+ned0877.c       | void p_activate_fr_help ()
+ned0878.c       | void ned_p_activate_cl_fr ()
+ned0879.c       | void p_cross_ref ()
+ned0879i.c      | void ned_lookup_lib ()
+ned0879l.c      | void ned_lookup_lexicon ()
+ned0879t.c      | void ned_lookup_thesaurus ()
+ned0880.c       | void ned_activate_cross_ref (char *str, ...)
+ned0881.c       | void p_2cross_ref (char *str, int MAX_STR)
+ned0882.c       | void ned_cross_ref (...)
+ned0883.c       |
+ned0884.c       | void ned_set_mark (void)
+ned0885.c       | void ned_set_lookup_tag (void)
+ned0885b.c      | void ned_set_lookup_tag_fr (void)
+ned0886.c       | struct FEATURE *ned_feature_set (struct WINDOWCTRL *w, ...)
+ned0887.c       | void ned_ftr_shift_up ()
+*               |

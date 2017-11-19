@@ -1,0 +1,100 @@
+#
+# FILE %nl_kr/make-dos
+#
+# makefile for MSDOS using MSC 5.0 and Zorland make
+#
+# Natural Language and Knowledge Representation
+# + lutmake/deref fulltext retrieval engine
+#  
+# written:       1989-03-29
+# latest update: 1996-12-22 21:19:34
+#
+# ============================================================================
+cml=cl -Od -AL /Fo$@ /W3 /c
+ccl=cl -Od -AL
+obj=objdec -w -d -m0 -sl 2 NLKR_TEXT
+map=\dev\nul
+lib=c:\usr\sbr\lsbr
+bin=c:\bin\
+
+DS=\usr\ds\hyxta\
+
+all : all.exe #all.doc
+
+all.exe : $(bin)lutmake.exe  $(bin)luttest.exe  $(bin)lutdump.exe !
+          $(bin)lutprint.exe $(bin)deref.exe    !
+          $(bin)ta.exe       $(bin)tasgml.exe
+
+all.obj : lutmake.obj  luttest.obj  lutdump.obj  !
+          lutprint.obj deref.obj
+
+all.doc : lmd.tex
+
+# ----------------------------------------------------------------------------
+nl_kr.sh :
+  shar -c -t nl_kr.sh -fmakeshar.lst
+
+# ----------------------------------------------------------------------------
+lmd.tex : lmd.hyx
+  hyxseq -vvvv -Olmd._01 lmd.hyx
+  chksgml -Olmd._02 lmd._01
+  command /c awk " {print}" lmd._02 >lmd.tex
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+# \usr\ds\lmd\nl_00501.c
+$(bin)lutmake.exe : lutmake.obj \usr\ds\lmd\nl_00501.obj
+  link $**,$(bin)lutmake.exe,$(map),$(lib)/NOE/NOI;
+
+$(bin)luttest.exe : luttest.obj
+  link luttest,$(bin)luttest.exe,$(map),$(lib)/NOE/NOI;
+
+$(bin)lutdump.exe : lutdump.obj
+  link lutdump,$(bin)lutdump,$(map),$(lib)/NOE/NOI;
+
+$(bin)lutprint.exe : lutprint.obj
+  link lutprint,$(bin)lutprint,$(map),$(lib)/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+$(bin)deref.exe : deref.obj \usr\ds\lmd\nl_00139.obj
+  link $**,$(bin)deref,$(map),$(lib)/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+TA_MOD= $(DS)hyxta005.obj
+$(bin)ta.exe : ta.obj $(TA_MOD)
+  link $**,$(bin)ta,$(map),$(lib)/NOE/NOI;
+
+$(bin)tasgml.exe : tasgml.obj
+  link $**,$(bin)tasgml,$(map),$(lib)/NOE/NOI;
+
+# _RELICS_ ===================================================================
+all2.exe : $(bin)nltest.exe nl01.obj $(bin)dicmerge.exe
+
+# ----------------------------------------------------------------------------
+nltest.obj : nltest.c design.h
+  $(cml) nltest.c
+  $(obj) nltest.obj
+
+$(bin)nltest.exe : nltest.obj
+  link nltest,$(bin)nltest,$(map),$(lib)/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+dicmerge.obj : dicmerge.c
+  $(cml) dicmerge.c
+  $(obj) dicmerge.obj
+
+$(bin)dicmerge.exe : dicmerge.obj
+  link dicmerge,$(bin)rdicmerge.exe,$(map),$(lib)/NOE/NOI;
+
+# ----------------------------------------------------------------------------
+lookup01.obj : lookup01.c
+  $(cml) lookup01.c
+  lib $(lib)-+lookup01;
+
+nl01.obj : nl.h nl01.c
+  $(cml) nl01.c
+  lib $(lib)-+nl01;

@@ -1,0 +1,75 @@
+#
+# FILE %ds/rdtp/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1996-04-01
+# latest update: 1997-07-14 21:25:13
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.00 all.01 all.02 all.03 all.04 # all.bin
+
+all.00 : !
+  rdtp0001.obj rdtp0002.obj rdtp0003.obj rdtp0004.obj rdtp0005.obj
+
+all.01 : !
+  rdtp0101.obj rdtp0102.obj rdtp0103.obj rdtp0104.obj rdtp0105.obj !
+  rdtp0106.obj rdtp0107.obj rdtp0108.obj rdtp0109.obj rdtp0110.obj !
+  rdtp0111.obj rdtp0112.obj rdtp0113.obj rdtp0114.obj rdtp0115.obj !
+  rdtp0116.obj
+
+all.02 : !
+  rdtp0201.obj rdtp0202.obj rdtp0203.obj rdtp0204.obj rdtp0205.obj !
+  rdtp0206.obj rdtp0207.obj rdtp0208.obj
+
+all.03 : !
+  rdtp0301.obj rdtp0302.obj rdtp0303.obj rdtp0304.obj rdtp0305.obj !
+  rdtp0306.obj rdtp0307.obj rdtp0308.obj rdtp0309.obj rdtp0310.obj !
+  rdtp0311.obj rdtp0312.obj rdtp0313.obj rdtp0314.obj rdtp0315.obj !
+  rdtp0316.obj rdtp0317.obj rdtp0318.obj rdtp0319.obj rdtp0320.obj !
+  rdtp0321.obj rdtp0322.obj !
+  rdtp0341.obj rdtp0342.obj rdtp0343.obj rdtp0344.obj rdtp0345.obj !
+  rdtp0346.obj rdtp0347.obj rdtp0348.obj
+
+all.04 : !
+  rdtp0403.obj !
+  rdtp0413.obj !
+  rdtp0421.obj rdtp0422.obj rdtp0423.obj
+
+all.bin : rt1_rtf.exe rt1_sgml.exe rt2.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+TEST_RTF= rdtp0001.obj rdtp0004.obj rdtp0106.obj rdtp0109.obj rdtp0110.obj !
+ rdtp0201.obj rdtp0206.obj
+
+rt1_rtf.obj : rt1.c
+  $(cml) -DRTF rt1.c
+
+rt1_rtf.exe : rt1_rtf.obj $(TEST_RTF)
+  link rt1_rtf $(TEST_RTF),,,c:\usr\sbr\lsbr;
+
+# ----------------------------------------------------------------------------
+TEST_SGML= rdtp0301.obj rdtp0321.obj rdtp0403.obj rdtp0413.obj rdtp0421.obj !
+ rdtp0423.obj
+
+rt1_sgml.obj : rt1.c
+  $(cml) -DSGML rt1.c
+
+rt1_sgml.exe : rt1_sgml.obj $(TEST_SGML)
+  link rt1_sgml $(TEST_SGML),,,c:\usr\sbr\lsbr;
+
+# see rt2.c rdtp0343.c
+RT2= rdtp0322.obj rdtp0341.obj rdtp0346.obj rdtp0347.obj
+
+rt2.exe : rt2.obj $(RT2)
+  link rt2 $(RT2),,,c:\usr\sbr\lsbr;

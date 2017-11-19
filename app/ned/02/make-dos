@@ -1,0 +1,38 @@
+#
+# FILE %ned/02/makefile
+#
+# GG's Night(mare) Editor System
+# see also: make-ux
+#
+# latest update: 1997-09-07 12:32:38
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED02_TEXT $@
+
+lib : !
+  ned0202.obj  ned0203.obj  ned0204.obj  ned0204b.obj ned0204c.obj !
+  ned0206.obj  ned0207.obj  ned0208.obj  !
+  ned0209.obj  ned0210.obj  ned0211.obj  ned0211b.obj ned0212.obj !
+  ned0213a.obj ned0213b.obj ned0213c.obj ned0213d.obj !
+  ned0213e.obj !
+  ned0214.obj  ned0215a.obj ned0215b.obj ned0215c.obj !
+  ned0216.obj  !
+  ned0217.obj  ned0218.obj  ned0219.obj  ned0220.obj !
+  ned0221.obj  ned0222.obj  ned0223.obj  ned0224.obj !
+  ned0225.obj  ned0226.obj  ned0227.obj  ned0228.obj !
+               ned0230.obj  ned0231.obj  ned0232.obj !
+  ned0240.obj  ned0241.obj  ned0242.obj  ned0243.obj !
+  ned0244.obj  ned0245.obj  ned0246.obj  ned0247.obj !
+  ned0248.obj  ned0249.obj  ned0250.obj  ned0251.obj !
+  ned0252.obj  ned0253.obj  ned0253v.obj ned0254.obj  ned0254b.obj !
+  ned0255.obj  ned0256.obj  ned0256a.obj !
+  ned0257.obj  ned0258.obj  ned0259.obj  !
+  ned0260.obj  ned0260b.obj ned0260c.obj ned0261.obj  ned0262a.obj !
+  ned0263.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

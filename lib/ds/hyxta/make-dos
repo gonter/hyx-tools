@@ -1,0 +1,25 @@
+#
+# FILE %ds/hyxta/makefile
+#
+# written:       1995-03-30
+# latest update: 1996-12-22 21:23:21
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 HYPER_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : hyxta001.obj hyxta002.obj hyxta003.obj hyxta004.obj !
+        hyxta005.obj hyxta006.obj hyxta007.obj hyxta008.obj !
+        hyxta012.obj hyxta015.obj hyxta020.obj !
+        hyxta101.obj hyxta102.obj hyxtax01.obj
+
+# hyxta009.obj hyxta010.obj hyxta011.obj hyxta012.obj !
+# hyxta013.obj hyxta014.obj hyxta015.obj hyxta016.obj !
+# hyxta017.obj hyxta018.obj hyxta019.obj hyxta020.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

@@ -1,0 +1,37 @@
+#
+# FILE %ned/07/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-12-05  1:34:33
+#
+# ============================================================================
+cc=cl -Os -AL /W3 /c
+ccc=cl -Os -AL /Fo$@ /W3 -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED07_TEXT $@
+
+lib : lib.1 lib.2
+lib.1 : !
+  ned0701.obj  ned0702.obj  ned0703.obj ned0705.obj ned0711.obj ned0712.obj !
+  ned0713.obj  ned0714.obj  ned0715.obj ned0716.obj !
+  ned0717.obj  ned0718.obj  ned0719.obj ned0719b.obj !
+  ned0719c.obj ned0720.obj  ned0721.obj  ned0722.obj  !
+  ned0723.obj  ned0723a.obj ned0723b.obj ned0724.obj  ned0724a.obj !
+  ned0725.obj  ned0725b.obj ned0725c.obj ned0726.obj  !
+  ned0727.obj  ned0727a.obj ned0727b.obj !
+  ned0727c.obj ned0727d.obj ned0727e.obj !
+  ned0728.obj  ned0729.obj
+
+lib.2 : !
+  ned0730.obj  ned0731a.obj ned0731w.obj ned0731p.obj !
+  ned0732.obj  ned0733.obj  ned0734.obj  ned0735.obj  !
+  ned0736.obj  ned0737.obj  ned0738.obj  ned0747.obj  ned0747b.obj !
+  ned0749.obj  ned0750.obj  ned0751.obj  ned0752.obj  ned0753.obj  !
+  ned0754a.obj ned0754b.obj ned0754c.obj ned0754d.obj !
+  ned0756.obj  ned0758.obj  ned0759.obj  !
+  ned0760.obj  ned0761.obj               ned0763.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

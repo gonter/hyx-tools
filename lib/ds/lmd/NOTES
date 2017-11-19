@@ -1,0 +1,13 @@
+$Id: NOTES,v 1.1 2001/10/08 17:07:57 gonter Exp $
+Notes about bugs and problems.
+
+Loop:
+
+(dbx) where
+lmd_dil_operator(0x22088af8, 0x2168cee8, 0x1002) at 0x10004890
+lmd_dil_accumulate(0x206c8958) at 0x10004728
+lmd_evaluate_terms(0x21fac8e8, 0x1001) at 0x1000463c
+print_term_list(0x21fac8e8) at 0x100007d0
+main(0x4, 0x2ff7fde8) at 0x1000073c
+
+

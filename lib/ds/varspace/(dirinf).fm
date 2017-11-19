@@ -1,0 +1,25 @@
+#
+# FILE %ds/varspace/(dirinf).fm
+#
+# written:       1994-12-11
+# latest update: 1995-12-29
+#
+# ----------------------------------------------------------------------------
+
+# see also: <gg/varspace.h>
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+varsp001.c      struct VAR_SPACE *vs_get_record (...)
+varsp002.c      struct VAR_SPACE *vs_get (...)
+varsp003.c      struct VAR_SPACE *vs_set (...)
+varsp004.c      struct VAR_SPACE *vs_set_array (...)
+varsp005.c      int vs_assign (struct YTREE **yt_root, char *var_name, ...)
+varsp006.c      long vs_increment (struct YTREE **yt_root, char *var_name, ...)
+varsp007.c      int vs_operations (struct YTREE **ytpp, ...)
+varsp008.c      struct VAR_SPACE *vs_query (struct YTREE *yt_root, ...)
+
+fehlt:
+varsp009.c      destroy ytree structure
+

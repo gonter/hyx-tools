@@ -1,0 +1,110 @@
+#
+# FILE %ds/lmd/(dirinf).fm
+#
+# LM/D library
+#
+# latest update: 1996-12-22 17:41:47
+# $Id: (dirinf).fm,v 1.4 2002/02/04 08:13:07 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+# administrative files
+(dirinf).fm     Contents
+Makefile        active version of Makefile
+make-ux         Unix version of Makefile
+make-dos        MSDOS version of Makefile
+
+# ----------------------------------------------------------------------------
+# Natural Language Utilities
+nl_00001.c      nl_get_str
+nl_00002.c      nl_key_valid
+nl_00004.c      nl_get_token (fi, s, mode, push_back)
+nl_00009.c      lookup_insert: Manipulation der kompakten LUT Struktur
+nl_00009.c      >>>>>>>>>>>>>> FUNKTIONIERT NICHT <<<<<<<<<<<<<<<<<
+#
+nl_00101.c      lmd_find_document_info (...)
+nl_00102.c      lmd_dump_document_info_list (...)
+nl_00104.c      lmd_deref_word() etc, lut, word ref and document info tables
+nl_00105.c      struct WORD_REF_LIST *lmd_deref1 (char *str, ...);
+nl_00106.c      int lmd_deref_word_ref (...)
+nl_00107.c      long lmd_read_word_ref_list (...)
+nl_00108.c      long lmd_read_word_ref (FILE *fi_word_ref, struct WORD_REF *wr)
+nl_00109.c      long lmd_read_document_info_list (...)
+nl_00111.c      int lmd_discard_doc_id (...);
+nl_00112.c      int lmd_free_docdir_list (struct DOCDIR_LIST *dl1)
+nl_00113.c      struct DOCDIR_LIST *lmd_read_docdir_info (...)
+nl_00114.c      struct DOCDIR_LIST *lmd_get_docdir_info (...);
+nl_00115.c      int lmd_find_word_ref (FILE *f_wr, long w_info, ...)
+nl_00116.c      int lmd_print_word_ref_info (FILE *fo, struct WORD_REF *wr)
+nl_00117.c      int lmd_print_doc_hit_list (...)
+nl_00118.c      int lmd_print_document_info_list (FILE *fo, ...);
+nl_00119.c      int lmd_print_veronica_hit_list (...);
+nl_00120.c      int lmd_print_veronica_docinfo_list (FILE *fo, FILE *vf, ...);
+nl_00121.c      int lmd_print_hyx_hit_list (FILE *fo, char *document_dir, ...);
+nl_00122.c      int lmd_print_docdir_hyx (FILE *fo, struct DOCDIR_LIST *docdir)
+nl_00123.c      int lmd_print_gopher_hit_list (...);
+nl_00124.c      int lmd_print_docdir_gopher (FILE *fo,struct DOCDIR_LIST *dl2,...)
+nl_00125.c      long lmd_write_word_ref (FILE *fo_word_ref, struct WORD_REF *wr, ..)
+nl_00126.c      int lmd_docid_list_insert (...);
+nl_00127.c      struct TERM_EVAL *lmd_build_term_eval (struct WORD_REF_LIST *wrl)
+nl_00128.c      struct TERM_EVAL *lmd_evaluate_terms (struct TERM_EVAL *te_list)
+nl_00129.c      struct DOCUMENT_INFO_LIST *lmd_dil_accumulate (...)
+nl_00130.c      struct DOCUMENT_INFO_LIST *lmd_dil_dup (struct DOCUMENT_INFO_LIST *org)
+nl_00131.c      struct DOCUMENT_INFO_LIST *lmd_dil_operator (...)
+nl_00132.c      struct DOCUMENT_INFO_LIST *lmd_find_document_info (struct WORD_REF *wr, ...)
+nl_00133.c      struct DOCUMENT_INFO_LIST *lmd_insert_document_info (struct WORD_REF *wr, ...)
+nl_00134.c      int lmd_create_dil (struct YTREE *yt, void *client_data)
+nl_00135.c      int lmd_qs_setup_table_names (struct LMD_QUERY_SET *lmdq, s);
+nl_00136.c      int lmd_deref_init (struct LMD_QUERY_SET *lmdqs);
+nl_00137.c      int lmd_deref_finish (struct LMD_QUERY_SET *lmdqs);
+nl_00138.c      int lmd_store_word_ref (char *str, long info, void *client_data)
+nl_00139.c      int lmd_print_hyx_cluster_hit_list (FILE *fo, struct WORD_REF_LIST *wrl, ...)
+nl_00140.c      new_LMDQS (...):
+nl_00141.c      WRL methods
+nl_00142.c      DIL methods
+#
+nl_00201.c      int lmd_set_location_code (struct DOCUMENT_INFO *di, ...)
+#
+nl_00301.c      int lmd_lmd_TWF (struct LMDT_CONTROL *lmdt, char *w);
+nl_00302.c      int lmd_report_tfb (struct LMDT_CONTROL *lmdt, long inf);
+nl_00303.c      int lmd_report2 (char *str, long inf, void *client_data);
+nl_00304.c      int lmd_report (struct LMDT_CONTROL *lmdt, char *w,...)
+nl_00305.c      int lmd_RL3 (struct LMDT_CONTROL *lmdt, char *fn, ...)
+nl_00306.c      int lmd_RL3_set_tfb_file (struct LMDT_CONTROL *lmdt, ...)
+#
+nl_00401.c      int lmd_score (struct LMDC_CONTROL *lmdc, char *s,...)
+nl_00402.c      int lmd_idx (struct LMDC_CONTROL *lmdc, char *s,...)
+nl_00403.c      struct WORD_REF *lmd_lookup_entry (lmdc, string);
+nl_00404.c      long lmd_PL (struct LMDC_CONTROL *lmdc, char *LUT_out,...)
+nl_00405.c      int lmd_RL4 (struct LMDC_CONTROL *lmdc, char *LUT_in,...)
+nl_00407.c      void lmd_initialize_control (struct LMDC_CONTROL *lmdc)
+nl_00408.c      void lmd_error04 (char *msg);
+nl_00409.c      void lmd_print_04statistics (struct LMDC_CONTROL *lmdc,...)
+nl_00410.c      int ytree_wr_ptr2idx (struct YTREE *yt, void *lmdc);
+nl_00411.c      int ytree_wr_idx2ptr (struct YTREE *yt, void *lmdc);
+#
+nl_00500.c      struct LMDC_CONTROL *lmd_create_control (void)
+nl_00501.c      int lmd_word_statistics (struct LMDC_CONTROL *lmdc,...)
+nl_00502.c      int lmd_write_tables (struct LMDC_CONTROL *lmdc,...)
+nl_00503.c      long lmd_read_tables (struct LMDC_CONTROL *lmdc,...)
+nl_00504.c      int lmd_discard_document_id (struct LMDC_CONTROL *lmdc,...)
+nl_00510.c      int lmd_dump_word_entry (struct YTREE *yt, void *client_data);
+nl_00511.c      int lmd_print_lmdd (FILE *fo, struct LMDD_CONTROL *lmdd);
+nl_00512.c      long lmd_get_interpretation (char *s);
+nl_00514.c      int lmd_discard_document_node (struct YTREE *yt, void *cd)
+#
+nl_00600.c      functions from lutmake.c; *** obsolete ***
+nl_00601.c      long lmd_read_stream (struct LMDC_CONTROL *lmdc, char *fn, ...)
+nl_00602.c      long lmd_read_tokens (struct LMDC_CONTROL *lmdc, char *fn, ...)
+nl_00603.c      long lmd_batch_process (struct LMDC_CONTROL *lmdc, char *fn)
+nl_00604.c      long lmd_docdir_process (struct LMDC_CONTROL *lmdc, char *fn)
+nl_00605.c      long lmd_veronica_process (struct LMDC_CONTROL *lmdc, char *fn);
+nl_00606.c      long lmd_read_tfb (struct LMDC_CONTROL *lmdc, char *fn,...)
+nl_00607.c      long lmd_read_words (struct LMDC_CONTROL *lmdc, char *fn);
+nl_00608.c      long lmd_read_fcy (struct LMDC_CONTROL *lmdc, char *fn);
+nl_00609.c      long lmd_read_long_fcy (struct LMDC_CONTROL *lmdc, char *fn);
+nl_00610.c      long lmd_read_hyx_cluster (struct LMDC_CONTROL *lmdc, ...);
+#
+util_001.c      int sort_by_frequency (char *wort, long frequency);
+#
+rdtoken.c       Testmodul fuer NL_00004.c

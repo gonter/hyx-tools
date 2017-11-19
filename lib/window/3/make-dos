@@ -1,0 +1,26 @@
+#
+#  FILE /usr/window/3/makefile
+#
+#  1989 08 16: aus WIN0.SAR Åbernommen
+#              Revision
+#
+
+asm=masm /Ml
+cml=cl -Os -AL /Fo$* /c
+cms=cl -Os -AS /Fo$* /c
+obl=objdec -w -d -m0 -sl 2 WINDOW_TEXT $*
+
+xx : large.library
+
+large.library : obj\win_l301.obj obj\win_l302.obj obj\win_l303.obj
+
+obj\win_l301.obj : win_l301.asm
+  masm /Ml WIN_L301.ASM,obj\win_l301;
+
+obj\win_l302.obj : win_l302.asm
+  masm /Ml WIN_L302.ASM,obj\win_l302;
+
+obj\win_l303.obj : win_0303.c
+  $(cml) win_0303.c
+  $(obj)
+

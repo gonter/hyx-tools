@@ -1,0 +1,29 @@
+#
+# FILE %ds/dbx/make-dos
+#
+# manipulation of database elements
+#  
+# written:       1996-11-26
+# latest update: 1996-11-26 17:39:49
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.exe
+
+all.2 : !
+  dbx_0001.obj dbx_1001.obj
+
+all.exe : dbf.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+dbf.exe : dbf.obj dbx_0001.obj dbx_1001.obj
+  link dbf dbx_0001 dbx_1001,$@,,$(lib);
+

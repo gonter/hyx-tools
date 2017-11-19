@@ -1,0 +1,35 @@
+#
+# FILE %ds/array/(dirinf).fm
+#
+# written:       1996-08-11
+# latest update: 1997-03-30  9:36:50
+#
+
+# see also: <gg/array.h>
+
+(dirinf).fm     Contents
+Makefile        current version of Makefile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+array000.c      template
+
+array001.c      replacement for %sbr/fnmqueue.c
+array002.c      int array_dispose (struct ARRAY_CONTROL *ac);
+
+array003.c      int array_push (struct ARRAY_CONTROL *ac, void *pl);
+array004.c      int array_unshift (struct ARRAY_CONTROL *ac, void *pl);
+array005.c      void *array_pop (struct ARRAY_CONTROL *ac);
+array006.c      void *array_shift (struct ARRAY_CONTROL *ac);
+array007.c      int array_push2 (struct ARRAY_CONTROL **ac, void *pl);
+array008.c      int array_unshift2 (struct ARRAY_CONTROL **ac, void *pl);
+array009.c      int array_push2_dup (struct ARRAY_CONTROL **ac, char *pl);
+
+array010.c      int array_dispose2 (struct ARRAY_CONTROL *ac, ...);
+array011.c      int array_dispose_string (struct ARRAY_CONTROL *ac);
+
+array012.c      struct ARRAY_CONTROL *array_append_split_destructive (...);
+array013.c      char *array_join (...);
+
+array014.c      char *array_dup_tmp (*ac);
+

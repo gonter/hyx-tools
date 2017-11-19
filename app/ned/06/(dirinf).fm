@@ -1,0 +1,48 @@
+#
+# FILE %ned/06/(dirinf).fm
+#
+# written:       1991 07 03
+# latest update: 2000-08-25 19:30:44
+# $Id: (dirinf).fm,v 1.3 2000/08/25 18:05:47 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile        | active Makefile (DOS or Unix)
+make-c5         | DOS Makefile
+
+ned0602.c       | void ned_clear_screen ()
+ned0603.c       | void p_refresh () /* ^O G */
+ned0604.c       | void p_refresh_all () /* ^O T */
+ned0605.c       | void p_jmpwdw ()
+ned0606.c       | int q_jmpwdw (i)
+ned0607.c       | void p_pushpage ()
+ned0608.c       | int q_pushpage (w, new_page)
+ned0609.c       | int maus_jmpwdw (x, y)
+ned0610.c       | int q_ofile ()
+ned0610a.c      | int p_ofile1 ()
+ned0610b.c      | int p_ofile2 ()
+ned0610c.c      | int ned_open_file (char *fnm, int flags)
+ned0610d.c      | int ned_cb_open_file (char *fnm, ...)
+ned0610e.c      | int ned_open_file_2 (char *fnm, int flags)
+ned0611.c       | void p_wdwsfile ()
+ned0612.c       | void p_wdwqfile ()
+ned0613.c       | int rd_str (char *msg, char *str, int str_size)
+ned0613b.c      | int ned_rd_str2 (char *msg, char *str, int str_size)
+ned0614.c       | void q_rename (char *fnm, int max_fnm)
+ned0615.c       | q_fnm (fnm)
+ned0616.c       | void p_rename () /* ^K N: Rename File */
+ned0617.c       | void p_garbling_code () /* ^K -: File Schluessel eingeben */
+ned0618.c       | void p_exit ()
+ned0619.c       | void p_ultra_panic ()
+ned0620.c       | void debug (s)
+ned0621.c       | int ned_error_message (char *s)
+ned0622.c       | void ned_message_* (cnt, ss)
+ned0623.c       | void correct_pathname (char *s)
+ned0624.c       | save_message_line, restore_message_line
+ned0625.c       | void q2_jmpwdw (struct WINDOWCTRL *w);
+ned0626.c       | void q0_jmpwdw ();
+ned0627.c       | int open_file_and_window (char *filename, char *location);
+ned0628.c       | int take_history_notes (struct WINDOWCTRL *w);
+ned0629.c       | int get_window_number (struct WINDOWCTRL *w);
+ned0630.c       | char *FC_setup_filenames (struct FILECTRL *fc, ...)
+ned0631.c       | int ned_prompt_string
+*               | 

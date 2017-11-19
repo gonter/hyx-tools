@@ -1,0 +1,13 @@
+#
+# Modules derived from other sources
+#
+# $Id: (dirinf).fm,v 1.1 2000/09/03 19:00:11 gonter Exp $
+
+# MD5
+md5gg.h    GG's wrapper functions
+global.h   original MD5 header
+md5.h      original MD5 header
+
+# ----
+pcmcia.h               7588 f 100644  3222  3000
+

@@ -1,0 +1,32 @@
+#
+# FILE %ned/make-sbr (%ned/sbr/Makefile)
+#
+# UNIX version only!
+#
+# GG's Night(mare) Editor System
+#   translate a couple of library functions that were moved out
+#   of their original places
+#
+# written:       1993-06-28
+# latest update: 1996-07-13 19:41:32
+#
+# ============================================================================
+cf=#-O -pedantic -Wall -Wuninitialized -Wunused -Wshadow
+
+# configuration
+# wmodel=-DW_MODEL_CURSES
+# wmodel=-DW_MODEL_NCURSES -I/usr/include/ncurses
+wmodel=-DW_MODEL_TK -I/usr/local/include
+
+ccc=cc -c -I.. $(cf) $(wmodel)
+objs= win_0102.o win_0111.o win_0112.o win_0125.o
+lib=../ned.a
+
+all : lib
+
+lib : $(objs)
+	ar ru $(lib) $?
+	touch lib
+
+.c.o:
+	$(ccc) $*.c

@@ -1,0 +1,19 @@
+#!/usr/local/bin/perl
+# FILE %usr/unixonly/CPAN/ldif/(dirinf).fm
+#
+# written:       1998-09-13
+# latest update: 1998-09-13  9:09:33
+#
+
+.                       LDIF, vCard, vCalendar hanlding
+Changes                 modifcation log
+MANIFEST                File Listek
+Makefile.PL             generic makefile
+
+LDIF.pm                 Main Module
+VDIF
+
+abook.pl                Address Book Converter
+cookieflt.pl            Cookie Filter
+pl.pl                   test?
+test.pl                 test?

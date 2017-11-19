@@ -1,0 +1,33 @@
+#
+#  FILE %win/1/(dirinf).fm
+#
+#  Window System; Modell-Unabhaengige Routinen
+#
+#  written:       1989 08 16
+#  latest update: 1995-10-01
+#
+win_0101.c      void w_prntcol (p, x, y, a, s)
+win_0102.c      void w_setstring (p, ax, ay, bx, by, a, s, f)
+win_0103.c      void w_create (w)
+win_0104.c      void w_namecreat (w, n)
+win_0105.c      void gr_create (w)
+win_0106.c      void w_put1ln (w, l)
+win_0107.c      void w_putln (w, l)
+win_0108.c      void w_putstr (w, s)
+win_0109.c      int w_readstr (w, s)
+win_0110.c      int w_readln (w, s)    /* bis end of line zeichen oder wendiger  */
+win_0111.c      void w_disp_bbox (page, ax, ay, bx, by, attr, box_typ)
+win_0112.c      void w_disp_box (int page, int ax, ...)
+win_0113.c      void gr_setcup (cx, cy)        /* 40-Zeichen-Cursor im Graphic Mode */
+win_0114.c      void cga_setcup (pag, cx, cy)  /* 40-Zeichen-Cursor im Graphic Mode */
+win_0115.c      void ega_setcup (pag, cx, cy)  /* 80-Zeichen-Cursor im EGA Mode */
+win_0116.c      int  mapkey ()    /* nicht nur fuer windows!!, daher kein w_  */
+win_0117.c      w_printf (a01, a02, a03, a04, a05, a06, a07, a08, a09, a10, ...
+win_0118.c      int w_more (w, fnm)
+win_0119.c      w_puts (str)
+win_0120.c      int w_display (int page, char *s);
+win_0121.c      int w_display_scr (int page, char *scr);
+win_0122.c      void w_prtstr (p, x, y, attr, nm, l)
+win_0123.c      void w_print_long (int p, int x, int y, int c, ...)
+win_0124.c      void w_set_332_palette ()
+win_0125.c      void w_bell ()

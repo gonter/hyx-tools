@@ -1,0 +1,9 @@
+#!/usr/local/bin/perl
+# FILE %gg/usr/work/fbsd/gg/lib/include/(dirinf).fm
+#
+# written:       1999-12-19
+# latest update: 1999-12-19 18:47:42
+#
+
+contrib         headers for contributed files
+gg              headers for gg's files

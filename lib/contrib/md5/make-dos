@@ -1,0 +1,35 @@
+#
+# FILE %contrib/md5/makefile
+#
+# written:       1993-01-01
+# latest update: 1995-09-01
+#
+# ========================================================================
+cml=cl -AL /W3 /c
+cms=cl -AS /W3 /c
+ccl=cl -AL /W3
+ccs=cl -AS /W3
+obj=objdec -w -d -m0 -sl 2 MD5_TEXT
+bin=c:\bin\
+lib=c:\usr\sbr\lsbr
+
+all.obj : !
+  md5c.obj     md5d2s.obj   md5s2d.obj   !
+  md5chkb.obj  md5chk2a.obj md5chk2b.obj md5chks.obj md5chk2s.obj !
+  md5chk1f.obj md5chk2f.obj
+
+test.exe : mddriver.exe md5t1.exe
+
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+inc.md5.h :
+  copy global.h + md5.h + md5gg.h \c5\include\contrib\md5.h
+
+#
+mddriver.exe : mddriver.obj md5c.obj
+  link mddriver md5c;
+
+md5t1.exe : md5t1.obj
+  link md5t1,,,$(lib);

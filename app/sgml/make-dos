@@ -1,0 +1,433 @@
+#
+# FILE %sgml/makefile
+#
+# SGML and HyperText
+#
+#                1990 10 08: update ...
+# latest update: 1996-10-13 13:05:41
+#
+# ============================================================================
+cml=cl -Od -AL /Fo$* /c
+cml3=cl -Od -AL /W3 /Fo$* /c
+cms=cl -Od -AS /Fo$* /c
+ccl=cl -Od -AL
+ccs=cl -Od -AS
+obj=objdec -w -d -m0 $*.obj
+inst=command /c inst-exe
+bin=c:\bin\
+lib=c:\usr\sbr\lsbr.lib
+map=\dev\nul
+
+# ---------------------------------------------------------------------------
+all.exe : lib_a !
+  $(bin)chksgml.exe $(bin)hyxidx.exe   $(bin)hyxseq.exe $(bin)hyxthr.exe   !
+  $(bin)hyxpurge.exe !
+  $(bin)hyxd.exe    $(bin)http4hyx.exe $(bin)httpsf.exe $(bin)hyxadd.exe   !
+  $(bin)hyxx.exe    $(bin)hyxm.exe   $(bin)sgmlproc.exe !
+  $(bin)hyxscan.exe !
+  msrv.exe
+
+all2.exe : sf05t.exe $(bin)hyx.exe
+
+# ---------------------------------------------------------------------------
+HYXD=   obj\hyxd01.obj   obj\hyxd02.obj   obj\hyxd03.obj   obj\hyxd04.obj   !
+        obj\hyxd05.obj
+CHKSGML=obj\chksgml1.obj obj\chksgml2.obj obj\chksgml3.obj obj\chksgml4.obj !
+        obj\chksgml5.obj obj\chksgml6.obj
+MSRV=   obj\msrv01.obj   obj\msrv02.obj   obj\msrv03.obj   obj\msrv04.obj   !
+        obj\msrv05.obj   obj\msrv06.obj   obj\msrv07.obj
+HYXSF=  obj\sf01.obj     obj\sf02.obj     obj\sf03.obj     obj\sf04.obj     !
+        obj\sf05.obj
+
+lib_a: lib_a2 lib_a3 lsbr.lib
+
+lib_a2: $(CHKSGML)       $(MSRV)          $(HYXSF)         $(HYXD)
+
+lib_a3: obj\hyxeng01.obj obj\hyxeng02.obj obj\hyxeng03.obj obj\hyxeng04.obj !
+        obj\hyxeng05.obj obj\hyxidx01.obj obj\hyxadd01.obj !
+        obj\sgml0001.obj                  obj\sgml0003.obj obj\sgml0004.obj !
+        obj\sgml0005.obj obj\sgml0006.obj obj\sgml0007.obj obj\sgml0008.obj !
+        obj\sgml0009.obj obj\sgml0010.obj obj\sgml0011.obj obj\sgml0012.obj !
+        obj\sgml0013.obj
+
+lsbr.lib :
+  llink -v -l$(lib) -dsgml_a.mod -n0
+
+# ---------------------------------------------------------------------------
+sgml.sh :
+  shar -c -t sgml.sh -fmakeshar.lst
+
+# Hypertext Index: -----------------------------------------------------------
+obj\hyxidx.obj : hyxidx.c
+  $(cml3) hyxidx.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxidx01.obj : hyxidx01.c
+  $(cml3) hyxidx01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)hyxidx.exe : obj\hyxidx.obj obj\hyxidx01.obj
+  link obj\hyxidx obj\hyxidx01,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext Add: -------------------------------------------------------------
+obj\hyxadd.obj : hyxadd.c
+  $(cml3) hyxadd.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxadd01.obj : hyxadd01.c
+  $(cml3) hyxadd01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+HYXADD=obj\hyxadd.obj obj\hyxadd01.obj
+$(bin)hyxadd.exe : $(HYXADD)
+  link $(HYXADD),$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext Sequencer: -------------------------------------------------------
+obj\hyxseq.obj : hyxseq.c
+  $(cml3) hyxseq.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)hyxseq.exe : obj\hyxseq.obj
+  link obj\hyxseq,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext Threader: --------------------------------------------------------
+obj\hyxthr.obj : hyxthr.c
+  $(cml3) hyxthr.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)hyxthr.exe : obj\hyxthr.obj
+  link obj\hyxthr,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext Purge: -----------------------------------------------------------
+obj\hyxpurge.obj : hyxpurge.c
+  $(cml3) hyxpurge.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)hyxpurge.exe : obj\hyxpurge.obj
+  link obj\hyxpurge,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# SGML Checker: --------------------------------------------------------------
+obj\chksgml.obj : chksgml.c
+  $(cml3) chksgml.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)chksgml.exe : obj\chksgml.obj $(CHKSGML)
+  link obj\chksgml,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+obj\chksgml1.obj : chksgml1.c
+  $(cml3) chksgml1.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\chksgml2.obj : chksgml2.c
+  $(cml3) chksgml2.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\chksgml3.obj : chksgml3.c
+  $(cml3) chksgml3.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\chksgml4.obj : chksgml4.c
+  $(cml3) chksgml4.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\chksgml5.obj : chksgml5.c
+  $(cml3) chksgml5.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\chksgml6.obj : chksgml6.c
+  $(cml3) chksgml6.c
+  $(obj) -sl 2 HYPER_TEXT
+
+# Hypertext daemon: ----------------------------------------------------------
+obj\hyxd.obj : hyxd.c
+  $(cml3) hyxd.c
+  $(obj) -sl 2 HYPER_TEXT
+
+HYXD=obj\hyxd.obj obj\hyxd01.obj obj\hyxd03.obj
+$(bin)hyxd.exe : $(HYXD)
+  link $(HYXD),$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext daemon: ----------------------------------------------------------
+obj\http4hyx.obj : http4hyx.c
+  $(cml3) http4hyx.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)http4hyx.exe : obj\http4hyx.obj obj\hyxd04.obj obj\hyxd05.obj !
+    obj\sf04.obj
+  link obj\http4hyx obj\hyxd04.obj obj\hyxd05.obj obj\sf04.obj,!
+    $@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# Hypertext daemon: ----------------------------------------------------------
+obj\httpsf.obj : httpsf.c
+  $(cml3) httpsf.c
+  $(obj) -sl 2 HYPER_TEXT
+
+$(bin)httpsf.exe : obj\httpsf.obj $(HYXSF)
+  link obj\httpsf,$@,$(map),$(lib)/NOE/NOI;
+  $(inst) $@
+
+# HyperText daemon: ----------------------------------------------------------
+obj\hyxd01.obj : hyxd01.c
+  $(cml3) hyxd01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxd02.obj : hyxd02.c
+  $(cml3) hyxd02.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxd03.obj : hyxd03.c
+  $(cml3) hyxd03.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxd04.obj : hyxd04.c
+  $(cml3) hyxd04.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxd05.obj : hyxd05.c
+  $(cml3) hyxd05.c
+  $(obj) -sl 2 HYPER_TEXT
+
+# HyperText Filter -----------------------------------------------------------
+obj\sf01.obj : sf01.c
+  $(cml3) sf01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\sf02.obj : sf02.c
+  $(cml3) sf02.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\sf03.obj : sf03.c
+  $(cml3) sf03.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\sf04.obj : sf04.c
+  $(cml3) sf04.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\sf05.obj : sf05.c
+  $(cml3) sf05.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\sf05t.obj : sf05t.c
+  $(cml3) sf05t.c
+  $(obj) -sl 2 HYPER_TEXT
+
+sf05t.exe : obj\sf05t.obj obj\sf03.obj obj\sf04.obj obj\sf05.obj
+  link obj\sf05t obj\sf03 obj\sf04 obj\sf05,sf05t.exe,,c:\usr\sbr\lsbr/NOE/NOI;
+
+# HyperText Engine -----------------------------------------------------------
+obj\hyxeng01.obj : hyxeng.h hyxeng01.c hyxeng01.inc
+  $(cml3) hyxeng01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+hyxeng01.inc : hyxeng01.cmd
+  command /c hyxeng01
+
+obj\hyxeng02.obj : hyxeng.h hyxeng01.h hyxeng02.c
+  $(cml3) hyxeng02.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxeng03.obj : hyxeng.h hyxeng03.c
+  $(cml3) hyxeng03.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxeng04.obj : hyxeng.h hyxeng04.c
+  $(cml3) hyxeng04.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\hyxeng05.obj : hyxeng.h hyxeng05.c
+  $(cml3) hyxeng05.c
+  $(obj) -sl 2 HYPER_TEXT
+
+# ---------------------------------------------------------------------------
+test : sgmlt1a.exe sgmlt1b.exe sgmlt2a.exe sgmlt2b.exe
+
+obj\sgmlt1.obj : sgmlt1.c
+  $(cml3) sgmlt1.c
+
+obj\sgmlt2.obj : sgmlt2.c
+  $(cml) sgmlt2.c
+
+sgmlt1a.exe : obj\sgmlt1.obj
+  link obj\sgmlt1,sgmlt1a.exe,,c:\usr\sbr\lsbr/NOE/NOI;
+
+sgmlt1b.exe : obj\sgmlt1.obj obj\sgml0002.obj
+  link obj\sgmlt1 obj\sgml0002,sgmlt1b.exe,,c:\usr\sbr\lsbr/NOE/NOI;
+
+sgmlt2a.exe : obj\sgmlt2.obj
+  link obj\sgmlt2,sgmlt2a.exe,,c:\usr\sbr\lsbr/NOE/NOI;
+
+sgmlt2b.exe : obj\sgmlt2.obj obj\sgml0002.obj
+  link obj\sgmlt2 obj\sgml0002,sgmlt2b.exe,,c:\usr\sbr\lsbr/NOE/NOI;
+
+obj\sgmlproc.obj : sgmlproc.c
+  $(cml) sgmlproc.c
+
+$(bin)sgmlproc.exe : obj\sgmlproc.obj
+ link obj\sgmlproc,c:\bin\sgmlproc.exe,$(map),c:\usr\sbr\lsbr/NOE/NOI;
+ $(inst) c:\bin\sgmlproc.exe
+
+# ----------------------------------------------------------------------------
+obj\msrv.obj : msrv.c
+  $(cml3) /W3 msrv.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv01.obj : msrv01.c
+  $(cml3) /W3 msrv01.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv02.obj : msrv02.c
+  $(cml3) /W3 msrv02.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv03.obj : msrv03.c
+  $(cml3) /W3 msrv03.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv04.obj : msrv04.c
+  $(cml3) /W3 msrv04.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv05.obj : msrv05.c
+  $(cml3) /W3 msrv05.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv06.obj : msrv06.c
+  $(cml3) /W3 msrv06.c
+  $(obj) -sl 2 HYPER_TEXT
+
+obj\msrv07.obj : msrv07.c
+  $(cml3) /W3 msrv07.c
+  $(obj) -sl 2 HYPER_TEXT
+
+msrv.exe : obj\msrv.obj obj\msrv01.obj obj\msrv02.obj !
+  obj\msrv03.obj obj\msrv04.obj obj\msrv05.obj obj\msrv06.obj !
+  obj\msrv07.obj
+  link obj\msrv,,,$(lib);
+
+# SGML-Library ---------------------------------------------------------------
+obj\sgml0001.obj : sgml0001.c
+  $(cml3) sgml0001.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0002.obj : sgml0002.c
+  $(cml3) sgml0002.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0003.obj : sgml0003.c
+  $(cml) sgml0003.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0004.obj : sgml0004.c
+  $(cml) sgml0004.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0005.obj : sgml0005.c
+  $(cml) sgml0005.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0006.obj : sgml0006.c
+  $(cml) sgml0006.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0007.obj : sgml0007.c
+  $(cml) sgml0007.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0008.obj : sgml0008.c
+  $(cml) sgml0008.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0009.obj : sgml0009.c
+  $(cml) sgml0009.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0010.obj : sgml0010.c
+  $(cml) sgml0010.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0011.obj : sgml0011.c
+  $(cml) sgml0011.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0012.obj : sgml0012.c
+  $(cml) sgml0012.c
+  $(obj) -sl 2 SGML_TEXT
+
+obj\sgml0013.obj : sgml0013.c
+  $(cml) sgml0013.c
+  $(obj) -sl 2 SGML_TEXT
+
+# ----------------------------------------------------------------------------
+obj\hyxold.obj : hyxold.c
+  $(cml) hyxold.c
+  $(obj)
+
+$(bin)hyxold.exe : obj\hyxold.obj
+  link obj\h0yxold,$@,$(map),c:\usr\sbr\lsbr/NOE/NOI;
+  $(inst) c:\bin\hyx.exe
+
+obj\hyxx.obj : hyxx.c
+  $(cml3) hyxx.c
+  $(obj)
+
+$(bin)hyxx.exe : obj\hyxx.obj
+  link obj\hyxx,c:\bin\hyxx.exe,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+  $(inst) c:\bin\hyxx.exe
+
+obj\hyxm.obj : hyxm.c
+  $(cml3) hyxm.c
+  $(obj)
+
+$(bin)hyxm.exe : obj\hyxm.obj
+ link obj\hyxm,c:\bin\hyxm,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+ $(inst) c:\bin\hyxm.exe
+
+# ----------------------------------------------------------------------------
+obj\hyxscan.obj : hyxscan.c
+  $(cml3) hyxscan.c
+  $(obj)
+
+$(bin)hyxscan.exe : obj\hyxscan.obj
+  link obj\hyxscan,c:\bin\hyxscan.exe,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+  $(inst) c:\bin\hyxscan.exe
+
+#
+# RELICS =====================================================================
+#
+relics.exe : hyb.exe frt1.exe sgmlkonv.exe
+
+obj\arc2hyx.obj : arc2hyx.c
+  $(cml) arc2hyx.c
+  $(obj)
+
+arc2hyx.exe : obj\arc2hyx.obj
+  link obj\arc2hyx,,,c:\usr\sbr\lsbr/NOE/NOI;
+  copy arc2hyx.exe c:\bin
+
+frt1.exe : frt1.obj
+  link frt1.obj,,\dev\nul,c:\usr\sbr\lsbr/NOE/NOI;
+
+frt1.obj : frt1.c
+  $(cml) frt1.c
+
+obj\hyb.obj : hyb.c
+  $(cml) hyb.c
+
+hyb.exe : obj\hyb.obj
+  link obj\hyb,,$(map),c:\usr\sbr\lsbr/NOE/NOI;
+  copy hyb.exe c:\bin
+
+obj\sgmlkonv.obj : sgmlkonv.c
+  $(cml) sgmlkonv.c
+
+sgmlkonv.exe : obj\sgmlkonv.obj
+  link obj\sgmlkonv,,$(map),c:\usr\sbr\lsbr/NOE/NOI;

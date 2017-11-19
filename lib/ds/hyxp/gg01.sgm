@@ -1,0 +1,20 @@
+<!-- FILE %ds/hyxp/gg01.sgm 1996-02-19 21:18:44 -->
+
+<test>
+The following elements are recognized or not:
+- YES <minimized/text/
+- YES <emph meth=urxn /minimized/
+- YES <emph meth=urxn/minimized/
+- YES <emph meth="urxn"/minimized/
+- YES <emph meth="urxn/minimized"/urxn/
+- YES <emph meth="urxn/minimized/"/urxn/
+- YES <emph meth="urxn/minimized/" /urxn/
+- YES <emph meth='urxn/minimized/' /urxn/
+- YES and <tag1<tag2>asdfasdf</</>
+- YES <h1>this is a header</h1>
+- YES <?bold>urxn
+- ? x > y
+- ? x < y
+</test>
+
+

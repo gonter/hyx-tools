@@ -1,0 +1,124 @@
+#
+# File %sbr/make-sbr.lst (Contents)
+#
+# contents for shar file of the %sbr package
+#
+# written:       1995-12-28
+# latest update: 1997-11-27 16:04:13
+#
+# ----------------------------------------------------------------------------
+#
+>mkdir _bak_ftr.ned
+a make-ux                       make-ux
+a make-dos                      make-dos
+>ln -s make-ux Makefile
+a (dirinf).fm                   '(dirinf)'.fm
+a make-sbr.lst                  make-sbr.lst
+#
+>echo 'symlink pointing to the directory with the headers'
+>ln -fs ../gg      gg
+>ln -fs ../contrib contrib
+#
+# general library modules - - - - - - - - -
+a bin2hex.c            bin2hex.c
+a bin2hexr.c           bin2hexr.c
+a cdromfnm.c           cdromfnm.c
+a convent1.c           convent1.c
+a convent2.c           convent2.c
+a convent4.c           convent4.c
+a convent5.c           convent5.c
+a convent6.c           convent6.c
+a copyfil0.c           copyfil0.c
+a diagnose.c           diagnose.c
+a dirt_006.c           dirt_006.c
+a dirt_012.c           dirt_012.c
+a dirt_013.c           dirt_013.c
+a dirt_014.c           dirt_014.c
+a dirt_016.c           dirt_016.c
+a dpp_0001.c           dpp_0001.c
+a dpp_0002.c           dpp_0002.c
+a dpp_0003.c           dpp_0003.c
+a dpp_0005.c           dpp_0005.c
+a dpp_0006.c           dpp_0006.c
+a dpp_0007.c           dpp_0007.c
+a dpp_0008.c           dpp_0008.c
+a envfilsr.c           envfilsr.c
+a fclosec.c            fclosec.c
+a file2buf.c           file2buf.c
+a flopen.c             flopen.c
+a fndvfile.c           fndvfile.c
+a fnmcpy.c             fnmcpy.c
+a fnmcpy2.c            fnmcpy2.c
+a fnmcpy3.c            fnmcpy3.c
+a fnmcpy4.c            fnmcpy4.c
+a fnmdef.c             fnmdef.c
+a fnmdestn.c           fnmdestn.c
+a fnmdpath.c           fnmdpath.c
+a fnmovwr.c            fnmovwr.c
+a fnmreal.c            fnmreal.c
+a fnmrenm.c            fnmrenm.c
+a fnmsep1.c            fnmsep1.c
+a fnmsep2.c            fnmsep2.c
+a fnmsep3.c            fnmsep3.c
+a fnmsep4.c            fnmsep4.c
+a freadlin.c           freadlin.c
+a freadit.c            freadit.c
+a freaditf.c           freaditf.c
+a freadst.c            freadst.c
+a freadstf.c           freadstf.c
+a ftrans01.c           ftrans01.c
+a ftrans02.c           ftrans02.c
+a ftrans03.c           ftrans03.c
+a ftrans04.c           ftrans04.c
+a ftrans05.c           ftrans05.c
+a ftrans06.c           ftrans06.c
+a ftrans07.c           ftrans07.c
+a ftrans08.c           ftrans08.c
+a ftrans09.c           ftrans09.c
+a ftrans10.c           ftrans10.c
+a gennednm.c           gennednm.c
+a getcdir0.c           getcdir0.c
+a getcdir1.c           getcdir1.c
+a hex2bin.c            hex2bin.c
+a logicfnm.c           logicfnm.c
+a lng2hex.c            lng2hex.c
+a lng2nstr.c           lng2nstr.c
+a makepath.c           makepath.c
+a param001.c           param001.c
+a param002.c           param002.c
+a rndlong.c            rndlong.c
+a rotfile.c            rotfile.c
+a setetcfn.c           setetcfn.c
+a settmpfn.c           settmpfn.c
+a tellext.c            tellext.c
+a trasheol.c           trasheol.c
+a vshift01.c           vshift01.c
+a wcrd_001.c           wcrd_001.c
+a wcrd_002.c           wcrd_002.c
+a wcrd_003.c           wcrd_003.c
+a wcrd_004.c           wcrd_004.c
+a wcrd_005.c           wcrd_005.c
+a wcrd_006.c           wcrd_006.c
+a wcrd_007.c           wcrd_007.c
+a wcrd_008.c           wcrd_008.c
+a wcrd_009.c           wcrd_009.c
+a wildcrd2.c           wildcrd2.c
+a xref01.c             xref01.c
+a xref02.c             xref02.c
+a xref03.c             xref03.c
+#
+a /usr/bss/sixelval.c           sixelval.c
+#
+# MD5 processing
+a /usr/contrib/md5/md5c.c       md5c.c
+a /usr/contrib/md5/md5d2s.c     md5d2s.c
+a /usr/contrib/md5/md5s2d.c     md5s2d.c
+a /usr/contrib/md5/md5chkb.c    md5chkb.c
+a /usr/contrib/md5/md5chks.c    md5chks.c
+a /usr/contrib/md5/md5chk2a.c   md5chk2a.c
+a /usr/contrib/md5/md5chk2b.c   md5chk2b.c
+a /usr/contrib/md5/mddriver.c   mddriver.c
+# /usr/contrib/md5/md5.h        md5.h
+# /usr/contrib/md5/md5gg.h      md5gg.h
+# /usr/contrib/md5/global.h     global.h
+a /usr/contrib/md5/rfc1321.txt  rfc1321.txt

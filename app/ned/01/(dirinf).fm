@@ -1,0 +1,79 @@
+#
+# FILE %ned/01/(dirinf).fm
+#
+# latest update: 2000-08-24 14:22:23
+# $Id: (dirinf).fm,v 1.3 2001/02/12 00:03:19 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0101.c       | void wdw_rst (w) /* Window Default Values laden */
+ned0102.c       | int ned_w_cursor_up (...)
+ned0102m.c      | int ned_vi_cursor_mid ()
+ned0102p.c      | void ned_cursor_up ()
+ned0102v.c      | int ned_vi_cursor_top ()
+ned0103.c       | int ned_w_cursor_down ()
+ned0103p.c      | void ned_cursor_down ()
+ned0103v.c      | int ned_vi_cursor_bot ()
+ned0104.c       | void chk_updown (w)
+
+ned0105.c       | int ned_w_cursor_left (...)
+ned0105a.c      | int ned_q_cursor_left (struct WINDOWCTRL *w, int df)
+ned0105p.c      | void void ned_cursor_left ()
+
+ned0106.c       | void ned_w_cursor_right (...)
+ned0106a.c      | int  ned_q_cursor_right (struct WINDOWCTRL *w, int df)
+ned0106p.c      | void void ned_cursor_right ()
+
+ned0107.c       | void p_word_left () { ned_wc_word_lr (JMPWRD_left_beg); }
+ned0107b.c      | void p_word_left_2 () { ned_wc_word_lr (JMPWRD_left_beg_2); }
+ned0108a.c      | void p_word_right_beg () { ned_wc_word_lr (JMPWRD_right_beg); }
+ned0108b.c      | void p_word_right_end () { ned_wc_word_lr (JMPWRD_right_end); }
+ned0108c.c      | void p_word_right_beg_2 () { ned_wc_word_lr (JMPWRD_right_beg_2); }
+ned0108d.c      | void p_word_right_end_2 () { ned_wc_word_lr (JMPWRD_right_end_2); }
+ned0109.c       | ned_wc_word_lr (mode)
+ned0110.c       | void ned_w_page_up (...)
+ned0110a.c      | void ned_page_up ()
+ned0110b.c      | void ned_half_page_up ()
+ned0111.c       | void ned_w_page_down ()
+ned0111a.c      | void ned_page_down ()
+ned0111b.c      | void ned_half_page_down ()
+ned0112.c       | void p_ctrlq () { pfx = P_CTRLQ; } /* Submenues: Quick */
+ned0112w.c      | void p_ctrlw () { pfx = P_NONE;  } /* wordstart standard table */
+ned0113.c       | void p_ctrlk () { pfx = P_CTRLK; } /* . Block & File */
+ned0114.c       | void p_ctrlo () { pfx = P_CTRLO; } /* . On Screen */
+ned0115.c       | void ned_ctrlp ()
+ned0115b.c      | void ned_insert_special_char ()
+ned0116.c       | void p_funct () { pfx = P_FUNCT; } /* Funktionstasten bei IBM-PC */
+ned0117.c       | void p_nl2 () /* Ctrl N */
+ned0118.c       | void p_nl () /* Ctrl M */
+ned0119.c       | void p_ax_lng () /* CTRL-J: Spalte 0 oder letzte Spalte */
+ned0119a.c      | int ned_w_jmp_in_line (...)
+ned0120.c       | void ned_jmp_boln () /* Spalte 0 */
+ned0121.c       | void ned_jmp_eoln () /* letzte Spalte */
+ned0122.c       | void p_ctrlg ()
+ned0123.c       | void p_ctrlh ()
+ned0124.c       | void background ()
+ned0124.c       | void back2ground () /* Extended Status Line */
+ned0125c.c      | CHAR: int show_ch_display_range (struct WINDOWCTRL *w)
+ned0126.c       | int q_isolate_word (char *wp, int max_lng, int mode);
+ned0127.c       | int qq_isolate_word (char *wp, int max_lng, int mode);
+ned0128.c       | void p_ctrlu ()         /* Screen and Window Operationen */
+ned0129.c       | void p_split_join ()
+#
+ned0131.c       | struct LINE *alloc_line ()
+ned0132.c       | struct TXT *txch_alloc (size, ch)
+ned0133.c       | struct TXT *tx_alloc (size)
+ned0134.c       | strfill (s, cnt, ch)
+ned0135.c       | struct WINDOWCTRL *wdw_alloc ()
+ned0136.c       | struct FILECTRL *file_alloc ()
+ned0137.c       | struct FEATURE *feature_alloc ()
+ned0138.c       | void ned_lines_free (lp) /* Eine Liste von Zeilen freigeben */
+ned0138b.c      | void ned_feature_free (f) /* Eine Liste von Features freigeben */
+ned0139.c       | void txt_adj (lng, tp) /* Textsegmentliste auf aktuelle */
+ned0140.c       | void tx_free (tp) /* Textsegmente NICHT rekursiv freigeben */
+ned0141.c       | void file_free (struct FILECTRL *fc)
+ned0142.c       | int in_charset (int ch, int charset);
+*               |

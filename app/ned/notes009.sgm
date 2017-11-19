@@ -1,0 +1,47 @@
+
+FILE %ned/notes009.sgm
+
+written:       1997-06-15
+latest update: 1997-06-15  9:51:53
+
+SGML tag and feature handling
+
+
+<hyx.l file="%ned/08/ned0886.c" mark="ned_feature_set" tdc="pgm.func" tdp=15>ned_feature_set ()
+  <hyx.l file="%ned/08/ned0850.c" mark="q_feature_set" tdc="pgm.func" tdp=13>q_feature_set ()
+
+w, lp, offset   ... Position im File
+what            ... Typ des Features, z.B. SGML Tag, SGML Entity, Other
+
+struct FTR_SEGMENT *list
+
+
+V1:
+struct FTR_SEGMENT
+{
+  struct FTR_SEGMENT *next;
+
+  ...
+  int type;             /* tag, attrib_name, attrib_value */
+  char str [2];
+};
+
+V2:
+struct FTR_SEGMENT
+{
+  struct FTR_SEGMENT *next;
+
+  char *attrib_name;
+  char *attrib_value;
+};
+
+attrib_name == NULL =&gt; kein attrib name
+autom. Quoten und Escapen von Attrib Value, wenn attrib_name gegeben ist
+
+
+==&gt; FTR_EDITOR
+
+Feature Editor:
+add, delete attrib/value pair
+
+

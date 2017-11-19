@@ -1,0 +1,105 @@
+#
+#  FILE /usr/window/2/makefile
+#
+#  1989 08 16: aus WIN0.SAR Åbernommen
+#              Revision
+#
+
+asm=masm /Ml
+cml=cl -Os -AL /Fo$* /c
+cms=cl -Os -AS /Fo$* /c
+obl=objdec -w -d -m0 -sl 2 WINDOW_TEXT 
+cga=/DW_MODEL_CGA
+bios=/DW_MODEL_BIOS
+
+# ----------------------------------------------------------------------------
+all : large small
+
+large : biosl201.obj biosl202.obj biosl203.obj biosl204.obj biosl205.obj !
+        biosl206.obj
+
+#                  copy c:\usr\sbr\lsbr.lib x.lib
+#  lib x.lib-+biosl201-+biosl202-+biosl203-+biosl204-+biosl205-+biosl206;
+#                  copy   x.lib c:\usr\sbr\lsbr.lib
+#                  copy  cr.lst c:\usr\sbr\lsbr.lst
+#                  del    x.lib
+#                  del   cr.lst
+#                  del    *.obj
+#                  del    *.bak
+
+small : bioss201.obj bioss202.obj bioss203.obj bioss204.obj bioss205.obj !
+        bioss206.obj
+
+#                  copy c:\usr\sbr\ssbr.lib x.lib
+#  lib x.lib-+bioss201-+bioss202-+bioss203-+bioss204-+bioss205-+bioss206;
+#                  copy   x.lib c:\usr\sbr\ssbr.lib
+#                  copy  cr.lst c:\usr\sbr\ssbr.lst
+#                  del    x.lib
+#                  del   cr.lst
+#                  del    *.obj
+#                  del    *.bak
+
+# ----------------------------------------------------------------------------
+t1.obj : t1.c
+  $(cml) t1.c
+
+t1.exe : t1.obj biosl201.obj biosl205.obj biosl206.obj
+  link t1 biosl201 biosl205 biosl206,,/map,c:\usr\sbr\lsbr;
+
+t2.obj :        t2.c
+         $(cml) t2.c
+
+t2.exe : t2.obj biosl201.obj biosl202.obj biosl203.obj biosl204.obj !
+         biosl205.obj biosl206.obj
+ link t2 biosl201 biosl202 biosl203 biosl204 biosl205 biosl206,,/map,c:\usr\sbr\lsbr;
+
+
+# Large Modules: -------------------------------------------------------------
+biosl201.obj : win_0201.c
+               $(cml) $(bios) win_0201.c
+               $(obl) biosl201.obj
+
+biosl202.obj : win_0202.c
+               $(cml) $(bios) win_0202.c
+               $(obl) biosl202.obj
+
+biosl203.obj : win_0203.c
+               $(cml) $(bios) win_0203.c
+               $(obl) biosl203.obj
+
+biosl204.obj : win_0204.c
+               $(cml) $(bios) win_0204.c
+               $(obl) biosl204.obj
+
+biosl205.obj : win_0205.c
+               $(cml) $(bios) win_0205.c
+               $(obl) biosl205.obj
+
+biosl206.obj : win_0206.c
+               $(cml) $(bios) win_0206.c
+               $(obl) biosl206.obj
+
+
+
+# Small Modules: -------------------------------------------------------------
+bioss201.obj : win_0201.c
+               $(cms) $(bios) win_0201.c
+
+bioss202.obj : win_0202.c
+               $(cms) $(bios) win_0202.c
+
+bioss203.obj : win_0203.c
+               $(cms) $(bios) win_0203.c
+
+bioss204.obj : win_0204.c
+               $(cms) $(bios) win_0204.c
+
+bioss205.obj : win_0205.c
+               $(cms) $(bios) win_0205.c
+
+bioss206.obj : win_0206.c
+               $(cms) $(bios) win_0206.c
+
+
+
+

@@ -1,0 +1,23 @@
+#
+# FILE %ds/hyxdb/(dirinf).fm
+#
+# written:       1996-01-22
+# latest update: 1997-11-09 11:17:44
+#
+
+# see also: <gg/hyxdb.h>
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+hyxdb000.c      TEMPLATE
+hyxdb001.c      new database
+hyxdb002.c      new object
+hyxdb003.c      insert attribute to object
+hyxdb004.c      retrieve attribute values from an object
+hyxdb005.c      load object from a frame
+hyxdb006.c      load object from a stream
+hyxdb007.c      new value
+
+
+

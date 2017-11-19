@@ -1,0 +1,9 @@
+README
+MANIFEST
+Makefile.PL
+lib/Net/freedb/file.pm
+lib/Net/freedb/track.pm
+lib/Net/freedb/cluster.pm
+lib/Net/freedb/tools.pm
+lib/Net/freedb/catalog.pm
+lib/Net/freedb/catalog_entry.pm

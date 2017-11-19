@@ -1,0 +1,38 @@
+#
+#  FILE %ned/00/makefile
+#
+#  GG's Night(mare) Editor System
+#
+#  written:       1990-01-01
+#  latest update: 1997-08-03 22:15:43
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -sl 2 NED00_TEXT $@
+
+lib : !
+  ned0001.obj ned0002.obj  ned0003.obj  ned0004.obj  ned0005.obj !
+  ned0006.obj ned0006b.obj ned0007.obj  ned0010.obj  ned0011.obj !
+  ned0015.obj ned0031.obj
+
+.c.obj :
+  $(ccc) $?
+  $(obj)
+
+# ============================================================================
+ned0001.obj : ..\ed.h ned0001.c ned0009.c !
+  ned0001a.c ned0001f.c ned0001k.c ned0001o.c ned0001q.c ned0001x.c !
+  ned0001v.c ned0001u.c ned0016v.c ned0016w.c ned0016p.c
+  $(ccc) ned0001.c
+  $(obj)
+
+ned0008.obj : ..\ed.h ..\edhyx.h ned0008.c
+  $(ccc) ned0008.c
+  $(obj)
+
+#
+ned0031.obj : ..\ed.h ned0031.c ned0009.c !
+  ned0031a.c ned0031f.c ned0031v.c
+  $(ccc) ned0031.c
+  $(obj)

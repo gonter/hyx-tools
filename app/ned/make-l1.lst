@@ -1,0 +1,806 @@
+#
+# File %ned/make-l1.lst
+#
+# pack files for the NED open hypertext editor system in a shar file
+# Note: header files are listed in file make-l2.lst
+#
+# goto [00|01|02|03|04|05|06|07|08|09|10|11|12|13|unix|sbr]
+#
+# written:       1992-12-01
+# latest update: 1997-12-05  3:49:58
+#
+# ----------------------------------------------------------------------------
+>if [ ! -d _bak_ftr.ned ]
+>then
+>  mkdir _bak_ftr.ned
+>fi
+>ln -fs ../gg gg
+>ln -fs ../contrib contrib
+# ----------------------------------------------------------------------------
+a Readme.txt            Readme.txt
+a make-l1.lst           make-l1.lst
+# ----------------------------------------------------------------------------
+a (dirinf).fm           '(dirinf)'.fm
+a ed.h                  ed.h
+a edctx.h               edctx.h
+a edhyx.h               edhyx.h
+a edtcl.h               edtcl.h
+a edtk.h                edtk.h
+a proto.h               proto.h
+a message.h             message.h
+a make-ux               make-ux
+a make-dos              make-dos
+>ln -s make-ux Makefile
+a ned00.c               ned00.c
+a sgmlflt.c             sgmlflt.c
+# --------------------------------------
+>if [ ! -d 00 ]
+>then
+>  mkdir 00
+>  mkdir 00/_bak_ftr.ned
+>fi
+a 00/(dirinf).fm        00/'(dirinf)'.fm
+a 00/make-ux            00/make-ux
+a 00/make-dos           00/make-dos
+>ln -s make-ux 00/Makefile
+a 00/ned0001.c          00/ned0001.c
+a 00/ned0001a.c         00/ned0001a.c
+a 00/ned0001f.c         00/ned0001f.c
+a 00/ned0001c.c         00/ned0001c.c
+a 00/ned0001k.c         00/ned0001k.c
+a 00/ned0001o.c         00/ned0001o.c
+a 00/ned0001q.c         00/ned0001q.c
+a 00/ned0001t.c         00/ned0001t.c
+a 00/ned0001u.c         00/ned0001u.c
+a 00/ned0001v.c         00/ned0001v.c
+a 00/ned0001x.c         00/ned0001x.c
+a 00/ned0002.c          00/ned0002.c
+a 00/ned0003.c          00/ned0003.c
+a 00/ned0004.c          00/ned0004.c
+a 00/ned0005.c          00/ned0005.c
+a 00/ned0006.c          00/ned0006.c
+a 00/ned0006b.c         00/ned0006b.c
+a 00/ned0007.c          00/ned0007.c
+a 00/ned0009.c          00/ned0009.c
+a 00/ned0010.c          00/ned0010.c
+a 00/ned0011.c          00/ned0011.c
+a 00/ned0015.c          00/ned0015.c
+a 00/ned0016v.c         00/ned0016v.c
+a 00/ned0016w.c         00/ned0016w.c
+a 00/ned0016p.c         00/ned0016p.c
+# --------------------------------------
+>if [ ! -d 01 ]
+>then
+>  mkdir 01
+>  mkdir 01/_bak_ftr.ned
+>fi
+a 01/(dirinf).fm        01/'(dirinf)'.fm
+a 01/make-ux            01/make-ux
+a 01/make-dos           01/make-dos
+>ln -s make-ux          01/Makefile
+a 01/ned0101.c          01/ned0101.c
+a 01/ned0102.c          01/ned0102.c
+a 01/ned0102m.c         01/ned0102m.c
+a 01/ned0102p.c         01/ned0102p.c
+a 01/ned0102v.c         01/ned0102v.c
+a 01/ned0103.c          01/ned0103.c
+a 01/ned0103p.c         01/ned0103p.c
+a 01/ned0103v.c         01/ned0103v.c
+a 01/ned0104.c          01/ned0104.c
+a 01/ned0105.c          01/ned0105.c
+a 01/ned0105a.c         01/ned0105a.c
+a 01/ned0105p.c         01/ned0105p.c
+a 01/ned0106.c          01/ned0106.c
+a 01/ned0106a.c         01/ned0106a.c
+a 01/ned0106p.c         01/ned0106p.c
+a 01/ned0107.c          01/ned0107.c
+a 01/ned0107b.c         01/ned0107b.c
+a 01/ned0108a.c         01/ned0108a.c
+a 01/ned0108b.c         01/ned0108b.c
+a 01/ned0108c.c         01/ned0108c.c
+a 01/ned0108d.c         01/ned0108d.c
+a 01/ned0109.c          01/ned0109.c
+a 01/ned0110.c          01/ned0110.c
+a 01/ned0110a.c         01/ned0110a.c
+a 01/ned0110b.c         01/ned0110b.c
+a 01/ned0111.c          01/ned0111.c
+a 01/ned0111a.c         01/ned0111a.c
+a 01/ned0111b.c         01/ned0111b.c
+a 01/ned0112.c          01/ned0112.c
+a 01/ned0112w.c         01/ned0112w.c
+a 01/ned0113.c          01/ned0113.c
+a 01/ned0114.c          01/ned0114.c
+a 01/ned0115.c          01/ned0115.c
+a 01/ned0115b.c         01/ned0115b.c
+a 01/ned0116.c          01/ned0116.c
+a 01/ned0117.c          01/ned0117.c
+a 01/ned0118.c          01/ned0118.c
+a 01/ned0119.c          01/ned0119.c
+a 01/ned0119a.c         01/ned0119a.c
+a 01/ned0120.c          01/ned0120.c
+a 01/ned0121.c          01/ned0121.c
+a 01/ned0122.c          01/ned0122.c
+a 01/ned0123.c          01/ned0123.c
+a 01/ned0124.c          01/ned0124.c
+a 01/ned0125c.c         01/ned0125c.c
+a 01/ned0126.c          01/ned0126.c
+a 01/ned0127.c          01/ned0127.c
+a 01/ned0128.c          01/ned0128.c
+a 01/ned0129.c          01/ned0129.c
+a 01/ned0131.c          01/ned0131.c
+a 01/ned0132.c          01/ned0132.c
+a 01/ned0133.c          01/ned0133.c
+a 01/ned0134.c          01/ned0134.c
+a 01/ned0135.c          01/ned0135.c
+a 01/ned0136.c          01/ned0136.c
+a 01/ned0137.c          01/ned0137.c
+a 01/ned0138.c          01/ned0138.c
+a 01/ned0138b.c         01/ned0138b.c
+a 01/ned0139.c          01/ned0139.c
+a 01/ned0140.c          01/ned0140.c
+a 01/ned0141.c          01/ned0141.c
+a 01/ned0142.c          01/ned0142.c
+# --------------------------------------
+>if [ ! -d 02 ]
+>then
+>  mkdir 02
+>  mkdir 02/_bak_ftr.ned
+>fi
+a 02/(dirinf).fm        02/'(dirinf)'.fm
+a 02/make-ux            02/make-ux
+a 02/make-dos           02/make-dos
+>ln -s make-ux       02/Makefile
+a 02/ned0202.c          02/ned0202.c
+a 02/ned0203.c          02/ned0203.c
+a 02/ned0204.c          02/ned0204.c
+a 02/ned0204b.c         02/ned0204b.c
+a 02/ned0204c.c         02/ned0204c.c
+a 02/ned0205.c          02/ned0205.c
+a 02/ned0206.c          02/ned0206.c
+a 02/ned0207.c          02/ned0207.c
+a 02/ned0208.c          02/ned0208.c
+a 02/ned0209.c          02/ned0209.c
+a 02/ned0210.c          02/ned0210.c
+a 02/ned0211.c          02/ned0211.c
+a 02/ned0211b.c         02/ned0211b.c
+a 02/ned0212.c          02/ned0212.c
+a 02/ned0213a.c         02/ned0213a.c
+a 02/ned0213b.c         02/ned0213b.c
+a 02/ned0213c.c         02/ned0213c.c
+a 02/ned0213d.c         02/ned0213d.c
+a 02/ned0213e.c         02/ned0213e.c
+a 02/ned0214.c          02/ned0214.c
+a 02/ned0215a.c         02/ned0215a.c
+a 02/ned0215b.c         02/ned0215b.c
+a 02/ned0215c.c         02/ned0215c.c
+a 02/ned0216.c          02/ned0216.c
+a 02/ned0217.c          02/ned0217.c
+a 02/ned0218.c          02/ned0218.c
+a 02/ned0219.c          02/ned0219.c
+a 02/ned0220.c          02/ned0220.c
+a 02/ned0221.c          02/ned0221.c
+a 02/ned0222.c          02/ned0222.c
+a 02/ned0223.c          02/ned0223.c
+a 02/ned0224.c          02/ned0224.c
+a 02/ned0225.c          02/ned0225.c
+a 02/ned0226.c          02/ned0226.c
+a 02/ned0227.c          02/ned0227.c
+a 02/ned0228.c          02/ned0228.c
+# 02/ned0229.c          02/ned0229.c
+a 02/ned0230.c          02/ned0230.c
+a 02/ned0231.c          02/ned0231.c
+a 02/ned0232.c          02/ned0232.c
+a 02/ned0240.c          02/ned0240.c
+a 02/ned0241.c          02/ned0241.c
+a 02/ned0242.c          02/ned0242.c
+a 02/ned0243.c          02/ned0243.c
+a 02/ned0244.c          02/ned0244.c
+a 02/ned0245.c          02/ned0245.c
+a 02/ned0246.c          02/ned0246.c
+a 02/ned0247.c          02/ned0247.c
+a 02/ned0248.c          02/ned0248.c
+a 02/ned0249.c          02/ned0249.c
+a 02/ned0250.c          02/ned0250.c
+a 02/ned0251.c          02/ned0251.c
+a 02/ned0252.c          02/ned0252.c
+a 02/ned0253.c          02/ned0253.c
+a 02/ned0253v.c         02/ned0253v.c
+a 02/ned0254.c          02/ned0254.c
+a 02/ned0254b.c         02/ned0254b.c
+a 02/ned0255.c          02/ned0255.c
+a 02/ned0256.c          02/ned0256.c
+a 02/ned0256a.c         02/ned0256a.c
+a 02/ned0257.c          02/ned0257.c
+a 02/ned0258.c          02/ned0258.c
+a 02/ned0259.c          02/ned0259.c
+a 02/ned0260.c          02/ned0260.c
+a 02/ned0260b.c         02/ned0260b.c
+a 02/ned0260c.c         02/ned0260c.c
+a 02/ned0261.c          02/ned0261.c
+a 02/ned0262a.c         02/ned0262a.c
+a 02/ned0263.c          02/ned0263.c
+# --------------------------------------
+>if [ ! -d 03 ]
+>then
+>  mkdir 03
+>  mkdir 03/_bak_ftr.ned
+>fi
+a 03/(dirinf).fm        03/'(dirinf)'.fm
+a 03/make-ux            03/make-ux
+a 03/make-dos           03/make-dos
+>ln -s make-ux       03/Makefile
+a 03/ned0301.c          03/ned0301.c
+a 03/ned0302.c          03/ned0302.c
+a 03/ned0303.c          03/ned0303.c
+a 03/ned0304.c          03/ned0304.c
+a 03/ned0304b.c         03/ned0304b.c
+a 03/ned0305.c          03/ned0305.c
+a 03/ned0306.c          03/ned0306.c
+a 03/ned0307.c          03/ned0307.c
+a 03/ned0308.c          03/ned0308.c
+a 03/ned0309.c          03/ned0309.c
+a 03/ned0310.c          03/ned0310.c
+a 03/ned0311.c          03/ned0311.c
+a 03/ned0312.c          03/ned0312.c
+a 03/ned0313.c          03/ned0313.c
+a 03/ned0314.c          03/ned0314.c
+a 03/ned0315.c          03/ned0315.c
+a 03/ned0316.c          03/ned0316.c
+# 03/ned0317.c          03/ned0317.c
+# 03/ned0318.c          03/ned0318.c
+a 03/ned0319.c          03/ned0319.c
+a 03/ned0320.c          03/ned0320.c
+a 03/ned0321.c          03/ned0321.c
+a 03/ned0322.c          03/ned0322.c
+a 03/ned0323.c          03/ned0323.c
+a 03/ned0324.c          03/ned0324.c
+a 03/ned0325.c          03/ned0325.c
+a 03/ned0326.c          03/ned0326.c
+a 03/ned0327.c          03/ned0327.c
+a 03/ned0328.c          03/ned0328.c
+a 03/ned0329.c          03/ned0329.c
+a 03/ned0330.c          03/ned0330.c
+a 03/ned0331.c          03/ned0331.c
+a 03/ned0332.c          03/ned0332.c
+a 03/ned0332b.c         03/ned0332b.c
+a 03/ned0333.c          03/ned0333.c
+a 03/ned0333b.c         03/ned0333b.c
+a 03/ned0333c.c         03/ned0333c.c
+a 03/ned0333d.c         03/ned0333d.c
+a 03/ned0333e.c         03/ned0333e.c
+a 03/ned0334.c          03/ned0334.c
+a 03/ned0334b.c         03/ned0334b.c
+a 03/ned0335.c          03/ned0335.c
+a 03/ned0341a.c         03/ned0341a.c
+a 03/ned0341b.c         03/ned0341b.c
+a 03/ned0341c.c         03/ned0341c.c
+a 03/ned0342a.c         03/ned0342a.c
+a 03/ned0342b.c         03/ned0342b.c
+a 03/ned0342c.c         03/ned0342c.c
+# --------------------------------------
+>if [ ! -d 04 ]
+>then
+>  mkdir 04
+>  mkdir 04/_bak_ftr.ned
+>fi
+a 04/(dirinf).fm        04/'(dirinf)'.fm
+a 04/make-ux            04/make-ux
+a 04/make-dos           04/make-dos
+>ln -s make-ux          04/Makefile
+a 04/ned0401.c          04/ned0401.c
+a 04/ned0402.c          04/ned0402.c
+a 04/ned0402b.c         04/ned0402b.c
+a 04/ned0403.c          04/ned0403.c
+a 04/ned0404.c          04/ned0404.c
+a 04/ned0405.c          04/ned0405.c
+a 04/ned0406.c          04/ned0406.c
+a 04/ned0408.c          04/ned0408.c
+a 04/ned0409.c          04/ned0409.c
+a 04/ned0409b.c         04/ned0409b.c
+a 04/ned0409c.c         04/ned0409c.c
+a 04/ned0410.c          04/ned0410.c
+a 04/ned0411.c          04/ned0411.c
+a 04/ned0412.c          04/ned0412.c
+a 04/ned0413.c          04/ned0413.c
+a 04/ned0414.c          04/ned0414.c
+a 04/ned0415.c          04/ned0415.c
+a 04/ned0416.c          04/ned0416.c
+a 04/ned0417.c          04/ned0417.c
+a 04/ned0417b.c         04/ned0417b.c
+a 04/ned0418.c          04/ned0418.c
+# 04/ned0419.c          04/ned0419.c
+a 04/ned0420.c          04/ned0420.c
+a 04/ned0421.c          04/ned0421.c
+a 04/ned0422.c          04/ned0422.c
+a 04/ned0423.c          04/ned0423.c
+a 04/ned0425.c          04/ned0425.c
+a 04/ned0426.c          04/ned0426.c
+a 04/ned0427.c          04/ned0427.c
+a 04/ned0428.c          04/ned0428.c
+a 04/ned0429.c          04/ned0429.c
+a 04/ned0430.c          04/ned0430.c
+a 04/ned0431.c          04/ned0431.c
+a 04/ned0432.c          04/ned0432.c
+a 04/ned0433.c          04/ned0433.c
+a 04/ned0434.c          04/ned0434.c
+# --------------------------------------
+>if [ ! -d 05 ]
+>then
+>  mkdir 05
+>  mkdir 05/_bak_ftr.ned
+>fi
+a 05/(dirinf).fm        05/'(dirinf)'.fm
+a 05/make-ux            05/make-ux
+a 05/make-dos           05/make-dos
+>ln -s make-ux       05/Makefile
+a 05/ned0501.c          05/ned0501.c
+a 05/ned0502.c          05/ned0502.c
+a 05/ned0502b.c         05/ned0502b.c
+a 05/ned0502c.c         05/ned0502c.c
+a 05/ned0502d.c         05/ned0502d.c
+a 05/ned0503.c          05/ned0503.c
+a 05/ned0503b.c         05/ned0503b.c
+a 05/ned0504.c          05/ned0504.c
+a 05/ned0505.c          05/ned0505.c
+a 05/ned0506a.c         05/ned0506a.c
+a 05/ned0506b.c         05/ned0506b.c
+a 05/ned0506c.c         05/ned0506c.c
+a 05/ned0506d.c         05/ned0506d.c
+a 05/ned0506e.c         05/ned0506e.c
+a 05/ned0507.c          05/ned0507.c
+a 05/ned0508.c          05/ned0508.c
+a 05/ned0508b.c         05/ned0508b.c
+a 05/ned0508m.c         05/ned0508m.c
+a 05/ned0508t.c         05/ned0508t.c
+a 05/ned0509.c          05/ned0509.c
+a 05/ned0510.c          05/ned0510.c
+a 05/ned0510b.c         05/ned0510b.c
+a 05/ned0510c.c         05/ned0510c.c
+a 05/ned0511.c          05/ned0511.c
+a 05/ned0512.c          05/ned0512.c
+a 05/ned0513.c          05/ned0513.c
+a 05/ned0514.c          05/ned0514.c
+a 05/ned0515.c          05/ned0515.c
+a 05/ned0515b.c         05/ned0515b.c
+a 05/ned0516.c          05/ned0516.c
+a 05/ned0516b.c         05/ned0516b.c
+a 05/ned0517.c          05/ned0517.c
+a 05/ned0519.c          05/ned0519.c
+a 05/ned0520.c          05/ned0520.c
+a 05/ned0521.c          05/ned0521.c
+a 05/ned0522.c          05/ned0522.c
+# --------------------------------------
+>if [ ! -d 06 ]
+>then
+>  mkdir 06
+>  mkdir 06/_bak_ftr.ned
+>fi
+a 06/(dirinf).fm        06/'(dirinf)'.fm
+a 06/make-ux            06/make-ux
+a 06/make-dos           06/make-dos
+>ln -s make-ux       06/Makefile
+a 06/ned0602.c          06/ned0602.c
+a 06/ned0603.c          06/ned0603.c
+a 06/ned0604.c          06/ned0604.c
+a 06/ned0605.c          06/ned0605.c
+a 06/ned0606.c          06/ned0606.c
+a 06/ned0607.c          06/ned0607.c
+a 06/ned0608.c          06/ned0608.c
+a 06/ned0609.c          06/ned0609.c
+a 06/ned0610.c          06/ned0610.c
+a 06/ned0610a.c         06/ned0610a.c
+a 06/ned0610b.c         06/ned0610b.c
+a 06/ned0610c.c         06/ned0610c.c
+a 06/ned0610d.c         06/ned0610d.c
+a 06/ned0610e.c         06/ned0610e.c
+# 06/ned0611.c          06/ned0611.c ... not used
+a 06/ned0612.c          06/ned0612.c
+a 06/ned0613.c          06/ned0613.c
+a 06/ned0613b.c         06/ned0613b.c
+a 06/ned0614.c          06/ned0614.c
+a 06/ned0615.c          06/ned0615.c
+a 06/ned0616.c          06/ned0616.c
+# 06/ned0617.c          06/ned0617.c ... not used any more
+a 06/ned0618.c          06/ned0618.c
+a 06/ned0619.c          06/ned0619.c
+a 06/ned0620.c          06/ned0620.c
+a 06/ned0621.c          06/ned0621.c
+a 06/ned0622.c          06/ned0622.c
+a 06/ned0623.c          06/ned0623.c
+a 06/ned0624.c          06/ned0624.c
+a 06/ned0625.c          06/ned0625.c
+a 06/ned0626.c          06/ned0626.c
+a 06/ned0627.c          06/ned0627.c
+a 06/ned0628.c          06/ned0628.c
+a 06/ned0629.c          06/ned0629.c
+a 06/ned0630.c          06/ned0630.c
+a 06/ned0631.c          06/ned0631.c
+# --------------------------------------
+>if [ ! -d 07 ]
+>then
+>  mkdir 07
+>  mkdir 07/_bak_ftr.ned
+>fi
+a 07/(dirinf).fm        07/'(dirinf)'.fm
+a 07/make-ux            07/make-ux
+a 07/make-dos           07/make-dos
+>ln -s make-ux       07/Makefile
+a 07/ned0701.c          07/ned0701.c
+a 07/ned0702.c          07/ned0702.c
+a 07/ned0703.c          07/ned0703.c
+#
+a 07/ned0705.c          07/ned0705.c
+#
+a 07/ned0711.c          07/ned0711.c
+a 07/ned0712.c          07/ned0712.c
+a 07/ned0713.c          07/ned0713.c
+a 07/ned0714.c          07/ned0714.c
+a 07/ned0715.c          07/ned0715.c
+a 07/ned0716.c          07/ned0716.c
+a 07/ned0717.c          07/ned0717.c
+a 07/ned0718.c          07/ned0718.c
+a 07/ned0719.c          07/ned0719.c
+a 07/ned0719b.c         07/ned0719b.c
+a 07/ned0719c.c         07/ned0719c.c
+a 07/ned0720.c          07/ned0720.c
+a 07/ned0721.c          07/ned0721.c
+a 07/ned0722.c          07/ned0722.c
+a 07/ned0723.c          07/ned0723.c
+a 07/ned0723a.c         07/ned0723a.c
+a 07/ned0723b.c         07/ned0723b.c
+a 07/ned0724.c          07/ned0724.c
+a 07/ned0724a.c         07/ned0724a.c
+a 07/ned0725.c          07/ned0725.c
+a 07/ned0725b.c         07/ned0725b.c
+a 07/ned0725c.c         07/ned0725c.c
+a 07/ned0726.c          07/ned0726.c
+a 07/ned0727.c          07/ned0727.c
+a 07/ned0727a.c         07/ned0727a.c
+a 07/ned0727b.c         07/ned0727b.c
+a 07/ned0727c.c         07/ned0727c.c
+a 07/ned0727d.c         07/ned0727d.c
+a 07/ned0727e.c         07/ned0727e.c
+a 07/ned0728.c          07/ned0728.c
+a 07/ned0729.c          07/ned0729.c
+a 07/ned0730.c          07/ned0730.c
+a 07/ned0731a.c         07/ned0731a.c
+a 07/ned0731p.c         07/ned0731p.c
+a 07/ned0731w.c         07/ned0731w.c
+a 07/ned0732.c          07/ned0732.c
+a 07/ned0733.c          07/ned0733.c
+a 07/ned0734.c          07/ned0734.c
+a 07/ned0735.c          07/ned0735.c
+a 07/ned0736.c          07/ned0736.c
+a 07/ned0737.c          07/ned0737.c
+a 07/ned0738.c          07/ned0738.c
+#
+a 07/ned0747.c          07/ned0747.c
+a 07/ned0747b.c         07/ned0747b.c
+#
+a 07/ned0749.c          07/ned0749.c
+a 07/ned0750.c          07/ned0750.c
+a 07/ned0751.c          07/ned0751.c
+a 07/ned0752.c          07/ned0752.c
+a 07/ned0753.c          07/ned0753.c
+a 07/ned0754a.c         07/ned0754a.c
+a 07/ned0754b.c         07/ned0754b.c
+a 07/ned0754c.c         07/ned0754c.c
+a 07/ned0754d.c         07/ned0754d.c
+a 07/ned0756.c          07/ned0756.c
+#
+a 07/ned0758.c          07/ned0758.c
+a 07/ned0759.c          07/ned0759.c
+a 07/ned0760.c          07/ned0760.c
+a 07/ned0761.c          07/ned0761.c
+a 07/ned0762.c          07/ned0762.c
+a 07/ned0763.c          07/ned0763.c
+# --------------------------------------
+>if [ ! -d 08 ]
+>then
+>  mkdir 08
+>  mkdir 08/_bak_ftr.ned
+>fi
+a 08/(dirinf).fm        08/'(dirinf)'.fm
+a 08/make-ux            08/make-ux
+a 08/make-dos           08/make-dos
+>ln -s make-ux       08/Makefile
+a 08/ned0803.c          08/ned0803.c
+a 08/ned0804.c          08/ned0804.c
+a 08/ned0805.c          08/ned0805.c
+a 08/ned0806.c          08/ned0806.c
+a 08/ned0807.c          08/ned0807.c
+a 08/ned0808.c          08/ned0808.c
+a 08/ned0809.c          08/ned0809.c
+a 08/ned0810.c          08/ned0810.c
+a 08/ned0811.c          08/ned0811.c
+a 08/ned0812.c          08/ned0812.c
+a 08/ned0813.c          08/ned0813.c
+a 08/ned0814.c          08/ned0814.c
+a 08/ned0821.c          08/ned0821.c
+a 08/ned0822.c          08/ned0822.c
+a 08/ned0823.c          08/ned0823.c
+a 08/ned0824.c          08/ned0824.c
+a 08/ned0825.c          08/ned0825.c
+a 08/ned0826.c          08/ned0826.c
+a 08/ned0827.c          08/ned0827.c
+a 08/ned0828.c          08/ned0828.c
+a 08/ned0829.c          08/ned0829.c
+a 08/ned0830.c          08/ned0830.c
+a 08/ned0831.c          08/ned0831.c
+a 08/ned0832.c          08/ned0832.c
+a 08/ned0833.c          08/ned0833.c
+a 08/ned0834.c          08/ned0834.c
+a 08/ned0835.c          08/ned0835.c
+a 08/ned0836.c          08/ned0836.c
+a 08/ned0837.c          08/ned0837.c
+a 08/ned0838.c          08/ned0838.c
+a 08/ned0838a.c         08/ned0838a.c
+a 08/ned0839.c          08/ned0839.c
+a 08/ned0840.c          08/ned0840.c
+a 08/ned0841.c          08/ned0841.c
+a 08/ned0841b.c         08/ned0841b.c
+a 08/ned0842.c          08/ned0842.c
+a 08/ned0842b.c         08/ned0842b.c
+a 08/ned0842c.c         08/ned0842c.c
+a 08/ned0843.c          08/ned0843.c
+a 08/ned0844.c          08/ned0844.c
+a 08/ned0844b.c         08/ned0844b.c
+a 08/ned0845.c          08/ned0845.c
+a 08/ned0845a.c         08/ned0845a.c
+a 08/ned0846.c          08/ned0846.c
+a 08/ned0847.c          08/ned0847.c
+a 08/ned0848.c          08/ned0848.c
+a 08/ned0849.c          08/ned0849.c
+a 08/ned0850.c          08/ned0850.c
+a 08/ned0850b.c         08/ned0850b.c
+a 08/ned0851.c          08/ned0851.c
+a 08/ned0853.c          08/ned0853.c
+a 08/ned0854a.c         08/ned0854a.c
+a 08/ned0854b.c         08/ned0854b.c
+a 08/ned0854c.c         08/ned0854c.c
+a 08/ned0854d.c         08/ned0854d.c
+a 08/ned0854e.c         08/ned0854e.c
+a 08/ned0854f.c         08/ned0854f.c
+a 08/ned0854g.c         08/ned0854g.c
+a 08/ned0854h.c         08/ned0854h.c
+#
+a 08/ned0856.c          08/ned0856.c
+a 08/ned0857.c          08/ned0857.c
+a 08/ned0857b.c         08/ned0857b.c
+a 08/ned0857c.c         08/ned0857c.c
+a 08/ned0858.c          08/ned0858.c
+a 08/ned0858b.c         08/ned0858b.c
+a 08/ned0859.c          08/ned0859.c
+a 08/ned0860.c          08/ned0860.c
+a 08/ned0861.c          08/ned0861.c
+a 08/ned0862.c          08/ned0862.c
+a 08/ned0863.c          08/ned0863.c
+a 08/ned0863b.c         08/ned0863b.c
+a 08/ned0864.c          08/ned0864.c
+a 08/ned0865.c          08/ned0865.c
+a 08/ned0866.c          08/ned0866.c
+a 08/ned0867.c          08/ned0867.c
+a 08/ned0867b.c         08/ned0867b.c
+a 08/ned0868.c          08/ned0868.c
+a 08/ned0869.c          08/ned0869.c
+a 08/ned0869b.c         08/ned0869b.c
+a 08/ned0870.c          08/ned0870.c
+a 08/ned0871.c          08/ned0871.c
+#
+a 08/ned0873.c          08/ned0873.c
+#
+a 08/ned0875.c          08/ned0875.c
+a 08/ned0876.c          08/ned0876.c
+a 08/ned0877.c          08/ned0877.c
+a 08/ned0878.c          08/ned0878.c
+a 08/ned0879.c          08/ned0879.c
+a 08/ned0879i.c         08/ned0879i.c
+a 08/ned0879l.c         08/ned0879l.c
+a 08/ned0879t.c         08/ned0879t.c
+a 08/ned0880.c          08/ned0880.c
+a 08/ned0881.c          08/ned0881.c
+a 08/ned0882.c          08/ned0882.c
+a 08/ned0884.c          08/ned0884.c
+a 08/ned0885.c          08/ned0885.c
+a 08/ned0885b.c         08/ned0885b.c
+a 08/ned0886.c          08/ned0886.c
+# --------------------------------------
+>if [ ! -d 09 ]
+>then
+>  mkdir 09
+>  mkdir 09/_bak_ftr.ned
+>fi
+a 09/(dirinf).fm        09/'(dirinf)'.fm
+a 09/make-ux            09/make-ux
+a 09/make-dos           09/make-dos
+>ln -s make-ux       09/Makefile
+a 09/ned0901.c          09/ned0901.c
+a 09/ned0902.c          09/ned0902.c
+a 09/ned0903.c          09/ned0903.c
+#
+a 09/ned0905.c          09/ned0905.c
+a 09/ned0906.c          09/ned0906.c
+a 09/ned0907.c          09/ned0907.c
+a 09/ned0908.c          09/ned0908.c
+a 09/ned0909.c          09/ned0909.c
+a 09/ned0910.c          09/ned0910.c
+a 09/ned0911.c          09/ned0911.c
+a 09/ned0912.c          09/ned0912.c
+a 09/ned0913.c          09/ned0913.c
+a 09/ned0914.c          09/ned0914.c
+a 09/ned0915.c          09/ned0915.c
+a 09/ned0916.c          09/ned0916.c
+a 09/ned0917.c          09/ned0917.c
+a 09/ned0918.c          09/ned0918.c
+a 09/ned0919.c          09/ned0919.c
+a 09/ned0921.c          09/ned0921.c
+a 09/ned0922.c          09/ned0922.c
+a 09/ned0923.c          09/ned0923.c
+a 09/ned0924.c          09/ned0924.c
+a 09/ned0925.c          09/ned0925.c
+a 09/ned0926.c          09/ned0926.c
+a 09/ned0927.c          09/ned0927.c
+a 09/ned0928.c          09/ned0928.c
+a 09/ned0929.c          09/ned0929.c
+a 09/ned0929s.c         09/ned0929s.c
+a 09/ned0930.c          09/ned0930.c
+a 09/ned0931.c          09/ned0931.c
+a 09/ned0932.c          09/ned0932.c
+a 09/ned0933.c          09/ned0933.c
+a 09/ned0934.c          09/ned0934.c
+a 09/ned0935.c          09/ned0935.c
+a 09/ned0936.c          09/ned0936.c
+a 09/ned0937.c          09/ned0937.c
+a 09/ned0937b.c         09/ned0937b.c
+a 09/ned0938.c          09/ned0938.c
+a 09/ned0939.c          09/ned0939.c
+a 09/ned0940.c          09/ned0940.c
+a 09/ned0941.c          09/ned0941.c
+a 09/ned0942.c          09/ned0942.c
+a 09/ned0943.c          09/ned0943.c
+a 09/ned0944.c          09/ned0944.c
+a 09/ned0945.c          09/ned0945.c
+a 09/ned0946.c          09/ned0946.c
+a 09/ned0947.c          09/ned0947.c
+a 09/ned0948.c          09/ned0948.c
+a 09/ned0949.c          09/ned0949.c
+a 09/ned0950.c          09/ned0950.c
+a 09/ned0951a.c         09/ned0951a.c
+a 09/ned0951b.c         09/ned0951b.c
+# --
+a 09/ned0972.c          09/ned0972.c
+a 09/ned0973.c          09/ned0973.c
+a 09/ned0974.c          09/ned0974.c
+a 09/ned0975.c          09/ned0975.c
+a 09/ned0976.c          09/ned0976.c
+a 09/ned0977.c          09/ned0977.c
+a 09/ned0978.c          09/ned0978.c
+a 09/ned0979.c          09/ned0979.c
+a 09/ned0980.c          09/ned0980.c
+a 09/ned0981.c          09/ned0981.c
+# --------------------------------------
+>if [ ! -d 10 ]
+>then
+>  mkdir 10
+>  mkdir 10/_bak_ftr.ned
+>fi
+a 10/(dirinf).fm        10/'(dirinf)'.fm
+a 10/make-ux            10/make-ux
+a 10/make-dos           10/make-dos
+>ln -s make-ux       10/Makefile
+a 10/ned1001.c          10/ned1001.c
+a 10/ned1002.c          10/ned1002.c
+a 10/ned1003.c          10/ned1003.c
+a 10/ned1004.c          10/ned1004.c
+a 10/ned1005.c          10/ned1005.c
+a 10/ned1006.c          10/ned1006.c
+a 10/ned1007.c          10/ned1007.c
+a 10/ned1008.c          10/ned1008.c
+a 10/ned1009.c          10/ned1009.c
+a 10/ned1010.c          10/ned1010.c
+a 10/ned1011.c          10/ned1011.c
+a 10/ned1012.c          10/ned1012.c
+a 10/ned1013.c          10/ned1013.c
+a 10/ned1014.c          10/ned1014.c
+a 10/ned1015.c          10/ned1015.c
+a 10/ned1016.c          10/ned1016.c
+a 10/ned1017.c          10/ned1017.c
+a 10/ned1018.c          10/ned1018.c
+a 10/ned1019.c          10/ned1019.c
+# --------------------------------------
+>if [ ! -d 11 ]
+>then
+>  mkdir 11
+>  mkdir 11/_bak_ftr.ned
+>fi
+a 11/(dirinf).fm        11/'(dirinf)'.fm
+a 11/make-ux            11/make-ux
+a 11/make-dos           11/make-dos
+>ln -s make-ux          11/Makefile
+a 11/ned1101.c          11/ned1101.c
+a 11/ned1102.c          11/ned1102.c
+a 11/ned1103.c          11/ned1103.c
+a 11/ned1104.c          11/ned1104.c
+a 11/ned1105.c          11/ned1105.c
+a 11/ned1106.c          11/ned1106.c
+a 11/ned1107.c          11/ned1107.c
+a 11/ned1108.c          11/ned1108.c
+a 11/ned1109.c          11/ned1109.c
+a 11/ned1110.c          11/ned1110.c
+a 11/ned1111.c          11/ned1111.c
+a 11/ned1112.c          11/ned1112.c
+a 11/ned1112v.c         11/ned1112v.c
+a 11/ned1112w.c         11/ned1112w.c
+a 11/ned1113.c          11/ned1113.c
+# --------------------------------------
+>if [ ! -d 12 ]
+>then
+>  mkdir 12
+>  mkdir 12/_bak_ftr.ned
+>fi
+a 12/(dirinf).fm        12/'(dirinf)'.fm
+a 12/make-ux            12/make-ux
+a 12/make-dos           12/make-dos
+>ln -s make-ux          12/Makefile
+a 12/ned1201.c          12/ned1201.c
+a 12/ned1202.c          12/ned1202.c
+a 12/ned1203.c          12/ned1203.c
+a 12/ned1204.c          12/ned1204.c
+a 12/ned1204b.c         12/ned1204b.c
+a 12/ned1205.c          12/ned1205.c
+a 12/ned1206.c          12/ned1206.c
+a 12/ned1207.c          12/ned1207.c
+a 12/ned1208.c          12/ned1208.c
+a 12/ned1209.c          12/ned1209.c
+a 12/ned1210.c          12/ned1210.c
+a 12/ned1211.c          12/ned1211.c
+#
+a 12/ned1299.c          12/ned1299.c
+# --------------------------------------
+>if [ ! -d 13 ]
+>then
+>  mkdir 13
+>  mkdir 13/_bak_ftr.ned
+>fi
+a 13/(dirinf).fm        13/'(dirinf)'.fm
+a 13/make-ux            13/make-ux
+a 13/make-dos           13/make-dos
+>ln -s make-ux          13/Makefile
+a 13/ned1301.c          13/ned1301.c
+a 13/ned1302.c          13/ned1302.c
+#
+a 13/ned1391.c          13/ned1391.c
+a 13/ned1392.c          13/ned1392.c
+# ----------------------------------------------------------------------------
+>if [ ! -d unix ]
+>then
+>  mkdir unix
+>  mkdir unix/_bak_ftr.ned
+>fi
+a unix/(dirinf).fm              unix/'(dirinf)'.fm
+a unix/make-ux                  unix/make-ux
+# unix/make-dos                 unix/make-dos
+>ln -s make-ux                  unix/Makefile
+a unix/harness.c                unix/harness.c
+a unix/nedelm.c                 unix/nedelm.c
+a unix/keyboard.c               unix/keyboard.c
+a unix/tk2.c                    unix/tk2.c
+a unix/tk2_scr.c                unix/tk2_scr.c
+# unix/unix1.c                  unix/unix1.c
+a unix/unix2.c                  unix/unix2.c
+a unix/uxwindat.c               unix/uxwindat.c
+#
+# ----------------------------------------------------------------------------
+>if [ ! -d sbr ]
+>then
+>  mkdir sbr
+>  mkdir sbr/_bak_ftr.ned
+>fi
+a make-sbr                      make-sbr
+>ln -s ../make-sbr              sbr/Makefile
+#
+a c:/usr/window/1/win_0102.c    sbr/win_0102.c
+a c:/usr/window/1/win_0111.c    sbr/win_0111.c
+a c:/usr/window/1/win_0112.c    sbr/win_0112.c
+a c:/usr/window/1/win_0125.c    sbr/win_0125.c
+

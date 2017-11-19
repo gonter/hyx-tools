@@ -1,0 +1,95 @@
+#
+# FILE %ds/strings/(dirinf).fm
+#
+# C-libraries for string manipulation
+#
+#include <gg/strings.h>
+#
+# written:       1988 09 03
+# latest update: 2000-08-28 12:23:26
+# $Id: (dirinf).fm,v 1.4 2000/08/28 19:27:01 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+#
+large           | Objektfiles LARGE Model
+small           | Objektfiles SMALL Model
+Makefile        | active Makefile
+make-ux         | Makefile (Unix)
+make-dos        | Makefile (MSDOS)
+#
+# ============================================================================
+strings.zip     |        | String Operationen
+str_0001.c      | int strnscpy (char *d, char *s, int cnt)
+str_0002.c      | int strcmp_c (char *s1, char *s2);
+str_0003.c      | int strcmp_ebcdic (char *s1, char *s2);
+str_0004.c      | char *to_lower (char *n);
+str_0005.c      | char *to_upper (char *n);
+str_0006.c      | int match (pattern, string)
+str_0007.c      | int string_hash (str, lng, hash, hash_lng)
+str_0008.c      | int match_lng (char *s1, char *s2, int cnt);
+str_0009.c      | int strcmp_us (char *s1, char *s2);
+str_0010.c      | int strcmp_weighted (char *s1, char *s2);
+str_0011.c      | int strcmp_cweighted (char *s1, char *s2);
+str_0012.c      | int lower_case (int n);
+str_0013.c      | int upper_case (int n);
+str_0014.c      | int strcmp_cre (char *s1, char *s2);
+str_0015.c      | int skip_re (char *str);
+str_0016.c      | int find_command (...);
+str_0017.c      | char *str_assign (char **d, char *s);
+str_0018.c      | char *rotate13 (char *s);
+str_0019.c      | char *strridx (char *s, int ch);
+str_0020.c      | int split_string (...);
+str_0021.c      | int match_array (...);
+str_0022.c      | int isolate_words (...);
+str_0023.c      | int str2fld (...};
+str_0024.c      | int isolate_tokens (...);
+str_0025.c      | int strdiff (...);
+str_0026.c      | int isolate2words (...)
+str_0027.c      | int put_chartable (...)
+str_0028.c      | char *locate_word (char *s, int num)
+str_0029.c      | long count_char (int code, char *s, long size)
+str_0030.c      | int mk_passwd (char *s, int pass_lng)
+str_0031.c      | int enter_value (char *s, int pos, int val)
+str_0032.c      | void blanks (FILE *fo, int cnt)
+str_0033.c      | int chr_index (char *chars, int value)
+str_0034.c      | int xchange (char *s, int f, int t)
+str_0035.c      | int gopher_url2components (char *url, char **host,...)
+str_0036.c      | int str_prompt (char *txt, char *dest, ...)
+str_0037.c      | int remove_apostrophe (char *s);
+str_0038.c      | char *str_or_undef (char *s);
+str_0039.c      | int mk_PassWord (char *s, int pass_lng)
+str_0040.c      | get_operation ()
+str_0041.c      | int get_cat_code (int ch)
+str_0041.tbl    | IBM PC category codes
+str_0042.c      | int get_weight_code (int ch)
+str_0042.tbl    | IBM PC weight codes
+str_0043.c      | int mk_pin_code (char *s, int pass_lng)
+str_0044.c      | int free_or_what (void *s);
+str_0045.c      | char *strdup_extra (char *str, int extra)
+str_0046.c      | int sgml_encode (char *str, char *tmp, int str_size)
+str_0047.c      | char *read_string (FILE *fi, int string_length)
+str_0048.c      | char *XSTR (char *str)
+str_0049.c      | strcpy_max (char *d, char *s, int size);
+str_0050.c      | strcmp_nn (char *s1, char *s2);
+str_0051.c      | char *strdup_or_what (char *s)
+str_0052.c      | strcpy2_max (char *d, char *s, int size);
+str_0053.c      | char *get_password_verified (char *p1, char *p2);
+#
+str_0107.c      | strnins (str, lng, pos, cnt)
+str_0108.c      | strndel (str, lng, pos, cnt)
+str_0109.c      | delstr (s, p) /* Lîsche ein Zeichen     */
+#
+str_0201.c      | int abbrev (char *unabbr, char *abbr, int lng)
+str_0202.c      | char *translate (...)
+str_0203.c      | int verify (char *string, char *reference)
+str_0204.c      | int strip (char *string, char *where)
+#
+str_0301.c      | char *strdup (char *str);
+str_0301.c      |__CMS__ | fuer CMS
+str_0302.c      | char *strndup (char *str, int size);
+str_0303.c      | char *strrev (char *str)
+str_0304.c      | char *strdup_max (char *str, int max_size);
+#
+#
+strings.c       | Test Modul fÅr String Operationen
+*               |

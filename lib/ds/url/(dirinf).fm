@@ -1,0 +1,26 @@
+#
+# FILE %ds/url/(dirinf).fm
+#
+# written:       1995-12-12
+# latest update: 1996-11-04  0:00:10
+#
+
+# see also: <gg/url.h> and url
+(dirinf).fm     Contents
+Makefile        current version of Makefile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+url_0000.c      TEMPLATE
+url_0001.c      url handler stuff...
+url_0002.c      char *url_fetch (char *url);
+url_0003.c      write url interface
+url_0004.c      read url interface
+url_0005.c      char *url_isolate_schema (char *url, char *schema)
+url_0006.c      int url_identify_type (char *url)
+url_0007.c      char *url_fetch_file (char *url, void *cd)
+url_0008.c      char *url_fetch_mailto (char *url, void *cd)
+
+url_0009.c      ... trash ...
+
+

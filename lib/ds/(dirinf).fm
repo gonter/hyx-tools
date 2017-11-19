@@ -1,0 +1,51 @@
+#
+# FILE %ds/(dirinf).fm
+#
+# written:       1994-11-20
+# latest update: 1999-04-10 11:53:23
+# $Id: (dirinf).fm,v 1.4 2002/01/27 23:01:37 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+(dirinf).fm     manipulation of datastructures
+Makefile        active Makefile (DOS or Unix)
+make-ux         Makefile (Unix)
+make-dos        Makefile (MSDOS)
+makeshar.lst    list of files to be transfered to Unix
+# mkshar.pl     create shar file segment
+ds.mod          MSDOS module list
+
+array           perl like array processing
+attlist         attribute lists
+bbc             black board connections
+cal             date, time, calendar and planner functions
+codes           code translation routines
+dbx             database stuff
+dyb             dynamic blocks
+entity          SGML Entities
+ggcrypt         simple encryption routines
+hytxt           SGML and Hypertext Functions
+hyxdb           HYX Database
+hyxl            HYX attributes in SGML tag strings
+hyxp            HYX SGML Parser
+hyxta           HYX TA Parser
+irdb            irrelational database
+lmd             LM/D Engine
+lmd5            LM/D Engine Version 5
+lut             lookup table handling
+lutctl          lookup table control
+lxs             Lexical Subsystem
+mail            mail handling subroutines
+mime            Multimedia Internet Mail Extensions
+rdtp            restructured dynamic text parser
+rtf             Rich Text Format (not much...)
+streams         stream processing framework
+strings         string processing subroutines
+tcl             TCL command library
+tfb             Text File Base
+url             URL processing
+varspace        variable space managment
+vieos           Vienna Objective SGML, TCL Library
+ytree           YTREE: binary skip tree
+zip             ZIP file processing
+

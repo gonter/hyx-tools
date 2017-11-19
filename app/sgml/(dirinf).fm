@@ -1,0 +1,101 @@
+#
+# FILE %sgml/(dirinf).fm
+#
+# written:       1989 11 04
+# latest update: 1999-04-24 12:06:59
+#
+# ----------------------------------------------------------------------------
+.               SGML und HyperText
+.               SGML Standard Generalized Markup Language
+
+Makefile        <<<< active Makefile
+make-dos        <<<< DOS Makefile
+make-ux         <<<< Unix Makefile
+makeshar.lst    <<<< create Unix shar distribution package
+
+# ----------------------------------------------------------------------------
+# Toplevel Hypertext Tools:
+# chksgml.c, hyxidx.c, hyxthr.c, hyxpurge.c, hyxscan.c
+
+# ----------------------------------------------------------------------------
+chksgml.c       SGML checker
+chksgml1.c      SGML checker: int hoc_print_counter (FILE *fo, ...);
+chksgml2.c      SGML checker: int chksgml (FILE *fo, ...);
+chksgml3.c      SGML checker: int chksgml_stream (FILE *fo, ...);
+chksgml4.c      SGML checker: int analyze_tag (char *tag, ...);
+chksgml5.c      SGML checker: int analyze_entity (char *entity, ...);
+chksgml6.c      SGML checker: int hoc_reset_counter (...);
+
+hyxidx.c        HYX indexer
+hyxidx01.c      HYX indexer
+
+hyxadd.c        HYX add frames
+hyxpurge.c      HYX purge and cleanup
+hyxseq.c        HYX sequencer
+hyxthr.c        HYX thread sequencer (should be rolled back into hyxseq)
+hyxscan.c       HYX scanner
+translit.c      Zeichen umwandeln
+
+# unix tools, mostly: --------------------------------------------------------
+msrvh.h         Mail Server: datastructures and constants
+msrv.c          Mail Server: main module
+msrv01.c        Mail Server: dispatch incoming requests
+msrv02.c        Mail Server: get a frame from the database and ship it
+msrv03.c        Mail Server: read default setup
+msrv04.c        Mail Server: pick an email address to reply to
+msrv05.c        Mail Server: create an authorization record
+msrv06.c        Mail Server: check a given authorization against the config
+msrv07.c        Mail Server: int msrv_prepare_reply_header (...)
+
+http4hyx.c      HTTP daemon
+httpsf.c        HTTP SGML filter stage
+
+hyx.pm          perl 5 module implementing hash tie to hyx cluster
+hyxtest.pl      perl 5 program to test hyx.pm
+
+hyxd.c          Hypertext daemon
+hyxd01.c        int hyxd_daemon (...)
+hyxd02.c        int hyxd_extract (FILE *fo, char *cluster, ...)
+hyxd03.c        int hyxd_command (FILE *fo, char *line, int mode)
+hyxd04.c        int http4hyx_command (FILE *fo, char *line, int mode)
+hyxd05.c        int http4hyx_daemon (...)
+
+sf01.c          SGML filter: int hytxt_filter (FILE *fi, FILE *fo, long transfer_length)
+sf02.c          SGML filter: long hytxt_hyx2http (FILE *fo, char *tag_buffer)
+sf03.c          SGML filter: int frame_name2url (char *frame, char *url, int max_url)
+sf04.c          SGML filter: int url2frame_name (char *url, char *frame, int max_frame)
+sf05.c          SGML filter: tables for frame to url translation
+
+# main library modules: ------------------------------------------------------
+sgml_a.mod      LLINK Steuerfile fuer c:/usr/sbr/lsbr.lib
+sgml_b.mod      LLINK Steuerfile fuer c:/usr/sbr/ai.lib
+
+# experimental hypertext engine: ---------------------------------------------
+hyxeng01.c      HyperText Engine: Command Line Interpreter
+hyxeng01.h      HyperText Engine: aus HYXENG01.CMD erzeugte Konstanten
+hyxeng02.c      HyperText Engine: Interpreter
+hyxeng03.c      HyperText Engine: hy_purge
+hyxeng04.c      HyperText Engine: hyx_engine_list
+hyxeng05.c      HyperText Engine: hyx_engine_export
+hyxold.c        HyperText Engine: Steuermodul (obsolete)
+hy*.c           HyperText
+*.hyx           HyperText Cluster
+
+# ancient tools: -------------------------------------------------------------
+sgml0001.c      SGML-Filter
+sgml0002.c      SGML-Filter; selbstmodifizierender Code
+sgml0003.c      SGML     -> TEXT,FTR
+sgml0004.c      TEXT,FTR -> SGML
+sgml0005.c      SGML List Elements
+sgml0006.c      SGML List processor
+sgml0007.c      SGML Variablen
+sgml0008.c      SGML list -> LaTeX Konverter
+sgml0009.c      SGML data -> LaTeX Konverter
+sgml0010.c      SGML processor configuration
+sgml0011.c      int sgml_0011_config_processor (int processor_code)
+sgml0012.c      void sgml_report_list (struct SGML_LIST *sl)
+sgml0013.c      Identifikation von Tags
+sgmlkonv.c      Konverter: SGML -> NED-(TXT, FTR) und umgekehrt
+temp.c          SGML-Test-Konverter
+sgmlt1.c        SGML Parser
+sgmlt2.c        SGML Umformulierung

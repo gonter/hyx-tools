@@ -1,0 +1,11 @@
+#!/usr/local/bin/perl
+# FILE %gg/work/sf/hyx-tools/Perl/Modules/net-freedb/(dirinf).fm
+#
+# written:       2002-07-01
+# $Id: (dirinf).fm,v 1.2 2002/07/01 02:42:46 gonter Exp $
+#
+
+Changes         what's new
+MANIFEST        package list
+lib/Net/freedb/ library modules
+

@@ -1,0 +1,21 @@
+#
+#  FILE /usr/window/0/makefile
+#
+#  Window Programme (fÅr MAGIS)
+#
+#
+# =====================================================================
+cml=cl -Os -AL /c
+cms=cl -Os -AS /c
+ccl=cl -Os -AL
+ccs=cl -Os -AS
+llib=c:\usr\sbr\lsbr
+
+win_data : win_ldat.obj
+
+win_sdat.obj : win_data.c
+  $(cms) /Fo$* win_data.c
+
+win_ldat.obj : win_data.c
+  $(cml) /Fo$* win_data.c
+  objdec -m0 -w -sl 2 WINDOW_TEXT win_ldat.obj

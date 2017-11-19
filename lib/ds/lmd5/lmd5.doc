@@ -1,0 +1,47 @@
+#
+# FILE %ds/lmd5/lmd5.doc
+#
+# written:       1996-04-14
+# latest update: 1996-04-14 12:03:29
+#
+
+persistent data structure:
+
+wordcount.<word>                ... information about individual words
+  docs.<docid>= <cnt>           ... reference counter per document
+  cnt.total= <cnt>              ... all-over counter
+
+docs.<docid>                    ... document directory
+  cnt.upd= <cnt>                ... number of times this docid was updated
+  cnt.begin= <pos>              ... begin position within document
+  cnt.end= <pos>                ... end position within document
+  fref.name= <fref>             ... file reference (name)
+
+  Note: fref.name, cnt.begin, cnt.end are set together
+
+info.<attribute>= <value>       ... various information attributs
+
+
+stream format:
+
+DOCID <docid> [<fref> [<begin> [<end>]]]
+
+INFO
+<attribute> <value>
+.
+
+DATA
+<word>
+.
+
+data
+<Word>
+.
+
+DATAPOINTS
+<inc> <word>
+.
+
+datapoints
+<inc> <Word>
+.

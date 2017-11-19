@@ -1,0 +1,24 @@
+# automagically GENERATED directory listing of /afs/wu-wien.ac.at/home/edvz/gonter/usr/work/fbsd/gg/app/lex
+# filename             size T   mode owner group
+.                      2048 d 040755  3222  3000
+..                     2048 d 040755  3222  3000
+(dirinf).fm               0 f 100644     1  3000
+CVS                    2048 d 040755  3222  3000
+Makefile                325 f 100644  3222  3000
+_bak_ftr.ned           2048 d 040755  3222  3000
+contrib                  25 l 120755  3222  3000
+gg                       20 l 120755  3222  3000
+lexcut                16913 f 100755  3222  3000
+lexcut.c               5271 f 100644  3222  3000
+lexcut.o               5276 f 100644  3222  3000
+lexcut01.c             1583 f 100644  3222  3000
+lexcut01.o             1612 f 100644  3222  3000
+lexdiv.c               4533 f 100644  3222  3000
+lexm.c                 3567 f 100644  3222  3000
+lexm2.c                3219 f 100644  3222  3000
+lext.c                 5650 f 100644  3222  3000
+lext1.c                6551 f 100644  3222  3000
+make-dos               1544 f 100644  3222  3000
+makeshar.lst            340 f 100644  3222  3000
+xxconven.c             1285 f 100644  3222  3000
+yyconven.c             1418 f 100644  3222  3000

@@ -1,0 +1,16 @@
+n00_cur
+n00_tk
+n02_tk
+n02_cur
+n0*.core
+ned00
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+HTML
+@*
+test*.txt
+test*.ftr
+test*.sgm
+test*.sgml

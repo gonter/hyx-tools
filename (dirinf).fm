@@ -1,0 +1,12 @@
+##!/usr/local/bin/perl
+# FILE .../(dirinf).fm
+#
+# written:       2002-04-20
+# latest update: 2002-04-20 15:23:46
+# $Id: (dirinf).fm,v 1.1 2002/05/02 06:48:28 gonter Exp $
+#
+
+License                1691 f 100644  3222  3000
+README                 2922 f 100644  3222  3000
+app                     512 d 040755  3222  3000
+lib                     512 d 040755  3222  3000

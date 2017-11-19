@@ -1,0 +1,11 @@
+Changes
+VDIF.pm
+VDIF/Entry.pm
+VDIF/LDIF.pm
+VDIF/TopCall.pm
+VDIF/vCx.pm
+MANIFEST
+Makefile.PL
+test.pl
+scripts/abook.pl
+scripts/cookieflt.pl

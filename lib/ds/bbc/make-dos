@@ -1,0 +1,35 @@
+#
+# FILE %ds/bbc/makefile
+#
+# written:       1996-03-25
+# latest update: 1996-08-11 22:20:25
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$* /c
+obj=objdec -w -d -m0 -sl 2 BBC_TEXT
+inst=command /c inst-exe
+bin=c:\bin\
+
+all.exe : libr test
+
+lib.1 : !
+  bbc01.obj    bbc02.obj    bbc03.obj    bbc04.obj    !
+  bbc05.obj    bbc06.obj    bbc07.obj    bbc08.obj    !
+  bbc09.obj    bbc10.obj    bbc11.obj    bbc12.obj    !
+  bbc13.obj    bbc14.obj    bbc15.obj
+
+test : !
+  bbc.obj bbct1.exe
+
+libr : lib.1
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# production programs: -------------------------------------------------------
+# test programs: -------------------------------------------------------------
+OBJS= bbc04.obj
+bbct1.exe : bbct1.obj
+  link bbct1 $(OBJS),,,c:\usr\sbr\lsbr;

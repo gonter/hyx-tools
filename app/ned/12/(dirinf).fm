@@ -1,0 +1,24 @@
+#
+# FILE %ned/12/(dirinf).fm
+#
+# written:       1995-12-12
+# latest update: 1997-08-04  8:47:36
+#
+Makefile        | active Makefile (DOS or Unix)
+make-dos        | DOS Makefile
+make-ux         | UNIX Makefile
+
+ned1201.c       | create new context
+ned1202.c       | initialize context
+ned1203.c       | destroy context
+ned1204.c       | add new {crf,lib,tag,ftr}-item to context
+ned1204b.c      | add new set of {crf,lib,tag,ftr}-items to context
+ned1205.c       | add new tagging rule to context
+ned1206.c       | get first cross reference cluster name
+ned1207.c       | push current input handler to stack
+ned1208.c       | pop input handler from stack
+ned1209.c       | **OBS** int ned_add_tag_file (...)
+ned1210.c       | **OBS** int ned_add_feature_table (...)
+ned1211.c       | int ned_create_field_context
+ned1299.c       | int ned_diag_argv (int argc, char *argv [])
+*               |

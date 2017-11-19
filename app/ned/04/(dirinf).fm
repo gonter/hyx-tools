@@ -1,0 +1,50 @@
+#
+# FILE %ned/04/(dirinf).fm
+#
+# latest update: 2000-08-24 14:35:52
+# $Id: (dirinf).fm,v 1.2 2000/08/24 15:10:14 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0401.c       | void s_fget ()
+ned0402.c       | int ned_f_read (w, fnm_txt, fnm_ftr, flag, laptr, lzptr, gcode)
+ned0402b.c      | int ned_stream_read (...)
+ned0403.c       | int ned_f_write (w, fnm_txt, fnm_ftr, flag, lz_flag, laptr, lzptr, flg2, gcode)
+ned0404.c       | int q_save (w, flg)
+ned0405.c       | int q_allsave (flg)
+ned0406.c       | void set_code (char *cp)             /* set encryption code  */
+ned0408.c       | void p_sx ()                            /* ^K X: Save ALL Windows and Exit  */
+ned0409.c       | void p_save ()
+ned0409b.c      | void ned_rename_and_save ()
+ned0409c.c      | void pico_exit ()
+ned0410.c       | void p_ssave ()
+ned0411.c       | void p_abandon ()              /* ^K Q: Abandon File at curr. Window */
+ned0412.c       | void p_2abandon ()
+ned0413.c       | void p_qabandon ()
+ned0414.c       | void p_save_restart ()
+ned0415.c       | void p_load_restart ()
+ned0416.c       | void p_system ()
+ned0417.c       | void p_link ()                /* ^K L: Link to File at Window        */
+ned0417b.c      | int q2_link (struct WINDOWCTRL *w_dest, struct WINDOWCTRL *w_src)
+ned0418.c       | void p_unlink ()              /* ^K I:  Unlink linked File           */
+ned0420.c       | int editable_file (fnm)
+ned0421.c       | void p_XX_break ()
+ned0422.c       | void ned_show_author ()
+ned0423.c       | void ned_show_version ()
+ned0424.c       |
+ned0425.c       | int find_file (char *str, ...)
+ned0426.c       | void q_system (char *command_line);
+ned0427.c       | void p_pfile ()
+ned0428.c       | int access_gopher (char *hlink, char *fil);
+ned0429.c       | q_extract (char *filename, char *message)
+ned0430.c       | void p_extract ()
+ned0431.c       | int dorothy_rw (...)
+ned0432.c       | IOA: int indirect_object_access (...)
+ned0433.c       | history handling
+ned0433.c       | int ned_history (...)
+ned0434.c       | char *ned_get_file_path (struct WINDOWCTRL *wc);
+ned04t1.c       | TEST: Test fÅr ned0419.c ned0423.c ned0424.c
+*               |

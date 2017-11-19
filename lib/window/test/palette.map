@@ -1,0 +1,40 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00121H 00122H PALETTE_TEXT           CODE
+ 00122H 003CDH 002ACH WINDOW_TEXT            CODE
+ 003CEH 003F8H 0002BH KEYBOARD_TEXT          CODE
+ 003FAH 01F06H 01B0DH _TEXT                  CODE
+ 01F08H 01F08H 00000H C_ETEXT                ENDCODE
+ 01F10H 01F51H 00042H NULL                   BEGDATA
+ 01F52H 028B3H 00962H _DATA                  DATA
+ 028B4H 028C1H 0000EH CDATA                  DATA
+ 028C2H 028C2H 00000H XIFB                   DATA
+ 028C2H 028C2H 00000H XIF                    DATA
+ 028C2H 028C2H 00000H XIFE                   DATA
+ 028C2H 028C2H 00000H XIB                    DATA
+ 028C2H 028C2H 00000H XI                     DATA
+ 028C2H 028C2H 00000H XIE                    DATA
+ 028C2H 028C2H 00000H XPB                    DATA
+ 028C2H 028C5H 00004H XP                     DATA
+ 028C6H 028C6H 00000H XPE                    DATA
+ 028C6H 028C6H 00000H XCB                    DATA
+ 028C6H 028C6H 00000H XC                     DATA
+ 028C6H 028C6H 00000H XCE                    DATA
+ 028C6H 028C6H 00000H XCFB                   DATA
+ 028C6H 028C6H 00000H XCF                    DATA
+ 028C6H 028C6H 00000H XCFE                   DATA
+ 028C6H 02933H 0006EH CONST                  CONST
+ 02934H 0293BH 00008H HDR                    MSG
+ 0293CH 02A09H 000CEH MSG                    MSG
+ 02A0AH 02A0BH 00002H PAD                    MSG
+ 02A0CH 02A0CH 00001H EPAD                   MSG
+ 02A0EH 02BA3H 00196H _BSS                   BSS
+ 02BA4H 02BA4H 00000H XOB                    BSS
+ 02BA4H 02BA4H 00000H XO                     BSS
+ 02BA4H 02BA4H 00000H XOE                    BSS
+ 02BB0H 033AFH 00800H STACK                  STACK
+
+ Origin   Group
+ 01F1:0   DGROUP
+
+Program entry point at 003F:001A

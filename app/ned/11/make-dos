@@ -1,0 +1,21 @@
+#
+# FILE %ned/11/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-01-12 18:16:11
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /Fo$@ /W3 -I.. /c
+obj=objdec -m0 -w -sl 2 NED11_TEXT $@
+
+lib : !
+ ned1101.obj ned1102.obj ned1103.obj ned1104.obj ned1105.obj !
+ ned1106.obj ned1107.obj ned1108.obj ned1109.obj ned1110.obj !
+ ned1111.obj ned1112.obj ned1112v.obj ned1112w.obj ned1113.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

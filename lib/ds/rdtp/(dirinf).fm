@@ -1,0 +1,104 @@
+#
+# $Id: (dirinf).fm,v 1.2 2000/06/05 17:05:11 gonter Exp $
+# FILE %ds/rdtp/(dirinf).fm
+#
+# written:       1996-04-01
+# latest update: 2000-06-05 18:49:52
+#
+
+# see also: <gg/rdtp.h> and rdtp
+
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+rt1.c           test rtf parser
+rt2.c           test sgml parser
+
+rdtp0000.c      TEMPLATE
+
+rdtp00*.c       parser engine
+rdtp0001.c      dynamic parser engine
+rdtp0002.c      struct RDTP_THREAD *rdtp_new_thread (struct RDTP_CLASS *cl)
+rdtp0003.c      int rdtp_parse_file (thread, char *fnm, ...)
+rdtp0004.c      int rdtp_parse_stream (thread, FILE *fi, ...)
+rdtp0005.c      int rdtp_bad_thread (int code)
+
+# more standard parser functions
+# collect characters
+# create text segment
+# place text segment into parse tree
+
+rdtp01*.c       table generator
+rdtp0101.c      define transition entry
+rdtp0102.c      process static state table
+rdtp0103.c      find state entry
+rdtp0104.c      print generator information
+rdtp0105.c      print generator states
+rdtp0106.c      generate transition table
+rdtp0107.c      drop tables
+rdtp0108.c      unmark state table
+rdtp0109.c      mark state table
+rdtp0110.c      process one state table, pass 1
+rdtp0111.c      process one state table, pass 2
+rdtp0112.c      process one state table, pass 3
+rdtp0113.c      transformation pass 2
+rdtp0114.c      transformation pass 3
+rdtp0115.c      drop old tables
+rdtp0116.c      int rdtp_print_state_entry (FILE *fo, ...)
+
+rdtp02*.c       RTF concrete syntax
+rdtp0201.c      setup RTF syntax
+rdtp0202.c      RTF nop
+rdtp0203.c      RTF error
+rdtp0204.c      RTF name begin
+rdtp0205.c      RTF name
+rdtp0206.c      RTF name end
+rdtp0207.c      RTF print statistics
+rdtp0208.c      RTF print name statistics
+
+# see also: <gg/rdtp03.h> and rdtp
+rdtp03*.c       SGML concrete syntax
+rdtp0300.c      SGML template
+rdtp0301.c      SGML setup syntax
+rdtp0302.c      SGML nop
+rdtp0303.c      SGML error
+rdtp0304.c      SGML name begin
+rdtp0305.c      SGML collect, collect2
+rdtp0306.c      SGML name end
+rdtp0307.c      SGML print statistics
+rdtp0308.c      SGML print name statistics
+rdtp0309.c      SGML tag name end
+rdtp0310.c      SGML entity name end
+rdtp0311.c      SGML initialize buildup
+rdtp0312.c      SGML flush buffer
+rdtp0313.c      SGML new tag name
+rdtp0314.c      SGML new element
+rdtp0315.c      SGML declaration
+rdtp0316.c      SGML begin declaration token
+rdtp0317.c      SGML end declaration token
+rdtp0318.c      SGML tokenizer
+rdtp0319.c      SGML symbol tokenizer
+rdtp0320.c      SGML declaration entities
+rdtp0321.c      SGML declaration processing
+rdtp0322.c      SGML add tag
+
+rdtp0341.c      SGML new opening tag
+rdtp0342.c      SGML add new attribute name/value pair to an tag
+rdtp0343.c      SGML diagnostic output for tag structure
+rdtp0344.c      SGML destroy attribute
+rdtp0345.c      SGML destroy tag structure
+rdtp0346.c      SGML tag structure to string
+rdtp0347.c      SGML calculate space requirement for a tag
+rdtp0348.c      SGML add new attribute name/long-value pair to an tag
+
+rdtp04*.c       SGML document type definition
+rdtp0403.c      SGML element declaration
+
+rdtp0413.c      SGML print element declaration
+
+rdtp0421.c      SGML get a name group
+rdtp0422.c      SGML get content model
+rdtp0423.c      SGML get attribute list
+
+

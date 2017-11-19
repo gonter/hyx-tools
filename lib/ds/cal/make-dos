@@ -1,0 +1,299 @@
+#
+# FILE %ds/cal/makefile
+#
+# Diverse Unterprogramme und Libraries
+#
+# written:       1985-06-25 (extracted from %sbr/makefile)
+# latest update: 1998-08-22 20:59:08
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$*.obj /c
+cms=cl -AS /W3 /Fo$*.obj /c
+ccl=cl -AL
+ccs=cl -AS
+obj=objdec -w -d -m0
+incl=c:\c5\include\gg\
+bin=c:\bin\
+
+all : large.dt
+test.exe : dt031t.exe dt011t.exe
+
+# LARGE Library --------------------------------------------------------------
+large.dt : !
+ large\dt001b.obj   !
+ large\dt001.obj    large\dt002.obj    large\dt002b.obj   !
+ large\dt003.obj    large\dt004.obj    large\dt006.obj    large\dt007.obj    !
+ large\dt008.obj    large\dt010.obj    large\dt011.obj    !
+                    large\dt014a.obj   large\dt014b.obj   large\dt015a.obj   !
+ large\dt021.obj    large\dt022.obj    large\dt023.obj    large\dt024.obj    !
+ large\dt025.obj    !
+ large\dt031.obj    large\dt032.obj    large\dt033.obj    large\dt034.obj    !
+ large\dt035.obj    large\dt036.obj    large\dt037.obj    large\dt038.obj    !
+ large\dt041.obj    large\dt042.obj    !
+ large\cal01.obj    large\cal02.obj    large\cal03.obj    large\cal04.obj    !
+ large\cal05.obj    large\cal06.obj    large\cal07.obj    large\cal08.obj    !
+ large\cal09.obj    large\cal10.obj
+
+cal04exp.exe : large\cal04exp.obj large\cal04.obj
+  link large\cal04exp large\cal04.obj;
+
+# SMALL Library --------------------------------------------------------------
+lib.ssbr : small.dt ssbr.lib
+
+ssbr.lib :
+ llink -v -lssbr.lib -dssbr.mod -n0
+ del ssbr.bak
+
+small.dt : !
+ small\dt001.obj small\dt001b.obj small\dt002.obj    small\dt003.obj    !
+
+# Datum/Zeit ermitteln -------------------------------------------------------
+large\dt001.obj : dt001.c
+  $(cml) dt001.c
+  $(obj) -sl 2 DATUM_TEXT large\dt001.obj
+
+large\dt001b.obj : dt001b.c
+  $(cml) dt001b.c
+  $(obj) -sl 2 DATUM_TEXT large\dt001b.obj
+
+large\dt002.obj : dt002.c
+  $(cml) dt002.c
+  $(obj) -sl 2 DATUM_TEXT large\dt002.obj
+
+large\dt002b.obj : dt002b.c
+  $(cml) dt002b.c
+  $(obj) -sl 2 DATUM_TEXT large\dt002b.obj
+
+# Datum/Zeit drucken ---------------------------------------------------------
+large\dt003.obj : dt003.c
+  $(cml) dt003.c
+  $(obj) -sl 2 DATUM_TEXT large\dt003.obj
+
+large\dt004.obj : dt004.c
+  $(cml) dt004.c
+  $(obj) -sl 2 DATUM_TEXT large\dt004.obj
+
+large\dt005.obj : dt005.c
+  $(cml) dt005.c
+  $(obj) -sl 2 DATUM_TEXT large\dt005.obj
+
+large\dt006.obj : dt006.c
+  $(cml) dt006.c
+  $(obj) -sl 2 DATUM_TEXT large\dt006.obj
+
+large\dt007.obj : dt007.c
+  $(cml) dt007.c
+  $(obj) -sl 2 DATUM_TEXT large\dt007.obj
+
+large\dt008.obj : dt008.c
+  $(cml) dt008.c
+  $(obj) -sl 2 DATUM_TEXT large\dt008.obj
+
+large\dt009.obj : dt009.c
+  $(cml) dt009.c
+  $(obj) -sl 2 DATUM_TEXT large\dt009.obj
+
+large\dt010.obj : dt010.c
+  $(cml) dt010.c
+  $(obj) -sl 2 DATUM_TEXT large\dt010.obj
+
+large\dt011.obj : dt011.c
+  $(cml) dt011.c
+  $(obj) -sl 2 DATUM_TEXT large\dt011.obj
+
+large\dt014a.obj : dt014a.c
+  $(cml) dt014a.c
+  $(obj) -sl 2 DATUM_TEXT large\dt014a.obj
+
+large\dt014b.obj : dt014b.c
+  $(cml) dt014b.c
+  $(obj) -sl 2 DATUM_TEXT large\dt014b.obj
+
+large\dt015a.obj : dt015a.c
+  $(cml) dt015a.c
+  $(obj) -sl 2 DATUM_TEXT large\dt015a.obj
+
+large\dt011t.obj : dt011t.c
+  $(cml) dt011t.c
+  $(obj) -sl 2 DATUM_TEXT large\dt011t.obj
+
+dt011t.exe : large\dt011t.obj large\dt034.obj
+  link large\dt011t large\dt034,$@,\dev\nul,lsbr/NOE/NOI;
+
+# Datumsmanipulationen -------------------------------------------------------
+large\dt021.obj : dt021.c
+  $(cml) dt021.c
+  $(obj) -sl 2 DATUM_TEXT large\dt021.obj
+
+large\dt022.obj : dt022.c
+  $(cml) dt022.c
+  $(obj) -sl 2 DATUM_TEXT large\dt022.obj
+
+large\dt023.obj : dt023.c
+  $(cml) dt023.c
+  $(obj) -sl 2 DATUM_TEXT large\dt023.obj
+
+large\dt024.obj : dt024.c
+  $(cml) dt024.c
+  $(obj) -sl 2 DATUM_TEXT large\dt024.obj
+
+large\dt025.obj : dt025.c
+  $(cml) dt025.c
+  $(obj) -sl 2 DATUM_TEXT large\dt025.obj
+
+large\dt031.obj : dt031.c
+  $(cml) dt031.c
+  $(obj) -sl 2 DATUM_TEXT $@
+
+large\dt032.obj : dt032.c
+  $(cml) dt032.c
+  $(obj) -sl 2 DATUM_TEXT $@
+
+large\dt033.obj : dt033.c
+  $(cml) dt033.c
+  $(obj) -sl 2 DATUM_TEXT large\dt033.obj
+
+large\dt034.obj : dt034.c
+  $(cml) dt034.c
+  $(obj) -sl 2 DATUM_TEXT large\dt034.obj
+
+large\dt035.obj : dt035.c
+  $(cml) dt035.c
+  $(obj) -sl 2 DATUM_TEXT large\dt035.obj
+
+large\dt036.obj : dt036.c
+  $(cml) dt036.c
+  $(obj) -sl 2 DATUM_TEXT large\dt036.obj
+
+large\dt037.obj : dt037.c
+  $(cml) dt037.c
+  $(obj) -sl 2 DATUM_TEXT large\dt037.obj
+
+large\dt038.obj : dt038.c
+  $(cml) dt038.c
+  $(obj) -sl 2 DATUM_TEXT large\dt038.obj
+
+#
+large\dt041.obj : dt041.c
+  $(cml) dt041.c
+  $(obj) -sl 2 DATUM_TEXT large\dt041.obj
+
+large\dt042.obj : dt042.c
+  $(cml) dt042.c
+  $(obj) -sl 2 DATUM_TEXT large\dt042.obj
+
+# Datum/Zeit Diagnose --------------------------------------------------------
+dt031.obj : dt031.c
+  $(cml) -DDEBUG dt031.c
+  $(obj) -sl 2 DATUM_TEXT $@
+
+dt032.obj : dt032.c
+  $(cml) -DDEBUG dt032.c
+  $(obj) -sl 2 DATUM_TEXT $@
+
+dt031t.obj : dt031t.c
+  $(cml) dt031t.c
+  $(obj) -sl 2 DATUM_TEXT $@
+
+DT031T=dt031t.obj dt031.obj dt032.obj large\dt025.obj
+dt031t.exe : $(DT031T)
+  link $(DT031T),$@,\dev\nul,lsbr/NOE/NOI;
+
+# Datum/Zeit ermitteln -------------------------------------------------------
+small\dt001.obj : dt001.c
+  $(cms) dt001.c
+
+small\dt001b.obj : dt001b.c
+  $(cms) dt001b.c
+
+small\dt002.obj : dt002.c
+  $(cms) dt002.c
+
+# Datum/Zeit drucken ---------------------------------------------------------
+small\dt003.obj : dt003.c
+  $(cms) dt003.c
+
+small\dt004.obj : dt004.c
+  $(cms) dt004.c
+
+small\dt005.obj : dt005.c
+  $(cms) dt005.c
+
+small\dt006.obj : dt006.c
+  $(cms) dt006.c
+
+small\dt007.obj : dt007.c
+  $(cms) dt007.c
+
+small\dt008.obj : dt008.c
+  $(cms) dt008.c
+
+small\dt009.obj : dt009.c
+  $(cms) dt009.c
+
+small\dt010.obj : dt010.c
+  $(cms) dt010.c
+
+small\dt011.obj : dt011.c
+  $(cms) dt011.c
+
+# Datumsmanipulationen -------------------------------------------------------
+small\dt021.obj : dt021.c
+  $(cms) dt021.c
+
+small\dt022.obj : dt022.c
+  $(cms) dt022.c
+
+small\dt023.obj : dt023.c
+  $(cms) dt023.c
+
+small\dt024.obj : dt024.c
+  $(cms) dt024.c
+
+small\dt025.obj : dt025.c
+  $(cms) dt025.c
+
+# ----------------------------------------------------------------------------
+large\cal01.obj : cal01.c
+  $(cml) /Fo$* cal01.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal01.obj
+
+large\cal02.obj : cal02.c
+  $(cml) /Fo$* cal02.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal02.obj
+
+large\cal03.obj : cal03.c
+  $(cml) /Fo$* cal03.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal03.obj
+
+large\cal04.obj : cal04.c
+  $(cml) /Fo$* cal04.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal04.obj
+
+large\cal04exp.obj : cal04exp.c
+  $(cml) /Fo$* cal04exp.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal04exp.obj
+
+large\cal05.obj : cal05.c
+  $(cml) /Fo$* cal05.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal05.obj
+
+large\cal06.obj : cal06.c
+  $(cml) /Fo$* cal06.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal06.obj
+
+large\cal07.obj : cal07.c
+  $(cml) /Fo$* cal07.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal07.obj
+
+large\cal08.obj : cal08.c
+  $(cml) /Fo$* cal08.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal08.obj
+
+large\cal09.obj : cal09.c
+  $(cml) /Fo$* cal09.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal09.obj
+
+large\cal10.obj : cal10.c
+  $(cml) /Fo$* cal10.c
+  $(obj) -sl 2 PLANNER_TEXT large\cal10.obj

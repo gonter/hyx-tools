@@ -1,0 +1,21 @@
+#
+# FILE %ned/13/make-dos
+#
+# GG's Night(mare) Editor System
+#
+# written:       1997-08-03
+# latest update: 1997-08-04 12:33:08
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /Fo$@ /W3 -I.. /c
+obj=objdec -m0 -w -sl 2 NED13_TEXT $@
+
+lib : !
+ ned1301.obj  ned1302.obj !
+ ned1391.obj  ned1392.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $?
+  $(obj)

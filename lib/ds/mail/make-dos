@@ -1,0 +1,41 @@
+#
+# FILE %ds/mail/makefile
+#
+# mail operations
+#  
+# written:       1997-11-26
+# latest update: 1997-11-27 14:44:58
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  mail0001.obj mail0002.obj mail0003.obj mail0004.obj mail0005.obj !
+  mail0006.obj mail0007.obj mail0008.obj mail0009.obj mail0010.obj !
+  mail0011.obj mail0012.obj mail0013.obj mail0014.obj
+
+all.test : mt1.exe mt2.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+MOD1= mail0011.obj mail0012.obj mail0013.obj mail0014.obj
+
+mt1.obj : mt1.c
+  $(cml) -DMT1 mt1.c
+
+mt1.exe : mt1.obj $(MOD1)
+  link mt1 $(MOD1),$@,\dev\nul,$(lib);
+
+mt2.obj : mt1.c
+  $(cml) -DMT2 mt1.c
+
+mt2.exe : mt2.obj $(MOD1)
+  link mt2 $(MOD1),$@,\dev\nul,$(lib);
+

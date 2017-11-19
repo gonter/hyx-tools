@@ -1,0 +1,59 @@
+#
+# File %sgml/makeshar.lst (Contents)
+#
+# contents for shar file of the %sgml package
+#
+# written:       1992-12-14
+# latest update: 1999-04-24 12:07:22
+#
+# ----------------------------------------------------------------------------
+# create link to dir with header files
+>ln -fs ../gg gg
+>ln -fs ../contrib contrib
+>mkdir _bak_ftr.ned
+a make-ux                       make-ux
+a make-dos                      make-dos
+>ln -s make-ux Makefile
+a (dirinf).fm                   Files
+a makeshar.lst                  Contents
+#
+a chksgml.c                     chksgml.c
+a hyxd.c                        hyxd.c
+a http4hyx.c                    http4hyx.c
+a hyxidx.c                      hyxidx.c
+a hyxadd.c                      hyxadd.c
+a hyxseq.c                      hyxseq.c
+a hyxthr.c                      hyxthr.c
+a hyxpurge.c                    hyxpurge.c
+a httpsf.c                      httpsf.c
+a hyxscan.c                     hyxscan.c
+a translit.c                    translit.c
+# local library modules - - - - - - - - - -
+a chksgml1.c                    chksgml1.c
+a chksgml2.c                    chksgml2.c
+a chksgml3.c                    chksgml3.c
+a chksgml4.c                    chksgml4.c
+a chksgml5.c                    chksgml5.c
+a chksgml6.c                    chksgml6.c
+a hyxidx01.c                    hyxidx01.c
+a hyxadd01.c                    hyxadd01.c
+a hyxd01.c                      hyxd01.c
+a hyxd02.c                      hyxd02.c
+a hyxd03.c                      hyxd03.c
+a hyxd04.c                      hyxd04.c
+a hyxd05.c                      hyxd05.c
+a sf01.c                        sf01.c
+a sf02.c                        sf02.c
+a sf03.c                        sf03.c
+a sf04.c                        sf04.c
+a sf05.c                        sf05.c
+a msrvh.h                       msrvh.h
+a msrv.c                        msrv.c
+a msrv01.c                      msrv01.c
+a msrv02.c                      msrv02.c
+a msrv03.c                      msrv03.c
+a msrv04.c                      msrv04.c
+a msrv05.c                      msrv05.c
+a msrv06.c                      msrv06.c
+a msrv07.c                      msrv07.c
+#

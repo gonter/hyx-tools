@@ -1,0 +1,11 @@
+#!/usr/local/bin/perl
+# FILE %work/fbsd/gg/app/lexicon/NOTES
+#
+# written:       1999-11-28
+# latest update: 1999-11-28 13:12:34
+#
+
+char *get_divided_lexicon()  returns strdup()'ed string.
+  =>  Check if this could be a memory leak.
+
+

@@ -1,0 +1,26 @@
+#
+# FILE %ds/vieos/makefile
+#
+# written:       1995-03-19
+# latest update: 1997-01-15 11:31:40
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.2
+
+all.2 : !
+  vieos001.obj vieos002.obj vieos003.obj !
+  vieos101.obj vieos102.obj vieos103.obj !
+  vieos201.obj vieos202.obj vieos203.obj !
+  vieos301.obj vieos302.obj vieos303.obj !
+  vieos401.obj vieos402.obj vieos403.obj !
+  vieosg01.obj vieosg02.obj vieosg03.obj vieosg04.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

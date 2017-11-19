@@ -1,0 +1,20 @@
+# $Id: README.lmd,v 1.2 2002/07/04 18:08:49 gonter Exp $
+
+# This is LMD version 3.11 as of $Date: 2002/07/04 18:08:49 $
+
+How to build:
+
+  make
+
+If you want to build the Perl module and have SWIG on your machine, you
+may want to try this:
+
+  perl Makefile-swig.pl >>Makefile
+  make tfb.so
+
+To test if the module was built correctly, try this:
+
+  perl -e 'use tfb;'
+
+This should not return anything (at least nothing that looks like an error).
+

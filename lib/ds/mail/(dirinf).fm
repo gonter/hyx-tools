@@ -1,0 +1,34 @@
+#
+# FILE %ds/mail/(dirinf).fm
+#
+.  Mail handling subroutines
+#
+#  written:       1997-11-26
+.. latest update: 1997-11-26 13:04:13
+#
+
+# see also: <gg/mail.h>
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+mail0000.c      TEMPLATE
+mail0001.c      int RFC822_chk_keyword (char *s, int lng);
+mail0002.c      int mk_fnm_from_date (char *fnm_string, ...)
+mail0003.c      int message_delimiter (char *p, int delim_mode);
+mail0004.c      int breakup (char *fn, struct BREAKUP_CONTROL *bc);
+mail0005.c      int record_mails (struct BREAKUP_CONTROL *bc, ...)
+mail0006.c      int sort_mail (struct YTREE **ytr, ...)
+mail0007.c      struct BREAKUP_CONTROL *create_breakup_control (void);
+mail0008.c      int print_mail_description_link (FILE *fo, ...)
+mail0009.c      int print_mail_description_list (FILE *fo, ...)
+mail0010.c      int cdecl mk_frame_name_from_date (char *fnm_string, ...);
+
+mail0011.c      int mail_verify_address (char *s, ...)
+mail0012.c      int mail_verify_domain_name (char *s, ...)
+mail0013.c      int mail_valid_tld (char *s)
+mail0014.c      int mail_verify_message_id (char *s, ...)
+
+
+mt1.c   mail test 1
+

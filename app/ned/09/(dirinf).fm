@@ -1,0 +1,81 @@
+#
+# FILE %ned/09/(dirinf).fm
+#
+# written:       1987-09-10
+# latest update: 1997-12-05  2:52:02
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-ux         | Unix makefile
+make-dos        | MSDOS makefile
+
+ned0901.c       | void def_setupfnm (s)
+ned0902.c       | void p_edsetup ()
+ned0903.c       | int stp_whatcmd (s)
+#
+ned0905.c       | int stp_whatprim (s)
+ned0906.c       | void stp_rtbl (fi, tn, f)
+ned0907.c       | void stp_func (fi, tn, f)
+ned0908.c       | void stp_macro (fi)
+ned0909.c       | void stp_window (fi)
+ned0910.c       | int stp_maus (fi)
+ned0911.c       | int trans_str (si, so) /* Return: Anzahl der Bytes im ZIEL */
+ned0911.c       | int QQtrans_str (si, so) /* Return: Anzahl der Bytes im ZIEL */
+ned0912.c       | int p_rdsetup ()
+ned0913.c       | int kbin_jou ()
+ned0914.c       | int jou_in ()
+ned0915.c       | int p_open_jou_rd () /* Open Jour File for Read (Recover) */
+ned0916.c       | void p_open_jou_wr () /* Open Jour File for Write (Backup) */
+ned0917.c       | void p_close_jou ()
+ned0918.c       | int mac_expand ()
+ned0919.c       | void p_macro (num)
+ned0921.c       | p_macro00 () { p_macro ( 0); }
+ned0922.c       | int mac_call_tcl (char *rc_name)
+ned0923.c       | int ned_tcl_register (Tcl_Interp *interp)
+ned0924.c       | int ned_tcl_execute_primitive (ClientData client_data, ...)
+ned0925.c       | int _ned_tk_create_widget (ClientData clientData, ...)
+ned0926.c       | int ned_tk_create_widget (ClientData clientData, ...)
+ned0927.c       | int ned_tk_configure (Tcl_Interp *interp, NED_Widget *nw, ...)
+ned0928.c       | int _ned_tk_destroy_widget (NED_Widget *nw)
+ned0929.c       | int ned_tk_widget_cmd (ClientData clientData, Tcl_Interp *interp, ...)
+ned0929s.c      | int ned_tk_show_display_range (struct WINDOWCTRL *w)
+ned0930.c       | int ned_tk_widget_delete (ClientData clientData)
+ned0931.c       | void ned_tk_event_procedure (ClientData clientData, XEvent *eventPtr)
+ned0932.c       | int ned_tk_set_color (Tcl_Interp *interp, ...)
+ned0933.c       | int ned_tk_redraw_window (NED_Widget *nw)
+ned0934.c       | int ned_tk_exp_selection_procedure (...)
+ned0935.c       | int ned_tk_imp_selection_procedure (...)
+ned0936.c       | int ned_tcl_edit_file           (__TCL_command_pars__);
+ned0937.c       | int ned_tcl_edit_frame          (__TCL_command_pars__);
+ned0937b.c      | int ned_tcl_edit_crf            (__TCL_command_pars__);
+ned0938.c       | int ned_tcl_preset (Tcl_Interp *interp)
+ned0939.c       | int ned_tcl_main                (__TCL_command_pars__);
+ned0940.c       | int ned_tcl_set_markup          (__TCL_command_pars__);
+ned0941.c       | int ned_tcl_paste_str           (__TCL_command_pars__);
+ned0942.c       | int ned_tcl_submit_macro        (__TCL_command_pars__);
+ned0943.c       | int ned_tcl_enter_entity        (__TCL_command_pars__);
+ned0944.c       | int ned_tcl_jump_to_line        (__TCL_command_pars__);
+ned0945.c       | int ned_tcl_eval_tag            (__TCL_command_pars__);
+ned0946.c       | int ned_tcl_set_marker          (__TCL_command_pars__);
+ned0946b.c      | int ned_tcl_activate_note       (__TCL_command_pars__);
+ned0947.c       | int ned_tcl_jmp_marker          (__TCL_command_pars__);
+ned0948.c       | int ned_tcl_mac_define          (__TCL_command_pars__);
+ned0949.c       | int ned_tcl_define_feature      (__TCL_command_pars__);
+ned0950.c       | int ned_tcl_reg_tag_rule        (__TCL_command_pars__);
+ned0951a.c      | int ned_tcl_def_abbrev          (__TCL_command_pars__);
+ned0951b.c      | int ned_tcl_undef_abbrev        (__TCL_command_pars__);
+
+ned0952a.c      | *** DOES NOT EXIST *** int ned_tcl_extract             (__TCL_command_pars__);
+
+ned0972.c       | void p_mac_define ()
+ned0973.c       | void mac_clr ()
+ned0974.c       | void mac_undef (num)
+ned0975.c       | void mac_define (num, str, lng)
+ned0976.c       | int submit_macro (char *s)
+ned0977.c       | int mac_parse (char *tokens)
+ned0978.c       | int mac_definition (char *tok_num, char *tok_text)
+ned0979.c       | generalized macro bindings
+ned0980.c       | void p_dump_macro ()
+ned0981.c       | int stp_attr (FILE *fi, char *b, int max_b)
+*               |

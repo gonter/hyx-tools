@@ -1,0 +1,104 @@
+/*
+ *  FILE %ned/02/ned0211.c
+ *
+ *  close a window
+ *
+ *  written:       1987 04 08
+ *                 1991 02 03: Revision
+ *                 1991 06 02: Revision
+ *  latest update: 1996-05-26 17:56:34
+ *
+ */
+
+#ifdef MSDOS
+#pragma check_stack(off)
+#else
+#include <stdio.h>      /* HP/UX: defines size_t for malloc */
+#endif
+#include <malloc.h>
+#include "ed.h"
+#include "proto.h"
+
+#define WINSTACK
+#ifdef  WINSTACK
+extern struct PLIST *winstack;
+#endif
+
+extern struct WINDOWCTRL *windows;
+extern struct WINDOWCTRL *aw;
+extern int oper_level;
+
+/* ------------------------------------------------------------------------ */
+void p_wdwclose ()         /* aktuelles Window killen  */
+{
+  register struct WINDOWCTRL *wc;
+  register struct FILECTRL *fc;
+
+  if (oper_level >= LEV_LINK
+      || (wc= aw) == (struct WINDOWCTRL *) 0
+     )
+    return;
+
+  ned_reset_markers (wc);  /* reset markers which are in the current window */
+
+  if ((struct FILECTRL *) wc->file_or_frame != (struct FILECTRL *) 0
+      && ((struct FILECTRL *) wc->file_or_frame)->FC_links <= 1
+      && !(wc->WC_edit_mode & EDIT_NOTOGGLE) /* ??? */
+     )
+    return;  /* can't close window */
+
+#ifdef USE_TK
+  ned_tk_delete_association (wc);
+#endif
+
+#ifdef WINSTACK
+  if (windows == wc)
+  {
+    if (wc->WC_next == (struct WINDOWCTRL *) 0) return;
+    windows= wc->WC_next;
+  }
+
+  if (wc->file_type == FTY_PLAIN
+      && (fc=((struct FILECTRL *) wc->file_or_frame)) != (struct FILECTRL *) 0
+     )
+    fc->FC_links--;
+
+  if (wc->WC_prev != (struct WINDOWCTRL *) 0)
+    wc->WC_prev->WC_next= wc->WC_next;
+  if (wc->WC_next != (struct WINDOWCTRL *) 0)
+    wc->WC_next->WC_prev= wc->WC_prev;
+
+  winstack_delete (wc);
+  free (wc);
+  aw= (winstack != (struct WINDOWCTRL *) 0 && winstack->PL_val != (struct WINDOWCTRL *) 0)
+      ? winstack->PL_val : windows;
+  q2_jmpwdw (aw);
+#else
+  if (windows == wc)
+  {
+    aw= aw->WC_next;
+    if (aw == (struct WINDOWCTRL *) 0)
+    {
+      aw= wc;
+      return;         /* zu loeschendes Window ist das einzige */
+    }
+    windows= aw;
+  }
+  else
+  {
+    aw= wc->WC_prev;
+  }
+
+  if (wc->file_type == FTY_PLAIN
+      && ((struct FILECTRL *) wc->file_or_frame) != (struct WINDOWCTRL *) 0)
+     ((struct FILECTRL *) wc->file_or_frame)->FC_links--;
+
+  if (wc->WC_prev != (struct WINDOWCTRL *) 0)
+    wc->WC_prev->WC_next= wc->WC_next;
+  if (wc->WC_next != (struct WINDOWCTRL *) 0)
+    wc->WC_next->WC_prev= wc->WC_prev;
+  free (wc);
+#endif
+
+  p_refresh_all ();
+}

@@ -1,0 +1,38 @@
+#
+# FILE %ds/lmd5/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1996-04-05
+# latest update: 1996-05-05 11:48:20
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.00 # all.01 # all.02 # all.test
+
+all.00 : !
+  lmd50001.obj lmd50002.obj lmd50003.obj lmd50004.obj lmd50005.obj
+# lmd50010.obj lmd50011.obj lmd50012.obj lmd50013.obj lmd50014.obj !
+# lmd50015.obj lmd50016.obj lmd50017.obj lmd50018.obj lmd50019.obj !
+# lmd50020.obj
+
+all.01 : !
+  lmd50101.obj #lmd50102.obj
+
+all.test : lm5.exe
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+TEST= lmd50001.obj lmd50002.obj lmd50003.obj lmd50004.obj !
+  ..\irdb\irdb0103.obj ..\irdb\irdb0014.obj
+
+lm5.exe : lm5.obj $(TEST)
+  link lm5 $(TEST),,,c:\usr\sbr\lsbr;

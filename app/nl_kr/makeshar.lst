@@ -1,0 +1,33 @@
+#
+# FILE %nl_kr/makeshar.lst
+#
+# copy all necessary files into a shar file
+#
+# written:       1993-03-07
+# latest update: 1996-12-12 12:41:40
+#
+# ---------------------------------------------------------------------------
+>mkdir _bak_ftr.ned
+# docu...
+a lmd.tex                               lmd.tex
+a lmd.hyx                               lmd.hyx
+>echo "... but that's ok!"
+a lmd1.doc                              lmd1.doc
+a makeshar.lst                          Contents
+a make-ux                               make-ux
+a make-dos                              make-dos
+a (dirinf).fm                           '(dirinf)'.fm
+
+>ln -s make-ux Makefile
+>ln -s '(dirinf).fm' Files
+>ln -fs ../gg
+
+# main modules
+a deref.c                               deref.c
+a lutmake.c                             lutmake.c
+a lutdump.c                             lutdump.c
+a luttest.c                             luttest.c
+a c:/etc/lexicon/top200.lst             top200.lst
+
+a ta.c                                  ta.c
+a tasgml.c                              tasgml.c

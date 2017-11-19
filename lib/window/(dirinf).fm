@@ -1,0 +1,25 @@
+#
+# FILE .../lib/window/(dirinf).fm
+#
+# written:       1989 04 06
+# latest update: 1999-04-17 11:54:50
+# $Id: (dirinf).fm,v 1.4 2006/04/09 08:05:37 gonter Exp $
+#
+.               WINDOW-System Library Funktionen
+makefile        makefile
+makeall.bat     <<< execute make in all subdirectories
+window_l.mod    llink control file for the large model
+window_s.mod    llink control file for the small model
+bios            Modell BIOS
+cga             Modell CGA
+test            test modules
+utl             utility programs
+0               global data files
+1               allgemeines Modell
+2               allgemeines Modell; Graphic
+3               newer functions
+
+#
+_relics_.zip    Alte Module und Backups
+win0hers.asm    Window-System; Hercules Basis Modul
+*.sar           prehistoric modules

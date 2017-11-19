@@ -1,0 +1,61 @@
+#
+# FILE %ned/03/(dirinf).fm
+#
+# latest update: 2000-08-24 16:49:10
+# $Id: (dirinf).fm,v 1.3 2000/08/24 15:10:13 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0301.c       | void p_ovins () /* ^V: Toggle Insert Mode */
+ned0302.c       | p_ww () /* ^O^A: Enter Word Wrap Count */
+ned0303.c       | void p_ins ()
+ned0304.c       | void q_insert (k, df)
+ned0304b.c      | void q_insert_string (char *s, int  df)
+ned0305.c       | void insert (k, df)
+ned0306.c       | int delete (df)
+ned0307.c       | void p_insblk () /* Ctrl O+ */
+ned0308.c       | char gettxt (lp, coln)
+ned0308.c       | struct LINE *lp;
+ned0309.c       | void wd_coldis (w, la, lz, lp, coln, colpos)
+ned0310.c       | void p_colornxt ()
+ned0311.c       | void p_backcolnxt ()
+ned0312.c       | int get_confirmation (char *message);
+ned0313.c       | void p_turn_line ()    /* Zwei Zeilen vertauschen      */
+ned0314.c       | void p_fget ()         /* ^K G: Get File               */
+ned0315.c       | void p_alt_minus ()    /* ALT--: einfacher Querstrich  */
+ned0316.c       | void p_alt_gleich ()   /* ALT-=: doppelter Querstrich  */
+ned0319.c       | NED_interpreter ()
+ned0320.c       | void p_alt_zero ()     /* ALT-Z: Eingabe eines NULL char */
+ned0321.c       | ned_line_end_MAC
+ned0322.c       | ned_line_end_MSDOS
+ned0323.c       | ned_line_end_UNIX
+ned0324.c       | NEDa1_interpreter ()
+ned0325.c       | NEDa2_interpreter ()
+ned0326.c       | Editor Window Controller
+ned0327.c       | int q_kbin ()
+ned0328.c       | int qq_insert (...);
+ned0329.c       | int qq_delete (struct LINE *lp, int delete_idx, int delete_cnt)
+ned0330.c       | void ned_delete_word (void); ...
+ned0331.c       | void ned_lp_delete_word (struct LINE *lp, int delete_idx)
+ned0332.c       | int qq_insert_string (...)
+ned0332b.c      | int qq_insert_string_array (...)
+ned0333.c       | void ned_save_reload (struct WINDOWCTRL *wc, ...);
+ned0333b.c      | void p_save_reload (void)
+ned0333c.c      | void p_show_tag_normally (void)
+ned0333d.c      | void p_show_tag (void)
+ned0333e.c      | void p_show_full_tag (void)
+ned0334.c       | void ned_read_entity ()
+ned0334b.c      | void ned_enter_entity ()
+ned0335.c       | void p_toggle_case ()
+
+# NED Line Events (1997-04-13 20:19:59)
+ned0341a.c      | int ned_line_trigger_change (lp, delete_idx, -delete_cnt);
+ned0341b.c      | int ned_line_trigger_split (...)
+ned0341c.c      | int ned_line_trigger_delete (...);
+ned0342a.c      | int ned_line_reg_cb ()
+ned0342b.c      | int ned_line_rel_cb ()
+ned0342c.c      | int ned_line_test_cb ()
+*               |

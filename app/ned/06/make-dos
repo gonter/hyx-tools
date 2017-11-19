@@ -1,0 +1,29 @@
+#
+# FILE %ned/06/makefile
+#
+# GG's Night(mare) Editor System
+#
+# written:       1987-04-08
+# latest update: 1996-07-14  9:14:18
+#
+# ============================================================================
+cc=cl -Os -AL /W3 /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED06_TEXT $@
+
+lib :             ned0602.obj ned0603.obj  ned0604.obj  !
+  ned0605.obj ned0606.obj ned0607.obj  ned0608.obj  !
+  ned0609.obj ned0610.obj ned0610a.obj ned0610b.obj !
+  ned0610c.obj ned0610d.obj ned0610e.obj !
+  ned0612.obj ned0613.obj ned0613b.obj ned0614.obj  ned0615.obj  !
+  ned0616.obj                 ned0618.obj  !
+  ned0619.obj ned0620.obj ned0621.obj  ned0622.obj  !
+  ned0623.obj ned0624.obj ned0625.obj  ned0626.obj  !
+  ned0627.obj ned0628.obj ned0629.obj  ned0630.obj ned0631.obj
+
+obsolete: ned0611.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $?
+  $(obj)

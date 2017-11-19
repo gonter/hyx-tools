@@ -1,0 +1,79 @@
+$Id: crashes,v 1.3 2003/10/02 06:45:51 gonter Exp $
+
+2003-10-02  8:09:09 auf FreeBSD 5.1
+nach ^KV
+
+[gdb]
+#0  0x080609c3 in ned_line_rel_cb (lp=0x80d7a80, 
+    fnc=0x8054918 <ned_marker_callback>, event_mask=31, cd=0x8099180)
+    at ned0342b.c:43  [siehe %ned/03/ned0342b.c]
+43          if (lcb->func == fnc
+
+  for (lcbp= &lp->callbacks;
+       (lcb= *lcbp) != (struct LINE_CALLBACK *) 0;
+       lcbp= &lcb->next)
+  {
+    if (lcb->func == fnc  /* BUG HERE: see %ned/crashes */
+        && lcb->cd == cd
+        && lcb->event == event_mask
+       )
+    ...
+  }
+
+  Demnach ist entweder lcb kein Pointer vom Typ LINE_CALLBACK,
+  oder lcb zeigt auf einen bereits freigegebenen Memory Bereich.
+  Es ist kein NULL-Pointer, aber fnc gehoert nicht mehr zum
+  Memory Bereich.
+
+(gdb) where
+#0  0x080609c3 in ned_line_rel_cb (lp=0x80d7a80, 
+    fnc=0x8054918 <ned_marker_callback>, event_mask=31, cd=0x8099180)
+    at ned0342b.c:43
+#1  0x08058b4c in ned_set_marker2 (wc=0x80a1800, lp=0x80daaa0, offset=15, 
+    b=0x8099180) at ned0701.c:26
+#2  0x08054f67 in ned_set_marker (wc=0x80a1800, marker_id=49) at ned0260c.c:43
+#3  0x0805bd9b in ned_eval_feature () at ned0841.c:49
+#4  0x0804a88f in NED_interpreter () at ned0319.c:78
+#5  0x08049ec8 in main (argc=2, argv=0xbfbff760) at ned00.c:723
+#6  0x08049372 in _start ()
+
+2001-03-04 15:00
+nach yy im VI-Mode (?, vorher stand jj, aber in vi_dkey ist an der Stell y):
+
+#0  0x8065273 in ned_line_rel_cb (lp=0x81365e0, fnc=0x805690c <ned_marker_callback>, event_mask=31, 
+    cd=0x80781d0) at ned0342b.c:43  [siehe %ned/03/ned0342b.c]
+43          if (lcb->func == fnc
+(gdb) where
+#0  0x8065273 in ned_line_rel_cb (lp=0x81365e0, fnc=0x805690c <ned_marker_callback>, event_mask=31, 
+    cd=0x80781d0) at ned0342b.c:43
+#1  0x805bc02 in ned_set_marker2 (wc=0x813e700, lp=0x818f100, offset=0, b=0x80781d0) at ned0701.c:26
+#2  0x805bb7d in ned_set_block_markers (wc=0x813e700, lp=0x818f100, offset=0, what=0, mode=0)
+    at ned0713.c:35
+#3  0x8056f2a in ned_set_marker (wc=0x813e700, marker_id=40) at ned0260c.c:37
+#4  0x8055b08 in vi_dkey () at ned0245.c:165
+
+      ned_set_marker (aw, '(');
+
+#5  0x804a8dc in NED_interpreter () at ned0319.c:59
+#6  0x804a3c9 in main (argc=2, argv=0xbfbffb28) at ned00.c:723
+#7  0x8049859 in _start ()
+(gdb) 
+
+2001-02-18 18:20:00
+nack ^KY
+
+#0  tx_free (tp=0x3134392e) at ned0140.c:28
+28          tp2= tp->next;
+(gdb) where
+#0  tx_free (tp=0x3134392e) at ned0140.c:28
+#1  0x805411c in ned_lines_free (lp=0x8165320) at ned0138.c:32
+#2  0x806708e in ned_drop_buffer2 (bu=0x813ecc0) at ned0723.c:21
+#3  0x805c0b0 in ned_store_line_to_buffer (buffer_id=-1, lp_b=0x819ef20, lp_e=0x819ef20, add_mode=0) at ned0723b.c:41
+#4  0x80570d7 in ned_yank_marked (mrk_beg=0x80781e8, mrk_end=0x80781f4, add_mode=0) at ned0263.c:47
+#5  0x8057052 in ned_yank_block (add_mode=0) at ned0263.c:26
+#6  0x8055c4a in vi_dkey () at ned0245.c:196
+#7  0x804a8dc in NED_interpreter () at ned0319.c:59
+#8  0x804a3c9 in main (argc=2, argv=0xbfbffb30) at ned00.c:723
+#9  0x8049859 in _start ()
+(gdb) pezi:gonter> 
+

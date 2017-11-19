@@ -1,0 +1,5 @@
+# $Id: .cvsignore,v 1.3 2011/05/31 16:43:41 gonter Exp $
+codes
+codeconv
+codetbl
+trans.bin

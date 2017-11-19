@@ -1,0 +1,18 @@
+#
+# FILE %ds/attlist/(dirinf).fm
+#
+# written:       1994-03-28
+# latest update: 1997-11-02 12:50:50
+# $Id: (dirinf).fm,v 1.2 2002/05/02 06:48:29 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+attl0001.c  struct ATTRIBUTE_LIST *al_create_attribute (...)
+attl0002.c  struct ATTRIBUTE_LIST **al_getp_attribute (...)
+attl0003.c  struct ATTRIBUTE_LIST *al_set_attribut (...)
+attl0004.c  struct ATTRIBUTE_LIST *al_find_attribute (...)
+attl0005.c  int al_find_name (...)
+attl0006.c  void *al_find_attribute_value (...)
+attl0007.c  NOT FINISHED al_parse_stream
+attl0008.c  al_add_attribute (ATTLIST *l, ...);
+attl0009.c  new_ATTLIST (ATTLIST *l, ...);
+

@@ -1,0 +1,49 @@
+
+FILE           %ned/notes006.sgm
+
+written:       1997-06-14
+latest update: 1997-07-27 12:04:14
+
+DESGIN NOTES:
+implement buffers as windows with a special type ???
+
+
+Buffer Commands:
+^K?  copy block to named buffer
+^K?  move block to named buffer (^KY variant)
+^K?  insert named buffer (p variant)
+
+T2D:
++ save block is the buffer 0x00
++ yanking Kommandos kopieren in den (unnamed) Buffer
++ delete Kommandos transferieren in den (unnamed) Buffer
+
+Selection Export:
+Bei Beginn des Selection Exports Kopie in irgendeinen definierten
+Buffer und weitere Export-Segmente daraus abwickeln.
+
+Hilfsmarker fuer Yanks: 0x02 und 0x03 ??
+
+C-API:
+                line_to_block_store
+07/ned0729.c    blk_delete
+07/ned0723.c    clear_block_store
+  
+Blocks and Buffers
+
+^KV, Cursor in Block problem:
+
+  =&gt; cursor at end of block:
+     + if line_mode: +1 line; else +1 char
+     curor at begin of block:
+     + if line_mode: -1 line; else -1 char
+  
+
+struct <hyx.l file="proto.h" ln=39 cn=7 tdc=79 tdp=10>NED_BUFFER:
+struct <hyx.l file="07/ned0705.c" ln=24 cn=7 tdc=79 tdp=10>NED_BUFFER *<hyx.l file="%ned/07/ned0705.c" mark="ned_get_buffer" tdc="pgm.func" tdp=14>ned_get_buffer (int name, int make)
+
+07/ned0723b.c     28:   struct <hyx.l file="07/ned0723b.c" ln=28 cn=9 tdc=79 tdp=10>NED_BUFFER *bu;
+07/ned0723.c      19: int ned_drop_buffer2 (struct <hyx.l file="07/ned0723.c" ln=19 cn=29 tdc=79 tdp=10>NED_BUFFER *bu)
+07/ned0727c.c     25:   struct <hyx.l file="07/ned0727c.c" ln=25 cn=9 tdc=79 tdp=10>NED_BUFFER *bu;
+07/ned0727c.c     31:       || (bu= ned_get_buffer (buffer_name, 0)) == (struct <hyx.l file="07/ned0727c.c" ln=31 cn=58 tdc=79 tdp=10>NED_BUFFER *) 0
+07/ned0705.c      20: static struct <hyx.l file="07/ned0705.c" ln=20 cn=14 tdc=79 tdp=10>NED_BUFFER anon_buffer;

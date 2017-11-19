@@ -1,0 +1,14 @@
+#!/usr/local/bin/perl
+# FILE /old/usr/home/gonter/work/fbsd/gg/lib/ds/lutctl/(dirinf).fm
+#
+# include <gg/lutctl.h>
+#
+# written:       2001-11-20
+# latest update: 2001-11-20 19:09:07
+# $Id: (dirinf).fm,v 1.1 2001/11/20 19:32:39 gonter Exp $
+#
+
+Makefile
+lutctl01.c      lutctl_alloc (), lutctl_free ()
+lutctl02.c      lutctl_open (), lutctl_close ();
+

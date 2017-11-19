@@ -1,0 +1,24 @@
+#
+# FILE %ds/zip/(dirinf).fm
+#
+# written:       1995-12-25
+# latest update: 1995-12-28
+#
+
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+# see also: <gg/zip.h>
+zs.c        ZIP Scanner
+zip_0001.c  int zip_quick_scan (char *fnm);
+zip_0002.c  long zip_find_cde_start (FILE *fi, long max_search);
+zip_0003.c  struct ZIP_CONTROL *zip_init_control (char *fnm);
+zip_0004.c  int zip_init_LFH (struct ZIP_LOCAL_FILE_HEADER *lfh);
+zip_0005.c  int zip_init_CFH (struct ZIP_CENTRAL_FILE_HEADER *cfh);
+zip_0006.c  int zip_init_CDE (struct ZIP_CENTRAL_DIR_END *cde);
+zip_0007.c  int zip_scan (struct ZIP_CONTROL *zc);
+zip_0008.c  int zip_delete_control (struct ZIP_CONTROL *zc);
+
+
+

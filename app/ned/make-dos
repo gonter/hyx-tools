@@ -1,0 +1,143 @@
+#
+# FILE %ned/makefile
+#
+# GG's Night(mare) Editor System
+#
+# latest update: 1997-10-26 11:35:25
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ /c
+obj=objdec -m0 -w -d $@
+etc=c:\etc\
+bin=c:\bin\
+
+all : $(bin)vi.exe sgmlflt.exe
+all.2 : $(bin)n00.exe $(bin)hyxview.exe
+all.sh : ned.sh ned_gg.sh
+
+#
+# NED - Hauptprogramm ========================================================
+#
+$(bin)vi.exe : n00.obj ned.lib
+  link n00,$(bin)vi.exe,ned.map/map,ned lsbr/NOE;
+# command /c inst-exe $(bin)vi.exe
+
+$(bin)n00.exe : $(bin)vi.exe
+  copy $(bin)vi.exe $(bin)n00.exe
+  command /c inst-exe $(bin)n00.exe
+
+$(bin)hyxview.exe : n00.obj 00\obj\ned0031.obj ned.lib
+  link n00 00\obj\ned0031 08\obj\ner0831,$(bin)hyxview.exe,!
+    hyxview.map/map,ned lsbr/NOE;
+  command /c inst-exe $(bin)hyxview.exe
+
+ned.tri : $(bin)n00.exe
+  copy $(bin)n00.exe $(bin)ned.exe
+  copy $(bin)n00.exe g:\ned.exe
+  command /c inst-exe $(bin)ned.exe g:\ned.exe
+# command /c inst-exe $(bin)n00.exe c:\usr\ned\n00.exe
+
+ned.dei : $(bin)n00.exe
+  copy $(bin)n00.exe $(bin)ned.exe
+  command /c inst-exe $(bin)ned.exe
+# command /c inst-exe $(bin)n00.exe c:\usr\ned\n00.exe
+
+all2 : acc.exe nedxx.exe
+
+clean :
+  del cr.f
+  del cr.lst
+
+
+ned.sh :
+  shar -c -t ned.sh -fmake-l1.lst
+
+ned_gg.sh :
+  shar -c -t ned_gg.sh -fmake-l2.lst
+
+#
+# ============================================================================
+#
+n00.obj : ed.h ned00.c
+  $(ccc) ned00.c
+  $(obj)
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $?
+  $(obj)
+
+# NEDXX - Hauptprogramm ========================================================
+nedxx.exe : ax00.obj a3.obj a4.obj nt3.obj
+  link ax00 a3 a4 nt3,nedxx.exe,nedxx.map/map,ned lsbr/NOE;
+
+ned.lib :
+  llink -v -lned.lib -dned.mod -n0
+  del ned.bak
+
+#
+# Tools ======================================================================
+#
+BLND=13\ned1301.obj 13\ned1391.obj 13\ned1392.obj
+sgmlflt.exe : sgmlflt.obj $(BLND)
+  link sgmlflt.obj $(BLND),$@,/map,ned lsbr/NOE;
+
+SGMLFLT= sgmlflt.obj $(BLND) ned.lib
+sgmlflt.dia : $(SGMLFLT)
+  command /c objdec00 -c -m0 $(SGMLFLT) >$@
+
+#
+# experimentelle Module ======================================================
+#
+ax00.obj : ed.h ned.h ned00.c
+  $(ccc) /DEXPER ned00.c
+
+a3.c : acc.exe command.tbl
+  acc command.tbl
+
+a3.obj : a3.c
+  $(ccc) a3.c
+
+a4.c : primitiv.tbl
+  command /c primitiv
+
+a4.obj : a4.c
+  $(ccc) a4.c
+
+a4b.obj : a4.c
+  $(ccc) /Fo$*.obj /DCOMPILER a4.c
+
+a5.obj : a5.c
+  $(ccc) a5.c
+
+a6.obj : a6.c
+  $(ccc) a6.c
+
+acc.obj : acc.c
+  $(ccc) acc.c
+
+acc.exe : acc.obj a6.obj a4b.obj
+  link acc a6 a4b,,,ned lsbr;
+
+#
+# Testprogramme ==============================================================
+#
+key.exe : key.obj cio.obj
+  link key cio;
+
+key.obj : key.c
+  $(cc) key.c
+
+#
+# Abwicklung von Tests mit NED ===============================================
+#
+test.exe : test.c
+  cl -Od -AS -H24 -Ic:\c5\include test.c
+
+testprnt.exe : testprnt.c
+  cl -Od -AS -H24 -Ic:\c5\include testprnt.c
+
+testpr02.exe : testpr02.c
+  cl -Od -AL -H24 -Ic:\c5\include testpr02.c c:\usr\fm\fnames.obj
+

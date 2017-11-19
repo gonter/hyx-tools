@@ -1,0 +1,13 @@
+FILE .../net-freedb/README
+written: 2002-06-30
+$Id: README,v 1.1 2002/06/30 19:45:16 gonter Exp $
+
+collection of modules to handle freedb files
+
+Docu-T2D:
++ mention net::FreeDB module
++ why freedb and not FreeDB (pointer to www.freedb.org FAQ)
+
+
+
+

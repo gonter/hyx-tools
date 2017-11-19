@@ -1,0 +1,19 @@
+#
+# FILE %ds/mime/(dirinf).fm
+#
+.  Multipurpose Internet Mail Extension
+#
+#  written:       1996-02-23
+.. latest update: 1996-03-17 19:38:39
+#  $Id: (dirinf).fm,v 1.2 2001/12/24 16:21:11 gonter Exp $
+#
+
+# see also: <gg/mail.h>
+(dirinf).fm     Contents
+Makefile
+
+mime0000.c      TEMPLATE
+mime0001.c      int mime_convert_line (char *line, char *line2, int MAX_LINE, int mime_mode)
+mime0002.c      int mime_convert_url (char *line, char *line2, int MAX_LINE)
+mime0003.c      
+mime0004.c      

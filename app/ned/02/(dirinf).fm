@@ -1,0 +1,85 @@
+#
+# FILE %ned/02/(dirinf).fm
+#
+# latest update: 2000-08-24 14:26:57
+# $Id: (dirinf).fm,v 1.3 2002/06/10 06:17:42 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0201.c       | set_cup (x, y)
+ned0202.c       | void setcup ()
+ned0203.c       | void wd_displine (w, l_ptr, l_num)
+ned0204.c       | void ned_display_window (w, wi)
+ned0204b.c      | void wd_2setup (struct WINDOWCTRL *w, int ya, int yb)
+ned0204c.c      | void ned_decorate_window (...)
+ned0204g.c      | void ned_line_info (w, wi)
+ned0205.c       | void wd_setup ()
+ned0206.c       | void wda_setup ()
+ned0207.c       | int wd_upscr ()
+ned0208.c       | void p_upscr ()
+ned0209.c       | void wd_dnscr ()
+ned0210.c       | void p_dnscr ()
+ned0211.c       | void p_wdwclose ()
+ned0211b.c      | int ned_w_close_window (register struct WINDOWCTRL *wc)
+ned0212.c       | void p_wdwopen ()
+ned0213a.c      | void p_wdwsize ()
+ned0213b.c      | void q_wdwsize ()
+ned0213c.c      | void q2_wdwsize (struct WINDOW_CTRL *w, int pos, ...);
+ned0213d.c      | int ned_tile_window (int argf)
+ned0213e.c      | p_wdwfaecher ();
+ned0214.c       | int pr_wdwsize (wc, p, f)
+ned0215.c       | int pr_wdwcreate (wc)
+ned0215a.c      | struct WINDOWCTRL *ned_create_editor_window (void);
+ned0215b.c      | struct WINDOWCTRL *ned_create_feature_window (void);
+ned0215c.c      | struct WINDOWCTRL *ned_create_window_pair (void);
+ned0216.c       | void p_wdwXup ()
+ned0217.c       | void p_wdwXdn ()
+ned0218.c       | void p_wdwXlt ()
+ned0219.c       | void p_wdwXrt ()
+ned0220.c       | void p_wdwAup ()
+ned0221.c       | void p_wdwAdn ()
+ned0222.c       | void p_wdwAlt ()
+ned0223.c       | void p_wdwArt ()
+ned0224.c       | void p_wdwBup ()
+ned0225.c       | void p_wdwBdn ()
+ned0226.c       | void p_wdwBlt ()
+ned0227.c       | void p_wdwBrt ()
+ned0228.c       | wd_show_wdnr (p, x, y, c, n)
+ned0230.c       | void q_wdwopen ();
+ned0231.c       | int p_wdwopen_link ();
+ned0232.c       | void p_switch_line_mode ()
+ned0232.c       | memorize and restore window and line modes
+ned0240.c       | void vi_append (void);
+ned0241.c       | void vi_append_eol (void);
+ned0242.c       | void vi_insert_bol (void);
+ned0243.c       | void vi_bell ()
+ned0244.c       | void vi_ex ()
+ned0245.c       | void vi_dkey ()
+ned0246.c       | void vi_insert_after_line (void);
+ned0247.c       | void vi_insert_before_line (void);
+ned0248.c       | void vi_repeat_last_command (void);
+ned0248.c       | int set_repeat_command (void (*fnc)(void));
+ned0249.c       | void vi_join ()
+ned0250.c       | int vi_change_text ()
+ned0251.c       | void vi_substitute ()
+ned0252.c       | void pico_mode ()
+ned0253.c       | void wordstar_mode ()
+ned0253v.c      | void vi_mode ()
+ned0254.c       | void vi_change_2eoln ()
+ned0254b.c      | void vi_change_2boln ()
+ned0255.c       | void vi_change_line ()
+ned0256.c       | void vi_jmp_boln ()
+ned0256a.c      | void vi_jmp_column ()
+ned0257.c       | void vi_jmp_prev_boln ()
+ned0258.c       | void vi_jmp_next_boln ()
+ned0259.c       | void ex_tag_command (char *s)
+ned0260.c       | struct MARKER *ned_get_marker (char *s)
+ned0260b.c      | int ned_jmp_marker (char *s, int flag)
+ned0260c.c      | int ned_set_marker (char *s)
+ned0261.c       | void vi_digit ()
+ned0262a.c      | vi_jmp_2line
+ned0263.c       | ned_yank_block
+*               |

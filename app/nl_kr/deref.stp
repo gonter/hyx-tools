@@ -1,0 +1,11 @@
+# FILE deref.stp
+#
+# written:       1993-11-30
+# latest update: 1993-11-30
+# -------------------------
+-v
+
+[test]
+-zvnf=xyz
+
+

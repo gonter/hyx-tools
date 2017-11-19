@@ -1,0 +1,21 @@
+#
+# FILE %ds/mime/makefile
+#
+# mime operations
+#  
+# written:       1996-02-23
+# latest update: 1996-02-23 12:52:30
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  mime0001.obj # mime0002.obj mime0003.obj mime0004.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

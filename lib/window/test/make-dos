@@ -1,0 +1,111 @@
+#
+# FILE ~/usr/window/makefile
+#
+# Window Programme (fuer MAGIS)
+#
+#
+# written:       1989 08 16
+# latest update: 1994-08-24
+#
+# =====================================================================
+cml=cl -Os -AL -H24 -Ic:\c5\include /c
+cms=cl -Os -AS -H24 -Ic:\c5\include /c
+ccl=cl -Os -AL -H24 -Ic:\c5\include
+ccs=cl -Os -AS -H24 -Ic:\c5\include
+
+all : t1.obj palette.exe t2.exe
+
+t1.obj  : t1.c
+  $(cml) t1.c
+
+t2.obj  : t2.c
+  $(cml) t2.c
+
+t2b.obj : t2b.asm
+  masm /Ml t2b.asm;
+
+t2.exe : t2.obj t2b.obj
+  link t2 t2b;
+
+palette.exe : palette.c
+  $(cml) palette.c
+  link palette,,,c:\usr\sbr\lsbr;
+
+# JUNK
+# Bildschirmsteuerungen ===============================================
+#
+#               .             .             .             .
+windows.obj   : win0vir2.obj  win0cga.obj   win0her.obj   win0hers.obj !
+                win1.obj      win2.obj      win3.obj      win4.obj     !
+                win5.obj      window.obj    wmore.obj     wedit.obj
+                objdec -m0 -owindows.obj win1.obj
+
+\usr\g\d.lib   : windows.obj
+                lib \usr\g\d-+win0cga-+win1-+win2-+win3-+win4-+win5-+wmore-+wedit,\usr\g\cr.lst;
+                \nor\beep
+
+# Kernmodul   : Virtuelle Versionen
+#               Includiert und steuert win0cga.c und win0her.c
+win0vir2.obj  : win0vir2.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win0vir2.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win0vir2.obj
+
+win0vir1.obj  : win0vir1.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win0vir1.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win0vir1.obj
+
+# Kernmodul   : CGA-Version; (urspruengliche Version)
+win0cga.obj   : win0cga.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win0cga.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win0cga.obj
+
+# Kernmodul   : HERCULES-Version: Schnittstelle zu den Anwendungen
+win0her.obj   : win0her.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win0her.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win0her.obj
+
+# Kernmodul   : HERCULES-Versionen: Schnittstelle zur Maschine
+win0hers.obj  : win0hers.asm
+                \asm\masm win0hers.asm;
+                objdec -m0 -w -d win0hers.obj
+
+# Zusatzmodul :
+win1.obj      : win1.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win1.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win1.obj
+
+# Zusatzmodul :
+win2.obj      : win2.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win2.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win2.obj
+
+# Zusatzmodul :
+win3.obj      : win3.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win3.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win3.obj
+
+# Zusatzmodul :
+win4.obj      : win4.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win4.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win4.obj
+
+# Zusatzmodul :
+win5.obj      : win5.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c win5.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT win5.obj
+
+#
+wmore.obj     : wmore.c
+                cl -Ot -AL -H24 -Ic:\c5\include /c wmore.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT wmore.obj
+
+wedit.obj     : wedit.c
+                cl -Ot -AL -H24 -Ic:\c5\include /c wedit.c
+                objdec -m0 -w -d -sl 2 WINDOW_TEXT wedit.obj
+
+#             : alte Bildschirmsteuerung;
+#             : wird noch von anderen Programmen verwendet
+window.obj    : window.c window.h
+                cl -Os -AL -H24 -Ic:\c5\include /c window.c
+                objdec -m0 -w -d window.obj
+

@@ -1,0 +1,35 @@
+#
+# FILE %ds/hyxp/makefile
+#
+# written:       1995-03-19
+# latest update: 1996-02-18 11:49:30
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 HYPER_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.2 \bin\pt.exe
+
+all.2 : hyxp0001.obj hyxp0002.obj hyxp0003.obj hyxp0004.obj hyxp0005.obj !
+        hyxp0006.obj hyxp0007.obj hyxp0008.obj hyxp0009.obj hyxp0010.obj !
+        hyxp0011.obj hyxp0012.obj hyxp0013.obj hyxp0014.obj hyxp0015.obj !
+        hyxp0016.obj hyxp0017.obj hyxp0018.obj hyxp0019.obj hyxp0020.obj !
+        hyxp0021.obj hyxp0022.obj hyxp0023.obj hyxp0024.obj hyxp0025.obj !
+        hyxp0026.obj hyxp0027.obj hyxp0028.obj hyxp0029.obj hyxp0030.obj !
+        hyxp0031.obj hyxp0032.obj hyxp0033.obj hyxp0034.obj hyxp0035.obj
+
+# llink -n0 -l$(lib).lib -dhyxpib.mod
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+pt.obj : \usr\lexicon\pt.c
+  $(cml) -DDIAG $?
+  $(obj) $@
+
+\bin\pt.exe : pt.obj hyxp0002.obj hyxp0026.obj hyxp0027.obj hyxp0028.obj
+  link $**,$@,\dev\nul,c:\usr\sbr\lsbr/NOE;

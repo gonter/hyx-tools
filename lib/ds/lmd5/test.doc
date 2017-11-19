@@ -1,0 +1,23 @@
+
+INFO
+FILE          %ds/lmd5/test.doc
+written       1996-04-14
+latest_update 1996-04-14 10:34:40
+.
+
+
+DOCID urxn urxn.txt 0x1234 0x4321
+data
+iris
+karl
+Franz
+mausi
+.
+
+DOCID urxn2 urxn2.txt 0x1234 0x4321
+data
+iris
+karl2
+Franz2
+mausi2
+.

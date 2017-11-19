@@ -1,0 +1,22 @@
+#
+# FILE %ds/hyxdb/make-dos
+#
+# manipulation of hyxdb object
+#  
+# written:       1997-11-09
+# latest update: 1997-11-09 11:29:13
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  hyxdb001.obj hyxdb002.obj hyxdb003.obj hyxdb004.obj hyxdb005.obj !
+  hyxdb006.obj hyxdb007.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

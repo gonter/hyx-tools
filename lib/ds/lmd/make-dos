@@ -1,0 +1,56 @@
+#
+# FILE %ds/lmd/makefile
+#
+# natural language and knowledge representation library
+#
+# written:       1989 03 29
+# latest update: 1997-08-02  8:48:57
+#
+# ============================================================================
+# add -DDEBUG for debugging
+cml=cl -AL /W3 /Fo$*.obj /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 NLKR_TEXT
+
+all.0 : all.1 all.2 all.3 all.4 all.5 all.6
+
+all.1 : nl_00001.obj nl_00002.obj nl_00004.obj              !
+        nl_00102.obj              nl_00104.obj nl_00105.obj !
+        nl_00106.obj nl_00107.obj nl_00108.obj nl_00109.obj !
+                     nl_00111.obj nl_00112.obj nl_00113.obj !
+        nl_00114.obj nl_00115.obj nl_00116.obj nl_00117.obj !
+        nl_00118.obj nl_00119.obj nl_00120.obj nl_00121.obj !
+        nl_00122.obj nl_00123.obj nl_00124.obj nl_00125.obj !
+        nl_00126.obj nl_00127.obj nl_00128.obj nl_00129.obj !
+        nl_00130.obj nl_00131.obj nl_00132.obj nl_00133.obj !
+        nl_00134.obj nl_00135.obj nl_00136.obj nl_00137.obj !
+        nl_00138.obj nl_00139.obj
+
+all.2:  nl_00201.obj
+all.3:  nl_00301.obj nl_00302.obj nl_00303.obj nl_00304.obj nl_00305.obj !
+        nl_00306.obj
+all.4:  nl_00401.obj nl_00402.obj nl_00403.obj nl_00404.obj nl_00405.obj !
+        nl_00407.obj nl_00408.obj nl_00409.obj
+all.5:  nl_00500.obj nl_00501.obj nl_00502.obj nl_00503.obj nl_00504.obj !
+        nl_00510.obj nl_00511.obj nl_00512.obj nl_00514.obj
+
+all.6:  nl_00601.obj nl_00602.obj nl_00603.obj nl_00604.obj !
+        nl_00605.obj nl_00606.obj nl_00607.obj nl_00608.obj !
+        nl_00609.obj nl_00610.obj !
+        nl_01001.obj
+
+all.relics : !
+  dic_0001.obj dic_0002.obj dic_0003.obj dic_0004.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# ----------------------------------------------------------------------------
+test1.exe : test1.obj dic_0004.obj
+  link test1 dic_0004;
+
+# ----------------------------------------------------------------------------
+rdtoken.exe : rdtoken.obj nl_00004.obj
+  link rdtoken nl_00004,,,c:\usr\sbr\lsbr;

@@ -1,0 +1,29 @@
+#
+# FILE %ds/hyxl/(dirinf).fm
+#
+# written:       1994-11-13
+# latest update: 1997-11-09 12:48:24
+# $Id: (dirinf).fm,v 1.4 2002/07/17 07:04:35 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile        active make file
+make-ux         Makefile (Unix)
+make-dos        Makefile (MSDOS)
+
+hyxl0001.c char *find_attr_name (char *str, char *name);
+hyxl0002.c int get_attr_value (char *src, char *dst, int dst_lng,
+hyxl0003.c int find_attr_value (char *src, char *dst, int dst_size,
+hyxl0004.c int hyx_identify_color_code (char *colour_value);
+hyxl0005.c int hcc_set_cluster_name (struct HYX_CLUSTER_CONTROL *hcc, ...)
+hyxl0006.c int print_hyx_link (...)
+hyxl0007.c int hcc_destroy (struct HYX_CLUSTER_CONTROL *hcc);
+hyxl0008.c char *hyx_make_stop_tag (char *s)
+hyxl0009.c char *hyx_translate_special_frame (char *s)
+hyxl0010.c int hcc_open (struct HYX_CLUSTER_CONTROL *hcc, int mode);
+hyxl0011.c int hcc_update_index (...);
+hyxl0012.c int hcc_seek_by_name (...);
+hyxl0013.c int new_HYX_CLUSTER_CONTROL (...);
+hyxl0014.c hcc_add_frame (...);
+
+hyxl0101.c int hyx_rule_calendar (...)
+

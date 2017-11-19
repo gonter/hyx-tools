@@ -1,0 +1,14 @@
+#
+# FILE ~/usr/window/makefile
+#
+# latest update: 1994-09-01
+#
+all : large small
+
+large :
+  llink -n0 -v -l\usr\sbr\lsbr.lib -dwindow_l.mod
+  del \usr\sbr\lsbr.bak
+
+small :
+  llink -n0 -v -l\usr\sbr\ssbr.lib -dwindow_s.mod
+  del \usr\sbr\ssbr.bak

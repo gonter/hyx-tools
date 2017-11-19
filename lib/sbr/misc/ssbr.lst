@@ -1,0 +1,4179 @@
+
+
+
+
+	TITLE	maus_s01.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_reset             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s02.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_enable            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s03.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_disable           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s05.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_setposition       	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s06.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_set_x_margins     	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s07.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_set_y_margins     	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	maus_s08.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_set_cursor_type   	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	masked_1.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_msk_edit               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_msk_set_fld            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=2232
+PUBLIC	_msk_get_fld            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=2255
+PUBLIC	_msk_set_err            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=2278
+; 4 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_msk_edit               	; TYPE=0
+EXTRN	_msk_set_fld            	; TYPE=0
+EXTRN	_msk_get_fld            	; TYPE=0
+EXTRN	_msk_set_err            	; TYPE=0
+EXTRN	_scan_str               	; TYPE=0
+; 8 Externals
+
+
+
+
+
+	TITLE	maus_s04.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_maus_position          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_001.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_patch                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_patch                  	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_002.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_patch_str              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_patch_str              	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_003.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_get_patch              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_get_patch              	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_004.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_peekb                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_peekb                  	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_005.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_pokeb                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_pokeb                  	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_006.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_dump                   	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_dump                   	; TYPE=0
+EXTRN	_fprintf                	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_008.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_flip_int               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_flip_int               	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_009.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_flip_long              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_flip_long              	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_010.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_flip_long_2            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_flip_long_2            	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	dirt_011.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_VAL                    	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_VAL                    	; TYPE=0
+; 3 Externals
+
+
+
+
+
+	TITLE	key_s001.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbin                   	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_kbin_set_AT            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=25
+; 2 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	key_s002.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbhit                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_kbhit_set_AT           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=15
+; 2 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	key_s003.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbshift_set_AT         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=6
+PUBLIC	_kbshift                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 2 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	key_s004.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbclick                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	key_0005.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_kbqueue                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_kbqueue                	; TYPE=0
+; 3 Externals
+
+
+
+
+
+	TITLE	key_s006.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbtype                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	key_s007.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbnumoff               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	key_s008.asm
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_kbnumon                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0001.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_init              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_bios_init_mode         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=65
+; 2 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_init              	; TYPE=0
+EXTRN	_cga_get_mode           	; TYPE=0
+EXTRN	_bios_init_mode         	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_strcmp                 	; TYPE=0
+EXTRN	_w_screen_and_modes     	; TYPE=0
+EXTRN	_W_DATA_initialized     	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_W_TEXT_CELL_X          	; TYPE=0
+EXTRN	_cga_get_screen_max     	; TYPE=0
+EXTRN	_W_TEXT_CELL_Y          	; TYPE=0
+EXTRN	_W_GRAPH_MAX_X          	; TYPE=0
+EXTRN	_W_GRAPH_MAX_Y          	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_W_AKT_MODE             	; TYPE=0
+; 17 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	freadlin.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_fread_line             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fread_line             	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fsopen.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_fsopen                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fsopen                 	; TYPE=0
+EXTRN	__doserrno              	; TYPE=0
+EXTRN	_close                  	; TYPE=0
+EXTRN	_creat                  	; TYPE=0
+EXTRN	_sopen                  	; TYPE=0
+EXTRN	_fdopen                 	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	archead.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_get_arc_head           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_get_arc_head           	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+EXTRN	_fread                  	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	lzhhead.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_get_lzh_head           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_get_lzh_head           	; TYPE=0
+EXTRN	_strncmp                	; TYPE=0
+EXTRN	_fread                  	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	identkey.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_identify_key           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_identify_key           	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	ebcasc.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_EBCDIC_ASCII_INIT      	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_EBCDIC_ASCII_convert   	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=102
+PUBLIC	_EBCDIC_ASCII_char_convert	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=178
+; 3 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_set_etc_filename       	; TYPE=0
+EXTRN	_access                 	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_EBCDIC_ASCII_INIT      	; TYPE=0
+EXTRN	_EBCDIC_ASCII_convert   	; TYPE=0
+EXTRN	_EBCDIC_ASCII_char_convert	; TYPE=0
+EXTRN	_fopen                  	; TYPE=0
+EXTRN	_fread                  	; TYPE=0
+; 9 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0002.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_strcmp_c               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strcmp_c               	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0003.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_CODE_ASCII_to_EBCDIC   	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_strcmp_ebcdic          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 2 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strcmp_ebcdic          	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0005.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_to_upper               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_to_upper               	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0007.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_string_hash            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_string_hash            	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0009.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_strcmp_us              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strcmp_us              	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0107.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_strnins                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strnins                	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0108.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_strndel                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strndel                	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	ftrans02.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_f2transfer             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_ftransfer              	; TYPE=0
+EXTRN	_f2transfer             	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_fopen                  	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fileio.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_f4f_wds                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=2138
+PUBLIC	_set_filemode           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_get_identifier         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=28
+PUBLIC	_get_Sid                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=106
+PUBLIC	_f4fscan                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=180
+PUBLIC	_f4f_read               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=912
+PUBLIC	_f4f_write              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1492
+; 7 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_f4f_wds                	; TYPE=0
+EXTRN	_rename                 	; TYPE=0
+EXTRN	_to_lower               	; TYPE=0
+EXTRN	_set_filemode           	; TYPE=0
+EXTRN	_get_identifier         	; TYPE=0
+EXTRN	_unlink                 	; TYPE=0
+EXTRN	_get_Sid                	; TYPE=0
+EXTRN	_f4fscan                	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_strcmp                 	; TYPE=0
+EXTRN	_strcpy                 	; TYPE=0
+EXTRN	_f4f_read               	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+EXTRN	_f4f_write              	; TYPE=0
+EXTRN	_fopen                  	; TYPE=0
+EXTRN	_fprintf                	; TYPE=0
+EXTRN	_fputc                  	; TYPE=0
+EXTRN	_access                 	; TYPE=0
+; 20 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	scan.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_scan_int               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1392
+PUBLIC	_scan_hex               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1480
+PUBLIC	_set_coff               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1568
+PUBLIC	_scan_str               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_field_edit             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=282
+PUBLIC	_show_field             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1110
+PUBLIC	_getkey                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=1294
+; 7 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_getch                  	; TYPE=0
+EXTRN	_delstr                 	; TYPE=0
+EXTRN	_bios_cursoroff         	; TYPE=0
+EXTRN	_bios_cursoron          	; TYPE=0
+EXTRN	_kbhit                  	; TYPE=0
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_scan_int               	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_cga_setnchar           	; TYPE=0
+EXTRN	_scan_hex               	; TYPE=0
+EXTRN	_set_coff               	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	__get_parameter_value   	; TYPE=0
+EXTRN	_strcmp                 	; TYPE=0
+EXTRN	_scan_str               	; TYPE=0
+EXTRN	_strcpy                 	; TYPE=0
+EXTRN	_sprintf                	; TYPE=0
+EXTRN	_strlen                 	; TYPE=0
+EXTRN	_field_edit             	; TYPE=0
+EXTRN	_show_field             	; TYPE=0
+EXTRN	_getkey                 	; TYPE=0
+; 22 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fmt.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_dc_reset               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_dc_modus               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=24
+PUBLIC	_dc_cal                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=40
+PUBLIC	_dc_chk                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=132
+PUBLIC	_dc_fmt                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=768
+; 5 Publics
+
+EXTRN	__fltused               	; TYPE=0
+EXTRN	FJSRQQ                  	; TYPE=1
+EXTRN	FISRQQ                  	; TYPE=1
+EXTRN	FIERQQ                  	; TYPE=1
+EXTRN	FIDRQQ                  	; TYPE=1
+EXTRN	FIWRQQ                  	; TYPE=1
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_sprintf                	; TYPE=0
+EXTRN	_dc_reset               	; TYPE=0
+EXTRN	_dc_modus               	; TYPE=0
+EXTRN	_dc_cal                 	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_dc_chk                 	; TYPE=0
+EXTRN	_dc_fmt                 	; TYPE=0
+; 14 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fparslin.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_fpars_line             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fpars_line             	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_strlen                 	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fscanlin.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_fscan_line             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_fscan_line             	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	ftopen.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_ftopen                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_topen                  	; TYPE=0
+EXTRN	_fdopen                 	; TYPE=0
+EXTRN	_ftopen                 	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	ftrans01.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_ftransfer              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_ftransfer              	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+EXTRN	_fputc                  	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	ftrans03.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_f3transfer             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_ftransfer              	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_f3transfer             	; TYPE=0
+EXTRN	_fopen                  	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	copyfile.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_copy_file              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+EXTRN	_fopen                  	; TYPE=0
+EXTRN	_fputc                  	; TYPE=0
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_ftell                  	; TYPE=0
+EXTRN	_copy_file              	; TYPE=0
+EXTRN	_access                 	; TYPE=0
+; 9 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fnames2.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_Fname_find             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=216
+PUBLIC	_Freset_find            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=274
+PUBLIC	_Fget_dta               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=264
+PUBLIC	_wcrd_get_date          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=286
+PUBLIC	_wcrd_get_time          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=296
+PUBLIC	_wcrd_get_size          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=306
+PUBLIC	_Fdta_find              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 7 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_Fname_find             	; TYPE=0
+EXTRN	_Freset_find            	; TYPE=0
+EXTRN	_Fget_dta               	; TYPE=0
+EXTRN	_wcrd_get_date          	; TYPE=0
+EXTRN	_wcrd_get_time          	; TYPE=0
+EXTRN	_wcrd_get_size          	; TYPE=0
+EXTRN	_strcmp                 	; TYPE=0
+EXTRN	_strcpy                 	; TYPE=0
+EXTRN	_strlen                 	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_Fsetdta                	; TYPE=0
+EXTRN	_Fsfirst                	; TYPE=0
+EXTRN	_Fsnext                 	; TYPE=0
+EXTRN	_Fdta_find              	; TYPE=0
+; 15 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	arcfiles.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_get_arc_file           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fseek                  	; TYPE=0
+EXTRN	_get_arc_file           	; TYPE=0
+EXTRN	_strncpy                	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+EXTRN	_fread                  	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0001.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_strnscpy               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_strnscpy               	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0004.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_to_lower               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_to_lower               	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0006.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_match                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_match                  	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0008.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_match_lng              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_match_lng              	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	str_0109.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_delstr                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_delstr                 	; TYPE=0
+; 2 Externals
+
+
+
+
+
+	TITLE	topen_s.ASM
+
+_TEXT 	SEGMENT Byte Public CODE	; 
+_TEXT	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_topen                  	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	getpwd_s.ASM
+
+_TEXT 	SEGMENT Byte Public CODE	; 
+_TEXT	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_getpwd                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	fnames.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_Fsetdta                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_Fsfirst                	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=26
+PUBLIC	_Fsnext                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=70
+; 3 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_Fsetdta                	; TYPE=0
+EXTRN	_Fsfirst                	; TYPE=0
+EXTRN	_Fsnext                 	; TYPE=0
+EXTRN	_bdos                   	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_intdos                 	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0001.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_W_TEXT_AKT_MEM         	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=354
+PUBLIC	_W_TEXT_AKT_MULT        	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=356
+PUBLIC	_cga_init               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=19
+PUBLIC	_cga_init_mode          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=58
+PUBLIC	_cga_get_mode           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=282
+; 5 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_init               	; TYPE=0
+EXTRN	_cga_init_mode          	; TYPE=0
+EXTRN	_cga_get_mode           	; TYPE=0
+EXTRN	_cga_get_screen_max     	; TYPE=0
+EXTRN	__cga_get_mode          	; TYPE=0
+EXTRN	_bios_set_mode          	; TYPE=0
+EXTRN	_w_screen_and_modes     	; TYPE=0
+EXTRN	_W_DATA_initialized     	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_W_TEXT_CELL_X          	; TYPE=0
+EXTRN	_W_TEXT_CELL_Y          	; TYPE=0
+EXTRN	_W_GRAPH_MAX_X          	; TYPE=0
+EXTRN	_W_GRAPH_MAX_Y          	; TYPE=0
+EXTRN	_W_AKT_MODE             	; TYPE=0
+; 16 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0004.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_reset              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_reset              	; TYPE=0
+EXTRN	_bios_init_mode         	; TYPE=0
+EXTRN	_bios_cursoron          	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0008.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_selpage            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_AKT_MEM         	; TYPE=0
+EXTRN	_W_AKT_MODE             	; TYPE=0
+EXTRN	_w_screen_and_modes     	; TYPE=0
+EXTRN	_cga_selpage            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0012.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_setchar            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0013.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_setnchar           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_cga_setnchar           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0014.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_getchar            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_getchar            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0029.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_blit_save          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_blit_save          	; TYPE=0
+EXTRN	_cga_getchar            	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0030.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_blit_load          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_blit_load          	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+; 3 Externals
+
+
+
+
+
+	TITLE	WIN_S031.ASM
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	__cga_get_mode          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	WIN_S032.ASM
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		_DATA,	CONST,	_BSS
+; 1 Groups
+
+PUBLIC	_cga_get_cols           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+
+
+
+
+	TITLE	WIN_S033.ASM
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_getpage            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+; 0 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0034.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_scrblk_left        	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_scrblk_left        	; TYPE=0
+EXTRN	_cga_getchar            	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0035.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_scrblk_right       	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_scrblk_right       	; TYPE=0
+EXTRN	_cga_getchar            	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0041.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_cls_col            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_W_TEXT_AKT_MEM         	; TYPE=0
+EXTRN	_cga_cls_col            	; TYPE=0
+EXTRN	_set_cp                 	; TYPE=0
+; 6 Externals
+
+
+
+
+
+	TITLE	WIN_S043.ASM
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_get_screen_max     	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+; 2 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0004.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_reset             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_reset             	; TYPE=0
+EXTRN	_bios_init_mode         	; TYPE=0
+EXTRN	_bios_cursoron          	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0008.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_selpage           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_w_screen_and_modes     	; TYPE=0
+EXTRN	_W_AKT_MODE             	; TYPE=0
+EXTRN	_bios_selpage           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0009.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_cursoroff         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_bios_cursoroff         	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0010.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_cursoron          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_bios_cursoron          	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0011.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_border            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_border            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0012.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setchar           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0013.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setnchar          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_setnchar          	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0014.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_getchar           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_getchar           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0015.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setscreen         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_setscreen         	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0016.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_cls               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_cls               	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0018.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setarea           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_setarea           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0019.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_scrollup          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0020.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_scrolldown        	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_scrolldown        	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0021.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_scrblk_up         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_scrblk_up         	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0022.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_scrblk_down       	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_Y           	; TYPE=0
+EXTRN	_bios_scrblk_down       	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0023.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setcup            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0024.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_wr_dot            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_GRAPH_MAX_Y          	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_GRAPH_MAX_X          	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0025.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_rd_dot            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_GRAPH_MAX_Y          	; TYPE=0
+EXTRN	_bios_rd_dot            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_W_GRAPH_MAX_X          	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0027.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_set_mode          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_set_mode          	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0028.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_set_col           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_set_col           	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0029.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_blit_save         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_blit_save         	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0030.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_blit_load         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_blit_load         	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0042.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_getcup            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_getcup            	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0050.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_cursorsize        	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_cursorsize        	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_data.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_w_screen_and_modes     	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=0
+PUBLIC	_W_DATA_initialized     	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=4
+PUBLIC	_W_TEXT_MAX_X           	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=6
+PUBLIC	_W_TEXT_MAX_Y           	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=8
+PUBLIC	_W_TEXT_CELL_X          	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=10
+PUBLIC	_W_TEXT_CELL_Y          	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=12
+PUBLIC	_W_GRAPH_MAX_X          	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=14
+PUBLIC	_W_GRAPH_MAX_Y          	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=16
+PUBLIC	_W_AKT_MODE             	; GRP=1 SEG=2 FRAME=0 TYPE=0 OFFS=18
+; 9 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+; 1 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0101.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_prntcol           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_prntcol           	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0103.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_create            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_create            	; TYPE=0
+EXTRN	_bios_disp_bbox         	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0104.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_namecreat         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_create            	; TYPE=0
+EXTRN	_bios_namecreat         	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0105.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_gr_create         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_box               	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_gr_create         	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0106.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_put1ln            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_setnchar          	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_put1ln            	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0107.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_putln             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_put1ln            	; TYPE=0
+EXTRN	_bios_putln             	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0108.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_putstr            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_putstr            	; TYPE=0
+; 6 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0109.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_readstr           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_readstr           	; TYPE=0
+EXTRN	_mapkey                 	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0110.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_readln            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_bios_readln            	; TYPE=0
+EXTRN	_mapkey                 	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0111.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_disp_bbox         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_disp_box          	; TYPE=0
+EXTRN	_bios_disp_bbox         	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0112.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_disp_box          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_disp_box          	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_setnchar          	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0115.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_ega_setcup             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_ega_setcup             	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0117.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_printf            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_printf            	; TYPE=0
+EXTRN	_sprintf                	; TYPE=0
+EXTRN	_bios_puts              	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0118.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_more              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fscanf                 	; TYPE=0
+EXTRN	_fsopen                 	; TYPE=0
+EXTRN	_bios_more              	; TYPE=0
+EXTRN	_access                 	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_mapkey                 	; TYPE=0
+EXTRN	_bios_put1ln            	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+; 10 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0119.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_puts              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_puts              	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0120.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_display           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_border            	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_scrblk_up         	; TYPE=0
+EXTRN	_bios_disp_bbox         	; TYPE=0
+EXTRN	_bios_setscreen         	; TYPE=0
+EXTRN	_bios_display           	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0121.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_display_scr       	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_VAL                    	; TYPE=0
+EXTRN	_bios_display           	; TYPE=0
+EXTRN	_bios_display_scr       	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0101.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_prntcol            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_W_TEXT_MAX_X           	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_cga_prntcol            	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0104.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_namecreat          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setcup            	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_bios_create            	; TYPE=0
+EXTRN	_cga_namecreat          	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0106.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_put1ln             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_cga_setnchar           	; TYPE=0
+EXTRN	_bios_scrollup          	; TYPE=0
+EXTRN	_cga_put1ln             	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0111.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_disp_bbox          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_disp_box           	; TYPE=0
+EXTRN	_cga_disp_bbox          	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0112.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_disp_box           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_disp_box           	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_cga_setnchar           	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0117.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_printf             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_cga_printf             	; TYPE=0
+EXTRN	_sprintf                	; TYPE=0
+EXTRN	_cga_puts               	; TYPE=0
+; 5 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0118.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_more               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_fscanf                 	; TYPE=0
+EXTRN	_fsopen                 	; TYPE=0
+EXTRN	_cga_more               	; TYPE=0
+EXTRN	_access                 	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_mapkey                 	; TYPE=0
+EXTRN	_fclose                 	; TYPE=0
+EXTRN	_cga_put1ln             	; TYPE=0
+EXTRN	_fgetc                  	; TYPE=0
+; 10 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0119.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_puts               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_puts               	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0120.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_display            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_border            	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_bios_scrblk_up         	; TYPE=0
+EXTRN	_cga_disp_bbox          	; TYPE=0
+EXTRN	_bios_setscreen         	; TYPE=0
+EXTRN	_cga_display            	; TYPE=0
+; 7 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0121.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_display_scr        	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_VAL                    	; TYPE=0
+EXTRN	_cga_display            	; TYPE=0
+EXTRN	_cga_display_scr        	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0201.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_box               	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_box               	; TYPE=0
+EXTRN	__bios_x_line           	; TYPE=0
+EXTRN	__bios_y_line           	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0202.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_fbos              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_fbos              	; TYPE=0
+EXTRN	__bios_x_line           	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0203.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_circle            	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_circle            	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0204.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_fcircle           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_fcircle           	; TYPE=0
+EXTRN	__bios_x_line           	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0205.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	__bios_x_line           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__bios_x_line           	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0206.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	__bios_y_line           	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__bios_y_line           	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+; 3 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0113.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_gr_setcup              	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_gr_setcup              	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_bios_wr_dot            	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0114.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_setcup             	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_gr_setcup              	; TYPE=0
+EXTRN	_cga_setcup             	; TYPE=0
+EXTRN	__chkstk                	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0116.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_mapkey                 	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	__chkstk                	; TYPE=0
+EXTRN	_int86                  	; TYPE=0
+EXTRN	_mapkey                 	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0102.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_bios_setstring         	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_bios_setstring         	; TYPE=0
+EXTRN	_bios_setchar           	; TYPE=0
+EXTRN	_bios_setnchar          	; TYPE=0
+; 4 Externals
+
+; Translator : MS C
+; use Library: SLIBCE
+
+
+
+
+	TITLE	win_0102.c
+
+_TEXT 	SEGMENT Word Public CODE	; 
+_TEXT	ENDS
+_DATA 	SEGMENT Word Public DATA	; 
+_DATA	ENDS
+CONST 	SEGMENT Word Public CONST	; 
+CONST	ENDS
+_BSS 	SEGMENT Word Public BSS	; 
+_BSS	ENDS
+; 4 Segmente
+
+DGROUP	GROUP		CONST,	_BSS,	_DATA
+; 1 Groups
+
+PUBLIC	_cga_setstring          	; GRP=0 SEG=1 FRAME=0 TYPE=0 OFFS=0
+; 1 Publics
+
+EXTRN	__acrtused              	; TYPE=1
+EXTRN	_cga_setstring          	; TYPE=0
+EXTRN	_cga_setchar            	; TYPE=0
+EXTRN	_cga_setnchar           	; TYPE=0
+; 4 Externals
+

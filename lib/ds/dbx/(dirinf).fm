@@ -1,0 +1,19 @@
+#
+# FILE %ds/dbx/(dirinf).fm
+#
+# written:       1996-11-26
+# latest update: 1996-11-26 17:38:59
+#
+
+# see also: <gg/dbx.h> and dbx
+(dirinf).fm     Contents
+Makefile        current version of Makefile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+dbx_0000.c      TEMPLATE
+dbx_0001.c      dbx: new schema
+
+dbx_1001.c      dbf: open dbf
+
+dbf.c           DBF: test and dump

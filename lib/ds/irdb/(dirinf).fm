@@ -1,0 +1,61 @@
+#
+# FILE %ds/irdb/(dirinf).fm
+#
+# written:       1996-04-01
+# latest update: 1996-05-07 12:30:11
+#
+
+# see also: <gg/irdb.h> and irdb
+(dirinf).fm     Contents
+Makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+irdb0000.c      TEMPLATE
+
+irdb0001.c      dump to file
+irdb0002.c      dump to stream
+irdb0003.c      dump payload
+irdb0004.c      dump string
+irdb0005.c      dump struct
+irdb0006.c      commit pos
+irdb0007.c      get dumped form
+irdb0008.c      get core form
+irdb0009.c      create pos handle
+irdb0010.c      create irdb handle
+
+irdb0011.c      create irdb struct handle
+irdb0012.c      store to structure
+irdb0013.c      replace string to structure
+irdb0014.c      locate info address
+irdb0015.c      check if record exists
+irdb0016.c      replace string
+irdb0017.c      locate handle
+irdb0018.c      set long value
+irdb0019.c      post increment long value
+irdb0020.c      pre increment long value
+
+irdb0021.c      fixup pos header
+irdb0022.c      load handle
+irdb0023.c      load string
+irdb0024.c      get pos file pointer
+irdb0025.c      restore from pos
+irdb0026.c      restore handles
+irdb0027.c      restore strings
+irdb0028.c      get long value
+
+irdb0101.c      diag dump to file
+irdb0102.c      diag dump to stream
+irdb0103.c      diag dump payload
+irdb0104.c      diag dump string
+irdb0105.c      diag dump struct
+irdb0106.c      get type name
+irdb0107.c      long irdb_dbg_show_slot_names (...)
+
+irdb0112.c      debugging: store to structure
+irdb0116.c      debugging: replace string
+irdb0118.c      debugging: set long value
+irdb0119.c      debugging: post increment long value
+irdb0120.c      debugging: pre increment long value
+
+
+it1.c           Test 1

@@ -1,0 +1,34 @@
+#
+# FILE %ds/tfb/(dirinf).fm
+#
+# written:       1995-11-11
+# latest update: 1995-12-29
+# $Id: (dirinf).fm,v 1.3 2001/12/19 08:07:43 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+
+# see also: <gg/tfb.h> and tfb
+(dirinf).fm     Contents
+Makefile        current Makefile version
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+# library functions
+tfblut01.c      | create a LUT index for a TFB file; worker routine
+tfb01.c         | int tfb_get_entry (char *keyword, char *file_tfb, ...)
+tfb02.c         | int tfb_get_2entry (char *keyword, char *file_tfb, ...)
+tfb03.c         | struct TFB_HANDLE *tfb_create_handle (char *tfb_file, ...)
+tfb04.c         | int tfb_transfer_entry (...)
+tfb05.c         | int tfb_close_handle (struct TFB_HANDLE *h)
+tfb06.c         | int tfb_get_tag_entry (...)
+tfb07.c         | int tfb_fetch_entry (...)
+tfb08.c         | int tfb_fetch_entry2 (...)
+
+# main programs
+tfblut.c        | create a LUT index for a TFB file; main module
+tfbget.c        | get an entry from a TFB file by looking up the LUT file
+
+# special applications
+plz2tfb.c       | deutsche Postleitzahlen in TFB Format konvertieren
+dbf2tfb.c       | DBF (??) File in TFB konvertieren
+d3164.c         | repack a DBF 3164 File (whatever that is)

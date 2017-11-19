@@ -1,0 +1,404 @@
+#
+# FILE %ds/strings/makefile
+#
+# string processing library
+#
+# written:       198?-??-??
+# latest update: 1997-10-05 12:23:39
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$*.obj /c
+cms=cl -AS /W3 /Fo$*.obj /c
+ccl=cl -AL
+ccs=cl -AS
+obj=objdec -w -d -m0
+objs=objdec -w -d -m0 -sl 2 STRINGS_TEXT
+incl=c:\c5\include\gg\
+bin=c:\bin\
+
+all : lib.lsbr all.exe
+all.exe : $(bin)fnmdef.exe
+test.exe : strings.exe t.exe tt.exe zs.exe dt011t.exe str_0043.exe
+
+# LARGE Library --------------------------------------------------------------
+lib.lsbr : string1.lgrp string2.lgrp string3.lgrp
+
+string1.lgrp : !
+ large\str_0001.obj large\str_0002.obj large\str_0003.obj large\str_0004.obj !
+ large\str_0005.obj large\str_0006.obj large\str_0007.obj large\str_0008.obj !
+ large\str_0009.obj large\str_0010.obj large\str_0011.obj large\str_0012.obj !
+ large\str_0013.obj large\str_0014.obj large\str_0015.obj large\str_0016.obj !
+ large\str_0017.obj large\str_0018.obj large\str_0019.obj large\str_0020.obj !
+ large\str_0021.obj large\str_0022.obj large\str_0023.obj large\str_0024.obj !
+ large\str_0025.obj large\str_0026.obj large\str_0027.obj large\str_0028.obj
+
+string2.lgrp : !
+ large\str_0029.obj large\str_0030.obj large\str_0031.obj large\str_0032.obj !
+ large\str_0033.obj large\str_0034.obj large\str_0035.obj large\str_0036.obj !
+ large\str_0037.obj large\str_0038.obj large\str_0039.obj large\str_0040.obj !
+ large\str_0041.obj large\str_0042.obj large\str_0043.obj large\str_0044.obj !
+ large\str_0045.obj large\str_0046.obj large\str_0047.obj large\str_0048.obj !
+ large\str_0049.obj large\str_0050.obj large\str_0051.obj large\str_0052.obj !
+ large\str_0053.obj
+
+string3.lgrp : !
+ large\str_0107.obj large\str_0108.obj large\str_0109.obj !
+ large\str_0201.obj large\str_0202.obj large\str_0203.obj large\str_0204.obj !
+ large\str_0301.obj large\str_0302.obj large\str_0303.obj large\str_0304.obj
+
+# SMALL Library --------------------------------------------------------------
+lib.ssbr : part.s1 part.s2 part.s3 ssbr.lib
+
+part.s2 : !
+ small\str_s001.obj small\str_s002.obj small\str_s003.obj small\str_s004.obj !
+ small\str_s005.obj small\str_s006.obj small\str_s007.obj small\str_s008.obj !
+ small\str_s009.obj small\str_s107.obj small\str_s108.obj small\str_s109.obj
+
+# ----------------------------------------------------------------------------
+# generate include tables for category and weight codes
+
+str_0041.tbl : \etc\codes\table
+  codeconv -spc437 -spc -sascii -dcatc -wcstr_0041.tbl
+
+str_0042.tbl : \etc\codes\table
+  codeconv -spc437 -spc -sascii -dwgtc -wcstr_0042.tbl
+
+#
+# ===========================
+# Stringmanipulationen (Test) ------------------------------------------------
+strings.exe : strings.obj
+  link strings,,,c:\usr\sbr\lsbr;
+
+strings.obj : strings.c
+  $(cml) strings.c
+  $(obj) strings.obj
+
+stt.exe : stt.obj
+  link stt str_0015.obj,,\dev\nul,c:\usr\sbr\lsbr/NOE;
+
+stt.obj : stt.c
+  $(cml) stt.c
+
+str_0043.exe : str_0043.obj
+  link str_0043,,,c:\usr\sbr\lsbr;
+
+str_0043.obj : str_0043.c
+  $(cml) -DTEST str_0043.c
+
+large\stt_0020.obj : stt_0020.c
+  $(cml) stt_0020.c
+
+stt_0020.exe : large\stt_0020.obj large\str_0020.obj
+  link large\stt_0020 large\str_0020;
+
+stt_0035.obj : str_0035.c
+  $(cml) -DDEBUG str_0035.c
+
+stt_0035.exe : stt_0035.obj
+  link stt_0035,,\dev\nul,c:\usr\sbr\lsbr/NOE;
+
+# =============
+# LARGE LIBRARY
+# -------------
+
+large\str_0001.obj : str_0001.c
+  $(cml) str_0001.c
+  $(objs) $@
+
+large\str_0002.obj : str_0002.c
+  $(cml) str_0002.c
+  $(objs) $@
+
+large\str_0003.obj : str_0003.c
+  $(cml) str_0003.c
+  $(objs) $@
+
+large\str_0004.obj : str_0004.c
+  $(cml) str_0004.c
+  $(objs) $@
+
+large\str_0005.obj : str_0005.c
+  $(cml) str_0005.c
+  $(objs) $@
+
+large\str_0006.obj : str_0006.c
+  $(cml) str_0006.c
+  $(objs) $@
+
+large\str_0007.obj : str_0007.c
+  $(cml) str_0007.c
+  $(objs) $@
+
+large\str_0008.obj : str_0008.c
+  $(cml) str_0008.c
+  $(objs) $@
+
+large\str_0009.obj : str_0009.c
+  $(cml) str_0009.c
+  $(objs) $@
+
+large\str_0010.obj : str_0010.c
+  $(cml) str_0010.c
+  $(objs) $@
+
+large\str_0011.obj : str_0011.c
+  $(cml) str_0011.c
+  $(objs) $@
+
+large\str_0012.obj : str_0012.c
+  $(cml) str_0012.c
+  $(objs) $@
+
+large\str_0013.obj : str_0013.c
+  $(cml) str_0013.c
+  $(objs) $@
+
+large\str_0014.obj : str_0014.c
+  $(cml) str_0014.c
+  $(objs) $@
+
+large\str_0015.obj : str_0015.c
+  $(cml) str_0015.c
+  $(objs) $@
+
+large\str_0016.obj : str_0016.c
+  $(cml) str_0016.c
+  $(objs) $@
+
+large\str_0017.obj : str_0017.c
+  $(cml) str_0017.c
+  $(objs) $@
+
+large\str_0018.obj : str_0018.c
+  $(cml) str_0018.c
+  $(objs) $@
+
+large\str_0019.obj : str_0019.c
+  $(cml) str_0019.c
+  $(objs) $@
+
+large\str_0020.obj : str_0020.c
+  $(cml) str_0020.c
+  $(objs) $@
+
+large\str_0021.obj : str_0021.c
+  $(cml) str_0021.c
+  $(objs) $@
+
+large\str_0022.obj : str_0022.c
+  $(cml) str_0022.c
+  $(objs) $@
+
+large\str_0023.obj : str_0023.c
+  $(cml) str_0023.c
+  $(objs) $@
+
+large\str_0024.obj : str_0024.c
+  $(cml) str_0024.c
+  $(objs) $@
+
+large\str_0025.obj : str_0025.c
+  $(cml) str_0025.c
+  $(objs) $@
+
+large\str_0026.obj : str_0026.c
+  $(cml) str_0026.c
+  $(objs) $@
+
+large\str_0027.obj : str_0027.c
+  $(cml) str_0027.c
+  $(objs) $@
+
+large\str_0028.obj : str_0028.c
+  $(cml) str_0028.c
+  $(objs) $@
+
+large\str_0029.obj : str_0029.c
+  $(cml) str_0029.c
+  $(objs) $@
+
+large\str_0030.obj : str_0030.c
+  $(cml) str_0030.c
+  $(objs) $@
+
+large\str_0031.obj : str_0031.c
+  $(cml) str_0031.c
+  $(objs) $@
+
+large\str_0032.obj : str_0032.c
+  $(cml) str_0032.c
+  $(objs) $@
+
+large\str_0033.obj : str_0033.c
+  $(cml) str_0033.c
+  $(objs) $@
+
+large\str_0034.obj : str_0034.c
+  $(cml) str_0034.c
+  $(objs) $@
+
+large\str_0035.obj : str_0035.c
+  $(cml) str_0035.c
+  $(objs) $@
+
+large\str_0036.obj : str_0036.c
+  $(cml) str_0036.c
+  $(objs) $@
+
+large\str_0037.obj : str_0037.c
+  $(cml) str_0037.c
+  $(objs) $@
+
+large\str_0038.obj : str_0038.c
+  $(cml) str_0038.c
+  $(objs) $@
+
+large\str_0039.obj : str_0039.c
+  $(cml) str_0039.c
+  $(objs) $@
+
+large\str_0043.obj : str_0043.c
+  $(cml) str_0043.c
+  $(objs) $@
+
+large\str_0040.obj : str_0040.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0041.obj : str_0041.c str_0041.tbl
+  $(cml) str_0041.c
+  $(objs) $@
+
+large\str_0042.obj : str_0042.c str_0042.tbl
+  $(cml) str_0042.c
+  $(objs) $@
+
+large\str_0043.obj : str_0043.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0044.obj : str_0044.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0045.obj : str_0045.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0046.obj : str_0046.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0047.obj : str_0047.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0048.obj : str_0048.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0049.obj : str_0049.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0050.obj : str_0050.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0051.obj : str_0051.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0052.obj : str_0052.c
+  $(cml) $?
+  $(objs) $@
+
+large\str_0053.obj : str_0053.c
+  $(cml) $?
+  $(objs) $@
+
+#
+large\str_0107.obj : str_0107.c
+  $(cml) str_0107.c
+  $(objs) $@
+
+large\str_0108.obj : str_0108.c
+  $(cml) str_0108.c
+  $(objs) $@
+
+large\str_0109.obj : str_0109.c
+  $(cml) str_0109.c
+  $(objs) $@
+
+large\str_0201.obj : str_0201.c
+  $(cml) str_0201.c
+  $(objs) $@
+
+large\str_0202.obj : str_0202.c
+  $(cml) str_0202.c
+  $(objs) $@
+
+large\str_0203.obj : str_0203.c
+  $(cml) str_0203.c
+  $(objs) $@
+
+large\str_0204.obj : str_0204.c
+  $(cml) str_0204.c
+  $(objs) $@
+
+large\str_0301.obj : str_0301.c
+  $(cml) str_0301.c
+  $(objs) $@
+
+large\str_0302.obj : str_0302.c
+  $(cml) str_0302.c
+  $(objs) $@
+
+large\str_0303.obj : str_0303.c
+  $(cml) str_0303.c
+  $(objs) $@
+
+large\str_0304.obj : str_0304.c
+  $(cml) str_0304.c
+  $(objs) $@
+
+# ----------------------------------------------------------------------------
+# =============
+# SMALL LIBRARY
+# -------------
+
+small\str_s001.obj : str_0001.c
+  $(cms) str_0001.c
+
+small\str_s002.obj : str_0002.c
+  $(cms) str_0002.c
+
+small\str_s003.obj : str_0003.c
+  $(cms) str_0003.c
+
+small\str_s004.obj : str_0004.c
+  $(cms) str_0004.c
+
+small\str_s005.obj : str_0005.c
+  $(cms) str_0005.c
+
+small\str_s006.obj : str_0006.c
+  $(cms) str_0006.c
+
+small\str_s007.obj : str_0007.c
+  $(cms) str_0007.c
+
+small\str_s008.obj : str_0008.c
+  $(cms) str_0008.c
+
+small\str_s009.obj : str_0009.c
+  $(cms) str_0009.c
+
+small\str_s107.obj : str_0107.c
+  $(cms) str_0107.c
+
+small\str_s108.obj : str_0108.c
+  $(cms) str_0108.c
+
+small\str_s109.obj : str_0109.c
+  $(cms) str_0109.c

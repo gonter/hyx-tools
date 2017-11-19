@@ -1,0 +1,83 @@
+#
+# FILE %ned/07/(dirinf).fm
+#
+# marker, blocks and buffers
+#
+# latest update: 2000-08-24 14:39:15
+# $Id: (dirinf).fm,v 1.2 2000/08/24 15:10:16 gonter Exp $
+#
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned0701.c       | int p2_set_marker (b)
+ned0702.c       | void ned_set_marker_key ()
+ned0703.c       | void ned_group_set_marker ()
+#
+ned0705.c       | ned_get_buffer (...)
+ned0705.c       | *** UNDER CONSTRUCTION ***
+# ***
+ned0711.c       | int vi_yank ()
+ned0712.c       | void ned_blk_mode ()
+ned0713.c       | void ned_set_block_markers ()
+ned0714.c       | void p_blkbeg ()
+ned0715.c       | void p_blkend ()
+ned0716.c       | void p_hideblk ()
+ned0717.c       | int ned_reset_block_flags ()
+ned0718.c       | void ned_blk_rst ()
+ned0719.c       | int ned_blk_setflg () /* Setze Block-Markierungen in allen Zeilen */
+ned0719b.c      | int ned_swap_markers (struct MARKER *m1, struct MARKER *m2)
+ned0719c.c      | int ned_copy_markers (struct MARKER *dst, struct MARKER *src)
+ned0720.c       | int ned_blk_invalid () /* 1 -> Marker inkonsistent oder unvollstaendig */
+ned0721.c       | void ned_blk_screen ()
+ned0722.c       | int ned_blk_orientation (p)
+ned0723.c       | int ned_drop_buffer2 (struct NED_BUFFER *bu)
+ned0723a.c      | int ned_drop_buffer (int name)
+ned0723b.c      | int ned_store_line_to_buffer (...)
+ned0724.c       | int ned_blk_isolate (...)
+ned0724a.c      | int ned_blk_isolate2 (...)
+ned0725.c       | void ned_blk_insert (where, start, stop) /* Block einfaedeln */
+ned0725b.c      | void ned_blk_insert2 (where, sp, start, stop) /* Block einfaedeln */
+ned0725c.c      | int ned_blk_insert3 (...)
+ned0726.c       | void ned_blk_duplicate (...);
+ned0727.c       | void ned_wc_blk_copy (...)
+ned0727a.c      | void ned_blk_copy ()
+ned0727b.c      | void ned_blk_copy_before ()
+ned0727c.c      | void ned_wc_buffer_copy (...)
+ned0727d.c      | void ned_buffer_copy ()
+ned0727e.c      | void ned_buffer_copy_before ()
+ned0728.c       | void ned_blk_move ()
+ned0729.c       | void ned_blk_delete ()
+ned0730.c       | void ned_blk_read ()
+ned0731a.c      | void ned_blk_append ()
+ned0731p.c      | void ned_blk_print ()
+ned0731w.c      | void ned_blk_write ()
+ned0732.c       | void q_wablk (int mode) /* write or append block to file */
+ned0733.c       | void q_jmp_marker (m)
+ned0734.c       | void p_jmp_blkbeg ()
+ned0735.c       | void p_jmp_blkend ()
+ned0736.c       | void ned_jmp_marker_key ()
+ned0737.c       | void ned_jmp_marker_1 ()
+ned0738.c       | char *ned_block_2_string (...)
+# ***
+ned0746.c       | int ned_reset_markers (struct WINDOWCTRL *w)
+ned0747.c       | int ned_blk_critical ()
+ned0747b.c      | int ned_blk_realign_if_critical ()
+ned0748.c       | int ned_change_markers (w_old, w_new)
+ned0749.c       | void ned_blk_iconify ()
+ned0750.c       | int ned_blk_mark_all (struct WINDOWCTRL *w)
+ned0751.c       | struct LINE *ned_find_first_line (struct LINE *lc);
+ned0752.c       | struct LINE *ned_find_last_line (struct LINE *lc);
+ned0753.c       | int ned_paste_string (char *buffer)
+ned0754a.c      | int ned_paste_date ()
+ned0754b.c      | int ned_paste_seconds ()
+ned0754c.c      | int ned_paste_date_time ()
+ned0754d.c      | int ned_paste_date_string ()
+ned0756.c       | int ned_paste_file_name ()
+ned0758.c       | int ned_paste_user ()
+ned0759.c       | int ned_markup_block (struct WINDOWCTRL *w, ...)
+ned0760.c       | int ned_markup_block_2 (struct WINDOWCTRL *w, char *start_tag)
+ned0761.c       | int ned_markup_block_prompt (struct WINDOWCTRL *w, char *start_tag)
+ned0762.c       | *** under construction ***
+ned0763.c       | int ned_paste_renamed_object ()
+*               |

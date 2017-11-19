@@ -1,0 +1,42 @@
+#
+# FILE %ds/bbc/(dirinf).fm
+#
+. Black Board Controller
+#
+# written:       1996-03-25
+# latest update: 1996-12-01 16:03:36
+# $Id: (dirinf).fm,v 1.2 2003/06/25 03:09:53 gonter Exp $
+#
+
+# see also: <gg/bbch.h>
+(dirinf).fm     Contents
+Makefile        current version of Makfile
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+bbcd.doc        current docs
+
+bbc.c           black board controller: main program
+
+bbc01.c         int bbc_main (struct BBC_SESSION *bbcs, ...)
+bbc02.c         void inet_netnames (int sockfd, char *host_name, char *ipnum);
+bbc03.c         struct BBC_CONNECTION *bbc_init_connection (...)
+bbc04.c         int bbc_authentication_protocol (void *client_data, ...)
+bbc05.c         int bbc_chex (struct BBC_SESSION *bbcs, ...)
+bbc06.c         int bbc_diag_conn (FILE *fo, struct BBC_CONNECTION *bbcc);
+bbc07.c         int bbc_lexicon_processor (void *client_data, ...)
+bbc08.c         int bbc_get_request (struct BBC_CONNECTION *bbcc, char *buffer);
+bbc09.c         struct BBC_LISTEN *bbc_server (int port);
+bbc10.c         struct BBC_CONNECTION *bbc_connect (...)
+bbc11.c         int bbc_challenge (struct BBC_SESSION *bbcs, ...)
+bbc12.c         int bbc_to_stdout (void *client_data, ...)
+bbc13.c         int bbc_transmit_text (void *cd, struct TEXT_ELEMENT *te);
+bbc14.c         struct BBC_SESSION *bbc_new_session ()
+bbc15.c         int bbc_acceptor (void *client_data)
+
+bbc16.c ... fehlt
+
+bbct1.c         test program 1
+
+bbc*.c          black board controller
+#

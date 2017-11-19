@@ -1,0 +1,10 @@
+# automagically GENERATED directory listing of /afs/wu-wien.ac.at/home/edvz/gonter/usr/work/fbsd/gg/CPAN/vdif/scripts
+# filename             size T   mode owner group
+.                     16384 d 040700 14685     0
+..                     4096 d 040777     0     0
+(dirinf).fm               0 f 100644  3222  3000
+CVS                    2048 d 040755  3222  3000
+_bak_ftr.ned           2048 d 040755  3222  3000
+abook.pl               5077 f 100755  3222  3000
+almagen.pl              699 f 100755  3222  3000
+cookieflt.pl           1132 f 100755  3222  3000

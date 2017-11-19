@@ -1,0 +1,49 @@
+#
+#  FILE %ds/vieos/(dirinf).fm
+#
+.  Vienna objective SGML TCL Library
+#
+#  written:       1995-03-19
+.. latest update: 1997-01-15 11:31:20
+#
+#  ---------------------------------------------------------------------------
+
+# see also: <gg/vieos.h>, $vieos
+# administrative files
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+vieos.c         vieos interpreter
+
+# modules
+vieos001.c      struct VIEOS_CONTEXT *vieos_create_context (Tcl_Interp *interp)
+vieos002.c      int vieos_context_object (...)
+vieos003.c      int vieos_destroy_context (...)
+vieos004.c
+
+vieos101.c      struct VIEOS_MARKUP *vieos_create_markup (...)
+vieos102.c      int vieos_markup_object (...)
+vieos103.c      int vieos_destroy_markup (struct VIEOS_MARKUP *vm)
+vieos1*.c       markup objects
+
+vieos201.c      struct VIEOS_INDEX *vieos_create_index (...)
+vieos202.c      int vieos_index_object (...)
+vieos203.c      int vieos_destroy_index (struct VIEOS_INDEX *vm)
+vieos2*.c       index objects
+
+vieos301.c      struct VIEOS_BLOCK *vieos_create_block (...)
+vieos302.c      int vieos_block_object (...)
+vieos303.c      int vieos_destroy_block (struct VIEOS_BLOCK *vm)
+vieos3*.c       dynamic block objects <gg/dyb.h>
+
+vieos401.c      struct VIEOS_CLUSTER *vieos_create_cluster (...)
+vieos402.c      int vieos_cluster_object (...)
+vieos403.c      int vieos_destroy_cluster (struct VIEOS_CLUSTER *vcl)
+
+# generic modules, used as a template for new classes
+vieosg01.c      struct VIEOS_GENERIC *vieos_create_generic (...)
+vieosg02.c      int vieos_generic_object (...)
+vieosg03.c      int vieos_destroy_generic (struct VIEOS_GENERIC *vg)
+vieosg04.c      int vieos_destructor_generic (struct YTREE *yt, void *cd)
+

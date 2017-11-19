@@ -1,0 +1,282 @@
+#
+#  FILE ~/usr/window/cga/MAKEFILE
+#
+#  written:       1989 08 16: aus WIN0.SAR Åbernommen; Revisison
+#  latest update: 1994-09-01
+#
+
+asm=masm /Ml
+cml=cl -Os -AL /Fo$* /c
+cms=cl -Os -AS /Fo$* /c
+obl=objdec -w -d -m0 -sl 2 WINDOW_TEXT 
+
+all : large.window small.window
+
+large.window :     obj\cga_l001.obj obj\biosl001.obj !
+  obj\cga_l004.obj obj\cga_l008.obj !
+  obj\cga_l012.obj obj\cga_l013.obj obj\cga_l014.obj !
+  obj\cga_l029.obj obj\cga_l030.obj obj\cga_l031.obj !
+  obj\cga_l032.obj obj\cga_l033.obj obj\cga_l034.obj !
+  obj\cga_l035.obj obj\cga_l036.obj obj\cga_l037.obj !
+  obj\cga_l038.obj obj\cga_l039.obj obj\cga_l040.obj !
+  obj\cga_l041.obj obj\cga_l043.obj obj\cga_l044.obj obj\cga_l045.obj
+# llink -n0 -v -lc:\usr\sbr\lsbr.lib -dcga_l.mod
+
+small.window :     obj\cga_s001.obj obj\bioss001.obj !
+  obj\cga_s004.obj obj\cga_s008.obj !
+  obj\cga_s012.obj obj\cga_s013.obj obj\cga_s014.obj !
+  obj\cga_s029.obj obj\cga_s030.obj obj\cga_s031.obj !
+  obj\cga_s032.obj obj\cga_s033.obj obj\cga_s034.obj !
+  obj\cga_s035.obj obj\cga_s041.obj obj\cga_s043.obj
+# llink -n0 -v -lc:\usr\sbr\ssbr.lib -dcga_s.mod
+
+clear :
+  del *.bak
+  del *.ftr
+  del window.asm
+
+t1.obj : C:\usr\window\t1.c
+         $(cml) C:\usr\window\t1.c
+
+t1.exe  : t1.obj obj\cga_l001.obj obj\cga_l012.obj obj\cga_l013.obj
+  link t1 obj\cga_l001 obj\cga_l012 obj\cga_l013,/map,/NOE,c:\usr\sbr\lsbr;
+
+# LARGE Modell ---------------------------------------------------------------
+obj\cga_l001.obj : win_0001.c
+                   $(cml) -DW_MODEL_CGA win_0001.c
+                   $(obl) obj\cga_l001.obj
+
+obj\biosl001.obj : win_0001.c
+                   $(cml) -DW_MODEL_BIOS win_0001.c
+                   $(obl) obj\biosl001.obj
+
+obj\cga_l004.obj   :        win_0004.c
+                 $(cml) win_0004.c
+                 $(obl) obj\cga_l004.obj
+
+obj\cga_l008.obj   :        win_0008.c
+                 $(cml) win_0008.c
+                 $(obl) obj\cga_l008.obj
+
+obj\cga_l009.obj   :        win_0009.c
+                 $(cml) win_0009.c
+                 $(obl) obj\cga_l009.obj
+
+obj\cga_l010.obj   :        win_0010.c
+                 $(cml) win_0010.c
+                 $(obl) obj\cga_l010.obj
+
+obj\cga_l011.obj   :        win_0011.c
+                 $(cml) win_0011.c
+                 $(obl) obj\cga_l011.obj
+
+obj\cga_l012.obj : win_l012.asm
+                   $(asm) WIN_L012.ASM,obj\cga_l012.obj;
+
+obj\cga_l013.obj : win_l013.asm
+                   $(asm) WIN_L013.ASM,obj\cga_l013.obj;
+
+obj\cga_l014.obj : win_l014.asm
+                   $(asm) WIN_L014.ASM,obj\cga_l014.obj;
+
+obj\cga_l015.obj   :        win_0015.c
+                 $(cml) win_0015.c
+                 $(obl) obj\cga_l015.obj
+
+obj\cga_l016.obj   :        win_0016.c
+                 $(cml) win_0016.c
+                 $(obl) obj\cga_l016.obj
+
+obj\cga_l018.obj   :        win_0018.c
+                 $(cml) win_0018.c
+                 $(obl) obj\cga_l018.obj
+
+obj\cga_l019.obj   :        win_0019.c
+                 $(cml) win_0019.c
+                 $(obl) obj\cga_l019.obj
+
+obj\cga_l020.obj   :        win_0020.c
+                 $(cml) win_0020.c
+                 $(obl) obj\cga_l020.obj
+
+obj\cga_l021.obj   :        win_0021.c
+                 $(cml) win_0021.c
+                 $(obl) obj\cga_l021.obj
+
+obj\cga_l022.obj   :        win_0022.c
+                 $(cml) win_0022.c
+                 $(obl) obj\cga_l022.obj
+
+obj\cga_l023.obj   :        win_0023.c
+                 $(cml) win_0023.c
+                 $(obl) obj\cga_l023.obj
+
+obj\cga_l024.obj   :        win_l024.asm
+                 $(asm) WIN_L024.ASM,obj\cga_l024.obj;
+
+obj\cga_l025.obj   :        win_l025.asm
+                 $(asm) WIN_L025.ASM,obj\cga_l025.obj;
+
+obj\cga_l026.obj   :        win_0026.c
+                 $(cml) win_0026.c
+
+obj\cga_l027.obj   :        win_0027.c
+                 $(cml) win_0027.c
+                 $(obl) obj\cga_l027.obj
+
+obj\cga_l028.obj   :        win_0028.c
+                 $(cml) win_0028.c
+                 $(obl) obj\cga_l028.obj
+
+obj\cga_l029.obj   :        win_0029.c
+                 $(cml) win_0029.c
+                 $(obl) obj\cga_l029.obj
+
+obj\cga_l030.obj   :        win_0030.c
+                 $(cml) win_0030.c
+                 $(obl) obj\cga_l030.obj
+
+obj\cga_l031.obj : win_l031.asm
+                   $(asm) WIN_L031.ASM,obj\cga_l031;
+
+obj\cga_l032.obj : win_l032.asm
+                   $(asm) WIN_L032.ASM,obj\cga_l032;
+
+obj\cga_l033.obj : win_l033.asm
+                   $(asm) WIN_L033.ASM,obj\cga_l033;
+
+obj\cga_l034.obj : win_L034.asm
+                   $(asm) WIN_L034.ASM,obj\cga_l034;
+
+obj\cga_l035.obj : win_l035.asm
+                   $(asm) WIN_L035.ASM,obj\cga_l035;
+
+obj\cga_l036.obj : win_l036.asm
+                   $(asm) WIN_L036.ASM,obj\cga_l036;
+
+obj\cga_l037.obj : win_l037.asm
+                   $(asm) WIN_L037.ASM,obj\cga_l037;
+
+obj\cga_l038.obj : win_l038.asm
+                   $(asm) WIN_L038.ASM,obj\cga_l038;
+
+obj\cga_l039.obj : win_l039.asm
+                   $(asm) WIN_L039.ASM,obj\cga_l039;
+
+obj\cga_l040.obj : win_l040.asm
+                   $(asm) WIN_L040.ASM,obj\cga_l040;
+
+obj\cga_l041.obj   :        win_0041.c
+                 $(cml) win_0041.c
+                 $(obl) obj\cga_l041.obj
+
+obj\cga_l043.obj : win_l043.asm
+                   $(asm) WIN_L043.ASM,obj\cga_l043;
+
+obj\cga_l044.obj : win_0044.c
+  $(cml) win_0044.c
+  $(obl) obj\cga_l044.obj
+
+obj\cga_l045.obj : win_0045.c
+  $(cml) /DW_MODEL_CGA win_0045.c
+  $(obl) obj\cga_l045.obj
+
+
+# SMALL Modell ---------------------------------------------------------------
+obj\cga_s001.obj : win_0001.c
+                   $(cms) -DW_MODEL_CGA win_0001.c
+                   objdec -w -d -m0 obj\cga_s001.obj
+
+obj\bioss001.obj : win_0001.c
+                   $(cms) -DW_MODEL_BIOS win_0001.c
+                   objdec -w -d -m0 obj\bioss001.obj
+
+obj\cga_s004.obj   :        win_0004.c
+                 $(cms) win_0004.c
+
+obj\cga_s008.obj   :        win_0008.c
+                 $(cms) win_0008.c
+
+obj\cga_s009.obj   :        win_0009.c
+                 $(cms) win_0009.c
+
+obj\cga_s010.obj   :        win_0010.c
+                 $(cms) win_0010.c
+
+obj\cga_s011.obj   :        win_0011.c
+                 $(cms) win_0011.c
+
+obj\cga_s012.obj   :        win_0012.c
+                 $(cms) win_0012.c
+
+obj\cga_s013.obj   :        win_0013.c
+                 $(cms) win_0013.c
+
+obj\cga_s014.obj   :        win_0014.c
+                 $(cms) win_0014.c
+
+obj\cga_s015.obj   :        win_0015.c
+                 $(cms) win_0015.c
+
+obj\cga_s016.obj   :        win_0016.c
+                 $(cms) win_0016.c
+
+obj\cga_s018.obj   :        win_0018.c
+                 $(cms) win_0018.c
+
+obj\cga_s019.obj   :        win_0019.c
+                 $(cms) win_0019.c
+
+obj\cga_s020.obj   :        win_0020.c
+                 $(cms) win_0020.c
+
+obj\cga_s021.obj   :        win_0021.c
+                 $(cms) win_0021.c
+
+obj\cga_s022.obj   :        win_0022.c
+                 $(cms) win_0022.c
+
+obj\cga_s023.obj   :        win_0023.c
+                 $(cms) win_0023.c
+
+obj\cga_s024.obj   :        win_0024.c
+                 $(cms) win_0024.c
+
+obj\cga_s025.obj   :        win_0025.c
+                 $(cms) win_0025.c
+
+obj\cga_s026.obj   :        win_0026.c
+                 $(cms) win_0026.c
+
+obj\cga_s027.obj   :        win_0027.c
+                 $(cms) win_0027.c
+
+obj\cga_s028.obj   :        win_0028.c
+                 $(cms) win_0028.c
+
+obj\cga_s029.obj   :        win_0029.c
+                 $(cms) win_0029.c
+
+obj\cga_s030.obj   :        win_0030.c
+                 $(cms) win_0030.c
+
+obj\cga_s031.obj   :        win_s031.asm
+                 $(asm) WIN_S031.ASM,obj\cga_s031.obj;
+
+obj\cga_s032.obj   :        win_s032.asm
+                 $(asm) WIN_S032.ASM,obj\cga_s032.obj;
+
+obj\cga_s033.obj   :        win_s033.asm
+                 $(asm) WIN_S033.ASM,obj\cga_s033.obj;
+
+obj\cga_s034.obj   :        win_0034.c
+                 $(cms) win_0034.c
+
+obj\cga_s035.obj   :        win_0035.c
+                 $(cms) win_0035.c
+
+obj\cga_s041.obj   :        win_0041.c
+                 $(cms) win_0041.c
+
+obj\cga_s043.obj   :        win_s043.asm
+                 $(asm) WIN_S043.ASM,obj\cga_s043.obj;

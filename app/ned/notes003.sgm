@@ -1,0 +1,118 @@
+
+written:       1997-04-14
+latest update: 1997-07-27 10:16:35
+
+-&gt; <hyx.l tdc="hyx.l" tdp="8" mark="INTERNAL">INTERNAL, <hyx.l tdc="hyx.l" tdp="5" mark="C-API">C-API, <hyx.l tdc="hyx.l" tdp="4" mark="BUGS">BUGS
+
+"<hyx.l file="%ned/proto.h" tdc="pgm.incl" tdp=7>proto.h"
+This file describes the line callback system as it evolves.
+
+
+** <hyx.l tdc="mark" tdp="8" name="INTERNAL">INTERNAL **
+line callbacks INTERNAL
+  struct <hyx.l file="%ned/ed.h" mark="LINE_CALLBACK" tdc="pgm.struct" tdp=13>LINE_CALLBACK *lcb;
+#define LCB_edit        0x0001  /* insert/delete in line at column          */
+#define LCB_delete      0x0002  /* line was deleted                         */
+#define LCB_line_split  0x0004  /* line was splitted at column              */
+#define LCB_line_join   0x0008  /* line was joined at column                */
+#define LCB_chg_wdw     0x0010  /* window was changed                       */
+
+trigger functions:
+  int <hyx.l file="%ned/03/ned0341a.c" tdc="hyx.l" tdp=23 mark="ned_line_trigger_change">ned_line_trigger_change (...)
+  int <hyx.l file="%ned/03/ned0341b.c" tdc="hyx.l" tdp=27 mark="ned_line_trigger_split_join">ned_line_trigger_split_join (...)
+  int <hyx.l file="%ned/03/ned0341c.c" tdc="hyx.l" tdp=23 mark="ned_line_trigger_delete">ned_line_trigger_delete (struct <hyx.l file="%ned/ed.h" mark="LINE" tdc="pgm.struct" tdp=4>LINE *lp, int destroy);
+
+** <hyx.l tdc="mark" tdp="5" name="C-API">C-API **
+registration functions
+  <hyx.l file="%ned/03/ned0342a.c" tdc="hyx.l" tdp=15 mark="ned_line_reg_cb">ned_line_reg_cb (b-&gt;ptr= aw-&gt;WC_act, <hyx.l file="%ned/02/ned0260.c" tdc="hyx.l" tdp=19 mark="ned_marker_callback">ned_marker_callback, LCB_edit, b);
+  <hyx.l file="%ned/03/ned0342b.c" tdc="hyx.l" tdp=15 mark="ned_line_rel_cb">ned_line_rel_cb (b-&gt;ptr= aw-&gt;WC_act, <hyx.l file="%ned/02/ned0260.c" tdc="hyx.l" tdp=19 mark="ned_marker_callback">ned_marker_callback, LCB_edit, b);
+
+  convenience functions to register and release callbacks for
+  markers on lines
+  ned_marker_reg_cb(line, marker)
+  ned_marker_rel_cb(line, marker)
+
+obsolete:
+  ned_shift_markers ()
+  ned_change_markers ()
+
+used in
+  <hyx.l file="%ned/07/ned0701.c" tdc="hyx.l" tdp="15" mark="ned_set_marker2" "ned_set_marker2">ned_set_marker2 ()   [via ned_get_marker]
+  <hyx.l file="%ned/05/ned0515.c" mark="ned_split" tdc="pgm.func" tdp=9>ned_split ()   T2D: splitting with a block, block flags update
+  <hyx.l file="%ned/05/ned0516.c" mark="ned_join" tdc="pgm.func" tdp=8>ned_join ()
+  <hyx.l file="%ned/01/ned0138.c" mark="ned_lines_free" tdc="pgm.func" tdp=14>ned_lines_free ()
+
+** <hyx.l tdc="mark" tdp="8" name="EXAMPLES">EXAMPLES **
+callback functions:
+  void <hyx.l file="%ned/02/ned0260.c" tdc="hyx.l" tdp=19 mark="ned_marker_callback">ned_marker_callback ()
+
+** <hyx.l tdc="mark" tdp="12" name="DESIGN NOTES">DESIGN NOTES **
+Event types
+V1: register separate functions for each event type  
+V2: event handler has to identify the event type
+
+current solution: trigger selects correct function on event mask
+but the event handler implements all functions and selects
+event anyway.
+
+V2: Split and Join
++ b_first, b_last line makrers
++ set_block_bflags ()
+=&gt; callback wird fuer b_first, b_last registriert
+
+b_first, b_last ) registrieren
+b_beg, b_end    )
+
+wo b_beg, b_end gesetzt wird reg_cb und rel_cb einbauen
+
+** <hyx.l tdc="mark" tdp="4" name="BUGS">BUGS **
+<hyx.l file="%ned/02/ned0260c.c" mark="ned_set_marker" tdc="pgm.func" tdp=14>ned_set_marker ()
+   -&gt; <hyx.l file="%ned/07/ned0701.c" mark="ned_set_marker2" tdc="pgm.func" tdp=15>ned_set_marker2 ()
+      -&gt; <hyx.l file="%ned/03/ned0342b.c" mark="ned_line_rel_cb" tdc="pgm.func" tdp=15>ned_line_rel_cb =&gt; crash
+
+** <hyx.l tdc="mark" tdp="8" name="PROBLEMS">PROBLEMS **
+In the call back function of a Split and Join it is quite possible
+that the pointer changes and thus a registered callback must
+be unregistered before the change takes place and registered
+again afterwards!
+
+Markers b_beg, b_end, b_first, b_last are handled slightly differently
+
+Transfering a group of lines into a buffer (e.g. line store).
+the pointer to the window is then invalid!!!!
+
+<hyx.l file="%ned/07/ned0724a.c" mark="ned_blk_isolate2" tdc="pgm.func" tdp=16>ned_blk_isolate2 (): results in a loop during the split/join operation
+for block moves in standard mode
+
+solution attempt 1: 1997-06-23 20:44:32
+  unregister both markers and re-register after isolation
+  <hyx.l file="%ned/07/ned0728.c" mark="ned_blk_move" tdc="pgm.func" tdp=12>ned_blk_move
+
+** <hyx.l tdc="mark" tdp="13" name="TCL Interface">TCL Interface **
++ registration function
+  =&gt; create callback structure
+     - interp
+     - Tcl function name
+     - client_data
+  reg_line_callback line_callback CD
+  proc line_callback {event LINE_ID CD op1 op2} {...}
+
++ unreg. function
+  =&gt; destroy callback structure
+
+
+** <hyx.l tdc="mark" tdp="10" name="MORE NOTES">MORE NOTES **
+ned_reset_markers wird vermutlich nicht mehr benoetigt, das
+ueber ned_lines_free ebenfalls die Marker aufgehoben werden.
+
+proto.h          308:             int <hyx.l file="proto.h" ln=308 cn=16 tdc=79 tdp=17>ned_reset_markers (struct WINDOWCTRL *w);
+02/ned0260.c     221: int <hyx.l file="02/ned0260.c" ln=221 cn=4 tdc=79 tdp=17>ned_reset_markers (struct WINDOWCTRL *w)
+02/ned0211b.c     30:   <hyx.l file="02/ned0211b.c" ln=30 cn=2 tdc=79 tdp=17>ned_reset_markers (wc);  /* reset markers which are in the current window */
+03/ned0333.c      36:   <hyx.l file="03/ned0333.c" ln=36 cn=2 tdc=79 tdp=17>ned_reset_markers (wc);
+04/ned0412.c      30:   <hyx.l file="04/ned0412.c" ln=30 cn=2 tdc=79 tdp=17>ned_reset_markers (wc);
+
+proto.h          238: /* 0211b */ int <hyx.l file="proto.h" ln=238 cn=16 tdc=79 tdp=18>ned_w_close_window (register struct WINDOWCTRL *wc);
+02/ned0211b.c     24: int <hyx.l file="02/ned0211b.c" ln=24 cn=4 tdc=79 tdp=18>ned_w_close_window (register struct WINDOWCTRL *wc)
+02/ned0211.c      33:   if (oper_level &gt;= LEV_LINK || <hyx.l file="02/ned0211.c" ln=33 cn=32 tdc=79 tdp=18>ned_w_close_window (aw)) return;
+08/ned0845.c     106:       if (wc != (struct WINDOWCTRL *) 0) <hyx.l file="08/ned0845.c" ln=106 cn=41 tdc=79 tdp=18>ned_w_close_window (wc);
+

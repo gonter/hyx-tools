@@ -1,0 +1,26 @@
+#
+# FILE %ned/11/(dirinf).fm
+#
+# latest update: 2000-08-24 14:50:34
+# $Id: (dirinf).fm,v 1.2 2000/08/24 15:10:20 gonter Exp $
+#
+
+Makefile        | current makefile
+make-dos        | MSDOS makefile
+
+ned1101.c       | Find + Find/Switch: p_fr_next ()
+ned1102.c       | Find + Find/Switch: p_find (); etc...
+ned1103.c       | Find + Find/Switch: p_replace ()
+ned1104.c       | Find + Find/Switch: ned_ws_find_replace_dialog ()
+ned1105.c       | Find + Find/Switch: ned_str_match ()
+ned1106.c       | Find Bracket: q_find_bracket (int mode)
+ned1107.c       | Find Matching Bracket
+ned1108.c       | Find Higher Bracket
+ned1109.c       | Find Lower Bracket
+ned1110.c       | ned_wc_find_replace
+ned1111.c       | ned_all_lines (...); display all lines containing x
+ned1112.c       | ned_lp_find_str (...);
+ned1112v.c      | ned_vi_wc_find_str (...);
+ned1112w.c      | ned_ws_aw_find_str (...);
+ned1113.c       | ned_jmp_pattern (wc, char *pattern)
+*               |

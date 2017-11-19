@@ -1,0 +1,56 @@
+#
+# FILE %ds/hytxt/(dirinf).fm
+#
+# written:       1996-01-01
+# latest update: 1996-10-13 12:58:57
+# $Id: (dirinf).fm,v 1.2 2002/01/27 23:01:39 gonter Exp $
+#
+
+# see also: <gg/hytxt.h> and hyx
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+hytxt001.c      HyperText: Frame Scanner: ein ganzes File
+hytxt002.c      HyperText: Frame Scanner: ein Eintrag
+hytxt003.c      HyperText: Purge
+hytxt003.c      *** obsolete *** ??
+hytxt004.c      HyperText: Sort Frame List
+hytxt005.c      HyperText: Free Frame Struktur
+hytxt006.c      HyperText: hide earlier
+hytxt007.c      HyperText: Framestruktur -> Directory
+hytxt008.c      int hytxt_report_frame (..., struct HYTXT_FRAME *fd, ...)
+hytxt009.c      int hyx_purge2 (char *fni, char *fni_tmp, char *fnh, char *fnh_tmp)
+
+hytxt010.c      hyx_sequencer (FILE *fo, ...)
+hytxt011.c      long find_frame_lut (FILE *lut, char *fr_name);
+hytxt012.c      long find_frame_xfn (FILE *lut, char *fr_name);
+hytxt013.c      int deref_index (...);
+hytxt014.c      long hyx_write_stamp (FILE *fo, char *sig)
+hytxt015.c      int sgml_write_data (FILE *fo, ...)
+hytxt016.c      int hyx_extract (FILE *fo, ...)
+hytxt017.c      long hyx_get_last_index (char *fnm)
+hytxt018.c      long hyx_get_random_index (FILE *fi_idx)
+hytxt019.c      int hyx_update (char *fn_hyx, char *fn_idx, ...)
+hytxt020.c      struct FILE_SEGMENT *hyx_make_segment (...)
+hytxt021.c      int hyx_destroy_segments (struct FILE_SEGMENT *fs)
+hytxt022.c      long hyx_get_index (FILE *fi_idx, FILE *fi_lut, ...)
+hytxt023.c      int hytxt_scan_file (FILE *fo, char *fn)
+hytxt024.c      int hyx_seq (FILE *fo, ...);
+hytxt025.c      int hyx_purge (char *hyx_in, int verbose_level)
+hytxt026.c      long hyx_seek_by_name (...);
+hytxt027.c      int hyx_print_segment (FILE *fo, struct FILE_SEGMENT *fs);
+hytxt028.c      int hyx_setup_segment (...);
+hytxt029.c      int hyx_thr (...)
+hytxt030.c      int hyx_threader (...)
+hytxt031.c      int hyx_thr_extract (...)
+hytxt032.c      void hyx_thr_process (...)
+hytxt033.c      int hyx_update_index (...)
+hytxt034.c      int hyx_setup_delete_segment (...)
+hytxt035.c      long hyx_seek_by_index (FILE *fi_hyx, FILE *fi_idx, long idx);
+hytxt036.c      int hyx_setup_stdin_segment (...)
+hytxt037.c      int hyx_dump_frame_list (FILE *fi_lut, FILE *fi_xfn)
+
+hytxt038.c      DONT USE: long find_frame_lut_or_xfn (...)
+
+

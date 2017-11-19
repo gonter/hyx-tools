@@ -1,0 +1,199 @@
+#
+#  FILE /usr/window/bios/MAKEFILE
+#
+#  1989 08 16: aus WIN0.SAR Åbernommen
+#              Revision
+#
+
+asm=masm /Ml
+cml=cl -Os -AL /Fo$* /c
+cms=cl -Os -AS /Fo$* /c
+obl=objdec -w -d -m0 -sl 2 WINDOW_TEXT 
+
+window : large.window small.window
+
+large.window   : obj\biosl004.obj obj\biosl008.obj !
+                 obj\biosl009.obj obj\biosl010.obj obj\biosl011.obj obj\biosl012.obj !
+                 obj\biosl013.obj obj\biosl014.obj obj\biosl015.obj obj\biosl016.obj !
+                 obj\biosl018.obj obj\biosl019.obj obj\biosl020.obj !
+                 obj\biosl021.obj obj\biosl022.obj obj\biosl023.obj obj\biosl024.obj !
+                 obj\biosl025.obj              obj\biosl027.obj obj\biosl028.obj !
+                 obj\biosl029.obj obj\biosl030.obj obj\biosl042.obj !
+  obj\biosl050.obj
+#                llink -n0 -v -lC:\usr\sbr\lsbr.lib -dbiosl.mod
+
+small.window   : obj\bioss004.obj obj\bioss008.obj !
+                 obj\bioss009.obj obj\bioss010.obj obj\bioss011.obj obj\bioss012.obj !
+                 obj\bioss013.obj obj\bioss014.obj obj\bioss015.obj obj\bioss016.obj !
+                 obj\bioss018.obj obj\bioss019.obj obj\bioss020.obj !
+                 obj\bioss021.obj obj\bioss022.obj obj\bioss023.obj obj\bioss024.obj !
+                 obj\bioss025.obj              obj\bioss027.obj obj\bioss028.obj !
+                 obj\bioss029.obj obj\bioss030.obj obj\bioss042.obj !
+   obj\bioss050.obj
+#                llink -n0 -v -lC:\usr\sbr\ssbr.lib -dbioss.mod
+
+
+# LARGE Modell ---------------------------------------------------------------
+obj\biosl004.obj   :        win_0004.c
+                 $(cml) win_0004.c
+                 $(obl) obj\biosl004.obj
+
+obj\biosl008.obj   :        win_0008.c
+                 $(cml) win_0008.c
+                 $(obl) obj\biosl008.obj
+
+obj\biosl009.obj   :        win_0009.c
+                 $(cml) win_0009.c
+                 $(obl) obj\biosl009.obj
+
+obj\biosl010.obj   :        win_0010.c
+                 $(cml) win_0010.c
+                 $(obl) obj\biosl010.obj
+
+obj\biosl011.obj   :        win_0011.c
+                 $(cml) win_0011.c
+                 $(obl) obj\biosl011.obj
+
+obj\biosl012.obj : win_l012.asm
+                   $(asm) WIN_L012.ASM,obj\biosl012.obj;
+
+obj\biosl013.obj   :        win_l013.asm
+                 $(asm) WIN_L013.ASM,obj\biosl013.obj;
+
+obj\biosl014.obj   :        win_l014.asm
+                 $(asm) WIN_L014.ASM,obj\biosl014.obj;
+
+obj\biosl015.obj   :        win_0015.c
+                 $(cml) win_0015.c
+                 $(obl) obj\biosl015.obj
+
+obj\biosl016.obj   :        win_0016.c
+                 $(cml) win_0016.c
+                 $(obl) obj\biosl016.obj
+
+obj\biosl018.obj   :        win_0018.c
+                 $(cml) win_0018.c
+                 $(obl) obj\biosl018.obj
+
+obj\biosl019.obj   :        win_0019.c
+                 $(cml) win_0019.c
+                 $(obl) obj\biosl019.obj
+
+obj\biosl020.obj   :        win_0020.c
+                 $(cml) win_0020.c
+                 $(obl) obj\biosl020.obj
+
+obj\biosl021.obj : win_l021.asm
+                 $(asm) WIN_L021.ASM,obj\biosl021.obj;
+
+obj\biosl022.obj : win_l022.asm
+                 $(asm) WIN_L022.ASM,obj\biosl022.obj;
+
+obj\biosl023.obj   :        win_0023.c
+                 $(cml) win_0023.c
+                 $(obl) obj\biosl023.obj
+
+obj\biosl024.obj   :        win_l024.asm
+                 $(asm) WIN_L024.ASM,obj\biosl024.obj;
+
+obj\biosl025.obj   :        win_l025.asm
+                 $(asm) WIN_L025.ASM,obj\biosl025.obj;
+
+# obj\biosl027.obj : win_0027.c
+#                    $(cml) win_0027.c
+#                    $(obl) obj\biosl027.obj
+
+obj\biosl027.obj : win_l027.asm
+                   $(asm) WIN_L027.ASM,obj\biosl027.obj;
+
+obj\biosl028.obj : win_0028.c
+                   $(cml) win_0028.c
+                   $(obl) obj\biosl028.obj
+
+obj\biosl029.obj   :        win_0029.c
+                 $(cml) win_0029.c
+                 $(obl) obj\biosl029.obj
+
+obj\biosl030.obj : win_0030.c
+  $(cml) win_0030.c
+  $(obl) obj\biosl030.obj
+
+obj\biosl042.obj : win_l042.asm
+                   $(asm) WIN_L042.ASM,obj\biosl042.obj;
+
+obj\biosl050.obj : win_0050.c
+  $(cml) win_0050.c
+  $(obl) obj\biosl050.obj
+
+# SMALL Modell ---------------------------------------------------------------
+obj\bioss004.obj   :        win_0004.c
+                 $(cms) win_0004.c
+
+obj\bioss008.obj   :        win_0008.c
+                 $(cms) win_0008.c
+
+obj\bioss009.obj   :        win_0009.c
+                 $(cms) win_0009.c
+
+obj\bioss010.obj   :        win_0010.c
+                 $(cms) win_0010.c
+
+obj\bioss011.obj   :        win_0011.c
+                 $(cms) win_0011.c
+
+obj\bioss012.obj   :        win_0012.c
+                 $(cms) win_0012.c
+
+obj\bioss013.obj   :        win_0013.c
+                 $(cms) win_0013.c
+
+obj\bioss014.obj   :        win_0014.c
+                 $(cms) win_0014.c
+
+obj\bioss015.obj   :        win_0015.c
+                 $(cms) win_0015.c
+
+obj\bioss016.obj   :        win_0016.c
+                 $(cms) win_0016.c
+
+obj\bioss018.obj   :        win_0018.c
+                 $(cms) win_0018.c
+
+obj\bioss019.obj   :        win_0019.c
+                 $(cms) win_0019.c
+
+obj\bioss020.obj   :        win_0020.c
+                 $(cms) win_0020.c
+
+obj\bioss021.obj   :        win_0021.c
+                 $(cms) win_0021.c
+
+obj\bioss022.obj   :        win_0022.c
+                 $(cms) win_0022.c
+
+obj\bioss023.obj   :        win_0023.c
+                 $(cms) win_0023.c
+
+obj\bioss024.obj   :        win_0024.c
+                 $(cms) win_0024.c
+
+obj\bioss025.obj   :        win_0025.c
+                 $(cms) win_0025.c
+
+obj\bioss027.obj   :        win_0027.c
+                 $(cms) win_0027.c
+
+obj\bioss028.obj   :        win_0028.c
+                 $(cms) win_0028.c
+
+obj\bioss029.obj   :        win_0029.c
+                 $(cms) win_0029.c
+
+obj\bioss030.obj   :        win_0030.c
+                 $(cms) win_0030.c
+
+obj\bioss042.obj : win_0042.c
+  $(cms) win_0042.c
+
+obj\bioss050.obj : win_0050.c
+  $(cms) win_0050.c

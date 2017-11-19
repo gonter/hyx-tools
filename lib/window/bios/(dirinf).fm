@@ -1,0 +1,38 @@
+#
+# FILE ~/usr/window/bios/(dirinf).fm
+#
+# latest update: 1994-08-20
+#
+(DIRINF).FM     WINDOW System Library Funktionen; Model BIOS
+Makefile     <<<
+win_0001.c   void bios_init ()
+win_0004.c   void bios_reset ()
+win_0008.c   void bios_selpage (p)
+win_0009.c   void bios_cursoroff ()
+win_0010.c   void bios_cursoron ()
+win_0011.c   void bios_border (col)
+win_0012.c   void bios_setchar (p, x, y, a, c)
+win_0013.c   void bios_setnchar (p, x, y, a, c, n)
+win_0014.c   int bios_getchar (p, x, y)
+win_0015.c   void bios_setscreen (att)
+win_0016.c   void bios_cls ()
+win_0018.c   void bios_setarea (p, ax, ay, bx, by, att)
+win_0019.c   bios_scrollup (w, cnt)
+win_0020.c   bios_scrolldown (w, cnt)
+win_0021.c   bios_scrblk_up (ax, ay, bx, by, attr, cnt)
+win_0022.c   bios_scrblk_down (ax, ay, bx, by, attr, cnt)
+win_0023.c   void bios_setcup (p, x, y)
+win_0024.c   int bios_wr_dot (x, y, col)
+win_0025.c   int bios_rd_dot(x,y)  /* liest Punkt auf (x,y) mit Farbe col */
+win_0027.c   int bios_set_mode (mode)             /* setzt Bildschirm Mode auf mode  */
+win_0028.c   void bios_set_col (what, col)           /* setzt Hintergrundfarbe resp.     */
+win_0029.c   int bios_blit_save (puffer, page, ax, ay, bx, by)
+win_0030.c   int bios_blit_load (puffer, page, ax, ay, bx, by)
+win_0042.c   bios_getcup (int p, int *x, int *y);
+win_0050.c   void bios_cursorsize (int lower, int upper)
+win_L012.asm PUBLIC _bios_setchar
+win_L013.asm PUBLIC _bios_setnchar
+win_L014.asm PUBLIC _bios_getchar
+win_L024.asm PUBLIC _bios_wr_dot
+win_L025.asm PUBLIC _bios_rd_dot
+win_l042.asm PUBLIC _bios_get_cup

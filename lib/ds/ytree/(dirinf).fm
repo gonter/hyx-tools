@@ -1,0 +1,43 @@
+#
+# FILE %ds/ytree/(dirinf).fm
+#
+# include <gg/ytree.h>
+#
+# written:       1990-01-01
+# latest update: 1996-12-11 12:52:39
+#
+# ----------------------------------------------------------------------------
+(dirinf).fm     Library Funktionen: YTREE
+Makefile        active Makefile (DOS or Unix)
+make-ux         Makefile (Unix)
+make-dos        Makefile (MSDOS)
+
+# index tree handling
+yt_00001.c      ytree_alloc () neuen YTREE Knoten anlegen
+yt_00002.c      int ytree_free (struct YTREE *yt);
+yt_00003.c      ytree_insert_word () YTREE Struktur aufbauen
+yt_00004.c      ytree_lookup_word () Wort in YTREE Struktur suchen
+yt_00005.c      ytree_delete_word () Wort aus YTREE entfernen
+yt_00006.c      ytree_size () Groesse einer YTREE-(Sub)-Struktur berechnen
+yt_00007.c      ytree_print
+yt_00008.c      ytree_print_node
+yt_00009.c      ytree_dump () ytree im LUT-Format ausgeben
+yt_00010.c      int ytree_scan (lut, ytp);
+yt_00011.c      int ytree_full_scan (FILE *lut, struct YTREE **ytp, ...kill...);
+yt_00012.c      int ytree_process (struct YTREE *yt, YTREE_PROCESSOR *pr, void *cd)
+yt_00013.c      int ytree_operations (struct YTREE **ytp, ...)
+yt_00014.c      int ytree_debug (struct YTREE *yt)
+yt_00015.c      int ytree_dump_to_lut_file (char *name_lut, struct YTREE *yt)
+yt_00016.c      long ytree_set_value (struct YTREE **yt, unsigned char *w, long v)
+yt_00017.c      int ytree_increment_value (struct YTREE **ytp, ...)
+yt_00018.c      long ytree_get_value (struct YTREE *ytp, ...)
+yt_00019.c      struct YTREE *ytree_duplicate (struct YTREE *yt)
+yt_00020.c      int ytree_repack (struct YTREE **ytp)
+yt_00021.c      int ytree_track (struct YTREE *yt, YTREE_TRACKER *pr, void *cd)
+yt_00022.c      int ytree_process_info (struct YTREE *yt, YTREE_PROCESSOR *pr, void *cd)
+yt_00023.c      int ytree_track_info (struct YTREE *yt, YTREE_INFO_TRACKER *pr, void *cd)
+
+yt_00101.c      struct YTREE_CONTROL *ytree_new_control (char *name);
+yt_00102.c      int ytree_free_control (struct YTREE_CONTROL *yc);
+
+ytt

@@ -1,0 +1,42 @@
+#
+# FILE %ds/ggcrypt/(dirinf).fm
+#
+# written:       1995-12-29
+# latest update: 1997-10-09  4:29:05
+# $Id: (dirinf).fm,v 1.3 2007/12/02 11:58:07 gonter Exp $
+#
+
+# see also: <gg/url.h> and url
+(dirinf).fm     Contents
+Makefile        Unix version of Makefile
+
+ggcryp01.c      int cdecl ggcrypt_very_simple (char *fn, ...)
+ggcryp02.c      int cdecl gg_encrypt (char *fn, ...)
+ggcryp03.c      int cdecl gg_decrypt (char *fn, ...)
+ggcryp04.c      garbling code (was %usr/inc/garbling.inc)
+ggcryp05.c      int ggcrypt_block (...);
+ggcryp06.c      int ggcrypt_string (...);
+ggcryp07.c      char *sec_generate_key (char *principal, ...)
+ggcryp08.c      char *agettok_get_resource_password (char *file_name, ...)
+ggcryp09.c      char *agettok_get_challenge (char *password_file, ...)
+ggcryp10.c      char *sca_get_sigfile (char *username);
+ggcryp11.c      char *sca_get_signature (char *username, char *password);
+ggcryp12.c      int sca_check_signature (char *sca_sig_file, char *sca_signature);
+ggcryp13.c      int ggc_block_ecb (struct GG_CRYPT *ggc, ...);
+ggcryp13.c      int ggc_block_cfb (struct GG_CRYPT *ggc, ...);
+ggcryp14.c      int ggc_set_session_key (struct GG_CRYPT *ggc, ...);
+ggcryp15.c      int ggc_file_ecb (struct GG_CRYPT *ggc, ...);
+ggcryp15.c      int ggc_file_cfb (struct GG_CRYPT *ggc, ...);
+ggcryp16.c      int ggc_set_key (struct GG_CRYPT *ggc, ...);
+ggcryp17.c      int ggc_dispose_key (struct GG_CRYPT *ggc);
+ggcryp18.c      int ggc_dispose_block (char **cp, int size);
+ggcryp19.c      int ggc_dispose (struct GG_CRYPT *ggc);
+ggcryp20.c      int ggc_stream_encrypt (struct GG_CRYPT *ggc, ...);
+ggcryp21.c      int ggc_stream_2encrypt (struct GG_CRYPT *ggc, ...);
+ggcryp22.c      int ggc_stream_2decrypt (struct GG_CRYPT *ggc, ...);
+ggcryp23.c      int ggc_pad (*ggc, FILE *fo, long size);
+ggcryp24.c      int ggc_file_2enc (struct GG_CRYPT *ggc, ...);
+ggcryp25.c      int ggc_file_2dec (struct GG_CRYPT *ggc, ...);
+ggcryp26.c      int ggc_wr_tag_block (struct GG_CRYPT *ggc, ...);
+ggcryp27.c      int ggc_pad_md5 (*ggc, *md5, FILE *fo, long size);
+

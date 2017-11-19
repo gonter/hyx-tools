@@ -1,0 +1,30 @@
+
+Calendar Tools
+1996-08-05 09:30:00
+cal -s          ... create only specified frames
+
+cal -sYYYY      ... only year overview
+cal -sYYYY-MM   ... only month overview
+cal -sYYYY-MM-DD ... only day overview
+
+
+1996-08-05 09:35:00
+fr="$$calendar YYYY"  -&gt; calendar overview, alle Links in tdc=text
+
+Tools:
+[1] calendar overview erzeugen, wenn diese ev. noch nicht existiert
+[2] dynamic template um kalender Eintrag fuer Monat/Tag zu erzeugen
+[3] aendern der tdc=auf hyx.l, wenn ein Frame dazu existiert
+
+
+HYX Tools
+1996-09-11 08:52:00
+
+Cluster Diff (Cluster A + B):
+[1] Liste alle gleichnamigen Frames mit gleichem Inhalt
+[2] Liste von allen gleichnamigen Frames mit unterschiedlichem Inhalt
+[3] Liste von Frame, die in Cluster A, aber nicht in B vorkommen
+[4] Liste von Frame, die in Cluster B, aber nicht in A vorkommen
+
+
+

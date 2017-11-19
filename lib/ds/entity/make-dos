@@ -1,0 +1,22 @@
+#
+# FILE %ds/entity/makefile
+#
+# manipulation of entities
+#  
+# written:       1996-06-09
+# latest update: 1996-06-09 11:19:07
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  ent_0001.obj ent_0002.obj ent_0003.obj ent_0004.obj
+# ent_0005.obj ent_0006.obj ent_0007.obj ent_0008.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

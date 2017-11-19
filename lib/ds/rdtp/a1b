@@ -1,0 +1,16 @@
+<!ELEMENT Graphic - - CDATA >
+<!ATTLIST Graphic 
+                Entityref       ENTITY          #IMPLIED        
+                Fileref         CDATA           #IMPLIED 
+                Id              ID              #IMPLIED
+                SrcCredit       CDATA           #IMPLIED 
+>
+
+<!ELEMENT InlineGraphic - - CDATA >
+<!ATTLIST InlineGraphic 
+                Entityref       ENTITY          #IMPLIED        
+                Fileref         CDATA           #IMPLIED 
+                Id              ID              #IMPLIED
+                SrcCredit       CDATA           #IMPLIED 
+>
+

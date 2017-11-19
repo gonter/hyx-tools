@@ -1,0 +1,52 @@
+#
+# FILE %ds/hyxp/(dirinf).fm
+#
+# hyx parser subroutines
+#
+# written:       1995-03-19
+# latest update: 2001-02-18 17:31:16
+# $Id: (dirinf).fm,v 1.2 2001/02/19 00:27:52 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile   active Makefile
+make-ux    Makefile (Unix)
+make-c5    Makefile (MSDOS)
+
+# see also %lexicon/pt.c
+
+hyxp0001.c  struct HYX_PARSER_STATUS *hyx_parser_reset (void);
+hyxp0002.c  struct TEXT_ELEMENT *hyx_parse_char (...)
+hyxp0003.c  int hyx_parse2_char (struct HYX_PARSER_STATUS *hps, ...)
+hyxp0004.c  int hyx_parse1_file (FILE *fhyx,...)
+hyxp0005.c  int hyx_parse2_file (...)
+hyxp0006.c  int hyx_parse1_string (char *str,...)
+hyxp0007.c  int hyx_parse2_string (...)
+hyxp0008.c  int hyx_parse2_block (struct HYX_PARSER_STATUS *hps, ...)
+hyxp0009.c  struct TEXT_SEGMENT *hyx_mktx_segm (char *s,...)
+hyxp0010.c  struct TEXT_ELEMENT *hyx_mktx_elem (long lev);
+hyxp0011.c  struct TEXT_ELEMENT *hyx_mktx_elem_and_segm (char *str,
+hyxp0012.c  int hyx_frtx_elem_list (...)
+hyxp0013.c  int hyx_frtx_segm_list (...)
+hyxp0014.c  int hyx_strip_text_elem (struct TEXT_ELEMENT *t);
+hyxp0015.c  struct MARKUP *hyx_make_markup (void *start_tag,...)
+hyxp0016.c  int hyx_text_to_markup (...)
+hyxp0017.c  int hyx_copy_tx_segm_list (char *dest, int size,...)
+hyxp0018.c  struct TEXT_ELEMENT *hyx_append_tx_elem_list (...)
+hyxp0019.c  struct TEXT_ELEMENT **hyx_find_last_tx_elem_ptr (...)
+hyxp0020.c  long hyx_tx_segm_count_char (...)
+hyxp0021.c  struct TEXT_ELEMENT *hyx_parse_block (...)
+hyxp0022.c  struct TEXT_ELEMENT *hyx_parse_string (...)
+hyxp0023.c  int hyx_parse_hyx_frame (char *lexicon_file,...)
+hyxp0024.c  int hyx_parse_hyx_frame_file (FILE *fhyx, FILE *fidx,...)
+hyxp0025.c  int hyx_transfer_details (struct HYX_PARSER_STATUS *hps, tt)
+hyxp0026.c  int hyx_parser_add_char
+hyxp0027.c  int hyx_parser_finish
+hyxp0028.c  int hyx_parser_finish_segment
+hyxp0029.c  struct HYX_PARSER_CLASS *hyx_init_parser_class ()
+hyxp0030.c int hyx_read_tag_definition (struct HYX_PARSER_CLASS *hpc, char *fn)
+hyxp0031.c int hyx_process_tag_definition (struct HYX_PARSER_CLASS *hpc, char *line)
+hyxp0032.c struct TAG_DEFINITION *hyx_identify_tag (...)
+hyxp0033.c struct TAG_DEFINITION *hyx_make_tag_definition (...)
+hyxp0034.c struct TAG_DEFINITION *hyx_find_tag_definition (...)
+hyxp0035.c long hyx_get_tag_definition (...)
+

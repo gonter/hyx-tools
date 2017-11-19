@@ -1,0 +1,31 @@
+#
+# FILE %ned/03/make-dos
+#
+# GG's Night(mare) Editor System
+#
+# written:
+# latest update: 1997-07-27 11:20:01
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /Fo$@ /W3 -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED03_TEXT $@
+
+lib : !
+  ned0301.obj  ned0302.obj  ned0303.obj  ned0304.obj  ned0304b.obj !
+  ned0305.obj  ned0306.obj  ned0307.obj  ned0308.obj  !
+  ned0309.obj  ned0310.obj  ned0311.obj  ned0312.obj  !
+  ned0313.obj  ned0314.obj  ned0315.obj  ned0316.obj  !
+                            ned0319.obj  ned0320.obj  !
+  ned0321.obj  ned0322.obj  ned0323.obj  ned0324.obj  !
+  ned0325.obj               ned0327.obj  ned0328.obj  !
+  ned0329.obj  ned0330.obj  ned0331.obj  ned0332.obj  ned0332b.obj !
+  ned0333.obj  ned0333b.obj ned0333c.obj ned0333d.obj !
+  ned0333e.obj ned0334.obj  ned0334b.obj ned0335.obj  !
+  ned0341a.obj ned0341b.obj ned0341c.obj ned0342a.obj ned0342b.obj !
+  ned0342c.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

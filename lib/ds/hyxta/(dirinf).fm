@@ -1,0 +1,30 @@
+#
+# FILE %ds/hyxta/(dirinf).fm
+#
+# written:       1995-03-30
+# latest update: 1999-11-28 13:29:39
+#
+# ----------------------------------------------------------------------------
+Makefile   active Makefile
+make-ux    Makefile (Unix)
+make-dos   Makefile (MSDOS)
+
+hyxta001.c  int hyx_ta_parse_char (struct HYX_PARSER_STATUS *hps, ...)
+hyxta002.c  int hyx_ta_parse_flush (struct HYX_PARSER_STATUS *hps, ...)
+hyxta003.c  int hyx_ta_get_break_code (int last_cat_code, ...)
+hyxta004.c  long hyx_ta_get_cat_flags (int cat);
+hyxta004.c  int hyx_ta_set_cat_flags (int cat, long catf);
+hyxta005.c  long hyx_ta_parse_file (struct HYX_PARSER_STATUS *hps, ...)
+hyxta006.c  long hyx_ta_parse_stream (...)
+hyxta007.c  int hyx_ta_store_node (struct HYX_PARSER_STATUS *hps, ...)
+hyxta008.c  struct TAG_DEFINITION *hyx_ta_find_tag_definition (long cat_flags)
+
+
+# --- CLEANUP ---
+hyxta012.c  int hyx_ta_print_paragraph (FILE *fo, struct TA_TEXT *li, long ncnt)
+hyxta015.c  int hyx_ta_print_text_segments (FILE *fo, ...)
+hyxta020.c  int cdecl hyx_ta_flush_node_list (...)
+
+hyxta101.c static struct TA_OBJECT *finishup ()
+hyxta102.c struct TA_OBJECT *tao_mk_string (char *str, int size)
+hyxtax01.c int ta_transmit_node (...)

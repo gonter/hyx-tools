@@ -1,0 +1,27 @@
+#
+# FILE %ds/zip/makefile
+#
+# manipulation of zip files
+#  
+# written:       1995-12-25
+# latest update: 1995-12-26
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all : all.2 zs.exe
+
+all.2 : !
+  zip_0001.obj zip_0002.obj zip_0003.obj zip_0004.obj zip_0005.obj !
+  zip_0006.obj zip_0007.obj zip_0008.obj
+
+zs.exe : zs.obj
+  link zs.obj,$@,\dev\nul,$(lib);
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

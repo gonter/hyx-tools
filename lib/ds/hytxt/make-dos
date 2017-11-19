@@ -1,0 +1,29 @@
+#
+# FILE %ds/hytxt/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1996-01-01
+# latest update: 1997-11-01 10:47:00
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+lib_a1: hytxt001.obj hytxt002.obj hytxt003.obj hytxt004.obj !
+        hytxt005.obj hytxt006.obj hytxt007.obj hytxt008.obj !
+        hytxt009.obj hytxt010.obj hytxt011.obj hytxt012.obj !
+        hytxt013.obj hytxt014.obj hytxt015.obj hytxt016.obj !
+        hytxt017.obj hytxt018.obj hytxt019.obj hytxt020.obj !
+        hytxt021.obj hytxt022.obj hytxt023.obj hytxt024.obj !
+        hytxt025.obj hytxt026.obj hytxt027.obj hytxt028.obj !
+        hytxt029.obj hytxt030.obj hytxt031.obj hytxt032.obj !
+        hytxt033.obj hytxt034.obj hytxt035.obj hytxt036.obj !
+        hytxt037.obj hytxt038.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

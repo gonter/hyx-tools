@@ -1,0 +1,64 @@
+#
+# FILE %ds/ggcrypt/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1995-12-29
+# latest update: 1997-10-05  9:53:15
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.obj : !
+ ggcryp02.obj ggcryq02.obj ggcryr02.obj ggcryp04.obj !
+ ggcryp05.obj ggcryp06.obj ggcryp07.obj ggcryp08.obj !
+ ggcryp09.obj ggcryp10.obj ggcryp11.obj ggcryp12.obj !
+ ggcryp13.obj ggcryq13.obj ggcryp14.obj !
+ ggcryp15.obj ggcryq15.obj ggcryp16.obj !
+ ggcryp17.obj ggcryp18.obj ggcryp19.obj ggcryp20.obj ggcryq20.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@
+
+# simple encryption routines -------------------------------------------------
+ggcryp02.obj : ggcryp02.c
+  $(cml) -DMODE_ENCRYPT ggcryp02.c
+  $(obj) $@
+
+ggcryq02.obj : ggcryp02.c
+  $(cml) -DMODE_DECRYPT ggcryp02.c
+  $(obj) $@
+
+ggcryr02.obj : ggcryp02.c
+  $(cml) -DMODE_SIMPLE ggcryp02.c
+  $(obj) $@
+
+# ecb and cfb encryption routines --------------------------------------------
+ggcryp13.obj : ggcryp13.c
+  $(cml) -DMODE_ECB ggcryp13.c
+  $(obj) $@
+
+ggcryq13.obj : ggcryp13.c
+  $(cml) -DMODE_CFB ggcryp13.c
+  $(obj) $@
+
+ggcryp15.obj : ggcryp15.c
+  $(cml) -DMODE_ECB ggcryp15.c
+  $(obj) $@
+
+ggcryq15.obj : ggcryp15.c
+  $(cml) -DMODE_CFB ggcryp15.c
+  $(obj) $@
+
+ggcryp20.obj : ggcryp20.c
+  $(cml) -DMODE_ECB ggcryp20.c
+  $(obj) $@
+
+ggcryq20.obj : ggcryp20.c
+  $(cml) -DMODE_CFB ggcryp20.c
+  $(obj) $@

@@ -1,0 +1,38 @@
+#
+# FILE ~/usr/window/cga/(dirinf).fm
+#
+# latest update: 1994-08-20
+#
+(DIRINF).FM     WINDOW System Library Funktionen; Model CGA (direkt)
+Makefile     <<<
+# ----------------------------------------------------------------------------
+WIN_0001.C   void cga_init ()
+WIN_0004.C   void cga_reset ()
+WIN_0008.C   void cga_selpage (p)
+WIN_0012.C   void cga_setchar (p, x, y, a, c)
+WIN_L012.ASM void cga_setchar (int page, int x, int y, int attr, int ch);
+WIN_0013.C   void cga_setnchar (p, x, y, a, c, n)
+WIN_L013.ASM void cga_setnchar (int page, int x, int y, int attr, ch, count);
+WIN_0014.C   int  cga_getchar (p, x, y)
+WIN_L014.ASM int  cga_getchar (int page, int x, int y);
+WIN_0029.C   int  cga_blit_save (puffer, page, ax, ay, bx, by)
+WIN_0030.C   int  cga_blit_load (puffer, page, ax, ay, bx, by)
+WIN_L031.ASM int  _cga_get_mode (void);
+WIN_S031.ASM int  _cga_get_mode (void);
+WIN_L032.ASM int  cga_get_cols (void);
+WIN_S032.ASM int  cga_get_cols (void);
+WIN_L033.ASM int  cga_getpage (void);
+WIN_S033.ASM int  cga_getpage (void);
+WIN_0034.C   int  cga_scrblk_left  (page, ax, ay, bx, by, attr, cnt);
+WIN_L034.ASM int  cga_scrblk_left  (page, ax, ay, bx, by, attr, cnt);
+WIN_0035.C   int  cga_scrblk_right (page, ax, ay, bx, by, attr, cnt);
+WIN_L035.ASM int  cga_scrblk_right (page, ax, ay, bx, by, attr, cnt);
+WIN_L036.asm int  vga_setpalette (palette, red, green, blue);
+win_l037.asm int  vga_setpalette_block (start, count, block);
+WIN_L038.asm int  vga_getpalette (int palette, int *red, int *green, int *blue);
+win_l039.asm int  vga_getpalette_block (start, count, block);
+win_l040.asm int  vga_palette_block_grey (start, count);
+win_0041.c   void cga_cls_col (int col);
+win_?043.asm void cga_get_screen_max (void);
+win_0044.c   void cga_blit_line (int page, int ax, int ay, int cnt, char *line)
+win_0045.c   void vga_set_screen_mode (int mode)

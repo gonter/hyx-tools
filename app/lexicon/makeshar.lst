@@ -1,0 +1,147 @@
+#
+# File %lexicon/makeshar.lst (Contents)
+#
+# contents for shar file of the ~/usr/lexicon
+#
+# written:       1994-07-20
+# latest update: 1996-02-18 12:18:42
+#
+# ---------------------------------------------------------------------------
+a (dirinf).fm                   Files
+a make-ux                       Makefile
+a makefile                      makefile.c5
+a makeshar.lst                  Contents
+a /etc/lexicon.tag              lexicon.tags
+a http4lex.pl                   http4lex.pl
+#a /hyx-prv/lexicon/lexicon.hyx  lexicon.hyx
+#>echo "... but that's ok!"
+# regular files
+a dictadd.c                     dictadd.c
+a dictadd1.c                    dictadd1.c
+a dictadd2.c                    dictadd2.c
+a dictadd3.c                    dictadd3.c
+a dictadd4.c                    dictadd4.c
+a dictadd6.c                    dictadd6.c
+a dictadd8.c                    dictadd8.c
+a dictadd9.c                    dictadd9.c
+a dict0001.c                    dict0001.c
+a dict0002.c                    dict0002.c
+a dict0003.c                    dict0003.c
+a dict0004.c                    dict0004.c
+a dict0005.c                    dict0005.c
+a dict0006.c                    dict0006.c
+a dict0007.c                    dict0007.c
+a dict0008.c                    dict0008.c
+a dict0009.c                    dict0009.c
+a dict0010.c                    dict0010.c
+a dict0011.c                    dict0011.c
+a dict0012.c                    dict0012.c
+a dict0013.c                    dict0013.c
+a dict0014.c                    dict0014.c
+a dict0015.c                    dict0015.c
+a dict0016.c                    dict0016.c
+a dict0018.c                    dict0018.c
+a dictmod.c                     dictmod.c
+a lex.c                         lex.c
+a lex00001.c                    lex00001.c
+a lexpr001.c                    lexpr001.c
+a lexproc.h                     lexproc.h
+a lexut001.c                    lexut001.c
+a parse007.c                    parse007.c
+a parse008.c                    parse008.c
+a parse014.c                    parse014.c
+a parse016.c                    parse016.c
+a parse017.c                    parse017.c
+a parse019.c                    parse019.c
+a parse021.c                    parse021.c
+a parse022.c                    parse022.c
+# TA package
+a /usr/ta/ta.c                  atag.c
+a /usr/ta/ta012.c               ta012.c
+a /usr/ta/ta015.c               ta015.c
+a /usr/ta/ta020.c               ta020.c
+a /usr/ta/ta101.c               ta101.c
+a /usr/ta/ta102.c               ta102.c
+a /usr/ds/strings/str_0041.c    str_0041.c
+a /usr/ds/strings/str_0041.tbl  str_0041.tbl
+a pt.c                          pt.c
+a tst1.c                        tst1.c
+a tst2.c                        tst2.c
+# BBC package
+a bbc.c                         bbc.c
+a bbc01.c                       bbc01.c
+a bbc02.c                       bbc02.c
+a bbc03.c                       bbc03.c
+a bbc04.c                       bbc04.c
+a bbc05.c                       bbc05.c
+a bbc06.c                       bbc06.c
+a bbc07.c                       bbc07.c
+a bbc08.c                       bbc08.c
+a bbc09.c                       bbc09.c
+a bbc10.c                       bbc10.c
+a bbc11.c                       bbc11.c
+a bbc12.c                       bbc12.c
+a bbc13.c                       bbc13.c
+a bbc14.c                       bbc14.c
+a bbc15.c                       bbc15.c
+# headers
+>ln -fs ../gg
+>if [ ! -d contrib ]
+>then
+>   echo 'creating subdirectory contrib'
+>   mkdir contrib
+>fi
+a /c5/include/contrib/global.h  contrib/global.h
+a /c5/include/contrib/md5.h     contrib/md5.h
+a /c5/include/contrib/md5gg.h   contrib/md5gg.h
+>if [ ! -d _bak_ftr.ned ]
+>then
+>   echo 'creating subdirectory _bak_ftr.ned'
+>   mkdir _bak_ftr.ned
+>fi
+a _bak_ftr.ned/(dirinf).ftr     _bak_ftr.ned/'(dirinf)'.ftr
+a _bak_ftr.ned/dict0001.ftr     _bak_ftr.ned/dict0001.ftr
+a _bak_ftr.ned/dict0002.ftr     _bak_ftr.ned/dict0002.ftr
+a _bak_ftr.ned/dict0003.ftr     _bak_ftr.ned/dict0003.ftr
+a _bak_ftr.ned/dict0004.ftr     _bak_ftr.ned/dict0004.ftr
+a _bak_ftr.ned/dict0005.ftr     _bak_ftr.ned/dict0005.ftr
+a _bak_ftr.ned/dict0006.ftr     _bak_ftr.ned/dict0006.ftr
+a _bak_ftr.ned/dict0007.ftr     _bak_ftr.ned/dict0007.ftr
+a _bak_ftr.ned/dict0008.ftr     _bak_ftr.ned/dict0008.ftr
+a _bak_ftr.ned/dict0009.ftr     _bak_ftr.ned/dict0009.ftr
+a _bak_ftr.ned/dict0010.ftr     _bak_ftr.ned/dict0010.ftr
+a _bak_ftr.ned/dictadd.ftr      _bak_ftr.ned/dictadd.ftr
+a _bak_ftr.ned/dictadd1.ftr     _bak_ftr.ned/dictadd1.ftr
+a _bak_ftr.ned/dictadd2.ftr     _bak_ftr.ned/dictadd2.ftr
+a _bak_ftr.ned/dictadd4.ftr     _bak_ftr.ned/dictadd4.ftr
+a _bak_ftr.ned/dictadd6.ftr     _bak_ftr.ned/dictadd6.ftr
+a _bak_ftr.ned/dictadd8.ftr     _bak_ftr.ned/dictadd8.ftr
+a _bak_ftr.ned/dictadd9.ftr     _bak_ftr.ned/dictadd9.ftr
+a _bak_ftr.ned/dictmod.ftr      _bak_ftr.ned/dictmod.ftr
+a _bak_ftr.ned/http4lex.ftr     _bak_ftr.ned/http4lex.ftr
+a _bak_ftr.ned/lex.ftr          _bak_ftr.ned/lex.ftr
+a _bak_ftr.ned/lex00001.ftr     _bak_ftr.ned/lex00001.ftr
+a _bak_ftr.ned/lexfile.ftr      _bak_ftr.ned/lexfile.ftr
+a _bak_ftr.ned/lexicon.ftr      _bak_ftr.ned/lexicon.ftr
+a _bak_ftr.ned/lexpr001.ftr     _bak_ftr.ned/lexpr001.ftr
+a _bak_ftr.ned/lexproc.ftr      _bak_ftr.ned/lexproc.ftr
+a _bak_ftr.ned/lexut001.ftr     _bak_ftr.ned/lexut001.ftr
+a _bak_ftr.ned/makefile.ftr     _bak_ftr.ned/makefile.ftr
+a _bak_ftr.ned/makeshar.ftr     _bak_ftr.ned/makeshar.ftr
+a _bak_ftr.ned/parse007.ftr     _bak_ftr.ned/parse007.ftr
+a _bak_ftr.ned/parse008.ftr     _bak_ftr.ned/parse008.ftr
+a _bak_ftr.ned/parse014.ftr     _bak_ftr.ned/parse014.ftr
+a _bak_ftr.ned/parse016.ftr     _bak_ftr.ned/parse016.ftr
+a _bak_ftr.ned/parse017.ftr     _bak_ftr.ned/parse017.ftr
+a _bak_ftr.ned/parse019.ftr     _bak_ftr.ned/parse019.ftr
+a _bak_ftr.ned/parse021.ftr     _bak_ftr.ned/parse021.ftr
+a _bak_ftr.ned/parse022.ftr     _bak_ftr.ned/parse022.ftr
+a _bak_ftr.ned/pt.ftr           _bak_ftr.ned/pt.ftr
+a _bak_ftr.ned/test1.ftr        _bak_ftr.ned/test1.ftr
+a _bak_ftr.ned/tst1.ftr         _bak_ftr.ned/tst1.ftr
+a _bak_ftr.ned/tst2.ftr         _bak_ftr.ned/tst2.ftr
+a _bak_ftr.ned/bbc.ftr          _bak_ftr.ned/bbc.ftr
+a _bak_ftr.ned/bbc01.ftr        _bak_ftr.ned/bbc01.ftr
+a _bak_ftr.ned/bbc02.ftr        _bak_ftr.ned/bbc02.ftr
+a _bak_ftr.ned/bbc03.ftr        _bak_ftr.ned/bbc03.ftr
+a _bak_ftr.ned/bbc04.ftr        _bak_ftr.ned/bbc04.ftr

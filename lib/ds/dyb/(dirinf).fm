@@ -1,0 +1,23 @@
+#
+# FILE %ds/dyb/(dirinf).fm
+#
+# written:       1995-08-19
+# latest update: 1995-12-29
+#
+# ----------------------------------------------------------------------------
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+dyb_0001.c  struct DYB_SEGMENT *dyb_new_segment (void)
+dyb_0002.c  struct DYNAMIC_BLOCK *dyb_new_block (void)
+dyb_0003.c  int dyb_append_block (struct DYNAMIC_BLOCK *dyb, block, ...)
+dyb_0004.c  int dyb_append_string (struct DYNAMIC_BLOCK *dyb, string)
+dyb_0005.c  int dyb_destroy_block (struct DYNAMIC_BLOCK *dyb);
+dyb_0006.c  int dyb_reference (struct DYNAMIC_BLOCK *dyb);
+dyb_0007.c  long dyb_truncate (struct DYNAMIC_BLOCK *dyb, long size);
+dyb_0008.c  int dyb_encrypt_ecb (struct GG_CRYPT *ggc, struct DYNAMIC_BLOCK *dyb);
+dyb_0008.c  int dyb_encrypt_cfb (struct GG_CRYPT *ggc, struct DYNAMIC_BLOCK *dyb);
+dyb_0010.c  int dyb_write (int fd, struct DYNAMIC_BLOCK *dyb)
+dyb_0011.c  int dyb_append_blanks (struct DYNAMIC_BLOCK *dyb, long num_blanks);
+

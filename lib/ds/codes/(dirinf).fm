@@ -1,0 +1,60 @@
+#
+# File %ds/codes/(dirinf).fm
+#
+# code table handling facility
+#
+# written:       1993-01-01
+# latest update: 1996-02-24 11:08:03
+#
+# ----------------------------------------------------------------------------
+#
+# Utilities:
+# see also <gg/codes.h>
+(dirinf).fm     Contents
+makefile        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+codes.c         pre-process code table for various purposes
+codeconv.c      universal characterset converter
+codetbl.c       code table processor
+#
+# test programs
+xmerge.c        merge data files
+cst006.c        test cs006.c
+#
+makefile        DOS Makefile
+make-ux         Unix Makefile
+#
+# library functions:
+cs000.c         template
+cs001.c         struct CS_record *cs_parse_code_table (char *fn)
+cs002.c         long cs_print_records (FILE *fo, struct CS_record *recs)
+cs003.c         long cs_print_fields (FILE *fo, struct CS_field *fields)
+cs004.c         int cs_records2ytree (...)
+cs005.c         int cs_records2index (...)
+cs006.c         int cs_records2table (...)
+cs007.c         struct CS_field *cs_find_field (...)
+cs008.c         int cs_free_fields (...)
+cs009.c         int cs_count_attribute (...)
+cs010.c         int cs_print_statistics (FILE *fo)
+cs011.c         long cs_print_frames (FILE *fo, struct CS_record *recs)
+cs012.c         long cs_print_frame (FILE *fo, struct CS_field *fields)
+#
+cs101.c         char *get_sgml_entity (int ch)
+cs102.c         int find_sgml_entity (char *entity)
+cs103.c         struct CS_ET8 *cs_et8_create_table (long id, char *fnm, ...)
+cs104.c         int cs_et8_destroy_table (struct CS_ET8 *et8)
+cs105.c         char *cs_et8_code2entity (struct CS_ET8 *et8, int code)
+cs106.c         int cs_et8_entity2code (struct CS_ET8 *et8, char *entity)
+cs107.c         int cs_et8_fputc (struct CS_ET8 *et8, int ch, FILE *fo)
+cs108.c         int cs_et8_fputs (struct CS_ET8 *et8, char *str, FILE *fo)
+cs109.c         int cs_et8_ftransfer (struct CS_ET8 *et8, FILE *fi, FILE *fo)
+cs110.c         int cs_et8_encode (struct CS_ET8 *et8, char *fnm_in, char *fnm_out);
+#
+cs201.c         long cs_convert_stream (...)
+cs202.c         long cs_convert_file (...)
+cs203.c         long cs_convert_string (char *str, long *table)
+cs204.c         int cs_string_tlate (...)
+cs205.c         int cs_load_tlate_table (...)
+cs206.c         int cs_print_tlate_table (...)
+cs207.c         long cs_convert_block (char *str, long size, long *table)

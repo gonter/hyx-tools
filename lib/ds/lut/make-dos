@@ -1,0 +1,23 @@
+#
+# FILE %ds/lut/makefile
+#
+# lookup table handling
+#
+# written:       1989 03 29
+# latest update: 1996-10-13 12:46:33
+#
+# ============================================================================
+# add -DDEBUG for debugging
+cml=cl -AL /W3 /Fo$*.obj /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 NLKR_TEXT
+
+all.1: lut_0001.obj lut_0002.obj              lut_0004.obj !
+       lut_0005.obj              lut_0007.obj lut_0008.obj !
+       lut_0009.obj lut_0010.obj lut_0011.obj lut_0012.obj !
+       lut_0013.obj lut_0014.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

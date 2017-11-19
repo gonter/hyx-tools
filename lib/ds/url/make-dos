@@ -1,0 +1,22 @@
+#
+# FILE %ds/url/make-dos
+#
+# manipulation of URLs
+#  
+# written:       1995-11-26
+# latest update: 1996-11-04  0:19:51
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  url_0001.obj url_0002.obj url_0003.obj url_0004.obj url_0005.obj !
+  url_0006.obj url_0007.obj url_0008.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

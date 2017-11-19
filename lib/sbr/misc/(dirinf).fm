@@ -1,0 +1,209 @@
+#
+# FILE .../lib/sbr/misc/(dirinf).fm
+#
+# C-Libraries, see also %ds and ..
+#
+# written:       1988 09 03
+# latest update: 2000-08-28 12:26:17
+# $Id: (dirinf).fm,v 1.5 2002/05/02 06:48:29 gonter Exp $
+#
+# jump: tools
+#
+# ----------------------------------------------------------------------------
+#
+large           |        | Objektfiles LARGE Model
+small           |        | Objektfiles SMALL Model
+make-dos        |        | <<<< DOS Makefile
+Makefile        |        | <<<< Unix Makefile
+make-sbr.lst    |        | <<<< create Unix shar distribution package
+make-hdr.lst    |        | <<<< create distrib package for header files
+library.hyx     |        | Beschreibung der Funktionen aus der Library
+#
+ssbr.bak        |        | ==================================
+ssbr.lib        |        | SMALL Model Library
+ssbr.mod        |        | SMALL Model Steuerung
+ssbr.lst        |        | SMALL Model Cross Reference
+#
+lsbr.bak        |        | ==================================
+lsbr.lib        |        | LARGE Model Library
+lsbr.mod        |        | LARGE Model Steuerung
+lsbr.lst        |        | LARGE Model Cross Reference
+liblst.awk      |        | Angabe von Modulen in Libraries
+#
+ai.bak          |        | ==================================
+ai.lib          |        | LARGE Model: Advanced Information Library
+ai.lst          |        | LARGE Model: Advanced Information Library
+ai.crf          |        | LARGE Model: Advanced Information Library - Cross Reference
+#
+param001.c      |dpp     | String -> Long; OCT/DEC/HEX etc...
+param002.c      |dpp     | String -> Long; OCT/DEC/HEX etc...
+rndlong.c       |dpp     | long random_long ()
+alt_seed.c      |dpp     | void alt_seed ();
+convent1.c      |        | Convert Entities: convert a file in different modes
+convent2.c      |        | Convert Entities: convert PC chars and entities
+# convent3.c    |        | Convert Entities: convert MAC chars and entities
+convent4.c      |        | Convert Entities: convert typographic chars and entities
+convent5.c      |        | int cdecl fputc_entity (int ch, FILE *fo, int level);
+convent6.c      |        | int cdecl fputs_entity (char *s, FILE *fo, int level);
+#
+diagnose.c      |        | global variables for diagnose codes
+file2buf.c      |fileio  | read a file to a buffer
+file2low.c      |fileio  | int file_to_lower (char *fn, FILE *fo);
+file2low.c      |fileio  | int file_to_upper (char *fn, FILE *fo);
+fclosec.c       |fileio  | int fclose_or_what (FILE *f)
+fclosec.c       |fileio  | close a file if it was open
+fopenwng.c      |sbr     | FILE *fopen_wng (char *fnm, char *mode)
+flopen.c        |sbr     | lazy file open routines
+fparslin.c      |sbr     | Zeile parsen
+freadit.c       |sbr     | read a integer table
+freaditf.c      |sbr     | read a integer table from file stream
+freadlin.c      |sbr     | genau eine Zeile einlesen
+freadst.c       |sbr     | read a string table
+freadstf.c      |sbr     | read a string table from file stream
+fscanlin.c      |sbr     | Scannen von Zeilen mit Kommentar-Entfernung
+#
+ftrans01.c      |fileio  | Daten von einem File in ein anderes transferieren
+ftrans01.c      |fileio  | int ftransfer (FILE *fi, FILE *fo, long cpy_size)
+ftrans02.c      |fileio  | Daten von einem File in ein anderes transferieren
+ftrans02.c      |fileio  | long f2transfer (..)
+ftrans03.c      |fileio  | long f3transfer (...);
+ftrans04.c      |fileio  | long ftransfer_to_shar (FILE *fi, ...);
+ftrans05.c      |fileio  | long f5transfer_to_shar (FILE *fi, ...);
+ftrans06.c      |fileio  | long ftransfer_line (FILE *fi, ...);
+ftrans07.c      |fileio  | long cdecl ftransfer_crlf (FILE *fi, ...);
+ftrans08.c      |fileio  | long cdecl f2transfer_crlf (char *fi_nm, ...);
+ftrans09.c      |fileio  | long ftransfer_add_dot (FILE *fi, ...)
+ftrans10.c      |fileio  | long ftransfer_del_dot (FILE *fi, ...)
+#
+copyfil0.c      |fileio  | int copyfile (char *src, char *dst)
+copyfile.c      |fileio  | copy files (with options)
+trasheol.c      |fileio  | long trash_until_eol (FILE *fi)
+dsklscrd.asm    |        | disc sector read (large model)
+fnmqueue.c      |        | queue file names (or strings)
+                |        | *** OBSOLETE ***
+fmt.c           |        | Formatieren von Zahlen fuer Ausgabe
+fileio.c        |fileio  | Verarbeitung von Full-Text Daten Files
+masked_1.c      |        | Masken Editor / Version 1
+masked_t.c      |        | Masken Editor / Testmodul fr Version 1
+s2can.c         |        | Zeileneditor / vgl. \usr\g\ik*.c
+fsopen.c        |        | Netzwerk: File Shared Open
+ftopen.c        |        | file temporary open: create unique filename (stream)
+topen_l.asm     |        | file temporary open: create unique filename (low level)
+topen_l.asm     |        | Large Model
+topen_s.asm     |        | file temporary open: create unique filename (low level)
+topen_s.asm     |        | Samll Model
+identkey.c      |        | Key-Code aus der Bezeichnung des Keys ermitteln
+keynames.c      |        | Key Names aus dem Key Code ermitteln
+ebcasc.c        |        | Convert EBCDIC -> ASCII
+scan.c          |        | Einlesen eines Strings via field_edit
+# Test Module
+t.c             |        | Test Modul
+TT.C            |        | Test Modul
+t2dummy.c       |        | unix dummy functions
+#
+# Operationen mit Filenamen, Archiven und Directories ------------------------
+fnames.c        |        | DOS Function Call 4B ...
+fnames2.c       |        | File Find ueber FNAMES.C
+cdromfnm.c      |filename| int cdrom_file_name (char *fnm)
+curdisk.c       |filename| get or select the current dirve (MSDOS)
+dcd01.c         |filename| int dcd (char *dir_specified)
+envfilsr.c      |filename| search for file in path specified by environment
+envbinsr.c      |filename| char *env_bin_search (char *fn, char *env, ...);
+extcmp.c        |filename| int extcmp (char *s1, char *s2)
+extcmp.c        |filename| Zwei Files nach Extensions vergleichen
+fmtdta01.c      |filename| int fmt_dta_date (char *puffer, int fn_date)
+fmtdta02.c      |filename| int fmt_dta_time (char *puffer, int fn_time)
+fndvfile.c      |filename| int find_virtual_file (char *fnm, ...)
+fnmcpy.c        |filename| copy file name and set extension
+fnmcpy2.c       |filename| char *fnmcpy2 (char *fnm_old, char *ext)
+fnmcpy3.c       |filename| char *fnmcpy3 (char **dst, char *fnm_old, char *ext)
+fnmcpy4.c       |filename| char *fnmcpy4 (char *nm1, char *nm2, char *ext)
+fnmdef.c        |filename| int filename_definition (char *spec, ...)
+fnmdestn.c      |filename| char *get_destination_name (...)
+fnmdpath.c      |filename| char *duplicate_assumed_path (char *assumed_path);
+fnmreal.c       |filename| char *real_filename (char *spec)
+fnmrenm.c       |filename| char *filename_rename (from, to, mode)
+fnmsep1.c       |filename| isolate_path ()
+fnmsep2.c       |filename| char *remove_extension (char *s)
+fnmsep3.c       |filename| char *get_filename_from_path (char *s)
+fnmsep4.c       |filename| char *get_relative_path (char *p1, char *p2)
+fnmovwr.c       |filename| int dont_overwrite_file (char *s, int max);
+fnm_d2u.c       |filename| int cdecl filename_dos2unix (char *d, char *s);
+gennednm.c      |filename| generate ned names
+getcdir0.c      |filename| char *_get_current_directory (char *buffer)
+getcdir1.c      |filename| char *get_current_directory (char *buffer)
+getpwd_l.asm    |filename| Get Current Working Directory (Change Directory)
+getpwd_l.asm    |filename| Large Model
+getpwd_s.asm    |filename| Get Current Working Directory (Change Directory)
+getpwd_s.asm    |filename| Small Model
+logicfnm.c      |filename| translate logic filenames
+logicfpt.c      |filename| print logic filename translation table
+makepath.c      |filename| int make_path (char *path, int flags)
+modtbl.c        |filename| return module information
+rotfile.c       |filename| rotate a file
+setetcfn.c      |filename| set file name using environment variable ETC
+settmpfn.c      |filename| char *set_tmp_filename (char *dst, char *fnm);
+tellext.c       |filename| char *tell_extension (char *s)
+vshift01.c      |filename| vshift (char *fnm, long version, ...)
+wildcard.c      |filename| wildcard matching and recursive subdirs
+wildcrd2.c      |filename| int wcrd_wild_check (char *nm)
+wcrd_001.c      |filename| redesigned wildcard subsystem
+wcrd_002.c      |filename| redesigned wildcard subsystem
+wcrd_003.c      |filename| redesigned wildcard subsystem
+wcrd_004.c      |filename| redesigned wildcard subsystem
+wcrd_005.c      |filename| redesigned wildcard subsystem
+wcrd_006.c      |filename| redesigned wildcard subsystem
+wcrd_007.c      |filename| redesigned wildcard subsystem
+wcrd_008.c      |filename| redesigned wildcard subsystem
+wcrd_009.c      |filename| redesigned wildcard subsystem
+wcrd_d01.c      |filename| (DOS) redesigned wildcard subsytem
+wcrd_d02.c      |filename| (DOS) redesigned wildcard subsytem
+#
+archead.c       |archives| Einscannen von Fileheadern in ARC-Files
+arcfiles.c      |archives| Verarbeiten von ARC-Files (PKARC, ARC)
+zip_0001.c      |archives| Strings aus ZIP Files lesen
+zip_0001.c      |archives| int zip_read_string (FILE *fi, int string_length, char **string_ptr)
+zip_0002.c      |archives| Beginn des Central Directory End Blocks in ZIP Files aufsuchen
+zip_0002.c      |archives| long zip_find_cde_start (FILE *fi, long max_search)
+zs.c            |        | ZIP Scanner, experimentell
+lzhhead.c       |archives| LZH-Archive: Scannen eines Eintrags
+dpp_0001.c      |dpp     | long dpp_fread_long (FILE *fi, int bytes)
+dpp_0002.c      |dpp     | int dpp_fwrite_long (FILE *fo, long val, int bytes)
+dpp_0003.c      |dpp     | long dpp_get_long (char *buf, int bytes)
+dpp_0004.c      |dpp     | int ARGDeval (char *s, int o, int c, int b, int d);
+dpp_0005.c      |dpp     | int ARGeval (char *s, int o, int c, int b);
+dpp_0006.c      |dpp     | int ARG_long_eval (char *s, int o, int c, ...);
+dpp_0007.c      |dpp     | int msdos_get_int (char *s);
+dpp_0008.c      |dpp     | long msdos_get_long (char *s);
+lng2hex.c       |dpp     | int long_to_hex (long bin, char *hex)
+lng2nstr.c      |dpp     | int long_to_num_string (long bin, char *hex)
+bin2hex.c       |dpp     | int bin_to_hex (char *bin, char *hex, int lng)
+bin2hex.c       |dpp     | convert a binary data block into a printable hex string
+bin2hexr.c      |dpp     | int bin_to_hex_rev (char *bin, char *hex, int lng);
+hex2bin.c       |dpp     | int cdecl hex_to_bin (char *hex, char *bin, int lng);
+hex2bin.c       |dpp     | convert a printable hex string into a binary data block
+cms_stat.c      |__CMS__ | int stat (char *fn, struct stat *st);
+cms_acce.c      |__CMS__ | int access (char *fn, int mode);
+#
+# tools ======================================================================
+xref01.c        |tools   | general XREF package
+xref02.c        |tools   | XREF package: resolver helpers
+xref03.c        |tools   | XREF package: resolver
+#
+# 'Schmutzige' Tricks ========================================================
+dirt_001.c      |dirty   | patch (...)
+dirt_002.c      |dirty   | patch_str ()
+dirt_003.c      |dirty   | get_patch (...)
+dirt_004.c      |dirty   | peekb (...)
+dirt_005.c      |dirty   | pokeb (...)
+dirt_006.c      |dirty   | dump (FILE *fo, char *cp, int cnt);
+dirt_007.c      |dirty   | set_cp (char **c1, char *c2);
+dirt_008.c      |dirty   | flip_int    (int *);
+dirt_009.c      |dirty   | flip_long   (long *);
+dirt_010.c      |dirty   | flip_long_2 (long *);
+dirt_011.c      |dirty   | VAL (char *s, int idx);
+dirt_012.c      |dirty   | void dump_file* (FILE *fo, FILE *fi, long cnt)
+dirt_013.c      |dirty   | void dump_str* (FILE *fo, char *x, int cnt, long *tbl)
+dirt_014.c      |dirty   | int print_int_table (FILE *fo, int *cpi, int num);
+dirt_016.c      |dirty   | int print_int_table2 (...)
+*               |        |

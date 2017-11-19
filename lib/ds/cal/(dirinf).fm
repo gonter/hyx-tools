@@ -1,0 +1,64 @@
+#
+# FILE %ds/cal/(dirinf).fm
+#
+.               | Date, Time, Calendar and Planner functions
+#
+# written:       1988 09 03
+# latest update: 1997-01-15 21:59:56
+# $Id: (dirinf).fm,v 1.2 2005/12/19 10:33:45 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+large           | Objektfiles LARGE Model
+small           | Objektfiles SMALL Model
+
+Makefile        | active Makefile
+make-ux         | Makefile (Unix)
+make-dos        | Makefile (MSDOS)
+
+dt001.c         | int actual_datim (char *datum, int format);
+dt001b.c        | int _actual_datim (char *datum, int format, long tt);
+dt002.c         | int actual_datim_int (int *jahr, ...)
+dt002b.c        | int get_current_year ()
+dt003.c         | int print_date_time (FILE *fo);
+dt004.c         | void prepare_date (char *datum);
+dt006.c         | int days_of_month (int year, int month);
+dt007.c         | int is_leap_year (int year);
+dt008.c         | int modify_date (struct tm *d, int delta);
+dt010.c         | long day_number (int jahr, int mon, int tag);
+dt011.c         | int weekday (int jahr, int mon, int tag);
+dt014a.c        | char *DAY_OF_WEEK3 [] = ...
+dt014b.c        | char *DAY_OF_WEEK2 [] = ...
+dt015a.c        | char *MONTH_NAME [13] = ...
+
+dt021.c         | int chk_datum (char *sb, char *se, ...)
+dt022.c         | int get_datum (char *s, int zone_begin, ...)
+dt023.c         | int get_jahr_mon_tag (char *s, int *ii, ...)
+dt024.c         | int delta_datum (int bjahr, int bmon, ...)
+dt025.c         | int valid_datum (int jahr, int mon, ...)
+
+dt031t.c        | test for int analyze_date (...)
+dt031.c         | int analyze_date (char *s, int *jahr, ...)
+dt032.c         | int analyze_dat_str (char *name, ...)
+dt033.c         | int check_for_timezone (int *v, int *s, char *str);
+dt034.c         | int get_easter (int year, int *month, int *day)
+dt035.c         | int get_day_index (struct YEAR_INFO *yi, int mon, int day)
+dt036.c         | struct DAY_INFO_EXTRA *create_day_info_extra (...);
+dt037.c         | struct DAY_INFO *cdecl fixup_day (struct YEAR_INFO *yi, ...)
+dt038.c         | int get_wday_index (struct YEAR_INFO *yi, int mon, ...)
+
+dt041.c         | int setup_year_info (struct YEAR_INFO *yi, int year)
+dt042.c         | int cal_reset_year_info (struct YEAR_INFO *yi)
+
+cal01.c         | int print_yi_year (FILE *fo, struct YEAR_INFO *yi, int year);
+cal02.c         | int print_yi_months (FILE *fo, struct YEAR_INFO *yi);
+cal03.c         | int print_yi_days (FILE *fo, struct YEAR_INFO *yi);
+cal04.c         | extern struct DAY_INFO_EXTRA AT_holiday [];
+cal04exp.c      | int export_DE ()
+cal05.c         | int fixup_extra_information (struct YEAR_INFO *yi, ...)
+cal06.c         | int get_day_string (char *day_frame, struct DAY_INFO *di);
+cal07.c         | int print_calendar (FILE *fo, int year_from, ...)
+cal08.c         | int cal_reset_alternative_view (struct YEAR_INFO *yi);
+cal09.c         | int cal_setup_alternative_view (struct YEAR_INFO *yi);
+cal10.c         | int cal_print_alternative_view (FILE *fo, struct YEAR_INFO *yi);
+
+*               |

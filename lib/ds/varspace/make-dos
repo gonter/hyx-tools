@@ -1,0 +1,27 @@
+#
+# FILE %ds/varspace/makefile
+#
+# manipulation of attribute lists
+#  
+# written:       1994-12-11
+# latest update: 1996-01-01
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 DS_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : !
+  varsp001.obj varsp002.obj varsp003.obj varsp004.obj !
+  varsp005.obj varsp006.obj varsp007.obj varsp008.obj
+
+# ----------------------------------------------------------------------------
+VS=varsp001.obj varsp005.obj varsp006.obj!
+ varsp007.obj varsp008.obj
+vspt.exe : vspt.obj $(VS)
+  link vspt $(VS),,,$(lib)/NOE;
+
+.c.obj :
+  $(cml) $?
+  $(obj) $@

@@ -1,0 +1,75 @@
+#
+# FILE /usr/lex/makefile
+#
+# written:       1991-xx-xx
+# latest update: 1993-07-06
+#
+# ========================================================================
+cml=cl -AL /W3 /c
+cms=cl -AS /W3 /c
+ccl=cl -AL /W3
+ccs=cl -AS /W3
+obj=objdec -w -d -m0 -sl 2 LEXTOOL_TEXT
+bin=c:\bin\
+lib=c:\usr\sbr\lsbr
+
+all.exe : $(bin)lext.exe $(bin)lexm.exe $(bin)lext1.exe $(bin)lexdiv.exe !
+  $(bin)lexcut.exe
+
+# ---
+lex.sh :
+  del lex.sh
+  shar -a lex.sh -fmakeshar.lst
+
+# ---
+$(bin)lext.exe : lext.obj xxconven.obj
+  link lext xxconven,$(bin)lext.exe,\dev\nul,$(lib);
+
+lext.obj : lext.c
+  $(cml) lext.c
+  $(obj) lext.obj
+
+xxconven.obj : xxconven.c
+  $(cml) xxconven.c
+  $(obj) xxconven.obj
+
+yyconven.obj : yyconven.c
+  $(cml) yyconven.c
+  $(obj) yyconven.obj
+
+$(bin)lexm.exe : lexm.obj lexm2.obj yyconven.obj
+  link lexm lexm2 yyconven,$(bin)lexm.exe,\dev\nul,$(lib);
+
+lexm.obj : lexm.c
+  $(cml) lexm.c
+  $(obj) lexm.obj
+
+lexm2.obj : lexm2.c
+  $(cml) lexm2.c
+  $(obj) lexm2.obj
+
+$(bin)lext1.exe : lext1.obj
+  link lext1,$(bin)lext1.exe,\dev\nul,$(lib);
+
+lext1.obj : lext1.c
+  $(cml) lext1.c
+  $(obj) lext1.obj
+
+$(bin)lexdiv.exe : lexdiv.obj
+  link lexdiv,$(bin)lexdiv.exe,\dev\nul,$(lib);
+
+lexdiv.obj : lexdiv.c
+  $(cml) lexdiv.c
+  $(obj) lexdiv.obj
+
+$(bin)lexcut.exe : lexcut.obj lexcut01.obj
+  link lexcut lexcut01,$(bin)lexcut.exe,\dev\nul,$(lib);
+
+lexcut.obj : lexcut.c
+  $(cml) lexcut.c
+  $(obj) lexcut.obj
+
+lexcut01.obj : lexcut01.c
+  $(cml) lexcut01.c
+  $(obj) lexcut01.obj
+

@@ -1,0 +1,18 @@
+#
+# FILE %ned/unix/(dirinf).fm
+#
+# written:       1995-11-11
+# latest update: 2000-08-24 12:54:39
+# $Id: (dirinf).fm,v 1.2 2000/08/24 15:10:24 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile        | unix makefile
+
+keyboard.c      | keyboard emulation
+harness.c       | dummy functions
+unix2.c         | curses stuff
+nedelm.c        | curses stuff
+uxwindat.c      | Window Data
+tk2.c           | TK specific screen output
+tk2_scr.c       | TK specific, scrolling
+

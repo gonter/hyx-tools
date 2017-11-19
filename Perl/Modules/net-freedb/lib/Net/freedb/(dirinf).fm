@@ -1,0 +1,15 @@
+#!/usr/local/bin/perl
+# FILE .../net-freedb/lib/Net/freedb/(dirinf).fm
+#
+# written:       2001-01-28
+# re-issued as Net::freedb::* 2002-06-30
+# $Id: (dirinf).fm,v 1.1 2002/07/01 02:42:25 gonter Exp $
+#
+
+file.pm         process freedb files
+track.pm        individual freedb track
+tools.pm        Various utility functions
+catalog.pm      handle a catalog file used from LMD and RCS
+catalog_entry.pm handle a single catalog entry
+
+cluster.pm      clustering of similar entries

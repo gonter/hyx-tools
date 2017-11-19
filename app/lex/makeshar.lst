@@ -1,0 +1,12 @@
+#
+# FILE usr/lex/makeshar.lst
+#
+# copy all necessary files into a shar file.
+#
+# written:       1993-07-05
+# latest update: 1993-07-06
+#
+# ---------------------------------------------------------------------------
+a makefile.ux                   Makefile
+a lexcut.c                      lexcut.c
+a lexcut01.c                    lexcut01.c

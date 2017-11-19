@@ -1,0 +1,34 @@
+#
+# FILE %ds/tcl/(dirinf).fm
+#
+# written:       1996-03-17
+# latest update: 1996-09-28 11:35:07
+#
+
+# see also: <gg/ggtcl.h> and tcl
+(dirinf).fm     Contents
+make-dos        DOS version of Makefile
+make-ux         Unix version of Makefile
+
+# TCL registration procedures
+tclreg00.c      int ggtcl_reg_services (Tcl_interp *interp, service_table)
+tclreg01.c      int ggtcl_reg_filename_services (Tcl_Interp *interp)
+tclreg02.c      int ggtcl_reg_hyx_services (Tcl_Interp *interp)
+
+# TCL command procedures: filename services
+tcl_0000.c      TEMPLATE
+tcl_0001.c      int ggtcl_translate_virtual_name (...)
+tcl_0002.c      int ggtcl_read_virtual_path_table (...)
+tcl_0003.c      int ggtcl_define_virtual_path (...)
+tcl_0004.c      int ggtcl_virtual_filename (...)
+tcl_0005.c      int ggtcl_real_filename (...)
+tcl_0006.c      int ggtcl_filename_definition (...)
+tcl_0007.c      int ggtcl_find_virtual_file (...)
+tcl_0008.c      int ggtcl_set_dirinf (...)
+tcl_0009.c      int ggtcl_register_dirinf_generator (
+tcl_0010.c      int ggtcl_register_url_handler (...)
+
+# TCL command procedures: hyx services
+tcl_0101.c      int ggtcl_hyx_set_color_code (...)
+
+

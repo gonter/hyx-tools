@@ -1,0 +1,20 @@
+#
+#  FILE usr/aisbr/makefile
+#
+#  Subroutines for AI
+#
+#  1991 05 01
+#
+# ========================================================================
+cml=cl -Od -AL /W3 /Fo$* /c
+obj=objdec -w -d -m0 -sl 2 AISBR_TEXT $*.obj
+unify=unify\obj\unify
+lib=c:\usr\sbr\lsbr
+
+library :
+  llink -n0 -l$(lib).lib -daisbr.mod
+
+unify.lbr : $(unify)001.obj $(unify)002.obj $(unify)003.obj !
+            $(unify)004.obj $(unify)005.obj $(unify)006.obj !
+            $(unify)007.obj $(unify)008.obj
+  touch unify.lbr

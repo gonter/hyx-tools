@@ -1,0 +1,23 @@
+#
+# FILE %ds/hyxl/makefile
+#
+# written:       1993-03-07
+# latest update: 1997-11-09 12:48:48
+#
+# ============================================================================
+cml=cl -AL /W3 /Fo$@ /c
+ccl=cl -AL
+obj=objdec -w -d -m0 -sl 2 HYPER_TEXT
+lib=c:\usr\sbr\lsbr
+
+all.2 : hyxl0001.obj hyxl0002.obj hyxl0003.obj hyxl0004.obj hyxl0005.obj !
+        hyxl0006.obj hyxl0007.obj hyxl0008.obj hyxl0009.obj hyxl0010.obj !
+        hyxl0011.obj hyxl0012.obj !
+        hyxl0101.obj
+
+# llink -n0 -l$(lib).lib -dhyxlib.mod
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(cml) $?
+  $(obj) $@

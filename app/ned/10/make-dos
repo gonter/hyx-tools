@@ -1,0 +1,22 @@
+#
+# FILE %ned/10/makefile
+#
+# written:       1990 01 20
+# latest update: 1996-05-27 11:09:48
+#
+# ============================================================================
+cc=cl -Os -AL /c
+ccc=cl -Os -AL /W3 /Fo$@ -I.. /c
+obj=objdec -m0 -w -d -sl 2 NED10_TEXT $@
+
+lib : !
+  ned1001.obj ned1002.obj ned1003.obj ned1004.obj !
+  ned1005.obj ned1006.obj ned1007.obj ned1008.obj !
+  ned1009.obj ned1010.obj ned1011.obj ned1012.obj !
+  ned1013.obj ned1014.obj ned1015.obj ned1016.obj !
+  ned1017.obj ned1018.obj ned1019.obj
+
+# ----------------------------------------------------------------------------
+.c.obj :
+  $(ccc) $*.c
+  $(obj)

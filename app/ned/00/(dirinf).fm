@@ -1,0 +1,43 @@
+#
+# File %ned/00/(dirinf).fm
+#
+# latest update: 2000-08-24 15:10:21
+# $Id: (dirinf).fm,v 1.3 2002/06/15 04:35:20 gonter Exp $
+#
+# ----------------------------------------------------------------------------
+Makefile        | active Makefile (DOS or Unix)
+make-dos        | DOS Makefile
+
+ned0001.c       | command table: main file
+ned0001a.c      | command table: main group
+ned0001c.c      | command table: function key group for curses
+ned0001f.c      | command table: function key group for PCs
+ned0001k.c      | command table: prefix group k
+ned0001o.c      | command table: prefix group o
+ned0001q.c      | command table: prefix group q
+ned0001t.c      | command table: function key group for Tk (X11)
+ned0001u.c      | command table: prefix group u
+ned0001v.c      | command table: vi commands
+ned0001x.c      | command table: dummy block
+ned0001?.c      | command table: ...
+ned0002.c       | Primitives Table
+ned0003.c       | Maus Menue Initialisierung
+ned0004.c       | global ds: windows, files
+ned0005.c       | global ds: blocks, marker
+ned0006.c       | global ds: console, input, macro, setup
+ned0006b.c      | global ds: input handler
+ned0007.c       | global ds: colour attribute
+
+ned0009.c       | re-declaration of functions for editor commands
+ned0010.c       | global ds: additional screen control
+ned0011.c       | global ds: defaults and setup parameters
+
+ned0015.c       | global ds: context related structures
+ned0016v.c      | vi table
+ned0016w.c      | wordstar table
+ned0016p.c      | pico table
+
+ned0031.c       | hyx viewer, main command table
+ned0031f.c      | hyx viewer, function key command table
+
+*               |

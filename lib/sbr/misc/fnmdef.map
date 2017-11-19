@@ -1,0 +1,41 @@
+
+ Start  Stop   Length Name                   Class
+ 00000H 00BCBH 00BCCH FILES_TEXT             CODE
+ 00BCCH 00BE4H 00019H GETPWD_TEXT            CODE
+ 00BE6H 00EE3H 002FEH STRINGS_TEXT           CODE
+ 00EE4H 00F6FH 0008CH FILEIO_TEXT            CODE
+ 00F70H 03E62H 02EF3H _TEXT                  CODE
+ 03E64H 03E64H 00000H C_ETEXT                ENDCODE
+ 03E70H 03EB1H 00042H NULL                   BEGDATA
+ 03EB2H 04645H 00794H _DATA                  DATA
+ 04646H 04653H 0000EH CDATA                  DATA
+ 04654H 04654H 00000H XIFB                   DATA
+ 04654H 04654H 00000H XIF                    DATA
+ 04654H 04654H 00000H XIFE                   DATA
+ 04654H 04654H 00000H XIB                    DATA
+ 04654H 04654H 00000H XI                     DATA
+ 04654H 04654H 00000H XIE                    DATA
+ 04654H 04654H 00000H XPB                    DATA
+ 04654H 04657H 00004H XP                     DATA
+ 04658H 04658H 00000H XPE                    DATA
+ 04658H 04658H 00000H XCB                    DATA
+ 04658H 04658H 00000H XC                     DATA
+ 04658H 04658H 00000H XCE                    DATA
+ 04658H 04658H 00000H XCFB                   DATA
+ 04658H 04658H 00000H XCF                    DATA
+ 04658H 04658H 00000H XCFE                   DATA
+ 04658H 0488BH 00234H CONST                  CONST
+ 0488CH 04893H 00008H HDR                    MSG
+ 04894H 04961H 000CEH MSG                    MSG
+ 04962H 04963H 00002H PAD                    MSG
+ 04964H 04964H 00001H EPAD                   MSG
+ 04966H 04E63H 004FEH _BSS                   BSS
+ 04E64H 04E64H 00000H XOB                    BSS
+ 04E64H 04E64H 00000H XO                     BSS
+ 04E64H 04E64H 00000H XOE                    BSS
+ 04E70H 0566FH 00800H STACK                  STACK
+
+ Origin   Group
+ 03E7:0   DGROUP
+
+Program entry point at 00F7:0010
