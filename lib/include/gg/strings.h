@@ -14,6 +14,7 @@
 #ifndef __GG_strings__
 #define __GG_strings__
 
+#include <stdlib.h>
 #include <gg/floskel.h>
 
 /* ------------------------------------------------------------------------ */
@@ -144,12 +145,15 @@ typedef int (*mk_pass_func) (char *s, int pass_lng);
 #ifdef __AIX43__
 #define __strndup_defined__
 #endif
+#ifdef __linux__
+#define __strndup_defined__
+#endif
 
 #ifdef __strdup_undefined__
 /* 0301 */ char *cdecl strdup (const char *str);
 #endif
 
-#ifndef __strdnup_defined__
+#ifndef __strndup_defined__
 #ifndef size_t
 #include <sys/types.h>
 #endif
